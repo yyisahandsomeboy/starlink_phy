@@ -1,0 +1,6 @@
+{
+  "receiver_version": "real-v4-linear-pilot-temporal-fit",
+  "max_frames": 32,
+  "pilot_fit_evm_max": 0.55,
+  "notes": "Receiver confidence gate on fitting pilots only. 0.55 is an engineering quality limit retained from the existing baseline reference-error target, not a real-signal truth or a changed evaluator threshold. Unresolved candidates are recorded separately. Heldout rows and author TOAs never participate in selection."
+}

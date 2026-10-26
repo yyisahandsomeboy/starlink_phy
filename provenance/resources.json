@@ -1,0 +1,211 @@
+{
+  "version": "receiver-source-resources-v1",
+  "public_assets": [
+    {
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/exemplar-frames-data/EXEMPLAR_FRAMES_GUIDE.txt",
+      "bytes": 4157,
+      "sha256": "9a8e637263cfd5ffa107a938e1c3094bb529dbe7ac75989940d35353f12b27fe",
+      "source_url": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/exemplar-frames-data/EXEMPLAR_FRAMES_GUIDE.txt"
+    },
+    {
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/GUIDE.txt",
+      "bytes": 6426,
+      "sha256": "c84db336c7b4a4866e64f1467d5c46c6b226fa360c329de0de3a621f32bb5b39",
+      "source_url": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/GUIDE.txt"
+    },
+    {
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/LICENSE.txt",
+      "bytes": 2417,
+      "sha256": "2eac370ac8e59527726a0b3ee5493f9f1bc1ff1a941f2bb68a1b97230c009046",
+      "source_url": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/LICENSE.txt"
+    },
+    {
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/loadAndPlotExemplarFrames.m",
+      "bytes": 18038,
+      "sha256": "96141f75d609aa70f8fe7b7919735b81ea0ddb405ef0c199e4df8b631f056e56",
+      "source_url": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/loadAndPlotExemplarFrames.m"
+    },
+    {
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/reference-template/correlateEdgePilots.m",
+      "bytes": 2493,
+      "sha256": "ccfe38772ea0bb6adbbc92a048425840e623443b7dc4680d5d7b6abe42dff7a7",
+      "source_url": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/reference-template/correlateEdgePilots.m"
+    },
+    {
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/reference-template/genEdgePilots.m",
+      "bytes": 9555,
+      "sha256": "906c1aa492351ea3ffb61551eb7439be7e5933cddece128a111b23b39aab904b",
+      "source_url": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/reference-template/genEdgePilots.m"
+    },
+    {
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/reference-template/genPss.m",
+      "bytes": 964,
+      "sha256": "32c7a9a5844499e5f92dbd6503fdd0f2ebe178a1f6691313887f70b53e1d21b6",
+      "source_url": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/reference-template/genPss.m"
+    },
+    {
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/reference-template/genReferenceTemplate.m",
+      "bytes": 1837,
+      "sha256": "07965e1b49bae96f8fee74052f5eb7af017cc34b881c2cf6b51c31a6fe11fdda",
+      "source_url": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/reference-template/genReferenceTemplate.m"
+    },
+    {
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/reference-template/genSss.m",
+      "bytes": 1752,
+      "sha256": "b327682ef5adc9c2692c3a0332cd0a4c9a30bc262fad45824b770d9e3c2b5e3e",
+      "source_url": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/reference-template/genSss.m"
+    },
+    {
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/reference-template/referenceTemplate.mat",
+      "bytes": 99179,
+      "sha256": "ec77ad6f9a17c8b14451f7f3cea6114952d0ad3aca26b3eb8c0e9aec06b002cd",
+      "source_url": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/reference-template/referenceTemplate.mat"
+    },
+    {
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/reference-template/sssVec.mat",
+      "bytes": 1602,
+      "sha256": "d1e35826279baf0fc3e5a6fa3d34e5a83dd525956132ad9cecdb2af48450f982",
+      "source_url": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/reference-template/sssVec.mat"
+    },
+    {
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/startup.m",
+      "bytes": 1658,
+      "sha256": "dcf83df7dc6fbd973cae43de59a95f94a9c57c168e2f4e84875744a87cf689bb",
+      "source_url": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/startup.m"
+    },
+    {
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/utils/complexConstellations/gen4QAMconst.m",
+      "bytes": 289,
+      "sha256": "f5d460076ff3a4866eb8b7f3fd6fbfceabb13b9678e21abea5ce34e9ee1102d8",
+      "source_url": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/utils/complexConstellations/gen4QAMconst.m"
+    },
+    {
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/utils/complexConstellations/genQPSKconst.m",
+      "bytes": 53,
+      "sha256": "39586d146adde8d303d2d421d6244c3c742cf957ea5801e99051a86b7732b41d",
+      "source_url": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/utils/complexConstellations/genQPSKconst.m"
+    },
+    {
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/utils/complexConstellations/modEnum.m",
+      "bytes": 387,
+      "sha256": "ffbcbc97cba7490605dd9950c50ca3f1e1b42805a84a79c37a37d74c94c63434",
+      "source_url": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/utils/complexConstellations/modEnum.m"
+    },
+    {
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/utils/complexConstellations/modulationMap.m",
+      "bytes": 2098,
+      "sha256": "3ee3e25cd5bff752b1d373cd6d40c906a8cfbf7177f865bbf1fca874bf50f329",
+      "source_url": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/utils/complexConstellations/modulationMap.m"
+    },
+    {
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/utils/signalProcessing/fftcorr.m",
+      "bytes": 1326,
+      "sha256": "540797821c6bfd1916e66a4b95f3bda1a253d77f34325e3d0ccd0edadda68bfd",
+      "source_url": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/utils/signalProcessing/fftcorr.m"
+    },
+    {
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/utils/signalProcessing/qpsk2rotations.m",
+      "bytes": 131,
+      "sha256": "460f6f010909faddbd3b73e3990e85d85cc571c3755b470a86f2c15c19c7a6d2",
+      "source_url": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/utils/signalProcessing/qpsk2rotations.m"
+    },
+    {
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/utils/signalProcessing/starlinkConstants.m",
+      "bytes": 1755,
+      "sha256": "06704563406a8c70c7e3178e3f003753cbda141f554dfc2d3102a8ffbd70a76b",
+      "source_url": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/utils/signalProcessing/starlinkConstants.m"
+    }
+  ],
+  "capture_archive": {
+    "url": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/raw-iq-data/exemplar250-257.zip",
+    "sha256": "68d5c9185fb689af390f7e9c3ed32e166635e04658c8f75f7a870f6519166558",
+    "bytes": 40714282,
+    "destination": "data/raw/exemplar250-257.zip"
+  },
+  "raw_files": [
+    {
+      "local_path": "data/raw/exemplar250-257/exemplar250-257.bin",
+      "archive_basename": "exemplar250-257.bin",
+      "sha256": "c69e82022d45173cdcaf1a5fdc8a2b864e2d61e85ae819af54b16002044adae3",
+      "bytes": 50000000
+    },
+    {
+      "local_path": "data/raw/exemplar250-257/exemplar250-257.json",
+      "archive_basename": "exemplar250-257.json",
+      "sha256": "47e99c494f95bf552fcf6d841d41b6b7e17270ac2b363457ef20e66665b5a62c",
+      "bytes": 227
+    },
+    {
+      "local_path": "data/raw/exemplar250-257/sliceInfo.json",
+      "archive_basename": "sliceInfo.json",
+      "sha256": "2be3e49639310311cfa9c436a0655ac19ee1569ba0883f9a351c5c188c711338",
+      "bytes": 831
+    },
+    {
+      "local_path": "data/raw/exemplar250-257/README.txt",
+      "archive_basename": "README.txt",
+      "sha256": "c16597e011a8313042454d02a93b7f5782204f1d2286028d647a8a47adc24913",
+      "bytes": 320
+    },
+    {
+      "local_path": "data/raw/exemplar250-257/plotIQpsd.m",
+      "archive_basename": "plotIQpsd.m",
+      "sha256": "c5bacabfa7cc9377ae4892f26cdae62f37e94663c6071edf41b082c36a9a1de5",
+      "bytes": 1148
+    }
+  ],
+  "original_frozen_files": {
+    "matlab/evaluation/evaluate_receiver.m": "dcf34f613fe23097dcc607391c8c9cac1730ee33d5dcff5b73fb01d55107a23b",
+    "config/evaluation.json": "e1dcd236e6ab9ffe708e72761c72d6f376bcfde133a9e10ec421f5b5ac23215c",
+    "matlab/baseline/author_sequences.m": "2778931a33eb1df85b220195fbab6773eafbdf3bd02da769a615fc460ef7a18b",
+    "matlab/baseline/bandlimited_sample.m": "1176538487548cec760f211ae296c0a365d85421f5b76c3368f0ec7e4a34e49f",
+    "vendor/author_pilots/startup.m": "dcf83df7dc6fbd973cae43de59a95f94a9c57c168e2f4e84875744a87cf689bb",
+    "vendor/author_pilots/loadAndPlotExemplarFrames.m": "96141f75d609aa70f8fe7b7919735b81ea0ddb405ef0c199e4df8b631f056e56",
+    "vendor/author_pilots/reference-template/genSss.m": "b327682ef5adc9c2692c3a0332cd0a4c9a30bc262fad45824b770d9e3c2b5e3e",
+    "vendor/author_pilots/reference-template/genPss.m": "32c7a9a5844499e5f92dbd6503fdd0f2ebe178a1f6691313887f70b53e1d21b6",
+    "vendor/author_pilots/reference-template/correlateEdgePilots.m": "ccfe38772ea0bb6adbbc92a048425840e623443b7dc4680d5d7b6abe42dff7a7",
+    "vendor/author_pilots/reference-template/genReferenceTemplate.m": "07965e1b49bae96f8fee74052f5eb7af017cc34b881c2cf6b51c31a6fe11fdda",
+    "vendor/author_pilots/reference-template/genEdgePilots.m": "906c1aa492351ea3ffb61551eb7439be7e5933cddece128a111b23b39aab904b",
+    "vendor/author_pilots/utils/complexConstellations/modulationMap.m": "3ee3e25cd5bff752b1d373cd6d40c906a8cfbf7177f865bbf1fca874bf50f329",
+    "vendor/author_pilots/utils/complexConstellations/gen4QAMconst.m": "f5d460076ff3a4866eb8b7f3fd6fbfceabb13b9678e21abea5ce34e9ee1102d8",
+    "vendor/author_pilots/utils/complexConstellations/genQPSKconst.m": "39586d146adde8d303d2d421d6244c3c742cf957ea5801e99051a86b7732b41d",
+    "vendor/author_pilots/utils/complexConstellations/modEnum.m": "ffbcbc97cba7490605dd9950c50ca3f1e1b42805a84a79c37a37d74c94c63434",
+    "vendor/author_pilots/utils/signalProcessing/fftcorr.m": "540797821c6bfd1916e66a4b95f3bda1a253d77f34325e3d0ccd0edadda68bfd",
+    "vendor/author_pilots/utils/signalProcessing/starlinkConstants.m": "06704563406a8c70c7e3178e3f003753cbda141f554dfc2d3102a8ffbd70a76b",
+    "vendor/author_pilots/utils/signalProcessing/qpsk2rotations.m": "460f6f010909faddbd3b73e3990e85d85cc571c3755b470a86f2c15c19c7a6d2",
+    "vendor/author_pilots/reference-template/referenceTemplate.mat": "ec77ad6f9a17c8b14451f7f3cea6114952d0ad3aca26b3eb8c0e9aec06b002cd",
+    "vendor/author_pilots/reference-template/sssVec.mat": "d1e35826279baf0fc3e5a6fa3d34e5a83dd525956132ad9cecdb2af48450f982",
+    "matlab/evaluation/private/synthetic_holdout_truth.mat": "fd26abc793ed1386f577491e24335f7d8c1ef9c429b79e774b15c34f536a4698",
+    "matlab/evaluation/private/synthetic_cfo_only_truth.mat": "2f746d615456d8d4ce3455156d5b8778c50cce541a13602a2b20b3fa2326a610",
+    "matlab/evaluation/private/synthetic_training_truth.mat": "203d9dcb1978349f282736010c2f87702f58f90ab1897132905221674e982002",
+    "matlab/evaluation/private/synthetic_sfo_only_truth.mat": "a4667d851778a7d85cb6737e1dbb603ad41371619699965d0923dc3e9fd547d4",
+    "matlab/evaluation/private/synthetic_awgn_only_truth.mat": "95412446ed2d6d3c7bbf4d8424bbb7b10c15679b6ddeac49e13210f38d4f2a30",
+    "matlab/evaluation/private/synthetic_noiseless_truth.mat": "0d4383b88c7c28140496fd6d3a98467534ff079ebab0a9c5e90ac732d7da356d",
+    "data/reference/synthetic_cfo_only.mat": "d538b32406aa5f4ee813bd073a078d66377f1e24c7056cdf8b274e37d4a3c0ee",
+    "data/reference/synthetic_training.mat": "c247d7ae355eb585e7cdefa3be83036d2e90fd8c8186651768d43ad84bcf9f74",
+    "data/reference/synthetic_holdout.mat": "0549e041a6790b7531ff270155c2c79b1a9161f55eeb7dfc5bc1aadd66e92c0b",
+    "data/reference/synthetic_awgn_only.mat": "cdf2604cb8d1ed059d59d22df1dd200bd20df4df44384873aec833dc865f1589",
+    "data/reference/synthetic_noiseless.mat": "49527e383b69602a3a4cc40ed56af257ad06107f3bf96686106057bd53f4cc48",
+    "data/reference/synthetic_sfo_only.mat": "d97da1004817da584102f9837260736b0531062c50d2edfc0170e78cf8fa35e5"
+  },
+  "legacy_synthetic_note": "Only original strict Python launchers require the archived synthetic fixture hashes; native real-IQ DSP does not consume those arrays."
+}

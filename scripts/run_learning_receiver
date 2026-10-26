@@ -1,0 +1,12 @@
+#!/usr/bin/env python3
+"""Step-by-step native MATLAB learning receiver; no online model calls."""
+import pathlib
+import sys
+import json
+sys.path.insert(0,str(pathlib.Path(__file__).resolve().parents[1]/'tools'))
+from learning_receiver import main
+try:
+    sys.exit(main())
+except (ValueError, RuntimeError, FileNotFoundError) as error:
+    print(json.dumps({'status': 'failed', 'reason': str(error)}, ensure_ascii=False))
+    sys.exit(1)

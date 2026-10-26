@@ -1,0 +1,48 @@
+{
+  "schema_version": 4,
+  "frozen_before_validation": true,
+  "freeze_date": "2026-10-13",
+  "minimum_frames": 2,
+  "grid_shape": [
+    1024,
+    301
+  ],
+  "pss_correlation_min": 0.08,
+  "sss_correlation_min": 0.05,
+  "pilot_fit_rows": [
+    489,
+    491,
+    493,
+    495,
+    529,
+    531,
+    533,
+    535
+  ],
+  "pilot_eval_rows": [
+    490,
+    492,
+    494,
+    496,
+    530,
+    532,
+    534,
+    536
+  ],
+  "synthetic": {
+    "timing_error_samples_max": 8,
+    "cfo_error_hz_max": 1500,
+    "sfo_error_ppm_max": 3,
+    "noiseless_grid_evm_max": 0.12,
+    "impaired_grid_evm_max": 0.55,
+    "pilot_evm_max": 0.55
+  },
+  "real_iq": {
+    "heldout_pilot_evm_max": 1.2,
+    "relative_pilot_evm_improvement_min": 0.05,
+    "timing_reference_tolerance_samples": 16
+  },
+  "notes": "Frozen before any baseline validations. Real EVM may fail at low SINR; no thresholds are changed after a failure. No payload BER claim on real IQ. codex_baseline never counts as an agent success.",
+  "evaluation_version": "4.1-partial-annotations-vectorized-plots",
+  "version_reason": "Same numerical scoring and thresholds as v4; vectorize scatter plotting and permit no-plot scoring to avoid hundreds of graphics objects per symbol matrix. v4 native scoring was interrupted during rendering; actual receiver arrays preserved in runs/real-full-scan-v4."
+}

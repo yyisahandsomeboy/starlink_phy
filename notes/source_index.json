@@ -1,0 +1,967 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-12T07:21:56.677347+00:00",
+  "scope": "Local primary resources for offline IQ receiver; no RAG graph or model calls.",
+  "manifest": "sources/download_manifest.json",
+  "link_checks": "sources/link_checks.json",
+  "source_id_policy": "Source IDs are unique here; download manifest repeats N02 for distinct assets. asset_id and unit_id are unique.",
+  "sources": [
+    {
+      "source_id": "P01",
+      "title": "Signal Structure of the Starlink Ku-Band Downlink",
+      "source_url": "https://arxiv.org/abs/2210.11578",
+      "local_path": "sources/P01_frame_structure.pdf",
+      "sha256": "e175dcec18f2a46e99e06366ba8db6bb77a6112b72686f87b07d26e08b60beb4",
+      "bytes": 908519,
+      "source_type": "primary paper PDF",
+      "status": "manifest_verified_content_reviewed",
+      "page_numbering": "1-based PDF physical page",
+      "units": [
+        {
+          "unit_id": "P01:pdf-page:1",
+          "page": 1,
+          "local_path": "sources/page_text/P01_frame_structure_page_01.txt",
+          "text_characters": 9217,
+          "sha256": "ba576b167078e7a472f3d5f8d5c0ebe0dd37ab3c388044efaa95a664fd95d094",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P01:pdf-page:2",
+          "page": 2,
+          "local_path": "sources/page_text/P01_frame_structure_page_02.txt",
+          "text_characters": 7182,
+          "sha256": "8b82767c19284eeda218621dcac7f06018f2f84b32cb1654cc82aade23c864ec",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P01:pdf-page:3",
+          "page": 3,
+          "local_path": "sources/page_text/P01_frame_structure_page_03.txt",
+          "text_characters": 5603,
+          "sha256": "86004d84efaa6e02d9f332d45d36535207301a8c0331ef6411ccbe91dcaf79e0",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P01:pdf-page:4",
+          "page": 4,
+          "local_path": "sources/page_text/P01_frame_structure_page_04.txt",
+          "text_characters": 7621,
+          "sha256": "121da7f674fbbf07c97a5712f2aab23a4997224d89bc7a0d34dd35584c6552bd",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P01:pdf-page:5",
+          "page": 5,
+          "local_path": "sources/page_text/P01_frame_structure_page_05.txt",
+          "text_characters": 8340,
+          "sha256": "9c7627922a9b17b5c61e8153a95a789d8f2ed50b2c98c7f891b95ef2b863c770",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P01:pdf-page:6",
+          "page": 6,
+          "local_path": "sources/page_text/P01_frame_structure_page_06.txt",
+          "text_characters": 7174,
+          "sha256": "0259c1c0277f07330b2c3cb9139fe4265011bdde4c3fcf0c86459630a77d13cb",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P01:pdf-page:7",
+          "page": 7,
+          "local_path": "sources/page_text/P01_frame_structure_page_07.txt",
+          "text_characters": 9573,
+          "sha256": "36755f3d0115248844fb4621b70b61886d8003e9b3cfc53999bf4c0cab71d040",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P01:pdf-page:8",
+          "page": 8,
+          "local_path": "sources/page_text/P01_frame_structure_page_08.txt",
+          "text_characters": 8220,
+          "sha256": "b8faf997629a9fa8e1f4d5e9931c68bf9d34daeecc86dc1c4da099f367503ca6",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P01:pdf-page:9",
+          "page": 9,
+          "local_path": "sources/page_text/P01_frame_structure_page_09.txt",
+          "text_characters": 8296,
+          "sha256": "e789cd660277176210d5e5be3e0d94da6f736ba7b840e3e3b0c060950063ba4e",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P01:pdf-page:10",
+          "page": 10,
+          "local_path": "sources/page_text/P01_frame_structure_page_10.txt",
+          "text_characters": 8220,
+          "sha256": "5a6fbf05dfccecf45493b6488b8cf4dc477e7d6155a8abaeed3b3ccbd02c9984",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P01:pdf-page:11",
+          "page": 11,
+          "local_path": "sources/page_text/P01_frame_structure_page_11.txt",
+          "text_characters": 8446,
+          "sha256": "ba2e20968b1eb6876db4f746ed4bacd2852512aff036c4fe04884927bbc8a8d3",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P01:pdf-page:12",
+          "page": 12,
+          "local_path": "sources/page_text/P01_frame_structure_page_12.txt",
+          "text_characters": 6652,
+          "sha256": "730a8b4c7742d8d3cb067cba4c19d4dd304c57be1071f229e5108555b06ff1fb",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P01:pdf-page:13",
+          "page": 13,
+          "local_path": "sources/page_text/P01_frame_structure_page_13.txt",
+          "text_characters": 7352,
+          "sha256": "2414fc34a5add482b81d95a423304dc188be8da57028fbe261df0f386d835417",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P01:pdf-page:14",
+          "page": 14,
+          "local_path": "sources/page_text/P01_frame_structure_page_14.txt",
+          "text_characters": 9006,
+          "sha256": "714ad97e016095b3b3c890e25b86ebd99111cfbf37faa10556302073ab5260d1",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        }
+      ],
+      "reviewed_sections": [
+        {
+          "pages": [
+            10,
+            11
+          ],
+          "section": "VI / PSS and SSS disclosure"
+        },
+        {
+          "pages": [
+            11
+          ],
+          "section": "Table II signal parameter values"
+        },
+        {
+          "pages": [
+            12
+          ],
+          "section": "VII.B Frame Layout and Fig. 6"
+        }
+      ]
+    },
+    {
+      "source_id": "N01",
+      "title": "Pilots and other predictable elements of the Starlink Ku-band downlink",
+      "source_url": "https://www.nature.com/articles/s44459-026-00075-6.pdf",
+      "local_path": "sources/N01_pilots_journal.pdf",
+      "sha256": "62ff0cbf3c4e56c45ef00eae080593350653205e7d22ccdcbdad47eaa376a84d",
+      "bytes": 2394337,
+      "source_type": "primary paper PDF",
+      "status": "manifest_verified_content_reviewed",
+      "page_numbering": "1-based PDF physical page",
+      "units": [
+        {
+          "unit_id": "N01:pdf-page:1",
+          "page": 1,
+          "local_path": "sources/page_text/N01_pilots_journal_page_01.txt",
+          "text_characters": 7656,
+          "sha256": "22488a3d043af5719c1df2a649e3fe00c083657783b2f53f424b4bfb377003e1",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "N01:pdf-page:2",
+          "page": 2,
+          "local_path": "sources/page_text/N01_pilots_journal_page_02.txt",
+          "text_characters": 11088,
+          "sha256": "d965ae40705d71699abec7ff9d41701a5747cb7fce3942e31ca7b0cc3f9b3552",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "N01:pdf-page:3",
+          "page": 3,
+          "local_path": "sources/page_text/N01_pilots_journal_page_03.txt",
+          "text_characters": 10989,
+          "sha256": "6859aa49d9e4393dfad74c6cea05b14cf46c487f9478b0cbdae1a0e92a52a517",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "N01:pdf-page:4",
+          "page": 4,
+          "local_path": "sources/page_text/N01_pilots_journal_page_04.txt",
+          "text_characters": 8381,
+          "sha256": "6ffa0540e0024e25407af3d4c6338f9ba86f63933373eef35ca643982548fe3d",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "N01:pdf-page:5",
+          "page": 5,
+          "local_path": "sources/page_text/N01_pilots_journal_page_05.txt",
+          "text_characters": 11174,
+          "sha256": "2bad65ecdd2678da096fe36edb854cc10b17e9f6af1354a42713ff3e4313e9ad",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "N01:pdf-page:6",
+          "page": 6,
+          "local_path": "sources/page_text/N01_pilots_journal_page_06.txt",
+          "text_characters": 10694,
+          "sha256": "f2165d0fe4cbea917e05781eb6aaf4e0ddd79cba36f4f5f3aba94af1d5420704",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "N01:pdf-page:7",
+          "page": 7,
+          "local_path": "sources/page_text/N01_pilots_journal_page_07.txt",
+          "text_characters": 12641,
+          "sha256": "e6c087894b1b75f91cea0b977fe41da7addc18ff9dd6a25216123507cfa6d7e0",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "N01:pdf-page:8",
+          "page": 8,
+          "local_path": "sources/page_text/N01_pilots_journal_page_08.txt",
+          "text_characters": 11277,
+          "sha256": "b0de0cefc917288f177325be819117770f6bb827257d4306a00d18c2b0446c3b",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "N01:pdf-page:9",
+          "page": 9,
+          "local_path": "sources/page_text/N01_pilots_journal_page_09.txt",
+          "text_characters": 8751,
+          "sha256": "a64db71b0d15d5fc22582e644311eed98aac62cf93c0a990fe5d4cb6e935ca71",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "N01:pdf-page:10",
+          "page": 10,
+          "local_path": "sources/page_text/N01_pilots_journal_page_10.txt",
+          "text_characters": 9957,
+          "sha256": "20b1d1c379b3d06e8d22002390c14571e82cbbcf05931594a6db162c2575840b",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "N01:pdf-page:11",
+          "page": 11,
+          "local_path": "sources/page_text/N01_pilots_journal_page_11.txt",
+          "text_characters": 8066,
+          "sha256": "cef5d12af01de266b1db9dd50406c95f0d6d50149478dfea212271123a03e4db",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "N01:pdf-page:12",
+          "page": 12,
+          "local_path": "sources/page_text/N01_pilots_journal_page_12.txt",
+          "text_characters": 9620,
+          "sha256": "ec42c43deda3f230fc2f84f56fcf35be07220a7424e2fe816b4997ac00ed138f",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "N01:pdf-page:13",
+          "page": 13,
+          "local_path": "sources/page_text/N01_pilots_journal_page_13.txt",
+          "text_characters": 6545,
+          "sha256": "3cdbee090f025a6c32ac6b7093a06e36f76b75e1df024fd18f0b7f33c8b9eb02",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        }
+      ],
+      "reviewed_sections": [
+        {
+          "pages": [
+            4,
+            5,
+            6
+          ],
+          "section": "Signal model; Clock models; Transmitted/Received signal model"
+        },
+        {
+          "pages": [
+            6
+          ],
+          "section": "Coarse frame acquisition"
+        },
+        {
+          "pages": [
+            6,
+            7
+          ],
+          "section": "Channel equalization"
+        },
+        {
+          "pages": [
+            7,
+            8
+          ],
+          "section": "Residual synchronization parameter estimation and alternate method"
+        },
+        {
+          "pages": [
+            8
+          ],
+          "section": "Edge pilots"
+        },
+        {
+          "pages": [
+            9,
+            10,
+            11
+          ],
+          "section": "Low-entropy QPSK symbols; Reference template; Tessellation codes; Diversity"
+        },
+        {
+          "pages": [
+            12
+          ],
+          "section": "Data availability and Code availability"
+        }
+      ]
+    },
+    {
+      "source_id": "N03",
+      "title": "Supplementary Information: Pilots and Other Predictable Elements of the Starlink Ku-Band Downlink",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs44459-026-00075-6/MediaObjects/44459_2026_75_MOESM1_ESM.pdf",
+      "local_path": "sources/N03_supplementary.pdf",
+      "sha256": "a6f4b277f84e9d0503b091c8db69a616763acf8c7e9bd1c9c23903826c1db7c1",
+      "bytes": 140908,
+      "source_type": "primary paper PDF",
+      "status": "manifest_verified_content_reviewed",
+      "page_numbering": "1-based PDF physical page",
+      "units": [
+        {
+          "unit_id": "N03:pdf-page:1",
+          "page": 1,
+          "local_path": "sources/page_text/N03_supplementary_page_01.txt",
+          "text_characters": 7196,
+          "sha256": "e17de47e4939446db54c460f351d2344505464659b02e1d1f9a19b6bbb2fbcea",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "N03:pdf-page:2",
+          "page": 2,
+          "local_path": "sources/page_text/N03_supplementary_page_02.txt",
+          "text_characters": 8123,
+          "sha256": "80bf42e526345d94c1e493b4fccff58d0be55a971a696d4dfbf67dbb96258c8d",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "N03:pdf-page:3",
+          "page": 3,
+          "local_path": "sources/page_text/N03_supplementary_page_03.txt",
+          "text_characters": 3424,
+          "sha256": "ce6d390d27b3af3bbb3f3817c2a375a6b45456c19162938383b79dec3444c2f8",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        }
+      ],
+      "reviewed_sections": [
+        {
+          "pages": [
+            1,
+            2
+          ],
+          "section": "S1 processing-gain derivation"
+        },
+        {
+          "pages": [
+            2
+          ],
+          "section": "S2 / Table S1 Capture Metadata"
+        },
+        {
+          "pages": [
+            2,
+            3
+          ],
+          "section": "S3 explicit 150-digit qpk values"
+        }
+      ]
+    },
+    {
+      "source_id": "P07",
+      "title": "Signal Simulator for Starlink Ku-Band Downlink",
+      "source_url": "https://radionavlab.ae.utexas.edu/wp-content/uploads/komodromos_starlink_simulator.pdf",
+      "local_path": "sources/P07_simulator.pdf",
+      "sha256": "fcf1bb30b8be1995723ea0def5adc90f3b7e53e8a942c3febc6a92b463482ffc",
+      "bytes": 1239789,
+      "source_type": "primary paper PDF",
+      "status": "manifest_verified_content_reviewed",
+      "page_numbering": "1-based PDF physical page",
+      "units": [
+        {
+          "unit_id": "P07:pdf-page:1",
+          "page": 1,
+          "local_path": "sources/page_text/P07_simulator_page_01.txt",
+          "text_characters": 4961,
+          "sha256": "d96b01fbed287bc662114cfcc26c2d20d62920bb4b864143d00a92cdb943c7ad",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P07:pdf-page:2",
+          "page": 2,
+          "local_path": "sources/page_text/P07_simulator_page_02.txt",
+          "text_characters": 5445,
+          "sha256": "f387aea140b928074d083b02ba90d256ceb6dd8bd6f45a304ec514bc788f6f6b",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P07:pdf-page:3",
+          "page": 3,
+          "local_path": "sources/page_text/P07_simulator_page_03.txt",
+          "text_characters": 5660,
+          "sha256": "bd66754e471db444057fc870ee419320135183d102e6053fd15a964de30ab1e5",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P07:pdf-page:4",
+          "page": 4,
+          "local_path": "sources/page_text/P07_simulator_page_04.txt",
+          "text_characters": 2978,
+          "sha256": "246e8220d9e15991c2c8891b7a2e526e8ac64bf164671ef5600fd508f09f36da",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P07:pdf-page:5",
+          "page": 5,
+          "local_path": "sources/page_text/P07_simulator_page_05.txt",
+          "text_characters": 2223,
+          "sha256": "1a6b825bf3e934e6ea823301618bf339ec30f597e188b4e471bfaee45c2cb0b1",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P07:pdf-page:6",
+          "page": 6,
+          "local_path": "sources/page_text/P07_simulator_page_06.txt",
+          "text_characters": 3744,
+          "sha256": "e672029ecf227973df372cc87105e4a195aeef6efe181d8cf0f6eb0d7d53884d",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P07:pdf-page:7",
+          "page": 7,
+          "local_path": "sources/page_text/P07_simulator_page_07.txt",
+          "text_characters": 4987,
+          "sha256": "da6bdc2506c1bb582def4afe95d880fc07404248f5f07cad3855ade1c53af52a",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P07:pdf-page:8",
+          "page": 8,
+          "local_path": "sources/page_text/P07_simulator_page_08.txt",
+          "text_characters": 6660,
+          "sha256": "6e77c843c27264e581d43908acb9369d832259b40431fce4b20c505d08eb0947",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P07:pdf-page:9",
+          "page": 9,
+          "local_path": "sources/page_text/P07_simulator_page_09.txt",
+          "text_characters": 3551,
+          "sha256": "1e36b7b738e241094effa6f629f6053a42d5f75d07d28476ff4e7b2ddff5e133",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P07:pdf-page:10",
+          "page": 10,
+          "local_path": "sources/page_text/P07_simulator_page_10.txt",
+          "text_characters": 4022,
+          "sha256": "5662fc5dddb52cc1daf75fee679aaaab0715f67da28369d737335089cc9f9b4e",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P07:pdf-page:11",
+          "page": 11,
+          "local_path": "sources/page_text/P07_simulator_page_11.txt",
+          "text_characters": 3782,
+          "sha256": "3e2bae49f110eefb4cb4dd236c23955a74687566ce5c0c30247a4b0ce3d2547b",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P07:pdf-page:12",
+          "page": 12,
+          "local_path": "sources/page_text/P07_simulator_page_12.txt",
+          "text_characters": 3473,
+          "sha256": "7cd9e6f6c4d0b9c7a118c948b9fb550332c4c68859066d393e7c3de75aabff26",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P07:pdf-page:13",
+          "page": 13,
+          "local_path": "sources/page_text/P07_simulator_page_13.txt",
+          "text_characters": 1845,
+          "sha256": "562997c94394f3ccd44f4fe1747505df9c3f54378ffb834ec6131274942f9ced",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P07:pdf-page:14",
+          "page": 14,
+          "local_path": "sources/page_text/P07_simulator_page_14.txt",
+          "text_characters": 5382,
+          "sha256": "0458357ef32eba35c9e46520feb5da2c2d9aeded2c4d1ca5684387a98702f05f",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        },
+        {
+          "unit_id": "P07:pdf-page:15",
+          "page": 15,
+          "local_path": "sources/page_text/P07_simulator_page_15.txt",
+          "text_characters": 7747,
+          "sha256": "c6ebc74a2f6262627b9bce65f496dc69745dcf707cdd6653ece07f64548da516",
+          "status": "extracted_layout_text",
+          "caution": "PDF math/glyph extraction may be lossy; original PDF is authoritative."
+        }
+      ],
+      "reviewed_sections": [
+        {
+          "pages": [
+            2,
+            3
+          ],
+          "section": "III Starlink signal structure / Table I"
+        },
+        {
+          "pages": [
+            3,
+            4,
+            5
+          ],
+          "section": "Simulation / delay, Doppler, signal generation"
+        }
+      ]
+    },
+    {
+      "source_id": "N02",
+      "title": "UT author pilot/template MATLAB code and guides",
+      "source_url": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/",
+      "local_path": "vendor/author_pilots",
+      "source_type": "primary author code/data guide",
+      "status": "manifest_verified_code_reviewed",
+      "units": [
+        {
+          "unit_id": "N02:GUIDE.txt",
+          "local_path": "vendor/author_pilots/GUIDE.txt",
+          "line_count": 122,
+          "status": "reviewed"
+        },
+        {
+          "unit_id": "N02:EXEMPLAR_FRAMES_GUIDE.txt",
+          "local_path": "vendor/author_pilots/exemplar-frames-data/EXEMPLAR_FRAMES_GUIDE.txt",
+          "line_count": 113,
+          "status": "reviewed"
+        },
+        {
+          "unit_id": "N02:correlateEdgePilots.m",
+          "local_path": "vendor/author_pilots/reference-template/correlateEdgePilots.m",
+          "line_count": 74,
+          "status": "reviewed"
+        },
+        {
+          "unit_id": "N02:genEdgePilots.m",
+          "local_path": "vendor/author_pilots/reference-template/genEdgePilots.m",
+          "line_count": 213,
+          "status": "reviewed"
+        },
+        {
+          "unit_id": "N02:genPss.m",
+          "local_path": "vendor/author_pilots/reference-template/genPss.m",
+          "line_count": 37,
+          "status": "reviewed"
+        },
+        {
+          "unit_id": "N02:genReferenceTemplate.m",
+          "local_path": "vendor/author_pilots/reference-template/genReferenceTemplate.m",
+          "line_count": 41,
+          "status": "reviewed"
+        },
+        {
+          "unit_id": "N02:genSss.m",
+          "local_path": "vendor/author_pilots/reference-template/genSss.m",
+          "line_count": 42,
+          "status": "reviewed"
+        },
+        {
+          "unit_id": "N02:starlinkConstants.m",
+          "local_path": "vendor/author_pilots/utils/signalProcessing/starlinkConstants.m",
+          "line_count": 55,
+          "status": "reviewed"
+        },
+        {
+          "unit_id": "N02:sssVec.mat",
+          "local_path": "vendor/author_pilots/reference-template/sssVec.mat",
+          "status": "manifest_verified_binary_asset",
+          "shape_evidence": "Author GUIDE; no independent MATLAB execution claimed here."
+        },
+        {
+          "unit_id": "N02:referenceTemplate.mat",
+          "local_path": "vendor/author_pilots/reference-template/referenceTemplate.mat",
+          "status": "manifest_verified_binary_asset",
+          "shape_evidence": "Author GUIDE; no independent MATLAB execution claimed here."
+        }
+      ]
+    },
+    {
+      "source_id": "N11",
+      "title": "UT Starlink signal simulator public archived code",
+      "source_url": "https://gitlab.com/radionavlab/public/ut-starlink-signal-simulator",
+      "archive_local_path": "vendor/simulator_original.zip",
+      "local_path": "vendor/simulator/ut-starlink-signal-simulator-main-5de898badd03f6a8b3c7d5196b9b31d4039263ed",
+      "archived_commit": "5de898badd03f6a8b3c7d5196b9b31d4039263ed",
+      "sha256": "ab2d1adb0256228c2ecf19cdaf41bd1dd2cb7758f2c5808b7fab15454338c2be",
+      "source_type": "primary public archived simulator code",
+      "status": "manifest_verified_code_reviewed",
+      "caution": "Archive URL used sha=main; archived commit is identified by ZIP directory, not current branch HEAD.",
+      "units": [
+        {
+          "unit_id": "N11:genOFDM.m",
+          "local_path": "vendor/simulator/ut-starlink-signal-simulator-main-5de898badd03f6a8b3c7d5196b9b31d4039263ed/utils/genOFDM.m",
+          "status": "static_code_reviewed",
+          "line_count": 161
+        },
+        {
+          "unit_id": "N11:genStrlkOFDM.m",
+          "local_path": "vendor/simulator/ut-starlink-signal-simulator-main-5de898badd03f6a8b3c7d5196b9b31d4039263ed/utils/genStrlkOFDM.m",
+          "status": "static_code_reviewed",
+          "line_count": 87
+        },
+        {
+          "unit_id": "N11:genStrlkFrame.m",
+          "local_path": "vendor/simulator/ut-starlink-signal-simulator-main-5de898badd03f6a8b3c7d5196b9b31d4039263ed/utils/genStrlkFrame.m",
+          "status": "static_code_reviewed",
+          "line_count": 186
+        },
+        {
+          "unit_id": "N11:genStrlkStream.m",
+          "local_path": "vendor/simulator/ut-starlink-signal-simulator-main-5de898badd03f6a8b3c7d5196b9b31d4039263ed/utils/genStrlkStream.m",
+          "status": "static_code_reviewed",
+          "line_count": 184
+        }
+      ]
+    },
+    {
+      "source_id": "N02_RAW",
+      "title": "exemplar250-257 raw-IQ metadata and README",
+      "parent_source_id": "N02",
+      "local_path": "data/raw/exemplar250-257",
+      "source_type": "primary capture metadata",
+      "status": "reviewed_with_metadata_anomaly",
+      "units": [
+        {
+          "unit_id": "N02_RAW:README.txt",
+          "local_path": "data/raw/exemplar250-257/README.txt",
+          "status": "reviewed"
+        },
+        {
+          "unit_id": "N02_RAW:exemplar250-257.json",
+          "local_path": "data/raw/exemplar250-257/exemplar250-257.json",
+          "status": "reviewed"
+        },
+        {
+          "unit_id": "N02_RAW:sliceInfo.json",
+          "local_path": "data/raw/exemplar250-257/sliceInfo.json",
+          "status": "reviewed"
+        }
+      ]
+    },
+    {
+      "source_id": "N02_BIN",
+      "title": "exemplar250-257 raw capture BIN",
+      "parent_source_id": "N02",
+      "local_path": "data/raw/exemplar250-257/exemplar250-257.bin",
+      "source_type": "primary raw IQ",
+      "bytes": 50000000,
+      "complex_samples": 12500000,
+      "sha256": "c69e82022d45173cdcaf1a5fdc8a2b864e2d61e85ae819af54b16002044adae3",
+      "status": "manifest_verified",
+      "units": {
+        "sample_encoding": "interleaved sc16 IQ",
+        "capture_rate_complex_samples_per_second": 250000000,
+        "native_rate_Hz": 240000000
+      }
+    },
+    {
+      "source_id": "N02_GUIDE_LIVE",
+      "title": "Current official UT GUIDE fetched for provenance",
+      "parent_source_id": "N02",
+      "local_path": "sources/N02_official_GUIDE.txt",
+      "source_url": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/GUIDE.txt",
+      "sha256": "c84db336c7b4a4866e64f1467d5c46c6b226fa360c329de0de3a621f32bb5b39",
+      "source_type": "primary live guide",
+      "status": "downloaded_matches_portable_guide"
+    },
+    {
+      "source_id": "P08",
+      "title": "Maximum-Likelihood-Based Precise Time-of-Arrival Estimation for Starlink Signals",
+      "source_url": "https://radionavlab.ae.utexas.edu/wp-content/uploads/qin_ML_Precise_TOA_PLANS.pdf",
+      "local_path": "sources/P08_qin_ML_Precise_TOA_PLANS.pdf",
+      "sha256": "1b33a8e3af9383b58c0029f35647556fedc6436a6a05038330a60b63cfdfd2a1",
+      "bytes": 1375552,
+      "source_type": "primary method paper PDF",
+      "status": "downloaded_and_method_sections_reviewed",
+      "page_numbering": "1-based PDF physical page; local txt preserves form-feed",
+      "manifest_path": "sources/P08_manifest.json",
+      "scope": "PLANS V-B-F clustering/maximum-likelihood/RANSAC details; no private receiver labels"
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "P01:sources/P01_frame_structure.pdf",
+      "source_id": "P01",
+      "local_path": "sources/P01_frame_structure.pdf",
+      "bytes": 908519,
+      "sha256": "e175dcec18f2a46e99e06366ba8db6bb77a6112b72686f87b07d26e08b60beb4",
+      "status": "manifest_verified"
+    },
+    {
+      "asset_id": "N01:sources/N01_pilots_journal.pdf",
+      "source_id": "N01",
+      "local_path": "sources/N01_pilots_journal.pdf",
+      "bytes": 2394337,
+      "sha256": "62ff0cbf3c4e56c45ef00eae080593350653205e7d22ccdcbdad47eaa376a84d",
+      "status": "manifest_verified"
+    },
+    {
+      "asset_id": "N03:sources/N03_supplementary.pdf",
+      "source_id": "N03",
+      "local_path": "sources/N03_supplementary.pdf",
+      "bytes": 140908,
+      "sha256": "a6f4b277f84e9d0503b091c8db69a616763acf8c7e9bd1c9c23903826c1db7c1",
+      "status": "manifest_verified"
+    },
+    {
+      "asset_id": "P07:sources/P07_simulator.pdf",
+      "source_id": "P07",
+      "local_path": "sources/P07_simulator.pdf",
+      "bytes": 1239789,
+      "sha256": "fcf1bb30b8be1995723ea0def5adc90f3b7e53e8a942c3febc6a92b463482ffc",
+      "status": "manifest_verified"
+    },
+    {
+      "asset_id": "N02:vendor/author_pilots/exemplar-frames-data/EXEMPLAR_FRAMES_GUIDE.txt",
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/exemplar-frames-data/EXEMPLAR_FRAMES_GUIDE.txt",
+      "bytes": 4157,
+      "sha256": "9a8e637263cfd5ffa107a938e1c3094bb529dbe7ac75989940d35353f12b27fe",
+      "status": "manifest_verified"
+    },
+    {
+      "asset_id": "N02:vendor/author_pilots/GUIDE.txt",
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/GUIDE.txt",
+      "bytes": 6426,
+      "sha256": "c84db336c7b4a4866e64f1467d5c46c6b226fa360c329de0de3a621f32bb5b39",
+      "status": "manifest_verified"
+    },
+    {
+      "asset_id": "N02:vendor/author_pilots/LICENSE.txt",
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/LICENSE.txt",
+      "bytes": 2417,
+      "sha256": "2eac370ac8e59527726a0b3ee5493f9f1bc1ff1a941f2bb68a1b97230c009046",
+      "status": "manifest_verified"
+    },
+    {
+      "asset_id": "N02:vendor/author_pilots/loadAndPlotExemplarFrames.m",
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/loadAndPlotExemplarFrames.m",
+      "bytes": 18038,
+      "sha256": "96141f75d609aa70f8fe7b7919735b81ea0ddb405ef0c199e4df8b631f056e56",
+      "status": "manifest_verified"
+    },
+    {
+      "asset_id": "N02:vendor/author_pilots/raw-iq-data/exemplar250-257.zip",
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/raw-iq-data/exemplar250-257.zip",
+      "bytes": 40714282,
+      "sha256": "68d5c9185fb689af390f7e9c3ed32e166635e04658c8f75f7a870f6519166558",
+      "status": "manifest_verified"
+    },
+    {
+      "asset_id": "N02:vendor/author_pilots/reference-template/correlateEdgePilots.m",
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/reference-template/correlateEdgePilots.m",
+      "bytes": 2493,
+      "sha256": "ccfe38772ea0bb6adbbc92a048425840e623443b7dc4680d5d7b6abe42dff7a7",
+      "status": "manifest_verified"
+    },
+    {
+      "asset_id": "N02:vendor/author_pilots/reference-template/genEdgePilots.m",
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/reference-template/genEdgePilots.m",
+      "bytes": 9555,
+      "sha256": "906c1aa492351ea3ffb61551eb7439be7e5933cddece128a111b23b39aab904b",
+      "status": "manifest_verified"
+    },
+    {
+      "asset_id": "N02:vendor/author_pilots/reference-template/genPss.m",
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/reference-template/genPss.m",
+      "bytes": 964,
+      "sha256": "32c7a9a5844499e5f92dbd6503fdd0f2ebe178a1f6691313887f70b53e1d21b6",
+      "status": "manifest_verified"
+    },
+    {
+      "asset_id": "N02:vendor/author_pilots/reference-template/genReferenceTemplate.m",
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/reference-template/genReferenceTemplate.m",
+      "bytes": 1837,
+      "sha256": "07965e1b49bae96f8fee74052f5eb7af017cc34b881c2cf6b51c31a6fe11fdda",
+      "status": "manifest_verified"
+    },
+    {
+      "asset_id": "N02:vendor/author_pilots/reference-template/genSss.m",
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/reference-template/genSss.m",
+      "bytes": 1752,
+      "sha256": "b327682ef5adc9c2692c3a0332cd0a4c9a30bc262fad45824b770d9e3c2b5e3e",
+      "status": "manifest_verified"
+    },
+    {
+      "asset_id": "N02:vendor/author_pilots/reference-template/referenceTemplate.mat",
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/reference-template/referenceTemplate.mat",
+      "bytes": 99179,
+      "sha256": "ec77ad6f9a17c8b14451f7f3cea6114952d0ad3aca26b3eb8c0e9aec06b002cd",
+      "status": "manifest_verified"
+    },
+    {
+      "asset_id": "N02:vendor/author_pilots/reference-template/sssVec.mat",
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/reference-template/sssVec.mat",
+      "bytes": 1602,
+      "sha256": "d1e35826279baf0fc3e5a6fa3d34e5a83dd525956132ad9cecdb2af48450f982",
+      "status": "manifest_verified"
+    },
+    {
+      "asset_id": "N02:vendor/author_pilots/startup.m",
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/startup.m",
+      "bytes": 1658,
+      "sha256": "dcf83df7dc6fbd973cae43de59a95f94a9c57c168e2f4e84875744a87cf689bb",
+      "status": "manifest_verified"
+    },
+    {
+      "asset_id": "N02:vendor/author_pilots/utils/complexConstellations/gen4QAMconst.m",
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/utils/complexConstellations/gen4QAMconst.m",
+      "bytes": 289,
+      "sha256": "f5d460076ff3a4866eb8b7f3fd6fbfceabb13b9678e21abea5ce34e9ee1102d8",
+      "status": "manifest_verified"
+    },
+    {
+      "asset_id": "N02:vendor/author_pilots/utils/complexConstellations/genQPSKconst.m",
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/utils/complexConstellations/genQPSKconst.m",
+      "bytes": 53,
+      "sha256": "39586d146adde8d303d2d421d6244c3c742cf957ea5801e99051a86b7732b41d",
+      "status": "manifest_verified"
+    },
+    {
+      "asset_id": "N02:vendor/author_pilots/utils/complexConstellations/modEnum.m",
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/utils/complexConstellations/modEnum.m",
+      "bytes": 387,
+      "sha256": "ffbcbc97cba7490605dd9950c50ca3f1e1b42805a84a79c37a37d74c94c63434",
+      "status": "manifest_verified"
+    },
+    {
+      "asset_id": "N02:vendor/author_pilots/utils/complexConstellations/modulationMap.m",
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/utils/complexConstellations/modulationMap.m",
+      "bytes": 2098,
+      "sha256": "3ee3e25cd5bff752b1d373cd6d40c906a8cfbf7177f865bbf1fca874bf50f329",
+      "status": "manifest_verified"
+    },
+    {
+      "asset_id": "N02:vendor/author_pilots/utils/signalProcessing/fftcorr.m",
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/utils/signalProcessing/fftcorr.m",
+      "bytes": 1326,
+      "sha256": "540797821c6bfd1916e66a4b95f3bda1a253d77f34325e3d0ccd0edadda68bfd",
+      "status": "manifest_verified"
+    },
+    {
+      "asset_id": "N02:vendor/author_pilots/utils/signalProcessing/qpsk2rotations.m",
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/utils/signalProcessing/qpsk2rotations.m",
+      "bytes": 131,
+      "sha256": "460f6f010909faddbd3b73e3990e85d85cc571c3755b470a86f2c15c19c7a6d2",
+      "status": "manifest_verified"
+    },
+    {
+      "asset_id": "N02:vendor/author_pilots/utils/signalProcessing/starlinkConstants.m",
+      "source_id": "N02",
+      "local_path": "vendor/author_pilots/utils/signalProcessing/starlinkConstants.m",
+      "bytes": 1755,
+      "sha256": "06704563406a8c70c7e3178e3f003753cbda141f554dfc2d3102a8ffbd70a76b",
+      "status": "manifest_verified"
+    },
+    {
+      "asset_id": "N11:vendor/simulator_original.zip",
+      "source_id": "N11",
+      "local_path": "vendor/simulator_original.zip",
+      "bytes": 741799,
+      "sha256": "ab2d1adb0256228c2ecf19cdaf41bd1dd2cb7758f2c5808b7fab15454338c2be",
+      "status": "manifest_verified"
+    },
+    {
+      "asset_id": "N02_BIN:data/raw/exemplar250-257/exemplar250-257.bin",
+      "source_id": "N02_BIN",
+      "local_path": "data/raw/exemplar250-257/exemplar250-257.bin",
+      "bytes": 50000000,
+      "sha256": "c69e82022d45173cdcaf1a5fdc8a2b864e2d61e85ae819af54b16002044adae3",
+      "status": "manifest_verified"
+    },
+    {
+      "asset_id": "N02_GUIDE_LIVE:sources/N02_official_GUIDE.txt",
+      "source_id": "N02_GUIDE_LIVE",
+      "local_path": "sources/N02_official_GUIDE.txt",
+      "bytes": 6426,
+      "sha256": "c84db336c7b4a4866e64f1467d5c46c6b226fa360c329de0de3a621f32bb5b39",
+      "status": "manifest_verified"
+    }
+  ]
+}

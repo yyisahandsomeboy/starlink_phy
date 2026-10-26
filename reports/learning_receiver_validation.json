@@ -1,0 +1,159 @@
+{
+  "version": "learning-receiver-v1",
+  "recorded_at": "2026-10-26T21:29:48.608440+08:00",
+  "owner": "codex_baseline",
+  "status": "passed_for_documented_scope",
+  "matlab_release": "2025a",
+  "entry_script": "matlab/learning_receiver/START_HERE.m",
+  "learning_document": "docs/LEARNING_RECEIVER.zh-CN.md",
+  "module_parity": {
+    "status": "passed",
+    "evidence": "runs/codex-learning-validation-20261026-205547-557637/module_parity.json",
+    "metrics": {
+      "status": "passed",
+      "version": "learning-validation-v1",
+      "owner": "codex_baseline",
+      "interpolation_relative_error": 0,
+      "FFT_relative_error": 0,
+      "channel_relative_error": 0,
+      "likelihood_gradient_hessian_max_difference": 0,
+      "cardinality_score_max_difference": 0,
+      "tracking_phase_max_difference_rad": 8.881784197001252e-16,
+      "tracking_delay_coefficient_max_difference": 7.806255641895632e-18,
+      "tracked_grid_relative_error": 6.089764804552309e-16,
+      "all_300_geometry_labels_identical": true,
+      "reference_checkpoint_used_only_for_validation": true,
+      "original_evaluator_changed": false,
+      "payload_decoded": false
+    }
+  },
+  "real_single_frame": {
+    "status": "passed",
+    "run_id": "codex-learning-20261026-211257-564111",
+    "report": "runs/codex-learning-20261026-211257-564111/learning_report.html",
+    "metrics": {
+      "status": "passed",
+      "version": "learning-validation-v1",
+      "owner": "codex_baseline",
+      "single_frame_only": true,
+      "original_evaluator_changed": false,
+      "payload_bits_available": false,
+      "raw_readback_exact": true,
+      "nominal_sample_rate_hz": 240000000.0,
+      "independent_detection": true,
+      "start_sample_capture": 125001,
+      "model_and_capture_coordinate_identity": true,
+      "FFT_relative_error": 0,
+      "equalization_relative_error": 0,
+      "first_equalized_heldout_pilot_evm": 1.4788763262945215,
+      "front_end_checks": "passed",
+      "complete_single_frame_pipeline": true,
+      "final_heldout_pilot_evm": 0.2111825030281672,
+      "relative_improvement_vs_raw_fft": 0.7895353360072324,
+      "valid_hard_symbol_count": 301200,
+      "original_full_multiframe_acceptance": "not_claimed_single_frame"
+    },
+    "front_end_elapsed_s": 70.95575198599545,
+    "resume_through_14_elapsed_s": 370.93100621599297,
+    "same_code_as_run": true,
+    "learning_matlab_file_count": 32
+  },
+  "early_stop_after_read": {
+    "status": "passed",
+    "evidence": "runs/codex-learning-usage-20261026-212548-083516/only_read/learning_validation.json",
+    "metrics": {
+      "status": "partial",
+      "version": "learning-validation-v1",
+      "owner": "codex_baseline",
+      "single_frame_only": true,
+      "original_evaluator_changed": false,
+      "payload_bits_available": false,
+      "raw_readback_exact": true
+    }
+  },
+  "two_frame_frontend": {
+    "status": "passed_through_step_8",
+    "evidence": "runs/codex-learning-batch-20261026-212602-703/batch_validation.json",
+    "metrics": [
+      {
+        "status": "partial",
+        "version": "learning-validation-v1",
+        "owner": "codex_baseline",
+        "single_frame_only": true,
+        "original_evaluator_changed": false,
+        "payload_bits_available": false,
+        "raw_readback_exact": true,
+        "nominal_sample_rate_hz": 240000000.0,
+        "independent_detection": true,
+        "start_sample_capture": 125001,
+        "model_and_capture_coordinate_identity": true,
+        "FFT_relative_error": 0,
+        "equalization_relative_error": 0,
+        "first_equalized_heldout_pilot_evm": 1.478876306532293,
+        "front_end_checks": "passed"
+      },
+      {
+        "status": "partial",
+        "version": "learning-validation-v1",
+        "owner": "codex_baseline",
+        "single_frame_only": true,
+        "original_evaluator_changed": false,
+        "payload_bits_available": false,
+        "raw_readback_exact": true,
+        "nominal_sample_rate_hz": 240000000.0,
+        "independent_detection": true,
+        "start_sample_capture": 1791671.8333333333,
+        "model_and_capture_coordinate_identity": true,
+        "FFT_relative_error": 0,
+        "equalization_relative_error": 0,
+        "first_equalized_heldout_pilot_evm": 1.3221125741938171,
+        "front_end_checks": "passed"
+      }
+    ],
+    "full_two_frame_pipeline_tested": false
+  },
+  "config_mismatch_resume": {
+    "status": "passed",
+    "requested_duration_ms": 5,
+    "frozen_duration_ms": 4,
+    "result": "rejected_before_matlab_and_without_overwriting_frozen_steps"
+  },
+  "browser": {
+    "status": "passed",
+    "images_decoded": 27,
+    "missing_links": 0,
+    "runtime_errors": 0,
+    "evidence": "runs/codex-learning-20261026-211257-564111/validation/browser/validation.json"
+  },
+  "preservation": {
+    "original_iq_sha256": "c69e82022d45173cdcaf1a5fdc8a2b864e2d61e85ae819af54b16002044adae3",
+    "original_evaluator_lock_sha256": "41ffd48560543230ee67ecf0ff49e3625021cfd2f4bba0eebd8a89b278d26450",
+    "frozen_files_checked": 32,
+    "frozen_files_unchanged": true,
+    "original_receiver_files": {
+      "matlab/baseline/author_receiver.m": {
+        "unchanged_from_parent_commit": true,
+        "sha256": "18d5854b4fbe49da5ff38780116adce7901f2c92ecebacfc6f5567ae54fdd520"
+      },
+      "matlab/baseline/author_receiver_dsp.m": {
+        "unchanged_from_parent_commit": true,
+        "sha256": "3012733f7bc7ef1d0b9327d6d4c3f403f5bcbe55447a0e3b38d01be2febd8bfc"
+      },
+      "config/evaluation.json": {
+        "unchanged_from_parent_commit": true,
+        "sha256": "e1dcd236e6ab9ffe708e72761c72d6f376bcfde133a9e10ec421f5b5ac23215c"
+      }
+    }
+  },
+  "not_claimed": [
+    "full two-frame learning receiver acceptance",
+    "new author symbol agreement measurement",
+    "ground-truth payload symbol accuracy",
+    "physical configuration header decoding",
+    "business bit mapping, descrambling, FEC or CRC",
+    "online DSH/model behavior"
+  ],
+  "online_model_calls": 0,
+  "knowledge_mode": "documents",
+  "kg_enabled": false
+}

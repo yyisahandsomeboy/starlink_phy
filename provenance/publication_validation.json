@@ -1,0 +1,66 @@
+{
+  "version": "receiver-source-publication-v1",
+  "scope": "Codex full real-IQ receiver, modular learning receiver, diagnostic/decision code and READMEs",
+  "checked_at": "2026-10-26T22:16:51.383681+08:00",
+  "repository": "yyisahandsomeboy/starlink_phy",
+  "branch": "main",
+  "source_commit": "f081babab998962c9c82d1062f6d95c3984e93e7",
+  "copied_files_verified": 80,
+  "matlab_source_files_byte_identical_to_source": 54,
+  "original_evaluator_rules_and_lock_unchanged": true,
+  "original_frozen_files_verified_locally": 32,
+  "resource_preparation": {
+    "from_original_workspace": "passed",
+    "check_only": "passed",
+    "public_assets_and_raw_files_verified": 24,
+    "network_download_path_tested_this_publication": false,
+    "large_resources_committed": false
+  },
+  "matlab": {
+    "release": "2025a",
+    "version": "25.1.0.2943329 (R2025a)",
+    "arch": "glnxa64"
+  },
+  "baseline_module_checks": {
+    "status": "passed",
+    "DSP": "passed",
+    "frame_guard_tests": 7,
+    "elapsed_s": 14.767587950002053
+  },
+  "learning_receiver_at_exported_location": {
+    "status": "passed_through_step_8",
+    "requested_stop": 8,
+    "elapsed_s": 102.4141857069917,
+    "metrics": {
+      "status": "partial",
+      "version": "learning-validation-v1",
+      "owner": "codex_baseline",
+      "single_frame_only": true,
+      "original_evaluator_changed": false,
+      "payload_bits_available": false,
+      "raw_readback_exact": true,
+      "nominal_sample_rate_hz": 240000000.0,
+      "independent_detection": true,
+      "start_sample_capture": 125001,
+      "model_and_capture_coordinate_identity": true,
+      "FFT_relative_error": 0,
+      "equalization_relative_error": 0,
+      "first_equalized_heldout_pilot_evm": 1.4788763262945215,
+      "front_end_checks": "passed"
+    }
+  },
+  "readme_local_links": {
+    "files_checked": 3,
+    "missing": 0
+  },
+  "not_repeated": [
+    "full 50ms multi-frame receiver",
+    "learning steps 9-14, already verified in original project; see reports/learning_receiver_validation.json",
+    "new author agreement measurement",
+    "online DSH tasks"
+  ],
+  "credentials_committed": false,
+  "raw_IQ_committed": false,
+  "historical_results_committed": false,
+  "whitespace_check": "Passed excluding the original frozen evaluator, whose existing trailing space at line 34 is retained to preserve its SHA."
+}

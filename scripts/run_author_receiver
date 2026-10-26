@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+"""Run the published author method on real IQ; preserve source/variable evidence."""
+import argparse,datetime,json,pathlib,sys
+ROOT=pathlib.Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'tools'));import domain
+
+def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--workers',type=int,choices=[0,1,2],default=0)
+    parser.add_argument('--timeout',type=int,default=3000)
+    args=parser.parse_args();ok,reason=domain.verify_frozen_evaluator()
+    if not ok:raise ValueError(reason)
+    run_id='codex-author-real-'+datetime.datetime.now().strftime('%Y%m%d-%H%M%S-%f')
+    out=ROOT/'runs'/run_id;out.mkdir();capture=ROOT/'data/raw/exemplar250-257/exemplar250-257.bin'
+    cfg={'root':str(ROOT),'input_path':str(capture),'data_type':'real_iq','run_dir':str(out),
+         'pilot_fit_evm_max':json.loads((ROOT/'config/real_receiver.json').read_text())['pilot_fit_evm_max'],
+         'workers':args.workers,'make_plots':True,'timeout_s':args.timeout}
+    domain.save(out/'config.json',cfg)
+    sources=list((ROOT/'matlab/baseline').glob('*.m'))+list((ROOT/'matlab/visualization').glob('*.m'))
+    sources.extend(ROOT/p for p in ['config/author_receiver_v1.json','config/real_receiver.json','scripts/run_author_receiver','tools/domain.py'])
+    before={domain.relative(p):domain.sha(p) for p in sources}
+    lock={'role':'codex_baseline','frozen_before_run':True,'sources':before,'capture_sha256':domain.sha(capture),
+          'config_sha256':domain.sha(out/'config.json'),'evaluator_lock_sha256':domain.sha(ROOT/'config/evaluator_lock.json'),
+          'method_version':'author-ml-v1','started_at':domain.now()}
+    code=out/'receiver-code';code.mkdir()
+    for p in sources:
+        target=code/p.relative_to(ROOT);target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(p.read_bytes())
+    domain.save(out/'receiver_lock.json',lock)
+    expression='addpath('+domain.matlab_string(ROOT/'matlab/baseline')+');maxNumCompThreads(4);test_author_receiver_dsp('+domain.matlab_string(ROOT)+');test_frame_guard_metrics;cfg=jsondecode(fileread('+domain.matlab_string(out/'config.json')+'));author_receiver(cfg);addpath('+domain.matlab_string(ROOT/'matlab/evaluation')+');evaluate_receiver(cfg);baseline_manifest(cfg);'
+    execution=domain.native_run(out,expression,'author_receiver',args.timeout);domain.save(out/'execution.json',execution)
+    ok,reason=domain.verify_frozen_evaluator()
+    if not ok:raise ValueError(reason)
+    if before!={domain.relative(p):domain.sha(p) for p in sources} or domain.sha(capture)!=lock['capture_sha256']:
+        raise ValueError('Receiver source/input changed during computation')
+    report={'run_id':run_id,'output_dir':domain.relative(out),'execution':execution,'method_version':'author-ml-v1',
+            'owner':'codex_baseline','source_and_input_unchanged':True,'online_model_called':False,
+            'author_symbol_comparison_status':'not_yet_run'}
+    if execution['status']=='passed':
+        report['evaluation']=json.loads((out/'evaluation.json').read_text())
+        report['status']=report['evaluation']['status']
+    else:report['status']=execution['status']
+    domain.save(ROOT/'reports/author_receiver.json',report)
+    domain.save(out/'run_manifest.json',{'lock':lock,'files':{domain.relative(p):domain.sha(p) for p in out.iterdir() if p.is_file()}})
+    print(json.dumps(report,indent=2,allow_nan=False));return 0 if report['status']=='passed' else 2
+if __name__=='__main__':
+    try:sys.exit(main())
+    except Exception as error:print(json.dumps({'status':'failed','reason':str(error),'error_type':type(error).__name__}));sys.exit(1)

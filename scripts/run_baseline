@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$repo_root"
+if [[ "${1:-real}" == real ]]; then shift || true; fi
+exec scripts/run_author_receiver "$@"

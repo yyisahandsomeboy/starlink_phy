@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>星链载荷星座研究</title>
+<style>
+:root{font-family:"Noto Sans CJK SC",system-ui,sans-serif;color:#17243a;background:#f3f5f8}body{margin:0}main{max-width:1300px;margin:auto;padding:26px}h1{font-size:28px;margin:0 0 8px}h2{font-size:20px;margin:0 0 14px}.sub{color:#53647a;font-size:15px;line-height:1.8}.card{background:white;border:1px solid #dde3ec;border-radius:14px;padding:22px;margin:18px 0;box-shadow:0 4px 18px #17243a08}.legend{display:flex;gap:18px;flex-wrap:wrap;margin:15px 0;font-size:14px}.dot{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:7px}.grid{display:grid;grid-template-columns:minmax(460px,1.5fr) minmax(280px,1fr);gap:24px}.controls{display:flex;gap:22px;flex-wrap:wrap;align-items:center;margin:16px 0}select,input{font:inherit;padding:8px;border:1px solid #c9d2df;border-radius:7px}input[type=range]{width:230px}canvas{display:block;width:100%}#scatter{aspect-ratio:1/1}#map{height:200px;cursor:crosshair}.badge{display:inline-block;padding:8px 12px;border-radius:7px;background:#edf3fc;font-weight:600;margin:5px 0 14px}.bad{background:#fff0d9;color:#855004}p{line-height:1.8}dl{display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:14px}dt{color:#5b6b80}dd{margin:0;font-variant-numeric:tabular-nums}.note{font-size:13px;color:#5b6b80;border-top:1px solid #e3e7ee;padding-top:14px}.score{width:100%;border-collapse:collapse;font-size:13px}.score td,.score th{padding:8px;border-bottom:1px solid #e6eaf0;text-align:left}.active{background:#edf7ef}.action{font-size:15px;background:#f6f8fb;border-radius:8px;padding:14px}.path{font-family:monospace;overflow-wrap:anywhere}@media(max-width:850px){.grid{grid-template-columns:1fr}main{padding:12px}.card{padding:16px}}
+</style>
+<main>
+<h1>一张星座，一次只看一个区域</h1>
+<div class="sub">真实接收网格 · <span id="frame"></span> · 几何候选研究，尚未确认商业位映射</div>
+<section class="card"><h2>① 点击调制候选地图，选择一个 OFDM 符号和频段</h2>
+<div class="sub" id="map-explanation">每一列是一个数据符号，每一行是一个范围。颜色表示通过内部样本核对的候选；灰色表示目前不能确定。不同频段可有不同结果，不强行用同一种调制解释整列。</div>
+<div class="sub">频段 1–4 是按频率排序的人为四等分，每段 251 条载荷子载波；并非协议指定频道。</div>
+<div class="legend" id="legend"></div><canvas id="map"></canvas>
+<div class="controls"><label>数据符号 <input id="symbol" type="number" min="1" max="300" value="1"></label><input id="slider" type="range" min="1" max="300" value="1"><label>频段 <select id="region"></select></label></div>
+</section>
+<section class="card grid"><div><h2 id="scatter_title">② 判决前：蓝点是实测，红圈是几何假设</h2>
+<label>查看 <select id="view"><option value="received">判决前：接收点</option><option value="hard">判决后：保留的候选符号</option></select></label>
+<canvas id="scatter"></canvas><div class="legend" id="scatter_legend"></div></div>
+<div><h2 id="heading"></h2><div id="badge" class="badge"></div><p id="explanation"></p>
+<div id="decision_counts" class="action"></div>
+<p id="reading_help"></p>
+<details><summary>查看判断依据与候选比较（可选）</summary><dl id="metrics"></dl>
+<h3 id="scores-title">四种候选怎样比较？</h3><table class="score"><thead id="scores-header"><tr><th>几何候选</th><th>选择组损失↓</th><th>最终检查损失↓</th></tr></thead><tbody id="scores"></tbody></table>
+<p class="note" id="method-note">用一半点拟合增益/相位，用四分之一点选候选，最后四分之一点作额外检查。损失差值和“内部核对”是模型下的证据，不是实际分类正确率。载荷最近点误差不是有真实参考的 EVM。</p></details></div></section>
+<section class="card"><h2>③ 这对后续解调意味着什么？</h2><div id="next" class="action"></div>
+<p><b>判决后的点整齐，是最近点映射的必然结果，不能证明判决正确。</b>质量检查仍使用判决前的已知留出导频；本帧的对照结果：<span id="pilot_ser"></span>。载荷没有符号真值，不报告载荷 SER/BER。</p>
+<p>单个子载波在单个时刻只有一个复数点，通常不足以识别调制。若一个频段仍然混合，可以继续划分，或在调制保持不变的时间区间积累样本；不能仅凭一个点就指定 QAM 阶数。</p>
+<p>当前输出包含几何点编号、候选位置、模型条件概率和擦除标记。点编号是本工程定义的几何顺序，<b>不是星链业务比特</b>。真实位映射、资源/码块顺序、码块边界、LDPC 校验矩阵 H、扰码配置仍未知；进入比特软解调、解扰、解码前还需核实这些参数。</p>
+<div class="sub path">对应数值：symbol_decisions.mat（判决/擦除/原网格坐标）、decisions.json（摘要）；analysis_data.mat 和 symbol_candidates.mat 保留判决前数据与候选。页面完全离线。</div></section>
+</main>
+<script type="application/json" id="payload">__PAYLOAD_JSON__</script>
+<script>
+const D=JSON.parse(document.getElementById('payload').textContent), colors=['#bbc2ce','#299b60','#9664be','#397bd4','#ee9434'];
+const authorMethod=D.method_version==='author-ml-v1';
+if(authorMethod){document.getElementById('map-explanation').textContent='作者方法按整个 OFDM 符号识别星座。四个频段仅用于放大观察，继承整列分类；灰色表示未知或复合星座。';document.getElementById('scores-title').textContent='星座点数怎样选择？';document.getElementById('scores-header').innerHTML='<tr><th>候选点数</th><th>中位轮廓系数↑</th></tr>';document.getElementById('method-note').textContent='作者方法使用20次重复的k-means聚类，比较4/8/16/32点的中位轮廓系数。8点复合星座保留未知。相位/时延由接收机ML估计，已知类型作最近点判决；条件概率仅作诊断，没有额外划分样本验证。';}
+const names=['未判定','QPSK（4点十字）','4QAM（4点斜方）','16QAM（16点）','32QAM 候选（32点）'];
+const short=['未判定','QPSK','4QAM','16QAM','32QAM 候选'], status={supported_candidate:'通过内部样本核对',ambiguous_candidates:'候选太接近',poor_model_fit:'点云与假设匹配不足',insufficient_constellation_diversity:'出现的点簇不足，调制仍有歧义',parameter_bound_reached:'需要超出允许范围的增益或相位修正',inconsistent_frequency_regions:'各频段给出不同候选',insufficient_samples:'样本不够',invalid_samples:'存在无效采样'};
+let symbol=0,region=0;
+document.getElementById('frame').textContent='第 '+D.frame_index+' 帧，300 个数据符号';
+document.getElementById('legend').innerHTML=names.map((n,i)=>'<span><i class="dot" style="background:'+colors[i]+'"></i>'+n+'</span>').join('');
+const select=document.getElementById('region'),regionNames=['整个有效载荷频带','负频率低段','负频率高段','正频率低段','正频率高段'];
+D.band_frequency_mhz.forEach((f,i)=>{let o=document.createElement('option');o.value=i;o.textContent=regionNames[i]+'（'+f[0].toFixed(1)+' 至 '+f[1].toFixed(1)+' MHz）';select.appendChild(o)});
+function setup(id){const c=document.getElementById(id),w=c.clientWidth,h=c.clientHeight,scale=devicePixelRatio||1;c.width=w*scale;c.height=h*scale;const x=c.getContext('2d');x.scale(scale,scale);return {c,x,w,h}}
+function drawMap(){let {x,w,h}=setup('map'),left=138,right=20,top=8,bottom=28,cw=(w-left-right)/300,ch=(h-top-bottom)/5;x.fillStyle='#fff';x.fillRect(0,0,w,h);x.font='13px system-ui';x.textAlign='right';['整个符号','负频率低段','负频率高段','正频率低段','正频率高段'].forEach((n,r)=>{x.fillStyle='#3c4c63';x.fillText(n,left-10,top+(r+.6)*ch);for(let s=0;s<300;s++){x.fillStyle=colors[D.map[r][s]];x.fillRect(left+s*cw,top+r*ch,cw+.5,ch-2)}});x.strokeStyle='#17243a';x.lineWidth=2;x.strokeRect(left+symbol*cw,top+region*ch,cw,ch-2);x.textAlign='center';x.fillStyle='#526177';[1,50,100,150,200,250,300].forEach(n=>x.fillText(n,left+(n-1)*cw,h-8));}
+function drawScatter(r){let {x,w,h}=setup('scatter'),pad=52,size=Math.min(w,h)-pad*2,cx=(w-size)/2,cy=(h-size)/2;const after=document.getElementById('view').value==='hard';let pts=D.groups0[region].filter(row=>!after||D.decision_valid[row][symbol]).map(row=>after?[D.hard_I[row][symbol],D.hard_Q[row][symbol]]:[D.I[row][symbol],D.Q[row][symbol]]);let limit=Math.max(1.7,...pts.map(p=>Math.max(Math.abs(p[0]),Math.abs(p[1]))))*1.06;let px=v=>cx+(v+limit)/(2*limit)*size,py=v=>cy+(limit-v)/(2*limit)*size;
+x.fillStyle='#fff';x.fillRect(0,0,w,h);x.font='13px system-ui';for(let t=-1.5;t<=1.5;t+=.5){x.strokeStyle='#e4e9f0';x.lineWidth=1;x.beginPath();x.moveTo(px(t),cy);x.lineTo(px(t),cy+size);x.moveTo(cx,py(t));x.lineTo(cx+size,py(t));x.stroke();x.fillStyle='#657185';x.textAlign='center';x.fillText(t.toFixed(1),px(t),cy+size+22);x.textAlign='right';x.fillText(t.toFixed(1),cx-9,py(t)+4)}x.strokeStyle='#aeb9c9';x.strokeRect(cx,cy,size,size);if(!after){x.fillStyle='#287acb99';pts.forEach(p=>{x.beginPath();x.arc(px(p[0]),py(p[1]),2.2,0,2*Math.PI);x.fill()})}
+if(after){const bins=new Map();pts.forEach(p=>{const key=p.join(',');bins.set(key,{p,count:(bins.get(key)?.count||0)+1})});x.fillStyle='#249a62';x.textAlign='left';bins.forEach(({p,count})=>{x.beginPath();x.arc(px(p[0]),py(p[1]),Math.min(12,4+Math.sqrt(count)),0,2*Math.PI);x.fill();x.fillStyle='#34465e';x.fillText(String(count),px(p[0])+14,py(p[1])+4);x.fillStyle='#249a62'});if(!pts.length){x.fillStyle='#855004';x.textAlign='center';x.fillText('该区域全部擦除；切回判决前检查原因',w/2,h/2)}}
+else if(r.best_id>0){let m=r.best_id-1,a=r.candidate_parameters[m][0],phi=r.candidate_parameters[m][1]*Math.PI/180;x.strokeStyle='#d54b47';x.lineWidth=2.2;D.model_real[m].forEach((re,i)=>{let im=D.model_imag[m][i],ri=a*(re*Math.cos(phi)-im*Math.sin(phi)),rq=a*(re*Math.sin(phi)+im*Math.cos(phi));x.beginPath();x.arc(px(ri),py(rq),8,0,2*Math.PI);x.stroke()})}x.fillStyle='#34465e';x.textAlign='center';x.fillText('I',cx+size/2,h-8);x.fillText('Q',20,cy+size/2);}
+function fmt(v,n=3){return Number.isFinite(v)?v.toFixed(n):'—'}
+function update(){document.getElementById('symbol').value=symbol+1;document.getElementById('slider').value=symbol+1;select.value=region;const r=D.records[region][symbol],ok=r.label_id>0,best=r.best_id;document.getElementById('heading').textContent='数据符号 '+(symbol+1)+' · '+(region===0?'整个有效载荷频带':'频段 '+region);
+const badge=document.getElementById('badge');badge.textContent=ok?names[r.label_id]+'：候选':(status[r.status]||'未判定');badge.className='badge'+(ok?'':' bad');
+const after=document.getElementById('view').value==='hard',total=D.groups0[region].length,kept=D.groups0[region].filter(row=>D.decision_valid[row][symbol]).length;
+document.getElementById('decision_counts').textContent='当前区域 '+total+' 个资源：保留判决 '+kept+'，擦除 '+(total-kept)+'。保留比例不是正确率。';
+document.getElementById('scatter_title').textContent=after?'② 判决后：单位能量候选符号':'② 判决前：蓝点是实测，红圈是几何假设';
+document.getElementById('scatter_legend').innerHTML=after?'<span><i class="dot" style="background:#249a62"></i>保留的候选硬符号；数字表示同一点的符号数</span>':'<span><i class="dot" style="background:#287acb"></i>原接收机输出，不再次旋转</span><span><i class="dot" style="border:2px solid #d54b47;background:white"></i>拟合候选理想点</span>';
+const pilot=D.decision_summary;document.getElementById('pilot_ser').textContent=pilot.heldout_pilot_error_count+'/'+pilot.heldout_pilot_symbol_count+' 个已知符号判错，导频 SER '+(100*pilot.heldout_pilot_SER).toFixed(3)+'%。';
+document.getElementById('explanation').textContent=authorMethod?(after?'绿色点是作者方法的最近点硬判决，采用单位平均能量尺度。未知/复合星座列保留擦除。':(ok?'整列被作者方法识别为 '+short[r.label_id]+'；当前频段只放大观察，红圈使用接收机保存的增益，蓝点保持原样。':'接收机将此列保留为未知或复合星座，当前频段也不强行判决。')):(after?'绿色点是保留的条件硬符号，已去掉区域拟合增益和相位，采用候选几何的单位平均能量尺度。未保留的资源仍为擦除。':'这些实测点'+(ok?'更支持 '+short[r.label_id]+' 的几何形状，并通过额外样本核对。红圈包含记录的拟合参数，蓝点保持原样。':'没有满足固定的内部检查规则；最优假设为 '+(short[best]||'未知')+'。保留未知状态，可以检查各频段。'));
+document.getElementById('reading_help').textContent=after?'读法：同一理想点上的多个判决会重叠，数字是该位置的资源数。所有点整齐是映射的结果，不能证明判决正确。切回判决前查看实际误差。':'读法：每个蓝点是一个子载波在当前符号上的复数值。先看点是否围绕红圈成簇，再比较频段。红圈是待验证的几何假设，不是协议调制表确认。';
+const metricRows=authorMethod?[['当前区域点数',r.sample_count],['整列选择点数',r.cardinality],['候选最近点误差',fmt(Number.isFinite(r.decision_evm)?100*r.decision_evm:null,1)+'%（非真值 EVM）'],['载荷增益',fmt(r.gain)],['模型平均条件概率',fmt(r.mean_conditional_model_posterior)],['估计状态',ok?'整列论文方法分类':'未知或复合星座']]:[['实测点数',r.sample_count],['相对第二候选的差值',fmt(r.score_gap)],['最终检查差值',fmt(r.test_score_gap)],['候选最近点误差',fmt(Number.isFinite(r.decision_evm)?100*r.decision_evm:null,1)+'%（非真值 EVM）'],['拟合增益',fmt(r.gain)],['拟合相位',fmt(r.phase_deg,2)+'°'],['模型平均条件概率',fmt(r.mean_validation_posterior)],['估计状态',status[r.status]||r.status]];
+document.getElementById('metrics').innerHTML=metricRows.map(([k,v])=>'<dt>'+k+'</dt><dd>'+v+'</dd>').join('');
+document.getElementById('scores').innerHTML=authorMethod?[4,8,16,32].map((n,i)=>'<tr class="'+(n===r.cardinality?'active':'')+'"><td>'+n+'</td><td>'+fmt(r.cardinality_scores[i])+'</td></tr>').join(''):D.candidate_names.map((n,i)=>'<tr class="'+(i+1===best?'active':'')+'"><td>'+short[i+1]+'</td><td>'+fmt(r.scores_validation[i])+'</td><td>'+fmt(r.scores_test[i])+'</td></tr>').join('');
+document.getElementById('next').textContent=ok?'已经保存保留的候选硬符号和擦除标记。要输出业务比特，下一步必须核实位映射及比特/码块顺序。':(authorMethod?'此整列的调制未确定，保留擦除；各频段仅供观察，不另行填入判决。':'整列未判定时，部分频段仍可能保留条件判决；请逐频段检查。区域未知或点可靠性不足时保留擦除，不强行输出业务比特。');drawMap();drawScatter(r)}
+document.getElementById('symbol').oninput=e=>{symbol=Math.max(0,Math.min(299,Math.round(+e.target.value||1)-1));update()};document.getElementById('slider').oninput=e=>{symbol=+e.target.value-1;update()};select.onchange=e=>{region=+e.target.value;update()};
+document.getElementById('view').onchange=update;
+document.getElementById('map').onclick=e=>{const c=e.target,b=c.getBoundingClientRect(),left=138,right=20,top=8,bottom=28,x=e.clientX-b.left,y=e.clientY-b.top;if(x<left||x>b.width-right||y<top||y>b.height-bottom)return;symbol=Math.max(0,Math.min(299,Math.floor((x-left)/(b.width-left-right)*300)));region=Math.max(0,Math.min(4,Math.floor((y-top)/(b.height-top-bottom)*5)));update()};window.onresize=update;update();
+</script></html>

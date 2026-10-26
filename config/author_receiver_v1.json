@@ -1,0 +1,20 @@
+{
+  "version": "author-ml-v1",
+  "sources": ["N01:VI-A-D", "P08:V-B-F"],
+  "capture_fs_hz": 250000000,
+  "center_frequency_hz": 12075117197.1668,
+  "max_candidates": 32,
+  "kmeans_replicates": 20,
+  "smoothing_window": 21,
+  "smoothing_degree": 3,
+  "noise_variance_floor": 0.0001,
+  "ransac_delay_threshold_samples": 0.08,
+  "minimum_simple_symbols": 30,
+  "seed": 20261014,
+  "silhouette_distance": "euclidean",
+  "shared_sss_channel_min_correlation": 0.6,
+  "processing_sss_min_correlation": 0.6,
+  "workers": 0,
+  "batch_timeout_s": 3000,
+  "remarks": "Author algorithm; numerical smoothing/noise/search/RANSAC settings are engineering choices. Fixed pilot split is preserved. No reference labels or annotation TOAs enter receiver."
+}

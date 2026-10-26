@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "entry_point": "demo_receiver(cfg)",
+  "config": {"root":"absolute repository root", "run_dir":"absolute output directory", "input_path":"MAT public synthetic input or raw IQ binary", "data_type":"synthetic or real_iq"},
+  "synthetic_input": {"y":"complex column vector", "Fs":"capture sample rate Hz"},
+  "result_mat": "result struct containing frames struct array",
+  "frame_required": {"start_sample_capture":"1-based PSS start in capture", "grid_before":"1024x301 complex, ordinary FFT ordering, first column SSS", "grid_after":"1024x301 complex", "cfo_hz":"numeric Hz", "sfo_ppm":"numeric ppm or NaN", "pss_metric":"normalized correlation amplitude", "sss_metric":"normalized correlation amplitude", "pilot_fit_rows":"1-based rows used in estimation", "pilot_eval_rows":"disjoint heldout rows"},
+  "aliases": {"starts0":"0-based capture starts array", "grids":"1024x301xframes corrected grids", "Z":"alias for grids"},
+  "truth_policy":"receiver may not read separate private truth or sliceInfo; evaluator only",
+  "evaluate_entry_point":"evaluate_receiver(cfg), cfg.result_path optional, cfg.truth_path evaluator-private optional; writes run_dir/evaluation.json",
+  "pilot_fit_rows":[489,491,493,495,529,531,533,535],
+  "pilot_eval_rows":[490,492,494,496,530,532,534,536]
+}

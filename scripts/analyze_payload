@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+import argparse,json,pathlib,sys,subprocess
+sys.path.insert(0,str(pathlib.Path(__file__).resolve().parents[1]/'tools'))
+from payload import analyze_payload,analyze_all_payload
+from plots import latest_real_run_id
+parser=argparse.ArgumentParser(description='Analyze real OFDM payload geometry and open a human-readable constellation explorer')
+parser.add_argument('run_id',nargs='?',default=None)
+parser.add_argument('--frame',type=int,default=1)
+parser.add_argument('--open',action='store_true',help='Open the completed offline explorer in the VM browser')
+parser.add_argument('--all-frames',action='store_true',help='Analyze and decide every retained complete grid; preserve first-frame browser default')
+args=parser.parse_args()
+args.run_id=args.run_id or latest_real_run_id()
+try:
+    result=analyze_all_payload(args.run_id) if args.all_frames else analyze_payload(args.run_id,args.frame)
+    print(json.dumps(result,indent=2,ensure_ascii=False,allow_nan=False))
+    if args.open and result['status']=='passed':
+        subprocess.Popen(['xdg-open',str(pathlib.Path(__file__).resolve().parents[1]/result['explorer_path'])],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+    sys.exit(0 if result['status']=='passed' else 2)
+except Exception as error:
+    print(json.dumps({'status':'failed','error_type':type(error).__name__,'reason':str(error)}));sys.exit(1)

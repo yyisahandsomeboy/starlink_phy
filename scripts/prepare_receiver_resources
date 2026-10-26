@@ -1,0 +1,119 @@
+#!/usr/bin/env python3
+"""Restore fixed receiver inputs without committing IQ or reference MAT files.
+
+--from-workspace copies and verifies an existing original project, including
+the legacy fixtures required by its strict Python launchers. With no source
+workspace, only public author references and the 40.7 MB IQ ZIP are downloaded.
+Every target is hash-checked; an existing mismatched file is never overwritten.
+"""
+import argparse
+import hashlib
+import json
+import pathlib
+import shutil
+import tempfile
+import time
+import urllib.request
+import zipfile
+
+ROOT = pathlib.Path(__file__).resolve().parents[1]
+
+
+def sha(path):
+    digest = hashlib.sha256()
+    with path.open('rb') as stream:
+        for block in iter(lambda: stream.read(1024 * 1024), b''):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def target(name):
+    path = (ROOT / name).resolve()
+    if not path.is_relative_to(ROOT):
+        raise ValueError('Resource path escapes repository')
+    return path
+
+
+def verify(path, expected):
+    if not path.is_file() or sha(path) != expected:
+        raise ValueError('Missing or changed fixed resource: ' + str(path.relative_to(ROOT)))
+
+
+def install_stream(destination, expected, read_stream):
+    """Stage bytes first; failed downloads cannot replace a verified original."""
+    if destination.exists():
+        verify(destination, expected)
+        return
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(dir=destination.parent) as scratch:
+        staged = pathlib.Path(scratch) / 'resource'
+        with read_stream() as source, staged.open('wb') as output:
+            shutil.copyfileobj(source, output)
+        if sha(staged) != expected:
+            raise ValueError('Upstream/source SHA mismatch: ' + str(destination.relative_to(ROOT)))
+        staged.replace(destination)
+
+
+def download(url, destination, expected):
+    """Bounded retries; SHA catches HTML error pages and upstream changes."""
+    for attempt in range(3):
+        try:
+            install_stream(destination, expected, lambda: urllib.request.urlopen(url, timeout=60))
+            return
+        except (OSError, ValueError) as error:
+            if attempt == 2:
+                raise RuntimeError('Download failed for ' + str(destination.relative_to(ROOT))) from error
+            time.sleep(attempt + 1)
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--from-workspace', type=pathlib.Path)
+    parser.add_argument('--check-only', action='store_true')
+    args = parser.parse_args()
+    contract = json.loads((ROOT / 'provenance/resources.json').read_text())
+    required = {r['local_path']: r['sha256'] for r in contract['public_assets'] + contract['raw_files']}
+    frozen = contract['original_frozen_files']
+    if not args.check_only:
+        if args.from_workspace:
+            source_root = args.from_workspace.resolve()
+            for name, digest in {**frozen, **required}.items():
+                source = source_root / name
+                install_stream(target(name), digest, lambda source=source: source.open('rb'))
+        else:
+            for record in contract['public_assets']:
+                download(record['source_url'], target(record['local_path']), record['sha256'])
+            archive = contract['capture_archive']
+            zip_path = target(archive['destination'])
+            # An already verified BIN/metadata set does not require another ZIP.
+            if any(not target(r['local_path']).exists() for r in contract['raw_files']):
+                download(archive['url'], zip_path, archive['sha256'])
+                with zipfile.ZipFile(zip_path) as bundle:
+                    for record in contract['raw_files']:
+                        members = [n for n in bundle.namelist()
+                                   if pathlib.PurePosixPath(n).name == record['archive_basename']]
+                        if len(members) != 1:
+                            raise ValueError('Ambiguous/missing expected IQ ZIP member')
+                        install_stream(target(record['local_path']), record['sha256'],
+                                       lambda member=members[0]: bundle.open(member))
+    for name, digest in required.items():
+        verify(target(name), digest)
+    missing = []
+    for name, digest in frozen.items():
+        path = target(name)
+        if path.exists():
+            verify(path, digest)
+        else:
+            missing.append(name)
+    result = {'status': 'passed', 'version': contract['version'],
+              'public_resources_verified': len(required),
+              'strict_original_launcher_resources_complete': not missing,
+              'legacy_missing': missing,
+              'input_policy': 'sliceInfo is retained for evaluation, never acquisition',
+              'next': 'Native MATLAB entrypoints are ready. Original Python launchers require all legacy fixtures.'}
+    print(json.dumps(result, indent=2, ensure_ascii=False))
+    return 0
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())
