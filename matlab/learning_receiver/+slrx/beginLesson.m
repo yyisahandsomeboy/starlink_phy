@@ -59,7 +59,7 @@ function cfg = beginLesson(cfg)
     % 这些是显示/停止选项；恢复时允许变化，DSP参数仍必须完全一致。
     % 花括号创建cell，可放不同尺寸或类型的数据。
     ignored = {'run_dir', 'stop_after', 'resume', 'show_figures', 'make_plots', ...
-        'display_data_column'};  % 续接同一调用的其余参数或表达式。
+        'display_data_column', 'diagnostics_enabled'};  % 续接同一调用的其余参数或表达式。
 
     % 已有固定配置时走恢复核验；新运行会进入else记录初始身份。
     if exist(configFile, 'file')
@@ -67,8 +67,8 @@ function cfg = beginLesson(cfg)
         saved = load(configFile, 'frozenConfig', 'code');
 
         % assert检查括号内条件；若为false立即报错停止，不让错误输入继续传到下一步。
-        assert(isequaln(rmfield(cfg, ignored), rmfield(saved.frozenConfig, ...
-            ignored)), 'DSP参数已变化，请使用新学习目录，避免混合旧中间变量');  % 继续同一检查条件/失败时的说明。
+        assert(isequaln(rmfield(cfg, intersect(fieldnames(cfg), ignored)), ...
+            rmfield(saved.frozenConfig, intersect(fieldnames(saved.frozenConfig), ignored))), 'DSP参数已变化，请使用新学习目录，避免混合旧中间变量');  % 继续同一检查条件/失败时的说明。
 
         % assert检查括号内条件；若为false立即报错停止，不让错误输入继续传到下一步。
         assert(isequaln(code, saved.code), '学习代码已变化，请新建学习目录；旧MAT仍可直接读取');

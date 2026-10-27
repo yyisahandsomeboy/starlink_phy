@@ -91,7 +91,7 @@ function [value, gradient, hessian] = marginalNLL(theta, received, bins, ...
 
         % 已知导频不需枚举星座，直接使用已知参考的高斯负对数似然。
         extra = log(pi * pilotVariance) + abs(pilotAligned ...
-            - known.reference(:)) .^ 2. / pilotVariance;  % 续接同一调用的其余参数或表达式。
+            - known.reference(:)) .^ 2 ./ pilotVariance;  % 续接同一调用的其余参数或表达式。
     % 上面的if/elseif条件都不成立时，执行下面这一组缩进语句。
     else
         % 没有FIT导频时使用0行列向量，使后面的求和自然等于0。

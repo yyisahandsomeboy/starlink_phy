@@ -96,7 +96,7 @@ function estimate = fitSymbol(received, bins, constellation, variance, seed, ...
             accepted = false;
 
             % 从1、1/2、1/4依次缩小步长，寻找确实降低代价的更新；for后面的=给出本轮编号序列。
-            for scale = 2. ^ -(0:10)
+            for scale = 2 .^ (-(0:10))
                 % 当前参数加缩放后的建议改变量，得到一个待试探的新点。
                 proposal = theta + scale * change;
 

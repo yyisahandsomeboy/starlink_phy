@@ -86,5 +86,9 @@ function data = step(cfg, key, calculate, plotKind)
         slrx.drawStep(cfg, key, plotKind, data);
     % 结束这一组条件分支，之后接着执行同层的下一条语句。
     end
+
+    if ~isfield(cfg,'diagnostics_enabled') || cfg.diagnostics_enabled
+        slrx.diag.summarizeStep(cfg, key, data);
+    end
 % 结束这个函数，输出变量按函数声明返回给调用者。
 end

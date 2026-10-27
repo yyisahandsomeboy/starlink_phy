@@ -140,5 +140,8 @@ function cfg = defaultConfig(projectRoot)
 
     % 设置codex_baseline标记代码由Codex工程实现，不冒称DSH生成。
     cfg.owner = 'codex_baseline';
+
+    % 只增加小型步骤诊断摘要；不改变DSP参数或中间数组。
+    cfg.diagnostics_enabled = true;
 % 结束这个函数，输出变量按函数声明返回给调用者。
 end

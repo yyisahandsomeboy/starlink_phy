@@ -97,36 +97,12 @@ function drawStep(cfg, key, kind, data)
             store(fig, folder, [key '.png'], cfg);
         % kind等于3时执行本组绘图语句，其他case不会一起运行。
         case 3
-            % cell存放pss、sss两个字段名，下一层循环分别画两张相关峰图。
-            % 花括号创建cell，可放不同尺寸或类型的数据。
-            names = {'pss', 'sss'};
+            % 全局抽取轨迹与精细局部相关分开；都明确原文件/模型坐标。
+            fig = slrx.viz.plotGlobalSync(data, cfg, cfg.show_figures);
+            slrx.viz.saveFigure(fig, folder, [key '_global.png'], cfg.show_figures);
+            fig = slrx.viz.plotLocalSync(data, cfg, cfg.show_figures);
+            slrx.viz.saveFigure(fig, folder, [key '_local.png'], cfg.show_figures);
 
-            % 逐个处理当前列表中的元素，k是从1开始的整数索引；for后面的=给出本轮编号序列。
-            for k = 1:2
-                % 新建一个本学习步骤的图窗，返回图形对象供后面保存。
-                fig = makeFigure(visibility);
-
-                % 取选定帧的局部相关曲线结构，其中含相对采样偏移与PSS/SSS得分。
-                curve = data.selected.sync_local_curve;
-
-                % 画相对帧头偏移与对应相关值；.(字段名)按pss/sss名字动态选择结构字段。
-                % {编号}取得cell格子内部的数据，()则取得格子外壳。
-                plot(curve.lag_model_samples, curve.(names{k}), 'o-');
-
-                % 设置横轴名称和单位，避免把采样点、秒和FFT行号混在一起。
-                xlabel('相对检测起点 / 模型采样');
-
-                % 设置纵轴名称和单位，读图时先确认它表示幅度、相位还是频率。
-                ylabel('归一化相关幅度');
-
-                % 给当前图设置标题，明确阶段、列号和该图能说明的物理量。
-                title([upper(names{k}) '局部相关峰']);
-
-                % 调用本文件后面的保存函数，将当前图按步骤key保存到figures。
-                store(fig, folder, [key '_' names{k} '.png'], cfg);
-            % 结束循环体；还有下一个编号时回到for继续，否则往下执行。
-            end
-        % kind等于4时执行本组绘图语句，其他case不会一起运行。
         case 4
             % 新建一个本学习步骤的图窗，返回图形对象供后面保存。
             fig = makeFigure(visibility);
@@ -253,7 +229,8 @@ function drawStep(cfg, key, kind, data)
 
             % 剔除4个gutter和16条导频，展示该列1004个实际载荷点。
             % 单独的'对复数做共轭转置，与.'不同。
-            rows = setdiff((3:1022)', [489:496 529:536]');
+            refs = slrx.references(cfg);
+            rows = refs.payload_rows;
 
             % 按载荷行和选定列读取复数散点；实部画横轴，虚部画纵轴。
             z = data.values(rows, c);
