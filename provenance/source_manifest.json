@@ -1,6 +1,6 @@
 {
   "scope": "Codex real-IQ receiver and modular learning receiver; source-only publication",
-  "source_commit": "f081babab998962c9c82d1062f6d95c3984e93e7",
+  "source_commit": "a18359974079f701d6e4f87807da91e211041401",
   "algorithm_owner": "codex_baseline",
   "files": [
     {
@@ -121,201 +121,201 @@
     },
     {
       "path": "matlab/learning_receiver/+slrx/+alg/cardinality.m",
-      "source_sha256": "93a06249d589b78372f84377a0eb8d837725f4dcae2690c6460007f8b269f586",
-      "sha256": "93a06249d589b78372f84377a0eb8d837725f4dcae2690c6460007f8b269f586",
+      "source_sha256": "f3c1b2940088e455823ad70e60d5f18b8a891f9e57d1687f3ab3555f10bb248d",
+      "sha256": "f3c1b2940088e455823ad70e60d5f18b8a891f9e57d1687f3ab3555f10bb248d",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/+alg/detectSync.m",
-      "source_sha256": "49f3f6a532887bb0c8b5143993866b8625d5770e105059eb5f988e498dcdfc36",
-      "sha256": "49f3f6a532887bb0c8b5143993866b8625d5770e105059eb5f988e498dcdfc36",
+      "source_sha256": "14a5fcdf381131cf59a04b253d0085ffb595df808e11ebbe000e46cfc3ce9a2d",
+      "sha256": "14a5fcdf381131cf59a04b253d0085ffb595df808e11ebbe000e46cfc3ce9a2d",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/+alg/fitColumn.m",
-      "source_sha256": "8f1647ae44d349e79bb7804dfaa2a224d19fa7957aac127b51c5ae610aca1641",
-      "sha256": "8f1647ae44d349e79bb7804dfaa2a224d19fa7957aac127b51c5ae610aca1641",
+      "source_sha256": "1f442e333ddca783e1c5d8457ecfd1b0dd026d9a3d57d0f8e341f6da04f9d76d",
+      "sha256": "1f442e333ddca783e1c5d8457ecfd1b0dd026d9a3d57d0f8e341f6da04f9d76d",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/+alg/fitSymbol.m",
-      "source_sha256": "12a222dcb72444ac2b28fcec2b5f205c21f16aef48a7fa58ad041b4f3c3f53e0",
-      "sha256": "12a222dcb72444ac2b28fcec2b5f205c21f16aef48a7fa58ad041b4f3c3f53e0",
+      "source_sha256": "2f32460000e00ccbdd8a6127f57a301ccfeb5bd85d3f3f2ca765c13c6d6d41fc",
+      "sha256": "2f32460000e00ccbdd8a6127f57a301ccfeb5bd85d3f3f2ca765c13c6d6d41fc",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/+alg/interpolateSinc.m",
-      "source_sha256": "ac9007fbdb3fab047a18ef8e068700f0cb8707d09ae1fef1fcf7e37cbe46fa44",
-      "sha256": "ac9007fbdb3fab047a18ef8e068700f0cb8707d09ae1fef1fcf7e37cbe46fa44",
+      "source_sha256": "d3d6af552f74aac29276d285a5be13a0c879d200d32543beb20e9fe857e487f0",
+      "sha256": "d3d6af552f74aac29276d285a5be13a0c879d200d32543beb20e9fe857e487f0",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/+alg/marginalNLL.m",
-      "source_sha256": "1a356c4d4fda53d728ceeb40d1ec9919d910857e6f512231bcbf94ed15f7ea9b",
-      "sha256": "1a356c4d4fda53d728ceeb40d1ec9919d910857e6f512231bcbf94ed15f7ea9b",
+      "source_sha256": "4e76b57420866eaf48a0cf617c5a195bea7e8fd03183151f873c0e735840beda",
+      "sha256": "4e76b57420866eaf48a0cf617c5a195bea7e8fd03183151f873c0e735840beda",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/+alg/ransacLine.m",
-      "source_sha256": "a8861387cb0c79e0ea7e994938db1679aa1aaabdc232c10b18cc39a4a1e07c11",
-      "sha256": "a8861387cb0c79e0ea7e994938db1679aa1aaabdc232c10b18cc39a4a1e07c11",
+      "source_sha256": "48c92c2f58e803d1d47d71227550ce0572d24016cffe7f4d926b5ef0606fa1d2",
+      "sha256": "48c92c2f58e803d1d47d71227550ce0572d24016cffe7f4d926b5ef0606fa1d2",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/beginLesson.m",
-      "source_sha256": "029fcb6b9db55eaf0f826e8236faaf400a3d75f25c3f18b74bdd789629728dbe",
-      "sha256": "029fcb6b9db55eaf0f826e8236faaf400a3d75f25c3f18b74bdd789629728dbe",
+      "source_sha256": "916e1dc81b31c3922f10e7ca1f74969078f011bbaa32ea05c82367d0500440c3",
+      "sha256": "916e1dc81b31c3922f10e7ca1f74969078f011bbaa32ea05c82367d0500440c3",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/classifyColumns.m",
-      "source_sha256": "a44aa4587a501d4d2e1b2e12cc4b7eeb3b486beb8206432d3c0123059d21ed0b",
-      "sha256": "a44aa4587a501d4d2e1b2e12cc4b7eeb3b486beb8206432d3c0123059d21ed0b",
+      "source_sha256": "8aec86571ef9233911f3228fb1c14d23301843289901e77adedc32b76c5a2401",
+      "sha256": "8aec86571ef9233911f3228fb1c14d23301843289901e77adedc32b76c5a2401",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/decideSymbols.m",
-      "source_sha256": "e6bef89e50b6dc9861be2e734c5ed9b958c776ba622fe5a4fa218ccb51f9e37d",
-      "sha256": "e6bef89e50b6dc9861be2e734c5ed9b958c776ba622fe5a4fa218ccb51f9e37d",
+      "source_sha256": "31c1b64fda7014aa289122d1ac816fd255b3882dc2f2cce371d4799b5bb97bf0",
+      "sha256": "31c1b64fda7014aa289122d1ac816fd255b3882dc2f2cce371d4799b5bb97bf0",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/defaultConfig.m",
-      "source_sha256": "62c857178782dedfea04ea8b76d75ccb896eb24482bfd77c4a50026c4bee72c5",
-      "sha256": "62c857178782dedfea04ea8b76d75ccb896eb24482bfd77c4a50026c4bee72c5",
+      "source_sha256": "34b95b1bac62e2ab314aac1d03ffb5198a932e7fbce365cd932583b70cd5e681",
+      "sha256": "34b95b1bac62e2ab314aac1d03ffb5198a932e7fbce365cd932583b70cd5e681",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/drawStep.m",
-      "source_sha256": "ebe1bd0d306e5ea4bfca8d23982b2232cbb5a0c9f6e88c5f0d9631126f1f1a16",
-      "sha256": "ebe1bd0d306e5ea4bfca8d23982b2232cbb5a0c9f6e88c5f0d9631126f1f1a16",
+      "source_sha256": "e9de63b5a6e6a559e1011fc32d3d50722b97094122f96348c7cdae9285a84adb",
+      "sha256": "e9de63b5a6e6a559e1011fc32d3d50722b97094122f96348c7cdae9285a84adb",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/equalizeGrid.m",
-      "source_sha256": "7bd95fa869835060abe2ea74b922d06d49fcfee113e4d586344721c505a0c889",
-      "sha256": "7bd95fa869835060abe2ea74b922d06d49fcfee113e4d586344721c505a0c889",
+      "source_sha256": "1c24c5209e61a237452c39a900ffaec3c7dcd618151828fd51dbb237c5c9ed38",
+      "sha256": "1c24c5209e61a237452c39a900ffaec3c7dcd618151828fd51dbb237c5c9ed38",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/estimateChannel.m",
-      "source_sha256": "bd88ae29ef81342567883ec59a5bb10069244a064ab8242640012da3fce08075",
-      "sha256": "bd88ae29ef81342567883ec59a5bb10069244a064ab8242640012da3fce08075",
+      "source_sha256": "50b036f04226d7badd75211c25709d63f855180a3ff8b688a7132ddda996e313",
+      "sha256": "50b036f04226d7badd75211c25709d63f855180a3ff8b688a7132ddda996e313",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/extractFrame.m",
-      "source_sha256": "6461382d1616361e36d3bbd20a798d3d61b52259191bbc4d12fc1d3667913da1",
-      "sha256": "6461382d1616361e36d3bbd20a798d3d61b52259191bbc4d12fc1d3667913da1",
+      "source_sha256": "7fc4121ec55554964bac149615eff7ee6bebcaeff25ae203ccba4ac55e8af0e9",
+      "sha256": "7fc4121ec55554964bac149615eff7ee6bebcaeff25ae203ccba4ac55e8af0e9",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/fftGrid.m",
-      "source_sha256": "e338aaff9075d5ffa045b6ccde332f33708002a006d50a58e768b32f49abc982",
-      "sha256": "e338aaff9075d5ffa045b6ccde332f33708002a006d50a58e768b32f49abc982",
+      "source_sha256": "4376e000e2bec1d17b7f3e0fb81fb07b278b54773fd965052ce4bc729b32632c",
+      "sha256": "4376e000e2bec1d17b7f3e0fb81fb07b278b54773fd965052ce4bc729b32632c",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/findFrame.m",
-      "source_sha256": "fbd8742e4d67acb0f7eb16e8a21e34902da6465b3f150c80bf46683d9bef2905",
-      "sha256": "fbd8742e4d67acb0f7eb16e8a21e34902da6465b3f150c80bf46683d9bef2905",
+      "source_sha256": "3efc47c10b067f4092b5001647a565c93f59f2a94762b03a9540b6df9bc8c4d3",
+      "sha256": "3efc47c10b067f4092b5001647a565c93f59f2a94762b03a9540b6df9bc8c4d3",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/measureGuard.m",
-      "source_sha256": "6e9b487e50e3e526c7dc39643b135cd1cf049e0ac6d747d68d272d77d57769a6",
-      "sha256": "6e9b487e50e3e526c7dc39643b135cd1cf049e0ac6d747d68d272d77d57769a6",
+      "source_sha256": "bfdbb983b3a33112c906d022fdc3dd64d3d94af95edc096321a0458a30123aa2",
+      "sha256": "bfdbb983b3a33112c906d022fdc3dd64d3d94af95edc096321a0458a30123aa2",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/observePilots.m",
-      "source_sha256": "7f011283027d2d41f21667d6c2293ad13c781fb99ae32f3223d01caaab89f4a5",
-      "sha256": "7f011283027d2d41f21667d6c2293ad13c781fb99ae32f3223d01caaab89f4a5",
+      "source_sha256": "c707d31f4a0065f4c57fdd842def08e388efe222687715e4486833e54462c1fd",
+      "sha256": "c707d31f4a0065f4c57fdd842def08e388efe222687715e4486833e54462c1fd",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/readIQ.m",
-      "source_sha256": "7b20250d184a4e18505c258719a112d45cd6fea201b80e51f6a62c4f4f2be5d9",
-      "sha256": "7b20250d184a4e18505c258719a112d45cd6fea201b80e51f6a62c4f4f2be5d9",
+      "source_sha256": "e6be919d68b055602ecf004c8dca4fba85c1a246cf7e1266d48850e2b81a1bac",
+      "sha256": "e6be919d68b055602ecf004c8dca4fba85c1a246cf7e1266d48850e2b81a1bac",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/references.m",
-      "source_sha256": "10cd3eb44875f73151069316da952791f0219c3fcd9adae4a0c219440b7a8f7a",
-      "sha256": "10cd3eb44875f73151069316da952791f0219c3fcd9adae4a0c219440b7a8f7a",
+      "source_sha256": "d21f4eed367d4714111f40c0dfbcaa66de6b6b653dc8b2532da3e65d572a9d1a",
+      "sha256": "d21f4eed367d4714111f40c0dfbcaa66de6b6b653dc8b2532da3e65d572a9d1a",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/refineOffsets.m",
-      "source_sha256": "ede4f0b668459d2c6e017ba58e55b37636a184b3388fd51fdd98ccdc6d2425d7",
-      "sha256": "ede4f0b668459d2c6e017ba58e55b37636a184b3388fd51fdd98ccdc6d2425d7",
+      "source_sha256": "c4af06a66b41657aec15e231da0af5e3fde5ec49a1b28a15ebee995deb17e266",
+      "sha256": "c4af06a66b41657aec15e231da0af5e3fde5ec49a1b28a15ebee995deb17e266",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/removeCP.m",
-      "source_sha256": "9f32e0b881736002ac5d2a801e9bdafdbda316da91d15209b4ddfde00655f19f",
-      "sha256": "9f32e0b881736002ac5d2a801e9bdafdbda316da91d15209b4ddfde00655f19f",
+      "source_sha256": "3bafa8dd7b5d91d5bfdf9170382c492f4ac2e13898536c03f8cfa83d5233a993",
+      "sha256": "3bafa8dd7b5d91d5bfdf9170382c492f4ac2e13898536c03f8cfa83d5233a993",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/resampleCapture.m",
-      "source_sha256": "9682efabf52f7f83aa6e5b63a16e8a7bde35dcb21aa382642d910d1f27d826f8",
-      "sha256": "9682efabf52f7f83aa6e5b63a16e8a7bde35dcb21aa382642d910d1f27d826f8",
+      "source_sha256": "b7c4a9d9a851a7d95b98197f48cf470c2948ec65f7aae8a0c5361f7faeb62169",
+      "sha256": "b7c4a9d9a851a7d95b98197f48cf470c2948ec65f7aae8a0c5361f7faeb62169",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/runOne.m",
-      "source_sha256": "b643ba0a3238026a5d3c36327596ea2105b0ffe3fad0fc1f2f3feaa7999bd615",
-      "sha256": "b643ba0a3238026a5d3c36327596ea2105b0ffe3fad0fc1f2f3feaa7999bd615",
+      "source_sha256": "8274d0d45ee2ecc8544922a98e0f7d608ba6dfe582c5e7e1ac045948ef05a69d",
+      "sha256": "8274d0d45ee2ecc8544922a98e0f7d608ba6dfe582c5e7e1ac045948ef05a69d",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/sha256.m",
-      "source_sha256": "4731236f35d82d1216ddfa5040a1f09fc260f4b55b8a17c0b1d5399e3985462f",
-      "sha256": "4731236f35d82d1216ddfa5040a1f09fc260f4b55b8a17c0b1d5399e3985462f",
+      "source_sha256": "fb8c96cbe5dcdad48c727f6a9bb6bdc34885e5496644c7d277f5425c95bf0c2a",
+      "sha256": "fb8c96cbe5dcdad48c727f6a9bb6bdc34885e5496644c7d277f5425c95bf0c2a",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/step.m",
-      "source_sha256": "f6a9b65ecbdc5461b3340a122a9cf809297ddfad6fb9fee1273b736946f78954",
-      "sha256": "f6a9b65ecbdc5461b3340a122a9cf809297ddfad6fb9fee1273b736946f78954",
+      "source_sha256": "8ba1c74b98344ea50e1b5871dc39402b2c7aa5f3410f05fa4d5c9cb3eac75719",
+      "sha256": "8ba1c74b98344ea50e1b5871dc39402b2c7aa5f3410f05fa4d5c9cb3eac75719",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/trackFrame.m",
-      "source_sha256": "cdf70f6fc38d6c79a3d33332abca46ee7612880f0e7b88059070c04baf80baa5",
-      "sha256": "cdf70f6fc38d6c79a3d33332abca46ee7612880f0e7b88059070c04baf80baa5",
+      "source_sha256": "4730bed4368a5b5dd00fd34df97048f80fa7e8bb7b52b3361eca829399761c68",
+      "sha256": "4730bed4368a5b5dd00fd34df97048f80fa7e8bb7b52b3361eca829399761c68",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/+slrx/validateRun.m",
-      "source_sha256": "716364adec5491dbe94c7043ac379eefc09c761c5cddf9cc0cd0c4544581e3c1",
-      "sha256": "716364adec5491dbe94c7043ac379eefc09c761c5cddf9cc0cd0c4544581e3c1",
+      "source_sha256": "f44b4bc2a5d3fd1b317c66da6a8d880e953c9ae03ac63cc84fb248299dc0dc0b",
+      "sha256": "f44b4bc2a5d3fd1b317c66da6a8d880e953c9ae03ac63cc84fb248299dc0dc0b",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/README.zh-CN.md",
-      "source_sha256": "264c364d0767a2c9e9cc6819410c29edbc5293f3d29b836614a58a91b83e74c2",
-      "sha256": "43500b39d605f820f638477880baa4022cbfd2ebdc0f8b3b382adb0412f00385",
+      "source_sha256": "6d38d7ca7b482cc690e4a172ea916c46ed1492f210629d2fea788642ead94eab",
+      "sha256": "96a4288b22c2396fde2cc9891214184fd4cd49b412045ad5041b686df920065d",
       "source_unchanged": false,
-      "adaptation": "Documentation paths and source-only distribution notice"
+      "adaptation": "Portable documentation paths and source-only distribution notice"
     },
     {
       "path": "matlab/learning_receiver/RUN_MULTIPLE_FRAMES.m",
-      "source_sha256": "e4895e90c99298da823c5f6ab480e40ba560f742626dee2e2b27d9f4548caac2",
-      "sha256": "e4895e90c99298da823c5f6ab480e40ba560f742626dee2e2b27d9f4548caac2",
+      "source_sha256": "b20869f4601ee1e81cb8bd7c062f0f0478d3ad679301d5bb2b74879dc84392d6",
+      "sha256": "b20869f4601ee1e81cb8bd7c062f0f0478d3ad679301d5bb2b74879dc84392d6",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/START_HERE.m",
-      "source_sha256": "1170b0e3e6311209fa15211940eb404df0364dee18d52fed31c022d1005624dc",
-      "sha256": "1170b0e3e6311209fa15211940eb404df0364dee18d52fed31c022d1005624dc",
+      "source_sha256": "71b026916f11aab789023bee46995982d8cb601ab96e1707f8acd8992b58cd71",
+      "sha256": "71b026916f11aab789023bee46995982d8cb601ab96e1707f8acd8992b58cd71",
       "source_unchanged": true
     },
     {
       "path": "matlab/learning_receiver/tests/validate_learning_modules.m",
-      "source_sha256": "00eda45c3a6bd0ac1885a661b6c6301672b8f07cb5cad1c00f26ced80d469b50",
-      "sha256": "00eda45c3a6bd0ac1885a661b6c6301672b8f07cb5cad1c00f26ced80d469b50",
+      "source_sha256": "d44f4c918c1f936d996d1933afd8538d2c42fefedf206e4a2058add0a10fdd6c",
+      "sha256": "d44f4c918c1f936d996d1933afd8538d2c42fefedf206e4a2058add0a10fdd6c",
       "source_unchanged": true
     },
     {
@@ -494,5 +494,11 @@
     "MAT arrays, images and historical runs",
     "unrelated PN/header research",
     "uncommitted work from other sessions"
-  ]
+  ],
+  "latest_annotation_revision": {
+    "version": "learning-inline-comments-v1",
+    "scope": "Comments, whitespace and equivalent statement splitting only",
+    "file_count": 32,
+    "validation": "provenance/learning_comments_validation.json"
+  }
 }

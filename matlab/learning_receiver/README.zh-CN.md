@@ -6,6 +6,10 @@
 
 本目录是可独立执行的学习版，标记为 `codex_baseline`。算法从原接收机拆解、展开并进行同输入数值对照；不是把旧整机函数改个名字再调用。原接收机、旧实验和原始IQ保留。
 
+所有学习版MATLAB代码现在采用逐行中文注释：每行旁说明操作的目的，首次用到的矩阵索引、转置、逐元素运算、函数句柄等语法也就地解释。多条命令已拆成独立行，统一4空格缩进；长调用分行显示。不需要另读MATLAB语法教程才能开始。
+
+阅读时先打开 `START_HERE.m`，运行一节后，只打开该节注释标出的实际算法函数。例如第1节接着看 `+slrx/readIQ.m`，第2节看 `+slrx/resampleCapture.m`。保存、画图和底层优化文件可以等主线走到它们时再看，不需要一次读完所有文件。
+
 ## 1. 在 MATLAB 中按节运行
 
 打开 `START_HERE.m`。从第0节开始，把光标放进一节，按 **Ctrl+Enter** 执行当前节，再看 Workspace 和新图。不要第一次就按 Run 跑整份文件。
@@ -40,6 +44,8 @@ scripts/run_learning_receiver --resume codex-learning-实际时间 --through 14
 ```
 
 `--through 1` 表示只读IQ；`--through 6` 表示跑到FFT；默认是8。`--through 13` 包含第二轮13a～13h，14再作符号判决和保护间隔观察。已有MAT直接回读，后续步骤实际计算。改变算法、输入窗口或DSP参数，应建立新目录；不会把新算法输出混入旧缓存。
+
+本次逐行注释也会改变源码SHA。以前的运行仍可直接加载MAT查看；运行新版代码时应建立新学习目录，不要用旧目录恢复后混存新源码。
 
 输出目录含 `learning_report.html`，用浏览器直接打开；图片是同目录 `figures/` 中的本地PNG。`reports/learning_receiver_latest.json` 指向最近一次终端运行，`reports/learning_receiver_full.json` 指向最近一次完整运行。
 

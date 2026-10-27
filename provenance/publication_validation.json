@@ -62,5 +62,13 @@
   "credentials_committed": false,
   "raw_IQ_committed": false,
   "historical_results_committed": false,
-  "whitespace_check": "Passed excluding the original frozen evaluator, whose existing trailing space at line 34 is retained to preserve its SHA."
+  "whitespace_check": "Passed excluding the original frozen evaluator, whose existing trailing space at line 34 is retained to preserve its SHA.",
+  "latest_annotation_revision": {
+    "source_commit": "a18359974079f701d6e4f87807da91e211041401",
+    "validation": "provenance/learning_comments_validation.json",
+    "math_statements_unchanged": true,
+    "matlab_syntax_files_passed": 32,
+    "fresh_numeric_runtime_retest": "not_completed_full_matlab_startup_timed_out",
+    "historical_runtime_checks_above_not_relabelled": true
+  }
 }
