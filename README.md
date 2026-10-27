@@ -7,11 +7,12 @@
 | 学习接收顺序、逐步查看变量 | [学习版 README](matlab/learning_receiver/README.zh-CN.md) | 打开 `START_HERE.m`，按 Ctrl+Enter 逐节执行 |
 | 阅读完整多帧接收实现 | [完整接收机 README](matlab/baseline/README.zh-CN.md) | `author_receiver(cfg)` 或完整资源准备后的 `scripts/run_baseline real` |
 | 原理、公式、维度与保存位置 | [逐步学习手册](docs/LEARNING_RECEIVER.zh-CN.md) | 配合每节的 MATLAB 函数阅读 |
+| 按图学习同步、OFDM、均衡与星座 | [图像阅读索引](docs/VISUAL_DIAGNOSTICS_FIGURES.zh-CN.md) | 先了解每张图的作用，再运行诊断报告 |
 | 公开方法如何落实到原接收机 | [原算法与中间变量说明](docs/AUTHOR_RECEIVER.zh-CN.md) | 部分历史运行链接属于原工程，不随源码上传 |
 
 建议**先学一帧，再用同一套模块检查多帧**。一帧已有 PSS、SSS 与300个数据 OFDM 符号；多帧进一步检查帧间变化和稳定性。
 
-2026-10-27更新：学习版全部32个MATLAB文件已逐行中文注释，MATLAB语法直接在使用处解释，统一缩进并拆开多命令。全部文件通过MathWorks语法检查，运算语句与修改前一致；本轮完整MATLAB批处理启动超时，未宣称新增数值复跑通过。见[本轮检查记录](provenance/learning_comments_validation.json)。
+历史注释版本 `55082bc`：原有32个学习版MATLAB文件加入逐行中文解释，语法检查通过；该版本当时的批处理启动超时记录见[注释版本检查](provenance/learning_comments_validation.json)。后续教学诊断代码 `00eaa4b` 已在 Windows MATLAB R2024b 完成真实单帧复跑，22个步骤与修复后的参考逐值一致，详见[教学诊断验证报告](docs/VISUAL_DIAGNOSTICS_VALIDATION.zh-CN.md)。
 
 ## 1. 文件树
 
@@ -32,7 +33,7 @@ provenance/               代码来源、资源URL和固定SHA、出版核验记
 
 ## 2. 环境与输入
 
-- 原生 Linux MATLAB；实际验证版本为 **R2025a**。
+- 原完整接收机验证环境为原生 Linux MATLAB **R2025a**；教学诊断版本另在 Windows MATLAB **R2024b** 实际复跑，范围见验证报告。
 - 当前实现使用 Signal Processing Toolbox（`resample/pwelch/sgolayfilt`）与 Statistics and Machine Learning Toolbox（`kmeans`）；它们不是仓库自带依赖。
 - Python 3.10+；本文入口只使用Python标准库。Python负责文件/进程，DSP由MATLAB执行。
 - 输入 `data/raw/exemplar250-257/exemplar250-257.bin`：250Msps、小端交织int16 I/Q、50ms、12,500,000份复采样。两个int16才是一份复采样。
@@ -61,6 +62,8 @@ python3 scripts/prepare_receiver_resources
 **注意两种资源范围：**公开资源足够运行下面的原生MATLAB入口。原Python入口保留旧32文件完整性检查，其中还包括本工程早期生成的合成fixture；这些不是公开下载数据，也不是当前真实接收算法的输入。只下载公开资源时，脚本如实列出 `legacy_missing`，请使用MATLAB入口；若需要原Python入口，必须从原工程导入完整冻结资源。这里没有删除旧锁、修改门限或伪造fixture。
 
 ## 4. 先跑学习版
+
+新增教学诊断入口：接收后运行 `RUN_DIAGNOSTICS(lesson_cfg.run_dir, 'Symbols', 50)` 生成本地中文 HTML、15 类诊断图及资源追溯表；`BROWSE_DIAGNOSTICS(lesson_cfg.run_dir)` 打开 MATLAB 原生选择器。两轮分别比较同一符号的 FFT、均衡和跟踪，不额外修饰接收点。完整坐标、公式、每幅图的读法及运行示例见 [教学诊断手册](docs/VISUAL_DIAGNOSTICS.zh-CN.md)，本次实际复跑与旧测试见 [验证报告](docs/VISUAL_DIAGNOSTICS_VALIDATION.zh-CN.md)。
 
 在MATLAB中将当前目录切换到仓库根目录：
 
