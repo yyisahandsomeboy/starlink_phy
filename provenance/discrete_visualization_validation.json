@@ -1,0 +1,877 @@
+{
+  "date": "2026-10-28",
+  "baseline_commit": "9ab8723bf1803aa6b56d98b222bcbf9acae338e0",
+  "checker": "MathWorks standalone mlint.exe R2024b; no MATLAB session launched",
+  "deliberate_invalid_fixture_detected": true,
+  "files_checked": 69,
+  "records": [
+    {
+      "file": "matlab/learning_receiver/+slrx/+alg/cardinality.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+alg/detectSync.m",
+      "exit_code": 0,
+      "messages": "L 251 (C 17-24): AGROW: 变量的大小似乎在每个循环迭代都会更改。请考虑进行预分配以提升速度。\r\nL 319 (C 13-22): AGROW: 变量的大小似乎在每个循环迭代都会更改。请考虑进行预分配以提升速度。\r\n",
+      "ids": [
+        "AGROW",
+        "AGROW"
+      ]
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+alg/fitColumn.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+alg/fitSymbol.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+alg/interpolateSinc.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+alg/marginalNLL.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+alg/ransacLine.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/chartCatalog.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/constellationData.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/coordinates.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/exportDiagnostics.m",
+      "exit_code": 0,
+      "messages": "L 21 (C 1-2): ALIGN: 此关键字可能未与其在第 23 行上的匹配 END 对齐。\r\n",
+      "ids": [
+        "ALIGN"
+      ]
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/loadLesson.m",
+      "exit_code": 0,
+      "messages": "L 31 (C 54-64): MSNU: 此处之前隐藏了一条代码分析器消息，但该消息不再产生。\r\nL 33 (C 46-56): MSNU: 此处之前隐藏了一条代码分析器消息，但该消息不再产生。\r\n",
+      "ids": [
+        "MSNU",
+        "MSNU"
+      ]
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/pilotMetrics.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/sampleView.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/stepFigures.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/stepInfo.m",
+      "exit_code": 0,
+      "messages": "L 31 (C 64): CCAT1: { A{I} } 通常可以替换为速度快得多的 A(I) 或 A(I)'。\r\n",
+      "ids": [
+        "CCAT1"
+      ]
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/summarizeStep.m",
+      "exit_code": 0,
+      "messages": "L 23 (C 9-10): ALIGN: 此关键字可能未与其在第 30 行上的匹配 END 对齐。\r\n",
+      "ids": [
+        "ALIGN"
+      ]
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/syncSummary.m",
+      "exit_code": 0,
+      "messages": "L 18 (C 13-14): ALIGN: 此关键字可能未与其在第 20 行上的匹配 END 对齐。\r\n",
+      "ids": [
+        "ALIGN"
+      ]
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/tracePoint.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/writeJSON.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/writeReport.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/exploreRun.m",
+      "exit_code": 0,
+      "messages": "L 42 (C 9-11): ALIGN: 此关键字可能未与其在第 52 行上的匹配 END 对齐。\r\nL 55 (C 9-11): ALIGN: 此关键字可能未与其在第 59 行上的匹配 END 对齐。\r\n",
+      "ids": [
+        "ALIGN",
+        "ALIGN"
+      ]
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/newFigure.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotCapture.m",
+      "exit_code": 0,
+      "messages": "L 37 (C 1-2): ALIGN: 此关键字可能未与其在第 42 行上的匹配 END 对齐。\r\n",
+      "ids": [
+        "ALIGN"
+      ]
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotCardinality.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotCFO.m",
+      "exit_code": 0,
+      "messages": "L 12 (C 5-6): ALIGN: 此关键字可能未与其在第 24 行上的匹配 END 对齐。\r\nL 25 (C 30-40): MSNU: 此处之前隐藏了一条代码分析器消息，但该消息不再产生。\r\n",
+      "ids": [
+        "ALIGN",
+        "MSNU"
+      ]
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotChannel.m",
+      "exit_code": 0,
+      "messages": "L 18 (C 1-2): ALIGN: 此关键字可能未与其在第 27 行上的匹配 END 对齐。\r\n",
+      "ids": [
+        "ALIGN"
+      ]
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotConditionalModels.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotConstellationStages.m",
+      "exit_code": 0,
+      "messages": "L 7 (C 4-20): ISCL: 要提高性能，请使用 'isscalar' 而不是长度比较。\r\nL 37 (C 4-25): ISCL: 要提高性能，请使用 'isscalar' 而不是长度比较。\r\n",
+      "ids": [
+        "ISCL",
+        "ISCL"
+      ]
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotCP.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotFFTGrid.m",
+      "exit_code": 0,
+      "messages": "L 23 (C 64-74): MSNU: 此处之前隐藏了一条代码分析器消息，但该消息不再产生。\r\n",
+      "ids": [
+        "MSNU"
+      ]
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotFrameComparison.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotGlobalSync.m",
+      "exit_code": 0,
+      "messages": "L 58 (C 9-10): ALIGN: 此关键字可能未与其在第 63 行上的匹配 END 对齐。\r\n",
+      "ids": [
+        "ALIGN"
+      ]
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotGuard.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotLocalSync.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotOFDM.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotPilots.m",
+      "exit_code": 0,
+      "messages": "L 38 (C 5-6): ALIGN: 此关键字可能未与其在第 42 行上的匹配 END 对齐。\r\n",
+      "ids": [
+        "ALIGN"
+      ]
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotSampleWindow.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotSFO.m",
+      "exit_code": 0,
+      "messages": "L 20 (C 30-40): MSNU: 此处之前隐藏了一条代码分析器消息，但该消息不再产生。\r\nL 24 (C 1-2): ALIGN: 此关键字可能未与其在第 29 行上的匹配 END 对齐。\r\n",
+      "ids": [
+        "MSNU",
+        "ALIGN"
+      ]
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/saveFigure.m",
+      "exit_code": 0,
+      "messages": "L 6 (C 8): NOCOMMA: 不必要的额外逗号。\r\nL 9 (C 4-20): ISCL: 要提高性能，请使用 'isscalar' 而不是长度比较。\r\n",
+      "ids": [
+        "NOCOMMA",
+        "ISCL"
+      ]
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/beginLesson.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/classifyColumns.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/decideSymbols.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/defaultConfig.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/drawStep.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/equalizeGrid.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/estimateChannel.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/extractFrame.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/fftGrid.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/findFrame.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/measureGuard.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/observePilots.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/readIQ.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/references.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/refineOffsets.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/removeCP.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/resampleCapture.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/runOne.m",
+      "exit_code": 0,
+      "messages": "L 9 (C 5-14): NASGU: 赋给变量的值可能未使用。\r\n",
+      "ids": [
+        "NASGU"
+      ]
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/sha256.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/step.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/trackFrame.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/validateRun.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/BROWSE_DIAGNOSTICS.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/RUN_DIAGNOSTICS.m",
+      "exit_code": 0,
+      "messages": "L 27 (C 4-20): ISCL: 要提高性能，请使用 'isscalar' 而不是长度比较。\r\n",
+      "ids": [
+        "ISCL"
+      ]
+    },
+    {
+      "file": "matlab/learning_receiver/RUN_MULTIPLE_FRAMES.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/START_HERE.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/tests/test_discrete_visualization.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    },
+    {
+      "file": "matlab/learning_receiver/tests/test_visual_diagnostics.m",
+      "exit_code": 0,
+      "messages": "L 30 (C 37-93): ISCL: 要提高性能，请使用 'isscalar' 而不是长度比较。\r\nL 35 (C 5-6): ALIGN: 此关键字可能未与其在第 37 行上的匹配 END 对齐。\r\n",
+      "ids": [
+        "ISCL",
+        "ALIGN"
+      ]
+    },
+    {
+      "file": "matlab/learning_receiver/tests/validate_learning_modules.m",
+      "exit_code": 0,
+      "messages": "",
+      "ids": []
+    }
+  ],
+  "unchanged_existing_matlab_count": 79,
+  "unchanged_existing_matlab": [
+    {
+      "file": "matlab/baseline/author_receiver.m",
+      "sha256": "18d5854b4fbe49da5ff38780116adce7901f2c92ecebacfc6f5567ae54fdd520"
+    },
+    {
+      "file": "matlab/baseline/author_receiver_dsp.m",
+      "sha256": "3012733f7bc7ef1d0b9327d6d4c3f403f5bcbe55447a0e3b38d01be2febd8bfc"
+    },
+    {
+      "file": "matlab/baseline/author_sequences.m",
+      "sha256": "2778931a33eb1df85b220195fbab6773eafbdf3bd02da769a615fc460ef7a18b"
+    },
+    {
+      "file": "matlab/baseline/bandlimited_sample.m",
+      "sha256": "1176538487548cec760f211ae296c0a365d85421f5b76c3368f0ec7e4a34e49f"
+    },
+    {
+      "file": "matlab/baseline/baseline_manifest.m",
+      "sha256": "7546a3989d30ad4315de4cab6084325e68f50a37accba197b3c80cde0e1e819b"
+    },
+    {
+      "file": "matlab/baseline/frame_guard_metrics.m",
+      "sha256": "fc28f8cdd5f7531c4b3aa980739149ace52bd147e6e530fad9b7963830b47c70"
+    },
+    {
+      "file": "matlab/baseline/smoke.m",
+      "sha256": "7f680984b4f46f846fcd9bd13568a4ebb85d93a5b304773992e541f782d6c025"
+    },
+    {
+      "file": "matlab/baseline/test_author_receiver_dsp.m",
+      "sha256": "063f800f1e250246236ae094da982f89410bc119aadc8c32a85e7ad402a922f4"
+    },
+    {
+      "file": "matlab/baseline/test_frame_guard_metrics.m",
+      "sha256": "0dd4a9a8806e36c717c70703d7c4f69b5b6d85c19d8ad68372f8f59d359b0126"
+    },
+    {
+      "file": "matlab/evaluation/evaluate_receiver.m",
+      "sha256": "dcf34f613fe23097dcc607391c8c9cac1730ee33d5dcff5b73fb01d55107a23b"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+alg/cardinality.m",
+      "sha256": "f3c1b2940088e455823ad70e60d5f18b8a891f9e57d1687f3ab3555f10bb248d"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+alg/detectSync.m",
+      "sha256": "14a5fcdf381131cf59a04b253d0085ffb595df808e11ebbe000e46cfc3ce9a2d"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+alg/fitColumn.m",
+      "sha256": "1f442e333ddca783e1c5d8457ecfd1b0dd026d9a3d57d0f8e341f6da04f9d76d"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+alg/fitSymbol.m",
+      "sha256": "73a1c778bd2d0a043815513ff4d98dc0bfccde3cdfca5d47080a7cef3c97dcae"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+alg/interpolateSinc.m",
+      "sha256": "d3d6af552f74aac29276d285a5be13a0c879d200d32543beb20e9fe857e487f0"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+alg/marginalNLL.m",
+      "sha256": "64956dabbc7a3b624d096f82a74737b4ed22e3ff607b47465842d492ff115937"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+alg/ransacLine.m",
+      "sha256": "48c92c2f58e803d1d47d71227550ce0572d24016cffe7f4d926b5ef0606fa1d2"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/constellationData.m",
+      "sha256": "e4ccb5c29dc6173bb3b3c78e7910c74b09a4a579bf357e58808fb4483543433f"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/coordinates.m",
+      "sha256": "f0acf3173f52ac8144760be2260622fd42d9c950105e20834e0eca206a1a0a25"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/loadLesson.m",
+      "sha256": "a51da2dae0f6b36717a9bb577e0c6ca4e895a5bd51be372f52c0fdc8dccbf0f7"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/pilotMetrics.m",
+      "sha256": "1b0989513a351e0b87ac8610390c2984466bccba35c2fcb396510a8e8aa386b9"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/stepFigures.m",
+      "sha256": "ad82eb4590be1b13d239a03035b43dfeef914fd91003272bbe191f5454d0322f"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/stepInfo.m",
+      "sha256": "3ec439cee766b601a4682996c73077d7b176a4e3b1511de2a18e30157fd82b5e"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/summarizeStep.m",
+      "sha256": "d2d707c3304208f59867946a1185e4db98a4f197c6762837d95decad8a9a7dd1"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/syncSummary.m",
+      "sha256": "bd950abb1d2f620ab7e39c3f9e2ab266fd9625fb6338699243f76ccb6eaa878b"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/tracePoint.m",
+      "sha256": "d743e7ab3917c2308106efa5c7551907b9bea485a56b497381b5a85ed59dcd56"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/writeJSON.m",
+      "sha256": "c72a537c89614097289aba62de93d7b5b040702a2bee7c379aacd8e3fc35a805"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/writeReport.m",
+      "sha256": "d73119b8cb186e84ed92798a29028cd3948f6deeb7e63c68c8256e4112c44c39"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/exploreRun.m",
+      "sha256": "8858370a67442f33e8155b2c4419a1adeddcc5b0ff56e31e588c21b9aceb7354"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/newFigure.m",
+      "sha256": "42292cd9b345a7fcf56c98e9838b52483afbc7e834c1d9d33de481f7ad4b6586"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotCFO.m",
+      "sha256": "38d0307f45cc92f1556a29971cf641c0b708b274e4b9ec3512c4c240413c597c"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotChannel.m",
+      "sha256": "f83d7f97ae5470d2c2c6a10a7b4f0446b5f35809b019b4b6e3d7f673ad44194e"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotConditionalModels.m",
+      "sha256": "ee074a43a6d60c7946cf7082a6ba79981acf3fb767cfb75cd0cb86998b07ebbf"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotConstellationStages.m",
+      "sha256": "60b551b7e9fd962e839c70eb1b5850e8c1c33033df330af2d2714396972f1c9b"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotFFTGrid.m",
+      "sha256": "9bcfc6c0b10d95251dbd073e5cce27ccd92bd6be9163a471a02f2c29acc2a26a"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotFrameComparison.m",
+      "sha256": "b6fb6bfd54c719322191420caf452c5887044517927276e36d7c00e3cc6ab14f"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotGlobalSync.m",
+      "sha256": "c5e689411c28bed06a55ebeeeed971278d8c7b5b1975ba9a2f79e733edd4f19c"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotGuard.m",
+      "sha256": "d8897831bce9cb27e1ff48313b420fcf266b675f40064acc18616bb4e7bc1458"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotSFO.m",
+      "sha256": "3528ea9627dde6bb8f240999292716273b8c87503fbe856a58911c019726e7aa"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/saveFigure.m",
+      "sha256": "df73c969bb3fd96c0204b11742cde59d7ab154158639d3b12c6f7cd32630be64"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/beginLesson.m",
+      "sha256": "0c382d596635488f6008817712d486d3bfe1800fcdb85d21a2258de5d4141807"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/classifyColumns.m",
+      "sha256": "8aec86571ef9233911f3228fb1c14d23301843289901e77adedc32b76c5a2401"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/decideSymbols.m",
+      "sha256": "31c1b64fda7014aa289122d1ac816fd255b3882dc2f2cce371d4799b5bb97bf0"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/defaultConfig.m",
+      "sha256": "11fce83f758f5ee29cc97a069537f5633812e0f89c6fbe33b31c164e3668c17e"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/equalizeGrid.m",
+      "sha256": "1c24c5209e61a237452c39a900ffaec3c7dcd618151828fd51dbb237c5c9ed38"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/estimateChannel.m",
+      "sha256": "50b036f04226d7badd75211c25709d63f855180a3ff8b688a7132ddda996e313"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/extractFrame.m",
+      "sha256": "7fc4121ec55554964bac149615eff7ee6bebcaeff25ae203ccba4ac55e8af0e9"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/fftGrid.m",
+      "sha256": "4376e000e2bec1d17b7f3e0fb81fb07b278b54773fd965052ce4bc729b32632c"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/findFrame.m",
+      "sha256": "3efc47c10b067f4092b5001647a565c93f59f2a94762b03a9540b6df9bc8c4d3"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/measureGuard.m",
+      "sha256": "bfdbb983b3a33112c906d022fdc3dd64d3d94af95edc096321a0458a30123aa2"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/observePilots.m",
+      "sha256": "c707d31f4a0065f4c57fdd842def08e388efe222687715e4486833e54462c1fd"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/readIQ.m",
+      "sha256": "e6be919d68b055602ecf004c8dca4fba85c1a246cf7e1266d48850e2b81a1bac"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/references.m",
+      "sha256": "d21f4eed367d4714111f40c0dfbcaa66de6b6b653dc8b2532da3e65d572a9d1a"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/refineOffsets.m",
+      "sha256": "c4af06a66b41657aec15e231da0af5e3fde5ec49a1b28a15ebee995deb17e266"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/removeCP.m",
+      "sha256": "3bafa8dd7b5d91d5bfdf9170382c492f4ac2e13898536c03f8cfa83d5233a993"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/resampleCapture.m",
+      "sha256": "b7c4a9d9a851a7d95b98197f48cf470c2948ec65f7aae8a0c5361f7faeb62169"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/runOne.m",
+      "sha256": "8274d0d45ee2ecc8544922a98e0f7d608ba6dfe582c5e7e1ac045948ef05a69d"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/sha256.m",
+      "sha256": "fb8c96cbe5dcdad48c727f6a9bb6bdc34885e5496644c7d277f5425c95bf0c2a"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/step.m",
+      "sha256": "005bc96144dd146b311d66485fe138c26e2df34463552636df3db2c6c4938952"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/trackFrame.m",
+      "sha256": "4730bed4368a5b5dd00fd34df97048f80fa7e8bb7b52b3361eca829399761c68"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/validateRun.m",
+      "sha256": "f44b4bc2a5d3fd1b317c66da6a8d880e953c9ae03ac63cc84fb248299dc0dc0b"
+    },
+    {
+      "file": "matlab/learning_receiver/BROWSE_DIAGNOSTICS.m",
+      "sha256": "589b83ece4ed7d2d7a694af1fa3598d7e2db36b415d4a0139945d83ed20c64ac"
+    },
+    {
+      "file": "matlab/learning_receiver/RUN_DIAGNOSTICS.m",
+      "sha256": "6f034b769c5c936ac72b11894ecc6e16ae5172c872b65fb874b62644ba7613e3"
+    },
+    {
+      "file": "matlab/learning_receiver/RUN_MULTIPLE_FRAMES.m",
+      "sha256": "b20869f4601ee1e81cb8bd7c062f0f0478d3ad679301d5bb2b74879dc84392d6"
+    },
+    {
+      "file": "matlab/learning_receiver/START_HERE.m",
+      "sha256": "71b026916f11aab789023bee46995982d8cb601ab96e1707f8acd8992b58cd71"
+    },
+    {
+      "file": "matlab/learning_receiver/tests/test_visual_diagnostics.m",
+      "sha256": "d7b58f62ceb250b23553a3e92f242c8925c90bf7c1edb1442d862de3ab88bef5"
+    },
+    {
+      "file": "matlab/learning_receiver/tests/validate_learning_modules.m",
+      "sha256": "d44f4c918c1f936d996d1933afd8538d2c42fefedf206e4a2058add0a10fdd6c"
+    },
+    {
+      "file": "matlab/visualization/analyze_payload_regions.m",
+      "sha256": "9f6b6e30eb293587dc7d689dabc53179fbd19322623e56502a198216f382e75b"
+    },
+    {
+      "file": "matlab/visualization/export_author_payload.m",
+      "sha256": "a9acf81cbd5d28eda9c72364a77d9c4a147d4268f2d6dbc4a2049f28e941e236"
+    },
+    {
+      "file": "matlab/visualization/load_payload_frame.m",
+      "sha256": "a06b9b50c0a80e9631c7e2954df298ffa53c513e059c7fc6296f4ac15c95f128"
+    },
+    {
+      "file": "matlab/visualization/ofdm_view_data.m",
+      "sha256": "53ac314df468c20d682f5b63e5292bfbed0db5aca61b52da502dd186ead06ad8"
+    },
+    {
+      "file": "matlab/visualization/payload_hard_decision.m",
+      "sha256": "dd54d4364983df3aec431de56449c6b3270ad3a9cce80f4ef3dbd82c731b5418"
+    },
+    {
+      "file": "matlab/visualization/payload_models.m",
+      "sha256": "90c64513cc42a94013e1cd7b56c258455f12fcc24bccf83e230a8dc613af8cb1"
+    },
+    {
+      "file": "matlab/visualization/plot_ofdm_diagnostics.m",
+      "sha256": "a80d3a17aae1166e470ab59196b0f57835543c49a3c74929cc2940cbbcb44bfc"
+    },
+    {
+      "file": "matlab/visualization/plot_readable_diagnostics.m",
+      "sha256": "ddc7dc0cdd0a564a7bc021e2720ff713254a72d1cff7d2bcc84b1dfa48c20148"
+    },
+    {
+      "file": "matlab/visualization/test_author_payload_artifacts.m",
+      "sha256": "1c274d6d381fe6e370f293b9875d45dbda1ac0324ad7740d1c98f8da566bd412"
+    },
+    {
+      "file": "matlab/visualization/test_ofdm_view_data.m",
+      "sha256": "18ec8bb86554ceba1851f73aae66bf1bf5b549ade30442d075a875bed3ea40c5"
+    },
+    {
+      "file": "matlab/visualization/test_payload_artifacts.m",
+      "sha256": "bc9e5559ede93ee8aeb1aa21447ec1e9cea116e3b08a602c92ae316538e745f1"
+    },
+    {
+      "file": "matlab/visualization/test_payload_hard_decision.m",
+      "sha256": "d6c4909b11ae1979382258d242486a320c44dd06ef142218c6407099479ab607"
+    }
+  ],
+  "frozen_original_files_unchanged": 64,
+  "raw_bin_sha256": "c69e82022d45173cdcaf1a5fdc8a2b864e2d61e85ae819af54b16002044adae3",
+  "source_MAT_checkpoints_unchanged": 22,
+  "MATLAB_runtime_status": "deferred_by_user_after_memory_reserve_stop",
+  "rendering_status": "not_verified_this_revision",
+  "new_unit_test_status": "not_completed",
+  "numerical_runtime_regression_status": "not_run_this_revision",
+  "status": "static_checks_passed_runtime_deferred",
+  "syntax_errors_detected": false,
+  "observed_advisory_ids": [
+    "AGROW",
+    "ALIGN",
+    "CCAT1",
+    "ISCL",
+    "MSNU",
+    "NASGU",
+    "NOCOMMA"
+  ],
+  "runtime_not_replaced_by_static_check": true,
+  "initial_runtime_attempt": {
+    "host_total_bytes": 17024741376,
+    "initial_available_bytes": 2424180736,
+    "reserve_bytes": 1342177280,
+    "job_private_limit_bytes": 3221225472,
+    "sampling_interval_s": 0.25,
+    "status": "stopped_host_memory_reserve",
+    "samples": 92,
+    "peak_tree_private_bytes": 1792016384,
+    "peak_tree_working_set_bytes": 1783955456,
+    "peak_single_process_working_set_bytes": 1766199296,
+    "minimum_available_bytes": 1326718976,
+    "minimum_commit_headroom_bytes": 3625308160,
+    "maximum_host_load_percent": 92,
+    "current_stage": "startup",
+    "elapsed_s": 22.891,
+    "exit_code": 124,
+    "final_available_bytes": 1322078208
+  },
+  "user_decision": "Finish code and defer MATLAB runtime verification; no further MATLAB launch.",
+  "changed_teaching_source": [
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/chartCatalog.m",
+      "sha256": "41b0ede58b7422c63154444d2d976c02718b732d739112e3b4177f94dccf732d"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/exportDiagnostics.m",
+      "sha256": "5d6a01a3995d6d4ca7ea7734a8732c839c36ca7697b4368554ef5e5d2545467a"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+diag/sampleView.m",
+      "sha256": "f06eda52d6be32f3da03348ff4f27809197fa9972e5941bbbf618cb6cd239229"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotCapture.m",
+      "sha256": "af6939eb84e0b13aeb65037230c8c8226dc1165accb0c3002ca7a67eb55381c2"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotCardinality.m",
+      "sha256": "c750e65fe772ce88747934fe6bb56d00847e9c818ba38170dc5df13769aff29a"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotCP.m",
+      "sha256": "b5b73f80f7bd179dcb9a116f61385bf14e55e8b1a142de05d1be2751df94a85b"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotLocalSync.m",
+      "sha256": "178321314368d691aac2db33d7eac17a6e78124bbbb21c89af025fb385683cd2"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotOFDM.m",
+      "sha256": "c85efb4e439afd81d4f1d8ff6f5aaff4ffc9e68d4b38d0e19ef36f342e5e2d15"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotPilots.m",
+      "sha256": "10d551d1db36b54dd3f5091850239bf12a2b18a6f30f89c4a9d9ea38834f099f"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/+viz/plotSampleWindow.m",
+      "sha256": "e12c462afc037dbfddb82c0ad1d011bc10e3609fc21b5a7b10125a94d284bc5d"
+    },
+    {
+      "file": "matlab/learning_receiver/+slrx/drawStep.m",
+      "sha256": "aa321aa92cc51da2eaa4eadcfb5e62acc59a9c8ef831db65cbd51d6729d36dbc"
+    },
+    {
+      "file": "matlab/learning_receiver/tests/test_discrete_visualization.m",
+      "sha256": "4b032078db441d04ebca77c4041760b4d29d5c5a5c8d098a04eaab6136dacad0"
+    }
+  ]
+}

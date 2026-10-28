@@ -10,11 +10,11 @@ for pass=1:2
     ax=nexttile(layout);hold(ax,'on');found=false;
     for j=1:3
         k=(pass-1)*3+j;
-        if records(k).available,plot(ax,1:cfg.data_column_count,100*records(k).per_symbol_evm,'DisplayName',labels{k});found=true;end
+        if records(k).available,plot(ax,1:cfg.data_column_count,100*records(k).per_symbol_evm,'.','MarkerSize',5,'Tag','slrx-symbol-evm','DisplayName',labels{k});found=true;end
     end
     grid(ax,'on');xlabel(ax,'数据OFDM符号编号（网格列=编号+1）');ylabel(ax,'SSS约定下的留出导频EVM / %');
     if found,legend(ax,'Location','best');end
-    title(ax,sprintf('第%d轮内部比较；允许某些列变差，不据图强改算法',pass));
+    title(ax,sprintf('第%d轮逐符号观测：每点一个符号，不插值EVM',pass));
 end
 sgtitle(layout,'EVM=sqrt(sum|Z-P|^2/sum|P|^2)；EVAL不参与标定；未知业务BER/SER不能由EVM代替','FontSize',11);
 
@@ -48,12 +48,12 @@ for pass=1:2
         k=(pass-1)*3+j;
         if ~records(k).available,continue;end
         z=records(k).derotated;
-        plot(ax,1:cfg.data_column_count,angle(mean(z(positive,:),1))*180/pi,'DisplayName',[labels{k} ' 正频带']);
-        plot(ax,1:cfg.data_column_count,angle(mean(z(~positive,:),1))*180/pi,'--','DisplayName',[labels{k} ' 负频带']);found=true;
+        plot(ax,1:cfg.data_column_count,angle(mean(z(positive,:),1))*180/pi,'.','MarkerSize',5,'Tag','slrx-pilot-phase','DisplayName',[labels{k} ' 正频带']);
+        plot(ax,1:cfg.data_column_count,angle(mean(z(~positive,:),1))*180/pi,'x','MarkerSize',3,'Tag','slrx-pilot-phase','DisplayName',[labels{k} ' 负频带']);found=true;
     end
     grid(ax,'on');xlabel(ax,'数据OFDM符号编号');ylabel(ax,'已知导频平均残余相位 / 度（主值）');
     if found,legend(ax,'Location','best');end
-    title(ax,sprintf('第%d轮均衡/跟踪：正负频率分开观察',pass));
+    title(ax,sprintf('第%d轮均衡/跟踪：相位用散点，不跨±180°连线',pass));
 end
 sgtitle(layout,'留出参考验证与FIT初值分开；图中是实际误差，不能宣称商业位映射或CRC已通过','FontSize',11);
 end

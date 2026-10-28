@@ -123,7 +123,7 @@ fprintf('DIAGNOSTICS_CREATED %s\nPNG=%d；原BIN读取次数=%d；已加载检�
         if item.available
             switch key
                 case 'capture'
-                    item.current_fact=sprintf('实际输入RMS=%.8g；截幅比例=%.8g；本页未重读BIN。',context.capture.rms,context.capture.clipped_fraction);
+                    item.current_fact=sprintf('实际输入RMS=%.8g；截幅比例=%.8g；局部%d点，原/模型采样间隔 %.6g / %.6g ns；本页未重读BIN。',context.capture.rms,context.capture.clipped_fraction,numel(details.capture.sample_view.raw_indices),details.capture.sample_view.raw_spacing_ns,details.capture.sample_view.model_spacing_ns);
                 case {'global_sync','local_sync'}
                     s=sync.selected;
                     item.current_fact=sprintf('选中%s；raw=%.12g；model=%.12g；%.9fms；PSS=%.6f；SSS=%.6f。',s.candidate_id,s.raw_sample,s.model_sample,s.time_ms,s.pss_score,s.sss_score);

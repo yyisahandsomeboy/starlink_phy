@@ -31,31 +31,8 @@ function drawStep(cfg, key, kind, data)
     switch kind
         % kind等于1时执行本组绘图语句，其他case不会一起运行。
         case 1
-            % 新建一个本学习步骤的图窗，返回图形对象供后面保存。
-            fig = makeFigure(visibility);
-
-            % 只显示输入最前5000点，避免一次绘出百万个点难以阅读。
-            n = min(5000, numel(data.iq));
-
-            % plot画横纵坐标曲线；星座图中横轴取实部I、纵轴取虚部Q。
-            % 冒号给出索引序列；单独:取整维全部位置。
-            % 行尾...表示本条语句未结束，下一行仍属于这次计算/调用。
-            plot((0:n - 1) / data.fs_hz * 1e6, real(data.iq(1:n)), ...
-                (0:n - 1) / data.fs_hz * 1e6, imag(data.iq(1:n)));  % 续接同一调用的其余参数或表达式。
-
-            % 设置横轴名称和单位，避免把采样点、秒和FFT行号混在一起。
-            xlabel('窗口内时间 / us');
-
-            % 设置纵轴名称和单位，读图时先确认它表示幅度、相位还是频率。
-            ylabel('归一化幅度');
-
-            % 添加曲线/散点图例，文字顺序与先前plot调用的绘图顺序一致。
-            legend('I', 'Q');
-
-            % 给当前图设置标题，明确阶段、列号和该图能说明的物理量。
-            title('输入IQ短窗口');
-
-            % 调用本文件后面的保存函数，将当前图按步骤key保存到figures。
+            % 概览和32点离散I/Q局部使用同一批样本，不改原数值。
+            fig = slrx.viz.plotSampleWindow(data.iq, data.fs_hz, '输入IQ采样', cfg.show_figures);
             store(fig, folder, [key '_iq.png'], cfg);
 
             % 新建一个本学习步骤的图窗，返回图形对象供后面保存。
@@ -77,23 +54,8 @@ function drawStep(cfg, key, kind, data)
             store(fig, folder, [key '_psd.png'], cfg);
         % kind等于2时执行本组绘图语句，其他case不会一起运行。
         case 2
-            % 新建一个本学习步骤的图窗，返回图形对象供后面保存。
-            fig = makeFigure(visibility);
-
-            % plot画横纵坐标曲线；星座图中横轴取实部I、纵轴取虚部Q。
-            % 索引里的end指这一维最后的位置，不是结束if/for。
-            plot(real(data.iq(1:min(5000, end))));
-
-            % 设置横轴名称和单位，避免把采样点、秒和FFT行号混在一起。
-            xlabel('240Msps窗口内采样点');
-
-            % 设置纵轴名称和单位，读图时先确认它表示幅度、相位还是频率。
-            ylabel('I分量');
-
-            % 给当前图设置标题，明确阶段、列号和该图能说明的物理量。
-            title('名义重采样后的时域信号');
-
-            % 调用本文件后面的保存函数，将当前图按步骤key保存到figures。
+            % 已保存重采样流：Fs取真实字段，局部显示离散采样。
+            fig = slrx.viz.plotSampleWindow(data.iq, data.fs_hz, '名义重采样后的时域信号', cfg.show_figures);
             store(fig, folder, [key '.png'], cfg);
         % kind等于3时执行本组绘图语句，其他case不会一起运行。
         case 3
@@ -139,7 +101,7 @@ function drawStep(cfg, key, kind, data)
             fig = makeFigure(visibility);
 
             % 横轴是普通OFDM列号，纵轴是CP与尾部的归一化相关幅度。
-            plot(1:size(data.without_cp, 2), abs(data.cp_correlation));
+            plot(1:size(data.without_cp, 2), abs(data.cp_correlation), '.', 'MarkerSize', 6);
 
             % 设置横轴名称和单位，避免把采样点、秒和FFT行号混在一起。
             xlabel('网格列，1为SSS');
@@ -258,7 +220,7 @@ function drawStep(cfg, key, kind, data)
             fig = makeFigure(visibility);
 
             % plot画横纵坐标曲线；星座图中横轴取实部I、纵轴取虚部Q。
-            plot(data.raw_phase_rad);
+            plot(data.raw_phase_rad, '.', 'MarkerSize', 6);
 
             % hold on保留当前图已有曲线，让后面的plot叠加用于前后对照。
             hold on;
@@ -282,31 +244,8 @@ function drawStep(cfg, key, kind, data)
             store(fig, folder, [key '.png'], cfg);
         % kind等于10时执行本组绘图语句，其他case不会一起运行。
         case 10
-            % 新建一个本学习步骤的图窗，返回图形对象供后面保存。
-            fig = makeFigure(visibility);
-
-            % imagesc用颜色表达矩阵数值；行列坐标必须与对应数据顺序一致。
-            imagesc(1:300, 1:4, data.scores);
-
-            % 设定纵轴刻度的位置；此处候选K占据矩阵的第1到4行。
-            yticks(1:4);
-
-            % 把第1到4行显示成实际候选K=4/8/16/32，避免读错纵轴。
-            yticklabels({'4', '8', '16', '32'});
-
-            % 添加颜色与数值的对应刻度；颜色本身不能代替误差指标。
-            colorbar;
-
-            % 设置横轴名称和单位，避免把采样点、秒和FFT行号混在一起。
-            xlabel('数据OFDM列');
-
-            % 设置纵轴名称和单位，读图时先确认它表示幅度、相位还是频率。
-            ylabel('候选点数K');
-
-            % 给当前图设置标题，明确阶段、列号和该图能说明的物理量。
-            title('MSS轮廓得分：点数还不等于位映射');
-
-            % 调用本文件后面的保存函数，将当前图按步骤key保存到figures。
+            % 离散候选的柱形得分与逐符号分类台阶；不连接候选K。
+            fig = slrx.viz.plotCardinality(data, cfg);
             store(fig, folder, [key '.png'], cfg);
         % kind等于11时执行本组绘图语句，其他case不会一起运行。
         case 11

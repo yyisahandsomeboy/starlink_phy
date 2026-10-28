@@ -63,6 +63,8 @@ python3 scripts/prepare_receiver_resources
 
 ## 4. 先跑学习版
 
+**2026-10-28离散绘图更新：代码与静态检查已完成；MATLAB运行验证按用户选择暂缓。** 采样点、CP和局部FFT改用茎状图，逐符号观测用散点，保留概览和拟合线。详见[本轮实现与待验证记录](docs/DISCRETE_VISUALIZATION_VALIDATION.zh-CN.md)。
+
 新增教学诊断入口：接收后运行 `RUN_DIAGNOSTICS(lesson_cfg.run_dir, 'Symbols', 50)` 生成本地中文 HTML、15 类诊断图及资源追溯表；`BROWSE_DIAGNOSTICS(lesson_cfg.run_dir)` 打开 MATLAB 原生选择器。两轮分别比较同一符号的 FFT、均衡和跟踪，不额外修饰接收点。完整坐标、公式、每幅图的读法及运行示例见 [教学诊断手册](docs/VISUAL_DIAGNOSTICS.zh-CN.md)，本次实际复跑与旧测试见 [验证报告](docs/VISUAL_DIAGNOSTICS_VALIDATION.zh-CN.md)。
 
 在MATLAB中将当前目录切换到仓库根目录：
