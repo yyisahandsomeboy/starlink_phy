@@ -1,5 +1,5 @@
 % 定义step函数：圆括号内是输入，等号左边是返回变量；函数内部变量有独立作用域。
-function data = step(cfg, key, calculate, plotKind)
+function data = step(cfg, key, calculate, plotKind, plotContext)
     %STEP 学习流程的公共保存/恢复工具；数学处理在传入的具名函数里。
     % 示例：capture=slrx.step(cfg,'01_capture',@()slrx.readIQ(cfg),1)。
     % 第一次实际执行calculate，保存data到同名MAT；以后resume直接回读。
@@ -9,6 +9,7 @@ function data = step(cfg, key, calculate, plotKind)
     % 用运行目录和步骤key构造本步MAT文件路径。
     % 单引号里的文字是字符数据，不是同名变量。
     % =先计算右边，再把结果放进左边变量；行末;不打印大数组。
+    if nargin<5,plotContext=struct();end
     matFile = fullfile(cfg.run_dir, [key '.mat']);
 
     % 只有允许恢复且已有MAT时才回读，否则下面会实际计算本步。
@@ -83,7 +84,7 @@ function data = step(cfg, key, calculate, plotKind)
     % 只有配置要求画图才调用展示函数，关闭画图不改变数值。
     if cfg.make_plots
         % 将已算出的data绘图并保存；它不回头改IQ、网格或估计参数。
-        slrx.drawStep(cfg, key, plotKind, data);
+        slrx.drawStep(cfg, key, plotKind, data, plotContext);
     % 结束这一组条件分支，之后接着执行同层的下一条语句。
     end
 

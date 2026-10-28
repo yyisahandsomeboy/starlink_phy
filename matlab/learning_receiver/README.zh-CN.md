@@ -12,9 +12,9 @@
 
 ## 1. 在 MATLAB 中按节运行
 
-**2026-10-28离散绘图更新：代码与静态检查已完成；MATLAB运行验证按用户选择暂缓。** 采样点、CP和局部FFT改用茎状图，逐符号观测用散点，保留概览和拟合线。详见[本轮实现与待验证记录](../../docs/DISCRETE_VISUALIZATION_VALIDATION.zh-CN.md)。
+**2026-10-28观测量重构：CFO改为复数旋转、实际时间轴与分结构参考诊断；默认主线22张、独立报告17张。** 采样点、CP和局部FFT改用茎状图，逐符号观测用散点，保留概览和拟合线。旧版暂缓记录保留；现行测试范围与结果见[本轮验证](../../docs/OBSERVABILITY_VALIDATION.zh-CN.md)，读图原理见[CFO教学](../../docs/CFO_TEACHING.zh-CN.md)。
 
-新增教学诊断入口：接收后运行 `RUN_DIAGNOSTICS(lesson_cfg.run_dir, 'Symbols', 50)` 生成本地中文 HTML、15 类诊断图及资源追溯表；`BROWSE_DIAGNOSTICS(lesson_cfg.run_dir)` 打开 MATLAB 原生选择器。两轮分别比较同一符号的 FFT、均衡和跟踪，不额外修饰接收点。完整坐标、公式、每幅图的读法及运行示例见 [教学诊断手册](../../docs/VISUAL_DIAGNOSTICS.zh-CN.md)，本次实际复跑与旧测试见 [验证报告](../../docs/VISUAL_DIAGNOSTICS_VALIDATION.zh-CN.md)。
+新增教学诊断入口：接收后运行 `RUN_DIAGNOSTICS(lesson_cfg.run_dir, 'Symbols', 50)` 生成本地中文HTML、17类诊断图及资源追溯表；`BROWSE_DIAGNOSTICS(lesson_cfg.run_dir)` 打开 MATLAB 原生选择器。两轮分别比较同一符号的 FFT、均衡和跟踪，不额外修饰接收点。完整坐标、公式、每幅图的读法及运行示例见 [教学诊断手册](../../docs/VISUAL_DIAGNOSTICS.zh-CN.md)，本次实际复跑与旧测试见 [验证报告](../../docs/VISUAL_DIAGNOSTICS_VALIDATION.zh-CN.md)。
 
 打开 `START_HERE.m`。从第0节开始，把光标放进一节，按 **Ctrl+Enter** 执行当前节，再看 Workspace 和新图。不要第一次就按 Run 跑整份文件。
 

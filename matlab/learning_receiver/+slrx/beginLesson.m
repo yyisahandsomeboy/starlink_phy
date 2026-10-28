@@ -59,7 +59,7 @@ function cfg = beginLesson(cfg)
     % 这些是显示/停止选项；恢复时允许变化，DSP参数仍必须完全一致。
     % 花括号创建cell，可放不同尺寸或类型的数据。
     ignored = {'run_dir', 'stop_after', 'resume', 'show_figures', 'make_plots', ...
-        'display_data_column', 'diagnostics_enabled'};  % 续接同一调用的其余参数或表达式。
+        'display_data_column', 'diagnostics_enabled', 'debug_plots'};  % 续接同一调用的其余参数或表达式。
 
     % 已有固定配置时走恢复核验；新运行会进入else记录初始身份。
     if exist(configFile, 'file')

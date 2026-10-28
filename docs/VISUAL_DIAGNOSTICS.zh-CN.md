@@ -2,7 +2,17 @@
 
 这里解释的是接收机实际保存的复数组和算法估计。它不提供商业 MCS、业务位映射、扰码、FEC、CRC 或真实业务 BER/SER 的证明。代码身份为 `codex_baseline`。
 
-## 2026-10-28：离散教学视图
+## 2026-10-28：CFO与全流程观测量重构
+
+现行主线默认22张图片（旧版27张），完整独立诊断17张（旧版15张）。默认删除密集输入与CFO实部叠加；重采样采用采样网格/点数/PSD/FIR/DC诊断，ML和信道视图合并并补充原有残差。旧密集图仅显式debug生成。主线与报告复用同一批绘图和诊断函数。
+
+- [CFO公式、参考分块、证据边界与运行方法](CFO_TEACHING.zh-CN.md)
+- [全部主线分发和绘图函数逐图审计](OBSERVABILITY_AUDIT.zh-CN.md)
+- [本轮实际测试、原始IQ回归与图片验证](OBSERVABILITY_VALIDATION.zh-CN.md)
+
+下面的离散视图段落保留上一版本历史范围；当前数量、默认/调试策略以本节和最新图像索引为准。
+
+## 2026-10-28：离散教学视图（历史版本651e339）
 
 新增代码保留整体概览，在局部明确显示采样点、FFT频点和符号编号：
 
@@ -16,7 +26,7 @@
 
 这些是显示方式调整，未量化、旋转或重新估计接收样本。星座仍为散点；FFT网格与误差仍为热力图；PSD、信道、SFO模型趋势保留曲线。主线27张与完整单帧诊断15张的文件数量保持不变，局部细节增加在同一个图文件内。
 
-**验证状态：本轮MATLAB运行因主机内存保护中止，用户选择暂缓运行验证；当前新增视图尚未完成MATLAB绘图与数值回归。静态检查与后续运行方式见[本轮记录](DISCRETE_VISUALIZATION_VALIDATION.zh-CN.md)。2026-10-27的已通过记录属于上一版本。**
+**历史验证状态：651e339当时因主机内存保护而暂缓运行。随后本次CFO任务重新要求实际验证，已执行新的验收流程；最新结果见[观测量重构验证](OBSERVABILITY_VALIDATION.zh-CN.md)。原始暂缓记录保留在[离散视图记录](DISCRETE_VISUALIZATION_VALIDATION.zh-CN.md)。**
 
 ## 1. 最短运行流程
 
@@ -35,7 +45,7 @@ addpath('matlab/learning_receiver')
 r = RUN_DIAGNOSTICS(lesson_cfg.run_dir, 'Symbols', 50);
 ```
 
-终端会给出 `index.html` 的完整路径，直接双击该文件即可。默认不弹出 15 个图形窗口；HTML 使用本地 PNG，无需服务器或网络。已有旧版学习 MAT 也可以传入目录重画，不必重新接收。每次使用新输出目录，避免覆盖旧报告。
+终端会给出 `index.html` 的完整路径，直接双击该文件即可。默认不弹出17个图形窗口；HTML 使用本地 PNG，无需服务器或网络。已有旧版学习 MAT 也可以传入目录重画，不必重新接收。每次使用新输出目录，避免覆盖旧报告。
 
 ```matlab
 % 连续多个符号、正频率载荷、限制观察频段
@@ -89,13 +99,14 @@ FFT 数据保持 MATLAB 原始未移位行序。对偶数 N=1024，原行 1 对�
 
 ## 3. 推荐看图顺序与输出文件
 
-快速查看27张主线图、15张诊断图及2张多帧图各自的作用，见[图像阅读索引](VISUAL_DIAGNOSTICS_FIGURES.zh-CN.md)。图像在本机运行后生成，仓库中的文档通过源码链接解释它们。
+快速查看现行22张主线图、17张诊断图及2张多帧图各自的作用，见[图像阅读索引](VISUAL_DIAGNOSTICS_FIGURES.zh-CN.md)。图像在本机运行后生成，仓库中的文档通过源码链接解释它们。
 
 报告目录包含 `index.html`、`图像索引.md`、`diagnostics_summary.json`、`diagnostics_data.mat`、`sync_candidates.csv`（有同步结果时）、`point_resources.csv` 和 `figures/`。
 
 | 顺序 | 图片 | 核心问题 | 保存数据 |
 |---|---|---|---|
 | 1 | 00_capture | 读到了什么、选中帧在哪里、I/Q 表示什么 | capture、sync |
+| 1a | 00b_resampling | 250→240 MSps如何改变采样网格、FIR与DC | capture、sampled |
 | 2 | 01_sync_global / 02_sync_local | 在全窗口哪里找到帧，局部零点在哪里 | sync |
 | 3 | 05_cfo / 06_sfo | 相位旋转和采样时间刻度怎样变化 | time1/2、offsets、track1/2 |
 | 4 | 07_ofdm_symbol / 08_cp_copy | 1056=32+1024、CP 与尾部是什么关系 | time1/2、ofdm1/2 |
@@ -103,20 +114,21 @@ FFT 数据保持 MATLAB 原始未移位行序。对偶数 N=1024，原行 1 对�
 | 6 | 10_channel | H 怎样改变复数点，为什么做 Y/H | channel1/2、fft1/2、eq1/2 |
 | 7 | 03_constellation_stages | 同一符号在每一轮的三个阶段发生了什么 | fft/eq/track 两轮 |
 | 8 | 11_pilot_evm / 12_pilot_cloud / 13_pilot_errors | 已知留出资源的误差改善多少、坏在哪里 | refs.eval_rows、六阶段网格 |
+| 8a | 11b_tracking | 原ML拟合是否掩盖异常，残差和内点如何分布 | track1/2、EVAL |
 | 9 | 04_conditional_models | 观测与当前几何假设是否相容 | track1/2 的几何与增益 |
 | 10 | 14_guard | 模型预测的帧末区间有什么实际能量 | guard |
 
-全局与局部同步图应对照看；星座图六面板内部按行看（三阶段构成一轮）；EVM、导频点云和误差图一起看。15 个文件不等于 15 幅星座图，也不意味着应该把所有图同时弹出。
+全局与局部同步图应对照看；星座图六面板内部按行看（三阶段构成一轮）；EVM、导频点云和误差图一起看。17 个文件不等于 17 幅星座图，也不意味着应该把所有图同时弹出。
 
 ## 4. 输入 IQ、同步与采样定位
 
 ### 00_capture：输入 IQ 与频谱
 
-- 源码：`+viz/plotCapture.m`；输入已保存 `capture.iq/fs_hz/rms/clipped_fraction`、PSD 和同步元数据。
+- 源码：`+viz/plotCapture.m`；输入已保存 `capture.iq/fs_hz/rms/dc/clipped_fraction`、PSD和可用同步元数据。默认显示分箱功率、PSD、32点IQ与统计量，密集波形/原始散点移入debug。
 - 数学：`z[n]=I[n]+jQ[n]`，分段平均 `|z|²`，复用已保存 PSD。局部波形围绕实际选中帧头，不固定画文件开头。
 - 坐标：文件 ms → 平均功率；基带 MHz → PSD；概览文件 ms → I/Q；局部茎状图以同一原文件锚点的ns为横轴；散点横I纵Q。幅度均为接收机归一化单位。
 - 正常/异常：可检查饱和、全零段、DC、能量区间；OFDM 时域散点像连续点云通常并不异常。
-- 能证明输入形状和观测能量。标题固定为**“原始时域IQ散点图（非子载波调制星座）”**，不能据此判断 QPSK/16QAM 或读取业务比特。
+- 能证明输入形状和观测能量。调试模式的原始散点仍明确标为**“原始时域IQ散点图（非子载波调制星座）”**，不能据此判断QPSK/16QAM或读取业务比特。
 
 ### 01_sync_global：全局粗搜索与精确候选
 
@@ -137,11 +149,13 @@ FFT 数据保持 MATLAB 原始未移位行序。对偶数 N=1024，原行 1 对�
 
 ## 5. CFO 与 SFO：相位变化和时间刻度是两件事
 
-### 05_cfo：已知参考相位
+### 05_cfo：复数旋转、实际施加角与分结构参考诊断
 
-- 源码：`+viz/plotCFO.m`；输入保存的 CFO 前/后时间样本、PSS+SSS 参考、两轮实际 CFO 和 ML 相位。
-- 数学：`z_corr[n]=z[n] exp(-j2π*CFO*n/Fs)`；在已知 PSS/SSS 上每 64 点做相干参考比较后取相位。
-- 坐标：帧内时间 µs → 相位 rad；数据符号 → 原算法估计的残余相位修正。面板列出实际粗 CFO、两轮 CFO，不重新拟合未知业务 IQ 的相位斜率。
+本图已重构为六面板，详细分块、符号约定和独立性解释见[CFO教学](CFO_TEACHING.zh-CN.md)。PSS与SSS去CP后分别分块，PSS分两族、各自截距共享斜率；前后采用共同有效块与权重。
+
+- 源码：`+viz/plotCFO.m`与`+diag/cfoMetrics.m`；输入保存的CFO前/后时间样本、实际取样位置、PSS/SSS参考和两轮实际CFO；后续EVAL仅在可用时列出。
+- 数学：`t=(sample_positions_nominal-start)/Fs`，`a=-2π*CFO*t`，`z_corr=z*exp(ja)`；使用含SFO调整的实际时间，不把n/Fs当真实取样时间。已知PSS/SSS有效区内64点相干分块，不跨CP或结构边界。
+- 坐标：IQ复平面横I纵Q；实际帧内时间µs→施加角rad；各参考块中心µs→分结构/族相位。ML逐符号相位另在11b跟踪页观察；不对未知业务IQ求斜率并冒充CFO。
 - 相位趋势应结合数值和已知参考解释；多径、噪声、参考内幅度变化也会扰动曲线。原始 `angle(z)` 含未知调制相位，不能直接当 CFO 真值。
 - 图可验证补偿操作和参考相位变化，不能区分卫星、多普勒和本振各自贡献，不能单独证明 CFO 已消除。
 

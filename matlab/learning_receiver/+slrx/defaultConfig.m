@@ -143,5 +143,6 @@ function cfg = defaultConfig(projectRoot)
 
     % 只增加小型步骤诊断摘要；不改变DSP参数或中间数组。
     cfg.diagnostics_enabled = true;
+    cfg.debug_plots = false; % 旧密集波形仅显式调试时另存，非DSP参数。
 % 结束这个函数，输出变量按函数声明返回给调用者。
 end

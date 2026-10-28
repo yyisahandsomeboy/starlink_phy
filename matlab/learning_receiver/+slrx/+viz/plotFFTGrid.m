@@ -1,14 +1,15 @@
 function fig = plotFFTGrid(context, options)
 %PLOTFFTGRID 排序仅用于显示，原FFT行号与bin映射保存在UserData。
 fig=slrx.viz.newFigure('FFT资源网格：行号、signed bin与频率',options.show_figures);
-layout=tiledlayout(fig,1,2,'TileSpacing','compact');layout.OuterPosition=[0 .02 1 .92];
+passes=1:2;if isfield(options,'rounds_to_show'),passes=options.rounds_to_show;end
+layout=tiledlayout(fig,1,numel(passes),'TileSpacing','compact');layout.OuterPosition=[0 .02 1 .92];
 cfg=context.cfg;refs=context.refs;columns=options.grid_columns;
 assert(isscalar(columns)||all(diff(columns)==1),'slrx:DiagnosticSelection','FFT图列范围必须连续');
 [bins,order]=sort(refs.frequency_bins);freq=slrx.diag.coordinates('bin_to_mhz',bins,cfg);
 keep=freq>=options.frequency_band_mhz(1)&freq<=options.frequency_band_mhz(2);order=order(keep);bins=bins(keep);freq=freq(keep);
 assert(~isempty(order),'slrx:DiagnosticSelection','FFT图所选频率区间为空');
 axesList=gobjects(1,2);images=gobjects(1,2);markers=cell(1,2);fields={'fft1','fft2'};limits=[Inf -Inf];
-for pass=1:2
+for pass=passes
     field=fields{pass};ax=nexttile(layout);axesList(pass)=ax;markers{pass}=struct('handle',{},'bin',{});
     if ~isfield(context,field),axis(ax,'off');text(ax,.1,.5,sprintf('第%d轮FFT未执行',pass));continue;end
     z=20*log10(max(abs(context.(field).values(order,columns)),1e-12));

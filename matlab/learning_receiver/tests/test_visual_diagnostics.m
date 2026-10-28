@@ -18,7 +18,8 @@ baseOptions=struct('symbols',50,'carrier_mode','payload','frequency_band_mhz',[-
     'max_points',6000,'low_channel_fraction',.1,'show_figures',false);
 [fig,captureInfo]=slrx.viz.plotCapture(context,baseOptions);
 axesHandles=findall(fig,'Type','axes');titles=arrayfun(@(a)string(a.Title.String),axesHandles);
-assert(any(contains(titles,'原始时域IQ散点图（非子载波调制星座）'))&&~captureInfo.raw_scatter_is_modulation_constellation);close(fig);
+assert(any(contains(titles,'采样'))&&~captureInfo.raw_scatter_is_modulation_constellation);
+assert(~any(contains(titles,'原始时域IQ散点图')),'密集时域散点应仅在debug输出');close(fig);
 view=slrx.diag.constellationData(context,baseOptions);
 assert(numel(view.rows)==numel(refs.payload_rows)&&isempty(intersect(view.rows,refs.pilot_rows)));
 assert(isequal(view.grid_columns,51));

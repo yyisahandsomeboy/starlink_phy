@@ -1,6 +1,7 @@
 %% 0. 学习入口：先跑一帧，按Ctrl+Enter逐节执行
 % 本脚本是唯一的顺序学习主线。每节右侧slrx.xxx是真实算法模块，
 % slrx.step只负责回读/保存MAT、JSON和画图，不调用旧的整机接收脚本。
+% 可选输入5只给绘图传入已经计算的变量，不传入算法句柄，也不提前运行后续算法。
 % 第一次运行本节；之后可只运行下一节。变量保留在工作区供你查看。
 % 想重新计算某一步：lesson_cfg.resume=false，再顺序重跑其后步骤。
 % 想改变DSP参数：clear lesson_cfg，再运行本节，在beginLesson前修改配置。
@@ -57,7 +58,7 @@ sampled = slrx.step( ...
     lesson_cfg, ...  % 输入1：本次的路径、采样率和保存配置。
     '02_resampled', ...  % 输入2：本步MAT/JSON文件名前缀。
     @()slrx.resampleCapture(capture, lesson_cfg), ...  % 输入3：@()保存任务，需要时才实际计算。
-    2);  % 输入4：绘图类型；右括号结束调用。
+    2, struct('capture',capture,'refs',refs));  % 输入4：绘图类型；输入5：只读绘图上下文；右括号结束调用。
 
 % 若配置要求停在本步或更早，则结束本次脚本执行，已有变量仍可查看。
 if lesson_cfg.stop_after <= 2
@@ -74,7 +75,7 @@ synchronization = slrx.step( ...
     lesson_cfg, ...  % 输入1：本次的路径、采样率和保存配置。
     '03_sync', ...  % 输入2：本步MAT/JSON文件名前缀。
     @()slrx.findFrame(sampled, refs, lesson_cfg), ...  % 输入3：@()保存任务，需要时才实际计算。
-    3);  % 输入4：绘图类型；右括号结束调用。
+    3, struct('refs',refs));  % 输入4：绘图类型；输入5：只读绘图上下文；右括号结束调用。
 
 % 从独立同步结果取粗CFO，Hz为单位，不是12GHz载波频率。
 initialOffsets.cfo_hz = synchronization.selected.coarse_cfo_hz;
@@ -102,7 +103,7 @@ frameTime = slrx.step( ...
     '04_frame_time', ...  % 输入2：本步MAT/JSON文件名前缀。
     @()slrx.extractFrame(sampled, synchronization, initialOffsets, ...  % 输入3：@()保存任务，需要时才实际计算。
         lesson_cfg), ...  % 继续传入本步算法所需的结果和配置。
-    4);  % 输入4：绘图类型；右括号结束调用。
+    4, struct('refs',refs));  % 输入4：绘图类型；输入5：只读绘图上下文；右括号结束调用。
 
 % 若配置要求停在本步或更早，则结束本次脚本执行，已有变量仍可查看。
 if lesson_cfg.stop_after <= 4
@@ -118,7 +119,7 @@ ofdmTime = slrx.step( ...
     lesson_cfg, ...  % 输入1：本次的路径、采样率和保存配置。
     '05_without_cp', ...  % 输入2：本步MAT/JSON文件名前缀。
     @()slrx.removeCP(frameTime, lesson_cfg), ...  % 输入3：@()保存任务，需要时才实际计算。
-    5);  % 输入4：绘图类型；右括号结束调用。
+    5, struct('time1',frameTime,'refs',refs));  % 输入4：绘图类型；输入5：只读绘图上下文；右括号结束调用。
 
 % 若配置要求停在本步或更早，则结束本次脚本执行，已有变量仍可查看。
 if lesson_cfg.stop_after <= 5
@@ -135,7 +136,7 @@ frequencyGrid = slrx.step( ...
     lesson_cfg, ...  % 输入1：本次的路径、采样率和保存配置。
     '06_fft_grid', ...  % 输入2：本步MAT/JSON文件名前缀。
     @()slrx.fftGrid(ofdmTime, refs, lesson_cfg), ...  % 输入3：@()保存任务，需要时才实际计算。
-    6);  % 输入4：绘图类型；右括号结束调用。
+    6, struct('refs',refs));  % 输入4：绘图类型；输入5：只读绘图上下文；右括号结束调用。
 
 % 若配置要求停在本步或更早，则结束本次脚本执行，已有变量仍可查看。
 if lesson_cfg.stop_after <= 6
@@ -152,7 +153,7 @@ channel = slrx.step( ...
     lesson_cfg, ...  % 输入1：本次的路径、采样率和保存配置。
     '07_channel', ...  % 输入2：本步MAT/JSON文件名前缀。
     @()slrx.estimateChannel(frequencyGrid, refs, lesson_cfg), ...  % 输入3：@()保存任务，需要时才实际计算。
-    7);  % 输入4：绘图类型；右括号结束调用。
+    7, struct('fft1',frequencyGrid,'refs',refs));  % 输入4：绘图类型；输入5：只读绘图上下文；右括号结束调用。
 
 % 若配置要求停在本步或更早，则结束本次脚本执行，已有变量仍可查看。
 if lesson_cfg.stop_after <= 7
@@ -169,7 +170,7 @@ equalized = slrx.step( ...
     lesson_cfg, ...  % 输入1：本次的路径、采样率和保存配置。
     '08_equalized', ...  % 输入2：本步MAT/JSON文件名前缀。
     @()slrx.equalizeGrid(frequencyGrid, channel, refs), ...  % 输入3：@()保存任务，需要时才实际计算。
-    8);  % 输入4：绘图类型；右括号结束调用。
+    8, struct('fft1',frequencyGrid,'channel1',channel,'refs',refs));  % 输入4：绘图类型；输入5：只读绘图上下文；右括号结束调用。
 
 % 若配置要求停在本步或更早，则结束本次脚本执行，已有变量仍可查看。
 if lesson_cfg.stop_after <= 8
@@ -185,7 +186,7 @@ pilots = slrx.step( ...
     lesson_cfg, ...  % 输入1：本次的路径、采样率和保存配置。
     '09_pilot_observations', ...  % 输入2：本步MAT/JSON文件名前缀。
     @()slrx.observePilots(equalized, refs, lesson_cfg), ...  % 输入3：@()保存任务，需要时才实际计算。
-    9);  % 输入4：绘图类型；右括号结束调用。
+    9, struct('refs',refs));  % 输入4：绘图类型；输入5：只读绘图上下文；右括号结束调用。
 
 % 若配置要求停在本步或更早，则结束本次脚本执行，已有变量仍可查看。
 if lesson_cfg.stop_after <= 9
@@ -202,7 +203,7 @@ classes = slrx.step( ...
     lesson_cfg, ...  % 输入1：本次的路径、采样率和保存配置。
     '10_cardinality', ...  % 输入2：本步MAT/JSON文件名前缀。
     @()slrx.classifyColumns(equalized, refs, lesson_cfg, seedBase), ...  % 输入3：@()保存任务，需要时才实际计算。
-    10);  % 输入4：绘图类型；右括号结束调用。
+    10, struct('refs',refs));  % 输入4：绘图类型；输入5：只读绘图上下文；右括号结束调用。
 
 % 若配置要求停在本步或更早，则结束本次脚本执行，已有变量仍可查看。
 if lesson_cfg.stop_after <= 10
@@ -219,7 +220,7 @@ tracked = slrx.step( ...
     '11_tracking', ...  % 输入2：本步MAT/JSON文件名前缀。
     @()slrx.trackFrame(equalized, channel, pilots, classes, refs, ...  % 输入3：@()保存任务，需要时才实际计算。
         lesson_cfg, seedBase), ...  % 继续传入本步算法所需的结果和配置。
-    11);  % 输入4：绘图类型；右括号结束调用。
+    11, struct('eq1',equalized,'refs',refs));  % 输入4：绘图类型；输入5：只读绘图上下文；右括号结束调用。
 
 % 若配置要求停在本步或更早，则结束本次脚本执行，已有变量仍可查看。
 if lesson_cfg.stop_after <= 11
@@ -255,7 +256,7 @@ frameTimeFinal = slrx.step( ...
     '13a_frame_time', ...  % 输入2：本步MAT/JSON文件名前缀。
     @()slrx.extractFrame(sampled, synchronization, refinedOffsets, ...  % 输入3：@()保存任务，需要时才实际计算。
         lesson_cfg), ...  % 继续传入本步算法所需的结果和配置。
-    4);  % 输入4：绘图类型；右括号结束调用。
+    4, struct('refs',refs));  % 输入4：绘图类型；输入5：只读绘图上下文；右括号结束调用。
 
 %% 13b. 第二轮去CP
 
@@ -264,7 +265,7 @@ ofdmTimeFinal = slrx.step( ...
     lesson_cfg, ...  % 输入1：本次的路径、采样率和保存配置。
     '13b_without_cp', ...  % 输入2：本步MAT/JSON文件名前缀。
     @()slrx.removeCP(frameTimeFinal, lesson_cfg), ...  % 输入3：@()保存任务，需要时才实际计算。
-    5);  % 输入4：绘图类型；右括号结束调用。
+    5, struct('time2',frameTimeFinal,'refs',refs));  % 输入4：绘图类型；输入5：只读绘图上下文；右括号结束调用。
 
 %% 13c. 第二轮FFT
 
@@ -273,7 +274,7 @@ frequencyGridFinal = slrx.step( ...
     lesson_cfg, ...  % 输入1：本次的路径、采样率和保存配置。
     '13c_fft_grid', ...  % 输入2：本步MAT/JSON文件名前缀。
     @()slrx.fftGrid(ofdmTimeFinal, refs, lesson_cfg), ...  % 输入3：@()保存任务，需要时才实际计算。
-    6);  % 输入4：绘图类型；右括号结束调用。
+    6, struct('refs',refs));  % 输入4：绘图类型；输入5：只读绘图上下文；右括号结束调用。
 
 %% 13d. 第二轮单帧SSS信道估计
 
@@ -282,7 +283,7 @@ channelFinal = slrx.step( ...
     lesson_cfg, ...  % 输入1：本次的路径、采样率和保存配置。
     '13d_channel', ...  % 输入2：本步MAT/JSON文件名前缀。
     @()slrx.estimateChannel(frequencyGridFinal, refs, lesson_cfg), ...  % 输入3：@()保存任务，需要时才实际计算。
-    7);  % 输入4：绘图类型；右括号结束调用。
+    7, struct('fft2',frequencyGridFinal,'refs',refs));  % 输入4：绘图类型；输入5：只读绘图上下文；右括号结束调用。
 
 %% 13e. 第二轮均衡
 
@@ -291,7 +292,7 @@ equalizedFinal = slrx.step( ...
     lesson_cfg, ...  % 输入1：本次的路径、采样率和保存配置。
     '13e_equalized', ...  % 输入2：本步MAT/JSON文件名前缀。
     @()slrx.equalizeGrid(frequencyGridFinal, channelFinal, refs), ...  % 输入3：@()保存任务，需要时才实际计算。
-    8);  % 输入4：绘图类型；右括号结束调用。
+    8, struct('fft2',frequencyGridFinal,'channel2',channelFinal,'refs',refs));  % 输入4：绘图类型；输入5：只读绘图上下文；右括号结束调用。
 
 %% 13f. 第二轮导频初值
 
@@ -301,7 +302,7 @@ pilotsFinal = slrx.step( ...
     lesson_cfg, ...  % 输入1：本次的路径、采样率和保存配置。
     '13f_pilots', ...  % 输入2：本步MAT/JSON文件名前缀。
     @()slrx.observePilots(equalizedFinal, refs, lesson_cfg), ...  % 输入3：@()保存任务，需要时才实际计算。
-    9);  % 输入4：绘图类型；右括号结束调用。
+    9, struct('refs',refs));  % 输入4：绘图类型；输入5：只读绘图上下文；右括号结束调用。
 
 %% 13g. 第二轮点数识别；保留旧方法第二轮seed+500的约定
 
@@ -311,7 +312,7 @@ classesFinal = slrx.step( ...
     '13g_cardinality', ...  % 输入2：本步MAT/JSON文件名前缀。
     @()slrx.classifyColumns(equalizedFinal, refs, lesson_cfg, ...  % 输入3：@()保存任务，需要时才实际计算。
         seedBase + 500), ...  % 继续传入本步算法所需的结果和配置。
-    10);  % 输入4：绘图类型；右括号结束调用。
+    10, struct('refs',refs));  % 输入4：绘图类型；输入5：只读绘图上下文；右括号结束调用。
 
 %% 13h. 第二轮ML与整帧补偿，得到finalGrid.values
 
@@ -321,7 +322,7 @@ finalGrid = slrx.step( ...
     '13h_tracking', ...  % 输入2：本步MAT/JSON文件名前缀。
     @()slrx.trackFrame(equalizedFinal, channelFinal, pilotsFinal, ...  % 输入3：@()保存任务，需要时才实际计算。
         classesFinal, refs, lesson_cfg, seedBase + 500), ...  % 继续传入本步算法所需的结果和配置。
-    11);  % 输入4：绘图类型；右括号结束调用。
+    11, struct('track1',tracked,'eq2',equalizedFinal,'refs',refs));  % 输入4：绘图类型；输入5：只读绘图上下文；右括号结束调用。
 
 % 若配置要求停在本步或更早，则结束本次脚本执行，已有变量仍可查看。
 if lesson_cfg.stop_after <= 13
@@ -338,7 +339,7 @@ decisions = slrx.step( ...
     lesson_cfg, ...  % 输入1：本次的路径、采样率和保存配置。
     '14_decisions', ...  % 输入2：本步MAT/JSON文件名前缀。
     @()slrx.decideSymbols(finalGrid, channelFinal, refs, lesson_cfg), ...  % 输入3：@()保存任务，需要时才实际计算。
-    14);  % 输入4：绘图类型；右括号结束调用。
+    14, struct('refs',refs));  % 输入4：绘图类型；输入5：只读绘图上下文；右括号结束调用。
 
 %% 补充观察：帧末保护间隔（边界来自模型，不是噪声边缘检测）
 
@@ -348,7 +349,7 @@ guard = slrx.step( ...
     '15_guard', ...  % 输入2：本步MAT/JSON文件名前缀。
     @()slrx.measureGuard(capture, synchronization, refinedOffsets, ...  % 输入3：@()保存任务，需要时才实际计算。
         lesson_cfg), ...  % 继续传入本步算法所需的结果和配置。
-    15);  % 输入4：绘图类型；右括号结束调用。
+    15, struct('refs',refs));  % 输入4：绘图类型；输入5：只读绘图上下文；右括号结束调用。
 
 % fprintf按格式输出文字；%s放字符串、%d放整数，表示换行。
 fprintf('学习主链完成。结果保存在：%s\n', lesson_cfg.run_dir);

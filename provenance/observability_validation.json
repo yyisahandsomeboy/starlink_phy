@@ -1,0 +1,1209 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-28",
+  "status": "passed_with_explicit_scope_limits",
+  "role": "codex_baseline",
+  "base_commit": "651e339e3aca325a13796d9a665b31858b684ac8",
+  "task": "CFO teaching visualization and full observation audit",
+  "environment": {
+    "MATLAB": "R2024b",
+    "OS": "Windows",
+    "host_total_bytes": 17024741376
+  },
+  "core_DSP_changed": false,
+  "frozen_evaluator_changed": false,
+  "source_code_sha256": [
+    {
+      "path": "matlab/learning_receiver/+slrx/+diag/cfoMetrics.m",
+      "sha256": "88bddcb54b4b4fc7c3ee6de578d6e5affa1d6702d16060acffe3d41198abefab"
+    },
+    {
+      "path": "matlab/learning_receiver/+slrx/+diag/chartCatalog.m",
+      "sha256": "28f04377a599ac16dd6763ab8f0eb1a5dcebed035697beffd759e5fdb8333952"
+    },
+    {
+      "path": "matlab/learning_receiver/+slrx/+diag/exportDiagnostics.m",
+      "sha256": "49c930f44293a71bde13e54e77c550d338a0b2c08a6e9248adf0701e5d740a3b"
+    },
+    {
+      "path": "matlab/learning_receiver/+slrx/+diag/plotContract.m",
+      "sha256": "317c84446543347739689aaad18df20150e5a2720d1c82a34ad2dcbdebba53e3"
+    },
+    {
+      "path": "matlab/learning_receiver/+slrx/+diag/plotOptions.m",
+      "sha256": "6dc229d93fb1712a743033e033a1b6c6e2ef90e4a8be9cd441f1122f34e2199c"
+    },
+    {
+      "path": "matlab/learning_receiver/+slrx/+diag/resampleMetrics.m",
+      "sha256": "56144f7371b3896eb2f83a900a6eed46e9842c7fc10b56709552b565f1cd928b"
+    },
+    {
+      "path": "matlab/learning_receiver/+slrx/+diag/stepFigures.m",
+      "sha256": "6233a72c707f7fa9235b59616624d9fc057d1d550889ca362b8f7a4607e012fb"
+    },
+    {
+      "path": "matlab/learning_receiver/+slrx/+diag/writeReport.m",
+      "sha256": "330f21841060ce9d127d0cd47a1513efd0d3e90967f7c663a1b6a1bd8560ad16"
+    },
+    {
+      "path": "matlab/learning_receiver/+slrx/+viz/debugPlots.m",
+      "sha256": "1b00c9597fca8fedb70222af967ae57072d7a554da9fc59339d7e1b98ef5b424"
+    },
+    {
+      "path": "matlab/learning_receiver/+slrx/+viz/plotCFO.m",
+      "sha256": "85c74b200833a1f7e6ecc925a0a996ba37ff017c9dd26dc3b8957b3fd965e0e3"
+    },
+    {
+      "path": "matlab/learning_receiver/+slrx/+viz/plotCapture.m",
+      "sha256": "1d1768c8c602cda6338f7a4e048a5eb293663812a3f391fad208f81efcf1903c"
+    },
+    {
+      "path": "matlab/learning_receiver/+slrx/+viz/plotChannel.m",
+      "sha256": "0ab7741844856dcd84d0c4cfd8fb8f812568af5fd4211dea8fa6fd4e860740f2"
+    },
+    {
+      "path": "matlab/learning_receiver/+slrx/+viz/plotFFTGrid.m",
+      "sha256": "e15cee55887b3f8ab7adc75250f82b5a101c7e17a4e3c8588757c68cf3c19b81"
+    },
+    {
+      "path": "matlab/learning_receiver/+slrx/+viz/plotPilotFit.m",
+      "sha256": "4af521a67c3debdb03ebadafaad03bbd2a5e120af0bfa2f01c0747d6b5686b89"
+    },
+    {
+      "path": "matlab/learning_receiver/+slrx/+viz/plotResampling.m",
+      "sha256": "a3617fc1956ae2ada7b204687b11eb9397c0a79b7ac7eacc9cf7134c6c9a59cf"
+    },
+    {
+      "path": "matlab/learning_receiver/+slrx/+viz/plotTracking.m",
+      "sha256": "b0492e14bc2dec1e2bedacc9761588496c00ac83b1556069ef09668bd2e430a3"
+    },
+    {
+      "path": "matlab/learning_receiver/+slrx/+viz/teachingNotes.m",
+      "sha256": "4f4443f750d7baa7c5e4c2ff236ed75126e810d19d676bce3940864e4293ccca"
+    },
+    {
+      "path": "matlab/learning_receiver/+slrx/beginLesson.m",
+      "sha256": "23d1e017b0774182c16ff6af6aedaef8b28687bc53577e0eb951d416476f4b9a"
+    },
+    {
+      "path": "matlab/learning_receiver/+slrx/defaultConfig.m",
+      "sha256": "c40e336bb690b27944c0041e568f291fb500b6aa258a4dfaae6cfc0d8feb35e6"
+    },
+    {
+      "path": "matlab/learning_receiver/+slrx/drawStep.m",
+      "sha256": "e991414df495cd9e57235b76b1d733cbe0e75697c2506a79fe0e4e55f0c0f9a4"
+    },
+    {
+      "path": "matlab/learning_receiver/+slrx/step.m",
+      "sha256": "a546ec5e8499f1f2a239bbe0c1eb6889829b6560f9df0caa438cd2e589334049"
+    },
+    {
+      "path": "matlab/learning_receiver/RUN_DIAGNOSTICS.m",
+      "sha256": "f7d726bd3f195c1861d6affb73721da5d3a5e99eef53d5cd59716af521473761"
+    },
+    {
+      "path": "matlab/learning_receiver/START_HERE.m",
+      "sha256": "370c17f09073b234b85389cedd27a18bdca61b78b384ea803c28b9cf76d94a1d"
+    },
+    {
+      "path": "matlab/learning_receiver/tests/test_discrete_visualization.m",
+      "sha256": "23d026c3e9df880bdd6c42a9784bcd6eb9fbf254d81a0e712e560250db4a00dc"
+    },
+    {
+      "path": "matlab/learning_receiver/tests/test_observability.m",
+      "sha256": "21408266536cc14810a013b27d0fa7b879504fc2c098e1cadb692df94f3da186"
+    },
+    {
+      "path": "matlab/learning_receiver/tests/test_visual_diagnostics.m",
+      "sha256": "7a83f08d2d6aad51929abd2cab485cc963a6396c2bba758307b3219197bee860"
+    }
+  ],
+  "changed_files": [
+    "README.md",
+    "docs/CFO_TEACHING.zh-CN.md",
+    "docs/OBSERVABILITY_AUDIT.zh-CN.md",
+    "docs/OBSERVABILITY_VALIDATION.zh-CN.md",
+    "docs/VISUAL_DIAGNOSTICS.zh-CN.md",
+    "docs/VISUAL_DIAGNOSTICS_FIGURES.zh-CN.md",
+    "matlab/learning_receiver/+slrx/+diag/cfoMetrics.m",
+    "matlab/learning_receiver/+slrx/+diag/chartCatalog.m",
+    "matlab/learning_receiver/+slrx/+diag/exportDiagnostics.m",
+    "matlab/learning_receiver/+slrx/+diag/plotContract.m",
+    "matlab/learning_receiver/+slrx/+diag/plotOptions.m",
+    "matlab/learning_receiver/+slrx/+diag/resampleMetrics.m",
+    "matlab/learning_receiver/+slrx/+diag/stepFigures.m",
+    "matlab/learning_receiver/+slrx/+diag/writeReport.m",
+    "matlab/learning_receiver/+slrx/+viz/debugPlots.m",
+    "matlab/learning_receiver/+slrx/+viz/plotCFO.m",
+    "matlab/learning_receiver/+slrx/+viz/plotCapture.m",
+    "matlab/learning_receiver/+slrx/+viz/plotChannel.m",
+    "matlab/learning_receiver/+slrx/+viz/plotFFTGrid.m",
+    "matlab/learning_receiver/+slrx/+viz/plotPilotFit.m",
+    "matlab/learning_receiver/+slrx/+viz/plotResampling.m",
+    "matlab/learning_receiver/+slrx/+viz/plotTracking.m",
+    "matlab/learning_receiver/+slrx/+viz/teachingNotes.m",
+    "matlab/learning_receiver/+slrx/beginLesson.m",
+    "matlab/learning_receiver/+slrx/defaultConfig.m",
+    "matlab/learning_receiver/+slrx/drawStep.m",
+    "matlab/learning_receiver/+slrx/step.m",
+    "matlab/learning_receiver/README.zh-CN.md",
+    "matlab/learning_receiver/RUN_DIAGNOSTICS.m",
+    "matlab/learning_receiver/START_HERE.m",
+    "matlab/learning_receiver/tests/test_discrete_visualization.m",
+    "matlab/learning_receiver/tests/test_observability.m",
+    "matlab/learning_receiver/tests/test_visual_diagnostics.m",
+    "provenance/observability_validation.json"
+  ],
+  "fresh_single_frame": {
+    "status": "passed",
+    "fresh_raw_IQ_run": true,
+    "resumed_steps": 0,
+    "reference": "runs/codex-visual-learning-fresh",
+    "all_22_data_structs_exact": true,
+    "comparisons": [
+      {
+        "file": "01_capture.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "02_resampled.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "03_sync.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "04_frame_time.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "05_without_cp.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "06_fft_grid.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "07_channel.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "08_equalized.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "09_pilot_observations.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "10_cardinality.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "11_tracking.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "12_refined_offsets.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "13a_frame_time.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "13b_without_cp.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "13c_fft_grid.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "13d_channel.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "13e_equalized.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "13f_pilots.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "13g_cardinality.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "13h_tracking.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "14_decisions.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "15_guard.mat",
+        "data_isequaln": true
+      }
+    ],
+    "learning_validation": {
+      "status": "passed",
+      "version": "learning-validation-v1",
+      "owner": "codex_baseline",
+      "single_frame_only": true,
+      "original_evaluator_changed": false,
+      "payload_bits_available": false,
+      "raw_readback_exact": true,
+      "nominal_sample_rate_hz": 240000000.0,
+      "independent_detection": true,
+      "start_sample_capture": 125001,
+      "model_and_capture_coordinate_identity": true,
+      "FFT_relative_error": 0,
+      "equalization_relative_error": 0,
+      "first_equalized_heldout_pilot_evm": 1.4788763263281632,
+      "front_end_checks": "passed",
+      "complete_single_frame_pipeline": true,
+      "final_heldout_pilot_evm": 0.21118250302583794,
+      "relative_improvement_vs_raw_fft": 0.789535336002731,
+      "valid_hard_symbol_count": 301200,
+      "original_full_multiframe_acceptance": "not_claimed_single_frame"
+    }
+  },
+  "existing_tests": {
+    "status": "passed",
+    "existing_visual_and_discrete_tests": true,
+    "author_DSP": true,
+    "guard": {
+      "passed": true,
+      "test_count": 7
+    },
+    "ofdm_view": true,
+    "payload_hard_decisions": true,
+    "frozen_evaluation_scope": "historical nine-frame arrays rescored; not fresh nine-frame DSP"
+  },
+  "module_parity": {
+    "status": "passed",
+    "version": "learning-validation-v1",
+    "owner": "codex_baseline",
+    "interpolation_relative_error": 0,
+    "FFT_relative_error": 9.807741311180119e-17,
+    "channel_relative_error": 0,
+    "likelihood_gradient_hessian_max_difference": 0,
+    "cardinality_score_max_difference": 0,
+    "tracking_phase_max_difference_rad": 8.881784197001252e-16,
+    "tracking_delay_coefficient_max_difference": 7.806255641895632e-18,
+    "tracked_grid_relative_error": 6.089764804552296e-16,
+    "all_300_geometry_labels_identical": true,
+    "reference_checkpoint_used_only_for_validation": true,
+    "original_evaluator_changed": false,
+    "payload_decoded": false
+  },
+  "historical_frozen_rescore": {
+    "scope": "historical nine-frame result arrays rescored, NOT fresh nine-frame DSP",
+    "accepted": true,
+    "frame_count": 9,
+    "matched_annotation_count": 7,
+    "unmatched_candidate_count": 2,
+    "holdout_matched_count": 5,
+    "reference_metadata_used_for_detection": false,
+    "real_payload_ber_available": false,
+    "all_frames_accepted": true,
+    "heldout_evm_after": [
+      0.20457417869483843,
+      0.2131315902496206,
+      0.20565469041263978,
+      0.21994293921613398,
+      0.20699934812474852,
+      0.21312059259262478,
+      0.20526541807312557,
+      0.21328305419096216,
+      0.2139223667150487
+    ]
+  },
+  "observability_tests": {
+    "status": "passed",
+    "synthetic_CFO_sign_and_SFO_time": true,
+    "different_PSS_SSS_intercepts": true,
+    "block_boundaries": true,
+    "zero_signal_rejects_proxy": true,
+    "rotation_component_identity": true,
+    "resample_counts_duration_DC": true,
+    "real_rotation_invariance": true,
+    "same_reference_not_independent": true,
+    "main_default_pngs": 22,
+    "report_default_pngs": 17,
+    "debug_only_explicit": true,
+    "source_MAT_hashes_unchanged": true,
+    "raw_bin_reads_by_report": 0
+  },
+  "actual_CFO_observations": [
+    {
+      "round": 1,
+      "cfo_hz": -173068.2404084364,
+      "first_last_applied_phase_rad": [
+        0,
+        1444.9796432727462
+      ],
+      "magnitude_relative_error": 1.9051545223274807e-16,
+      "operation_relative_error": 1.0389921112508358e-13,
+      "references": [
+        {
+          "name": "PSS",
+          "frequency_before_hz": -173171.6199658389,
+          "frequency_after_hz": -66.6376962688102,
+          "residual_rms_before_rad": 0.02299025047852876,
+          "residual_rms_after_rad": 0.0225809169663766,
+          "correlation_before": 0.301593610365643,
+          "correlation_after": 0.9737673644414487,
+          "before_proxy_available": true,
+          "after_proxy_available": true
+        },
+        {
+          "name": "SSS",
+          "frequency_before_hz": -172569.62627389288,
+          "frequency_after_hz": 534.7600863100375,
+          "residual_rms_before_rad": 0.024600857529661666,
+          "residual_rms_after_rad": 0.02481091352693064,
+          "correlation_before": 0.28777658459780214,
+          "correlation_after": 0.9716237661973968,
+          "before_proxy_available": true,
+          "after_proxy_available": true
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "cfo_hz": -171761.3801553976,
+      "first_last_applied_phase_rad": [
+        0,
+        1434.068724600471
+      ],
+      "magnitude_relative_error": 1.904075569937337e-16,
+      "operation_relative_error": 1.0297493164477154e-13,
+      "references": [
+        {
+          "name": "PSS",
+          "frequency_before_hz": -173171.7770299868,
+          "frequency_after_hz": -1373.9370422534216,
+          "residual_rms_before_rad": 0.022987704814628557,
+          "residual_rms_after_rad": 0.02258158106611979,
+          "correlation_before": 0.30160291272624434,
+          "correlation_after": 0.9737325781000019,
+          "before_proxy_available": true,
+          "after_proxy_available": true
+        },
+        {
+          "name": "SSS",
+          "frequency_before_hz": -172570.5780869617,
+          "frequency_after_hz": -773.5212817686976,
+          "residual_rms_before_rad": 0.02453483343446108,
+          "residual_rms_after_rad": 0.024741815644773246,
+          "correlation_before": 0.28779395335477453,
+          "correlation_after": 0.9717055737770974,
+          "before_proxy_available": true,
+          "after_proxy_available": true
+        }
+      ]
+    }
+  ],
+  "heldout_records": [
+    {
+      "stage": "fft1",
+      "round": 1,
+      "available": true,
+      "raw_evm": 1.0034107342056158,
+      "calibrated_evm": 1.4029680934246087,
+      "calibration_divisor": {
+        "real": -0.0581717764876077,
+        "imag": 0.053522845021591554
+      },
+      "calibration_source": "SSS-only scalar; diagnostic reference calibration, not receiver output"
+    },
+    {
+      "stage": "eq1",
+      "round": 1,
+      "available": true,
+      "raw_evm": 1.4788763263281632,
+      "calibrated_evm": 1.4788763263281632,
+      "calibration_divisor": 1,
+      "calibration_source": "none; already in receiver output units"
+    },
+    {
+      "stage": "track1",
+      "round": 1,
+      "available": true,
+      "raw_evm": 0.21058671916857202,
+      "calibrated_evm": 0.21058671916857202,
+      "calibration_divisor": 1,
+      "calibration_source": "none; already in receiver output units"
+    },
+    {
+      "stage": "fft2",
+      "round": 2,
+      "available": true,
+      "raw_evm": 1.0468600668063885,
+      "calibrated_evm": 0.33489066514935895,
+      "calibration_divisor": {
+        "real": -0.05516156145998654,
+        "imag": 0.05662953572155507
+      },
+      "calibration_source": "SSS-only scalar; diagnostic reference calibration, not receiver output"
+    },
+    {
+      "stage": "eq2",
+      "round": 2,
+      "available": true,
+      "raw_evm": 0.21097200797066243,
+      "calibrated_evm": 0.21097200797066243,
+      "calibration_divisor": 1,
+      "calibration_source": "none; already in receiver output units"
+    },
+    {
+      "stage": "track2",
+      "round": 2,
+      "available": true,
+      "raw_evm": 0.21118250302583794,
+      "calibrated_evm": 0.21118250302583794,
+      "calibration_divisor": 1,
+      "calibration_source": "none; already in receiver output units"
+    }
+  ],
+  "memory": [
+    {
+      "run": "cfo_observability_20261028",
+      "status": "passed",
+      "elapsed_s": 84.063,
+      "exit_code": 0,
+      "initial_available_bytes": 5382090752,
+      "peak_tree_private_bytes": 2639118336,
+      "peak_tree_working_set_bytes": 2495168512,
+      "minimum_available_bytes": 2917834752,
+      "minimum_commit_headroom_bytes": 8929128448,
+      "reserve_bytes": 1342177280,
+      "job_private_limit_bytes": 3758096384,
+      "sampling_interval_s": 0.25
+    },
+    {
+      "run": "cfo_fresh_regression_20261028",
+      "status": "failed",
+      "elapsed_s": 141.547,
+      "exit_code": 1,
+      "initial_available_bytes": 5350301696,
+      "peak_tree_private_bytes": 2352087040,
+      "peak_tree_working_set_bytes": 2182549504,
+      "minimum_available_bytes": 3337342976,
+      "minimum_commit_headroom_bytes": 9207783424,
+      "reserve_bytes": 1342177280,
+      "job_private_limit_bytes": 3758096384,
+      "sampling_interval_s": 0.25
+    },
+    {
+      "run": "cfo_fresh_regression_20261028_retry",
+      "status": "passed",
+      "elapsed_s": 308.828,
+      "exit_code": 0,
+      "initial_available_bytes": 5627777024,
+      "peak_tree_private_bytes": 2625572864,
+      "peak_tree_working_set_bytes": 2487869440,
+      "minimum_available_bytes": 3226791936,
+      "minimum_commit_headroom_bytes": 8972746752,
+      "reserve_bytes": 1342177280,
+      "job_private_limit_bytes": 3758096384,
+      "sampling_interval_s": 0.25
+    },
+    {
+      "run": "cfo_existing_tests_20261028",
+      "status": "passed",
+      "elapsed_s": 270.204,
+      "exit_code": 0,
+      "initial_available_bytes": 5752127488,
+      "peak_tree_private_bytes": 3126902784,
+      "peak_tree_working_set_bytes": 3045130240,
+      "minimum_available_bytes": 3102539776,
+      "minimum_commit_headroom_bytes": 8447279104,
+      "reserve_bytes": 1342177280,
+      "job_private_limit_bytes": 3758096384,
+      "sampling_interval_s": 0.25
+    },
+    {
+      "run": "cfo_final_report_20261028",
+      "status": "passed",
+      "elapsed_s": 56.75,
+      "exit_code": 0,
+      "initial_available_bytes": 5924298752,
+      "peak_tree_private_bytes": 2489229312,
+      "peak_tree_working_set_bytes": 2385420288,
+      "minimum_available_bytes": 3634802688,
+      "minimum_commit_headroom_bytes": 9036292096,
+      "reserve_bytes": 1342177280,
+      "job_private_limit_bytes": 3758096384,
+      "sampling_interval_s": 0.25
+    }
+  ],
+  "report": {
+    "path": "runs/cfo-teaching-final-20261028/report/index.html",
+    "main_default_pngs": 22,
+    "report_default_pngs": 17,
+    "explicit_debug_pngs": 3,
+    "raw_BIN_reads": 0
+  },
+  "matlab_static_analysis": {
+    "files": 79,
+    "advisory_ids": [
+      "AGROW",
+      "ALIGN",
+      "ASGLU",
+      "CCAT1",
+      "ISCL",
+      "LAXES",
+      "MSNU",
+      "NASGU",
+      "NOCOMMA"
+    ],
+    "syntax_error_ids": []
+  },
+  "preserved_failed_trial": {
+    "run": "runs/cfo-fresh-regression-20261028",
+    "error": "drawStep did not explicitly skip numeric-only kind 12",
+    "resolution": "skip kinds 0 and 12; regression assertion; completely fresh retry passed all 22 data comparisons"
+  },
+  "verification_order": "fresh retry and 22 exact comparisons; then paired-coherence display update and full observability/legacy suite; final text-only labels/comments update and targeted readonly report regeneration",
+  "limits": [
+    "one fresh complete single-frame run, no new complete nine-frame DSP",
+    "reference slope proxy depends on stable channel and no phase aliasing; same synchronization reference is not independent",
+    "no CFO-only causal EVM/ICI experiment",
+    "commercial MCS, business bits, BER/SER, FEC and CRC not established",
+    "old large payload fixture and payload_analysis_v1.json locally restored for legacy tests; neither modified nor published here"
+  ],
+  "file_and_render_verification": {
+    "status": "passed",
+    "protected_files": [
+      {
+        "path": "config/evaluation.json",
+        "sha256": "e1dcd236e6ab9ffe708e72761c72d6f376bcfde133a9e10ec421f5b5ac23215c",
+        "unchanged": true
+      },
+      {
+        "path": "config/evaluator_lock.json",
+        "sha256": "41ffd48560543230ee67ecf0ff49e3625021cfd2f4bba0eebd8a89b278d26450",
+        "unchanged": true
+      },
+      {
+        "path": "config/learning_validation_v1.json",
+        "sha256": "5b7cf1ab2f5ae31befe27cb3b252509b66004f764072d9afcf5694586f9b04a3",
+        "unchanged": true
+      },
+      {
+        "path": "data/reference/synthetic_awgn_only.mat",
+        "sha256": "cdf2604cb8d1ed059d59d22df1dd200bd20df4df44384873aec833dc865f1589",
+        "unchanged": true
+      },
+      {
+        "path": "data/reference/synthetic_cfo_only.mat",
+        "sha256": "d538b32406aa5f4ee813bd073a078d66377f1e24c7056cdf8b274e37d4a3c0ee",
+        "unchanged": true
+      },
+      {
+        "path": "data/reference/synthetic_holdout.mat",
+        "sha256": "0549e041a6790b7531ff270155c2c79b1a9161f55eeb7dfc5bc1aadd66e92c0b",
+        "unchanged": true
+      },
+      {
+        "path": "data/reference/synthetic_noiseless.mat",
+        "sha256": "49527e383b69602a3a4cc40ed56af257ad06107f3bf96686106057bd53f4cc48",
+        "unchanged": true
+      },
+      {
+        "path": "data/reference/synthetic_sfo_only.mat",
+        "sha256": "d97da1004817da584102f9837260736b0531062c50d2edfc0170e78cf8fa35e5",
+        "unchanged": true
+      },
+      {
+        "path": "data/reference/synthetic_training.mat",
+        "sha256": "c247d7ae355eb585e7cdefa3be83036d2e90fd8c8186651768d43ad84bcf9f74",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/baseline/author_receiver.m",
+        "sha256": "18d5854b4fbe49da5ff38780116adce7901f2c92ecebacfc6f5567ae54fdd520",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/baseline/author_receiver_dsp.m",
+        "sha256": "3012733f7bc7ef1d0b9327d6d4c3f403f5bcbe55447a0e3b38d01be2febd8bfc",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/baseline/author_sequences.m",
+        "sha256": "2778931a33eb1df85b220195fbab6773eafbdf3bd02da769a615fc460ef7a18b",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/baseline/bandlimited_sample.m",
+        "sha256": "1176538487548cec760f211ae296c0a365d85421f5b76c3368f0ec7e4a34e49f",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/baseline/baseline_manifest.m",
+        "sha256": "7546a3989d30ad4315de4cab6084325e68f50a37accba197b3c80cde0e1e819b",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/baseline/frame_guard_metrics.m",
+        "sha256": "fc28f8cdd5f7531c4b3aa980739149ace52bd147e6e530fad9b7963830b47c70",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/baseline/smoke.m",
+        "sha256": "7f680984b4f46f846fcd9bd13568a4ebb85d93a5b304773992e541f782d6c025",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/baseline/test_author_receiver_dsp.m",
+        "sha256": "063f800f1e250246236ae094da982f89410bc119aadc8c32a85e7ad402a922f4",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/baseline/test_frame_guard_metrics.m",
+        "sha256": "0dd4a9a8806e36c717c70703d7c4f69b5b6d85c19d8ad68372f8f59d359b0126",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/evaluation/evaluate_receiver.m",
+        "sha256": "dcf34f613fe23097dcc607391c8c9cac1730ee33d5dcff5b73fb01d55107a23b",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/evaluation/private/synthetic_awgn_only_truth.mat",
+        "sha256": "95412446ed2d6d3c7bbf4d8424bbb7b10c15679b6ddeac49e13210f38d4f2a30",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/evaluation/private/synthetic_cfo_only_truth.mat",
+        "sha256": "2f746d615456d8d4ce3455156d5b8778c50cce541a13602a2b20b3fa2326a610",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/evaluation/private/synthetic_holdout_truth.mat",
+        "sha256": "fd26abc793ed1386f577491e24335f7d8c1ef9c429b79e774b15c34f536a4698",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/evaluation/private/synthetic_noiseless_truth.mat",
+        "sha256": "0d4383b88c7c28140496fd6d3a98467534ff079ebab0a9c5e90ac732d7da356d",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/evaluation/private/synthetic_sfo_only_truth.mat",
+        "sha256": "a4667d851778a7d85cb6737e1dbb603ad41371619699965d0923dc3e9fd547d4",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/evaluation/private/synthetic_training_truth.mat",
+        "sha256": "203d9dcb1978349f282736010c2f87702f58f90ab1897132905221674e982002",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/+alg/cardinality.m",
+        "sha256": "f3c1b2940088e455823ad70e60d5f18b8a891f9e57d1687f3ab3555f10bb248d",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/+alg/detectSync.m",
+        "sha256": "14a5fcdf381131cf59a04b253d0085ffb595df808e11ebbe000e46cfc3ce9a2d",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/+alg/fitColumn.m",
+        "sha256": "1f442e333ddca783e1c5d8457ecfd1b0dd026d9a3d57d0f8e341f6da04f9d76d",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/+alg/fitSymbol.m",
+        "sha256": "73a1c778bd2d0a043815513ff4d98dc0bfccde3cdfca5d47080a7cef3c97dcae",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/+alg/interpolateSinc.m",
+        "sha256": "d3d6af552f74aac29276d285a5be13a0c879d200d32543beb20e9fe857e487f0",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/+alg/marginalNLL.m",
+        "sha256": "64956dabbc7a3b624d096f82a74737b4ed22e3ff607b47465842d492ff115937",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/+alg/ransacLine.m",
+        "sha256": "48c92c2f58e803d1d47d71227550ce0572d24016cffe7f4d926b5ef0606fa1d2",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/classifyColumns.m",
+        "sha256": "8aec86571ef9233911f3228fb1c14d23301843289901e77adedc32b76c5a2401",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/decideSymbols.m",
+        "sha256": "31c1b64fda7014aa289122d1ac816fd255b3882dc2f2cce371d4799b5bb97bf0",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/equalizeGrid.m",
+        "sha256": "1c24c5209e61a237452c39a900ffaec3c7dcd618151828fd51dbb237c5c9ed38",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/estimateChannel.m",
+        "sha256": "50b036f04226d7badd75211c25709d63f855180a3ff8b688a7132ddda996e313",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/extractFrame.m",
+        "sha256": "7fc4121ec55554964bac149615eff7ee6bebcaeff25ae203ccba4ac55e8af0e9",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/fftGrid.m",
+        "sha256": "4376e000e2bec1d17b7f3e0fb81fb07b278b54773fd965052ce4bc729b32632c",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/findFrame.m",
+        "sha256": "3efc47c10b067f4092b5001647a565c93f59f2a94762b03a9540b6df9bc8c4d3",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/measureGuard.m",
+        "sha256": "bfdbb983b3a33112c906d022fdc3dd64d3d94af95edc096321a0458a30123aa2",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/observePilots.m",
+        "sha256": "c707d31f4a0065f4c57fdd842def08e388efe222687715e4486833e54462c1fd",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/readIQ.m",
+        "sha256": "e6be919d68b055602ecf004c8dca4fba85c1a246cf7e1266d48850e2b81a1bac",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/references.m",
+        "sha256": "d21f4eed367d4714111f40c0dfbcaa66de6b6b653dc8b2532da3e65d572a9d1a",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/refineOffsets.m",
+        "sha256": "c4af06a66b41657aec15e231da0af5e3fde5ec49a1b28a15ebee995deb17e266",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/removeCP.m",
+        "sha256": "3bafa8dd7b5d91d5bfdf9170382c492f4ac2e13898536c03f8cfa83d5233a993",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/resampleCapture.m",
+        "sha256": "b7c4a9d9a851a7d95b98197f48cf470c2948ec65f7aae8a0c5361f7faeb62169",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/trackFrame.m",
+        "sha256": "4730bed4368a5b5dd00fd34df97048f80fa7e8bb7b52b3361eca829399761c68",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/validateRun.m",
+        "sha256": "f44b4bc2a5d3fd1b317c66da6a8d880e953c9ae03ac63cc84fb248299dc0dc0b",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/loadAndPlotExemplarFrames.m",
+        "sha256": "96141f75d609aa70f8fe7b7919735b81ea0ddb405ef0c199e4df8b631f056e56",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/reference-template/correlateEdgePilots.m",
+        "sha256": "ccfe38772ea0bb6adbbc92a048425840e623443b7dc4680d5d7b6abe42dff7a7",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/reference-template/genEdgePilots.m",
+        "sha256": "906c1aa492351ea3ffb61551eb7439be7e5933cddece128a111b23b39aab904b",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/reference-template/genPss.m",
+        "sha256": "32c7a9a5844499e5f92dbd6503fdd0f2ebe178a1f6691313887f70b53e1d21b6",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/reference-template/genReferenceTemplate.m",
+        "sha256": "07965e1b49bae96f8fee74052f5eb7af017cc34b881c2cf6b51c31a6fe11fdda",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/reference-template/genSss.m",
+        "sha256": "b327682ef5adc9c2692c3a0332cd0a4c9a30bc262fad45824b770d9e3c2b5e3e",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/reference-template/referenceTemplate.mat",
+        "sha256": "ec77ad6f9a17c8b14451f7f3cea6114952d0ad3aca26b3eb8c0e9aec06b002cd",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/reference-template/sssVec.mat",
+        "sha256": "d1e35826279baf0fc3e5a6fa3d34e5a83dd525956132ad9cecdb2af48450f982",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/startup.m",
+        "sha256": "dcf83df7dc6fbd973cae43de59a95f94a9c57c168e2f4e84875744a87cf689bb",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/utils/complexConstellations/gen4QAMconst.m",
+        "sha256": "f5d460076ff3a4866eb8b7f3fd6fbfceabb13b9678e21abea5ce34e9ee1102d8",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/utils/complexConstellations/genQPSKconst.m",
+        "sha256": "39586d146adde8d303d2d421d6244c3c742cf957ea5801e99051a86b7732b41d",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/utils/complexConstellations/modEnum.m",
+        "sha256": "ffbcbc97cba7490605dd9950c50ca3f1e1b42805a84a79c37a37d74c94c63434",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/utils/complexConstellations/modulationMap.m",
+        "sha256": "3ee3e25cd5bff752b1d373cd6d40c906a8cfbf7177f865bbf1fca874bf50f329",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/utils/signalProcessing/fftcorr.m",
+        "sha256": "540797821c6bfd1916e66a4b95f3bda1a253d77f34325e3d0ccd0edadda68bfd",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/utils/signalProcessing/qpsk2rotations.m",
+        "sha256": "460f6f010909faddbd3b73e3990e85d85cc571c3755b470a86f2c15c19c7a6d2",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/utils/signalProcessing/starlinkConstants.m",
+        "sha256": "06704563406a8c70c7e3178e3f003753cbda141f554dfc2d3102a8ffbd70a76b",
+        "unchanged": true
+      }
+    ],
+    "raw_bin_bytes": 50000000,
+    "raw_bin_sha256": "c69e82022d45173cdcaf1a5fdc8a2b864e2d61e85ae819af54b16002044adae3",
+    "original_22_MAT_byte_hashes_unchanged": true,
+    "fresh_22_MAT_after_final_report_unchanged": true,
+    "local_only_files_unchanged": true,
+    "existing_matlab_files_checked": 91,
+    "changed_existing_matlab_files": [
+      "matlab/learning_receiver/+slrx/+diag/chartCatalog.m",
+      "matlab/learning_receiver/+slrx/+diag/exportDiagnostics.m",
+      "matlab/learning_receiver/+slrx/+diag/stepFigures.m",
+      "matlab/learning_receiver/+slrx/+diag/writeReport.m",
+      "matlab/learning_receiver/+slrx/+viz/plotCFO.m",
+      "matlab/learning_receiver/+slrx/+viz/plotCapture.m",
+      "matlab/learning_receiver/+slrx/+viz/plotChannel.m",
+      "matlab/learning_receiver/+slrx/+viz/plotFFTGrid.m",
+      "matlab/learning_receiver/+slrx/beginLesson.m",
+      "matlab/learning_receiver/+slrx/defaultConfig.m",
+      "matlab/learning_receiver/+slrx/drawStep.m",
+      "matlab/learning_receiver/+slrx/step.m",
+      "matlab/learning_receiver/RUN_DIAGNOSTICS.m",
+      "matlab/learning_receiver/START_HERE.m",
+      "matlab/learning_receiver/tests/test_discrete_visualization.m",
+      "matlab/learning_receiver/tests/test_visual_diagnostics.m"
+    ],
+    "html_local_links_checked": 38,
+    "html_images": 17,
+    "markdown_local_links_checked": 104,
+    "validated_pngs": [
+      {
+        "file": "runs/cfo-teaching-final-20261028/report/figures/00_capture.png",
+        "width": 1668,
+        "height": 1017,
+        "sha256": "651f65adde9402c298d1936b1f2d317f9760ca9bbb011c59f0d9405b3a72a5cc"
+      },
+      {
+        "file": "runs/cfo-teaching-final-20261028/report/figures/00b_resampling.png",
+        "width": 1906,
+        "height": 1189,
+        "sha256": "fda5e5a8a1d67d90cc4af414a8a3f961e5c64db51c849b44a6777da664ddc1d0"
+      },
+      {
+        "file": "runs/cfo-teaching-final-20261028/report/figures/01_sync_global.png",
+        "width": 1700,
+        "height": 1022,
+        "sha256": "3ef5e1ddf56ea143c1c08e0f03633b69165f112c14f1f9f61877a4ceb15e7db6"
+      },
+      {
+        "file": "runs/cfo-teaching-final-20261028/report/figures/02_sync_local.png",
+        "width": 1668,
+        "height": 996,
+        "sha256": "a65c48381dbcd826967af33560ec3fc593f9d8b5c419deb7af85a70c7001d9f4"
+      },
+      {
+        "file": "runs/cfo-teaching-final-20261028/report/figures/03_constellation_stages.png",
+        "width": 1668,
+        "height": 1023,
+        "sha256": "6bf0508c73c0df63d8933fef12d60b9cc6167b02cc2d70b45e7eb3518cf8c784"
+      },
+      {
+        "file": "runs/cfo-teaching-final-20261028/report/figures/04_conditional_models.png",
+        "width": 1668,
+        "height": 1018,
+        "sha256": "17d6670c3da7547f73763abb6412398976126446f7ae5ff897432ce28803c266"
+      },
+      {
+        "file": "runs/cfo-teaching-final-20261028/report/figures/05_cfo.png",
+        "width": 1965,
+        "height": 1223,
+        "sha256": "e911aad155938d4a0fba98de4784a3b421c5fb71103a33623652e3db1c6143ca"
+      },
+      {
+        "file": "runs/cfo-teaching-final-20261028/report/figures/06_sfo.png",
+        "width": 1668,
+        "height": 1018,
+        "sha256": "bc0a1677810c9c9ff0f3b47ef9d22fc918ba3f32a84c24e90f887912081d95b7"
+      },
+      {
+        "file": "runs/cfo-teaching-final-20261028/report/figures/07_ofdm_symbol.png",
+        "width": 1668,
+        "height": 1244,
+        "sha256": "af43b9dc9d651c3c4de64750e51b5557b8b6de56aa150af34a7b9c1b682c006a"
+      },
+      {
+        "file": "runs/cfo-teaching-final-20261028/report/figures/08_cp_copy.png",
+        "width": 1668,
+        "height": 1017,
+        "sha256": "7de7dd05845f7a4b6b195c131c272ac9b59f5dd4c6876b21880928e5d256bd38"
+      },
+      {
+        "file": "runs/cfo-teaching-final-20261028/report/figures/09_fft_grid.png",
+        "width": 1668,
+        "height": 1017,
+        "sha256": "5d510fe10470d4826491ea7b5f7977c6232f9049d67a9f1a98b292b43d6acafb"
+      },
+      {
+        "file": "runs/cfo-teaching-final-20261028/report/figures/10_channel.png",
+        "width": 1668,
+        "height": 1187,
+        "sha256": "bc7a6330f3a80d8ac42d464904313cea79ff7da043a89db9d127287bd0fd55a5"
+      },
+      {
+        "file": "runs/cfo-teaching-final-20261028/report/figures/11_pilot_evm.png",
+        "width": 1668,
+        "height": 1017,
+        "sha256": "de7f0afc5548ec8791928cf526d128291769a849dc7caee63b30780e9998a3b9"
+      },
+      {
+        "file": "runs/cfo-teaching-final-20261028/report/figures/11b_tracking.png",
+        "width": 1729,
+        "height": 1172,
+        "sha256": "63586673e5a9ac24effab485806b9b40fc83cc4893b091fe60e0509e9069f075"
+      },
+      {
+        "file": "runs/cfo-teaching-final-20261028/report/figures/12_pilot_cloud.png",
+        "width": 1668,
+        "height": 1017,
+        "sha256": "2800ed1aebda6418f51fc22f0a2c45c0ebb22e4773c1f6a03cb27fb3a874e370"
+      },
+      {
+        "file": "runs/cfo-teaching-final-20261028/report/figures/13_pilot_errors.png",
+        "width": 1693,
+        "height": 1017,
+        "sha256": "bb4eaf3f36aeae8cbc8b836eef708ba84802411545f773ebca872e23206ce6fa"
+      },
+      {
+        "file": "runs/cfo-teaching-final-20261028/report/figures/14_guard.png",
+        "width": 1668,
+        "height": 1017,
+        "sha256": "25f26f97ddb32e3259f5590f76c7db8498bbc45018fdcfb5b4fce79a36f1fcba"
+      },
+      {
+        "file": "runs/cfo-existing-tests-20261028/observability_final/main/figures/01_capture.png",
+        "width": 1668,
+        "height": 1017,
+        "sha256": "bbf0f6eff9aacdea3cc92d2c27f7e2905ca2184c9c207c6acb19b25f01404336"
+      },
+      {
+        "file": "runs/cfo-existing-tests-20261028/observability_final/main/figures/02_resampled.png",
+        "width": 1906,
+        "height": 1189,
+        "sha256": "e6003c2a2bd9cdb1f67a3e0b768c6fc9511152a9eb8fdab24d7f64f8da854e91"
+      },
+      {
+        "file": "runs/cfo-existing-tests-20261028/observability_final/main/figures/03_sync_global.png",
+        "width": 1700,
+        "height": 1022,
+        "sha256": "087396e5f8cd5bf676a257c6151d96bbc732326557911e75f59a6cc0ed05c5c7"
+      },
+      {
+        "file": "runs/cfo-existing-tests-20261028/observability_final/main/figures/03_sync_local.png",
+        "width": 1668,
+        "height": 996,
+        "sha256": "a356a1097320831093cdf21cdc10351d78cab03ca9be1c7516e312a454b566a4"
+      },
+      {
+        "file": "runs/cfo-existing-tests-20261028/observability_final/main/figures/04_frame_time.png",
+        "width": 1965,
+        "height": 1223,
+        "sha256": "dcb5d048f3da9abd24c467fba516c95191f04f94e55ec5199ce40e1b6e49f39b"
+      },
+      {
+        "file": "runs/cfo-existing-tests-20261028/observability_final/main/figures/05_without_cp.png",
+        "width": 1668,
+        "height": 1017,
+        "sha256": "ee49558325535daf3f23d2a13000e34cf3d55ebbe70ece23bcbbd02be887636c"
+      },
+      {
+        "file": "runs/cfo-existing-tests-20261028/observability_final/main/figures/06_fft_grid.png",
+        "width": 1668,
+        "height": 1017,
+        "sha256": "9cd4f40831c6a3c3c5621588d6a66abfd4c0e37e9001b9c840fde5f130e5676d"
+      },
+      {
+        "file": "runs/cfo-existing-tests-20261028/observability_final/main/figures/07_channel.png",
+        "width": 1668,
+        "height": 1187,
+        "sha256": "3b89e01ec0b83082b5145e94ce4c32dc9bfbefcfaa42697f94e71d4b409205b3"
+      },
+      {
+        "file": "runs/cfo-existing-tests-20261028/observability_final/main/figures/08_equalized.png",
+        "width": 1668,
+        "height": 1023,
+        "sha256": "90b14aed7fb21dde7a9415409880fe22a9d270bce7810df6324204ce6a0171cf"
+      },
+      {
+        "file": "runs/cfo-existing-tests-20261028/observability_final/main/figures/09_pilot_observations.png",
+        "width": 1668,
+        "height": 1009,
+        "sha256": "6c9df23a0d3eabe1f98343ffa5b21f6379ea657cae05f41f20382dc0021c5e2c"
+      },
+      {
+        "file": "runs/cfo-existing-tests-20261028/observability_final/main/figures/10_cardinality.png",
+        "width": 1668,
+        "height": 1017,
+        "sha256": "b4adbafeab9bb8291a3c4953003017ef6dec66c6e0e9f4def134957592c51071"
+      },
+      {
+        "file": "runs/cfo-existing-tests-20261028/observability_final/main/figures/11_tracking.png",
+        "width": 1729,
+        "height": 1172,
+        "sha256": "eac8d4c8d7e6427f52f63e46a4b9cb53167fe7e4dcc9132940005d268fe534ea"
+      },
+      {
+        "file": "runs/cfo-existing-tests-20261028/observability_final/main/figures/13a_frame_time.png",
+        "width": 1965,
+        "height": 1223,
+        "sha256": "d605867227f4ec1b7c1d13bdadb3382982adef92a718faa740a3f0fe94d5d872"
+      },
+      {
+        "file": "runs/cfo-existing-tests-20261028/observability_final/main/figures/13b_without_cp.png",
+        "width": 1668,
+        "height": 1017,
+        "sha256": "3cc15b34616ed6cc49c174d2ed848a634808a114903b303ed3ca4df4c9ce460a"
+      },
+      {
+        "file": "runs/cfo-existing-tests-20261028/observability_final/main/figures/13c_fft_grid.png",
+        "width": 1668,
+        "height": 1017,
+        "sha256": "cb99936b55b58f39d74d53001d8303d59c56fa77a7934777114aa15f23c80bda"
+      },
+      {
+        "file": "runs/cfo-existing-tests-20261028/observability_final/main/figures/13d_channel.png",
+        "width": 1668,
+        "height": 1187,
+        "sha256": "dda8599ccb5a82a51f4e79113e41541951a186f05333f916983b17acf3ef9c49"
+      },
+      {
+        "file": "runs/cfo-existing-tests-20261028/observability_final/main/figures/13e_equalized.png",
+        "width": 1668,
+        "height": 1023,
+        "sha256": "a0c8dce15365d0594e30396d3be7431a41c357ea03e683f08a178525f7c21c39"
+      },
+      {
+        "file": "runs/cfo-existing-tests-20261028/observability_final/main/figures/13f_pilots.png",
+        "width": 1668,
+        "height": 1009,
+        "sha256": "c79ec7577399c5de2b83544f430259a98590e2583c50c72d60768ebe40c562c3"
+      },
+      {
+        "file": "runs/cfo-existing-tests-20261028/observability_final/main/figures/13g_cardinality.png",
+        "width": 1668,
+        "height": 1017,
+        "sha256": "ddcd58b9f6f189f76307947398ad41bc496af3f888359946c49f794a1f41ff88"
+      },
+      {
+        "file": "runs/cfo-existing-tests-20261028/observability_final/main/figures/13h_tracking.png",
+        "width": 1729,
+        "height": 1172,
+        "sha256": "419a6295cee6a77828defebe1c697c689ffc3225b80426f0e215b357e94ac96e"
+      },
+      {
+        "file": "runs/cfo-existing-tests-20261028/observability_final/main/figures/14_decisions.png",
+        "width": 1668,
+        "height": 1064,
+        "sha256": "81ab79892f81b06306167cd9eb682eec8847d41cf43fd18ff8a9fbe939d05e99"
+      },
+      {
+        "file": "runs/cfo-existing-tests-20261028/observability_final/main/figures/15_guard.png",
+        "width": 1668,
+        "height": 1017,
+        "sha256": "8d67ae30a13c6e9ed75ccdb963bbfd26a2e166bfb61a1d3afc3e57d84ba6d4b0"
+      },
+      {
+        "file": "runs/cfo-existing-tests-20261028/observability_final/advanced/debug/capture_dense.png",
+        "width": 1496,
+        "height": 998,
+        "sha256": "4f466ab4f845d00bbafc5f5acacf0ea9e6aae05c9b84151d47ae94a364e7f694"
+      },
+      {
+        "file": "runs/cfo-existing-tests-20261028/observability_final/advanced/debug/cfo_dense_round1.png",
+        "width": 1438,
+        "height": 999,
+        "sha256": "36f5fdea1f5f66d164ce63813a7c71a84c47c4a072f22b0a4093816ab5fece07"
+      },
+      {
+        "file": "runs/cfo-existing-tests-20261028/observability_final/advanced/debug/cfo_dense_round2.png",
+        "width": 1438,
+        "height": 999,
+        "sha256": "945703e83dd7a985460d1a5c722a5510c605f14d2548abb40b8646cce530d683"
+      },
+      {
+        "file": "runs/cfo-teaching-final-20261028/main_resampling/figures/02_resampled.png",
+        "width": 1906,
+        "height": 1189,
+        "sha256": "bf0b60d38ab677f38558e405fe1ce3f4c9badc8b61303d2483a4c135533cf8cd"
+      }
+    ],
+    "syntax": {
+      "checked_files": 79,
+      "advisory_ids": [
+        "AGROW",
+        "ALIGN",
+        "ASGLU",
+        "CCAT1",
+        "ISCL",
+        "LAXES",
+        "MSNU",
+        "NASGU",
+        "NOCOMMA"
+      ],
+      "syntax_error_ids": []
+    }
+  }
+}

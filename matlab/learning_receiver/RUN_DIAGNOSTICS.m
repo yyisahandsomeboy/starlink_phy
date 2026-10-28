@@ -13,11 +13,13 @@ addParameter(p,'SelectedRow',[],@isnumeric);
 addParameter(p,'MaxPoints',6000,@(x)isnumeric(x)&&isscalar(x)&&x>=1&&x==floor(x));
 addParameter(p,'LowChannelFraction',.1,@(x)isnumeric(x)&&isscalar(x)&&x>0&&x<1);
 addParameter(p,'ShowFigures',false,@(x)islogical(x)&&isscalar(x));
+addParameter(p,'DebugPlots',false,@(x)islogical(x)&&isscalar(x));
+addParameter(p,'CFORound',[],@(x)isempty(x)||(isscalar(x)&&ismember(x,[1 2])));
 addParameter(p,'OutputDir','',@(x)ischar(x)||isstring(x));
 parse(p,varargin{:});a=p.Results;
 options=struct('symbols',a.Symbols,'carrier_mode',char(a.CarrierMode),'frequency_band_mhz',a.FrequencyBandMHz, ...
     'geometry_id',a.GeometryID,'normalization',char(a.Normalization),'grid_columns',a.GridColumns, ...
-    'selected_row',a.SelectedRow,'max_points',a.MaxPoints,'low_channel_fraction',a.LowChannelFraction,'show_figures',a.ShowFigures);
+    'selected_row',a.SelectedRow,'max_points',a.MaxPoints,'low_channel_fraction',a.LowChannelFraction,'show_figures',a.ShowFigures,'debug_plots',a.DebugPlots,'cfo_round',a.CFORound);
 if ischar(runDirs)||isstring(runDirs),runDirs=cellstr(runDirs);end
 assert(iscell(runDirs)&&~isempty(runDirs),'slrx:DiagnosticInput','请指定一个学习运行目录或目录cell列表');
 root=fileparts(fileparts(fileparts(mfilename('fullpath'))));
