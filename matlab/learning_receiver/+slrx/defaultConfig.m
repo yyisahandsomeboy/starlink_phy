@@ -119,7 +119,7 @@ function cfg = defaultConfig(projectRoot)
     % 每一轮用本帧SSS；不暗中合并其他帧
 
     % 设置运行到哪一步就停止；14为完整判决，终端默认可停在8。
-    cfg.stop_after = 18;  % 新版继续PN、BCC/CRC与Code5；设14可只运行原接收链。
+    cfg.stop_after = 20;  % 继续PN、BCC/CRC、Code5和逐资源判决；14仅原接收链。
     % 命令行可只跑到某一步，之后从MAT继续
 
     % 设置true时回读同目录已有MAT；false时随后执行的步骤重新计算。

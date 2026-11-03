@@ -10,5 +10,5 @@ for j=1:numel(files)
     records(end+1)=struct('path',strrep(rel,filesep,'/'),'sha256',slrx.sha256(p)); %#ok<AGROW>
 end
 for j=1:numel(extra),records(end+1)=struct('path',extra{j},'sha256',slrx.sha256(fullfile(root,extra{j})));end %#ok<AGROW>
-manifest=struct('version','pdu-receiver-source-v1','owner','codex_baseline','files',records);
+manifest=struct('version','pdu-receiver-source-v2','owner','codex_baseline','files',records);
 end

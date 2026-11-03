@@ -1,3 +1,5 @@
+> 2026-11-03继续升级：当前默认到第20步，增加候选资源分配、同列混合调制的逐资源几何判决及2张教学图（完整教学共27张）。[本轮原理与限制](RESOURCE_ALLOCATION_TEACHING.zh-CN.md)、[MATLAB实测](RESOURCE_ALLOCATION_VALIDATION.zh-CN.md)。下文第18步/25张等数字描述前一阶段。高阶格式位映射、FEC与业务明文仍未确认。
+
 > 2026-11-03：本页22张主线图指原核心接收链。新版默认在协议子目录另生成3张PN、BCC/CRC和Code5图，共25张；原独立物理诊断仍为17张。新增图及读法见[协议教学](PN_PDU_TEACHING.zh-CN.md)，现行测试见[验证记录](PROTOCOL_UPGRADE_VALIDATION.zh-CN.md)。
 
 # 图像阅读索引：每幅图想回答什么

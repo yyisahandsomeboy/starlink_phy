@@ -5,9 +5,9 @@ addpath(here,fullfile(root,'matlab','learning_receiver'));
 p=inputParser;addParameter(p,'Frames',1,@(x)isnumeric(x)&&isvector(x)&&all(x>=1&x==fix(x)));
 addParameter(p,'OutputDir','',@(x)ischar(x)||isstring(x));addParameter(p,'MakePlots',true,@islogical);
 addParameter(p,'ShowFigures',false,@islogical);addParameter(p,'PNModel','utexas_verified_pairclock',@(x)ischar(x)||isstring(x));
-addParameter(p,'Polarity',0,@(x)isscalar(x)&&ismember(x,[0 1]));addParameter(p,'EnableCode5',true,@islogical);parse(p,varargin{:});
+addParameter(p,'Polarity',0,@(x)isscalar(x)&&ismember(x,[0 1]));addParameter(p,'EnableCode5',true,@islogical);addParameter(p,'EnableAllocations',true,@islogical);parse(p,varargin{:});
 opt=slproto.defaultOptions();opt.make_plots=p.Results.MakePlots;opt.show_figures=p.Results.ShowFigures;
-opt.pn_model=char(p.Results.PNModel);opt.polarity=p.Results.Polarity;opt.enable_code5=p.Results.EnableCode5;
+opt.pn_model=char(p.Results.PNModel);opt.polarity=p.Results.Polarity;opt.enable_code5=p.Results.EnableCode5;opt.enable_allocations=p.Results.EnableAllocations;
 out=char(p.Results.OutputDir);if isempty(out),out=fullfile(sourceRun,['protocol-' char(datetime('now','Format','yyyyMMdd-HHmmss-SSS'))]);end
 assert(~isfolder(out),'slproto:OutputExists','输出目录已存在，请换一个目录');mkdir(out);
 cfg=slrx.defaultConfig(root);refs=slrx.references(cfg);frames=p.Results.Frames;items=cell(1,numel(frames));

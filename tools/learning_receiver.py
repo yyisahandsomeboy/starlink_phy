@@ -35,8 +35,11 @@ def protocol_state(out, through):
         return {'status':'missing_required_output','configuration_header_status':'not_decoded'}
     file=summaries[-1];d=json.loads(file.read_text(encoding='utf-8'))
     first=d['headers']['first']['accepted'];second=d['headers']['second_unique'];code=d['code5']
+    allocations=d.get('allocations',{})
+    if through>=20 and not allocations.get('complete'):
+        return {'status':'missing_required_output','configuration_header_status':'allocation_not_supported'}
     return {'status':'available','configuration_header_status':'crc_checked_units' if first and second else 'partial_or_not_supported',
-            'first_header_accepted':first,'second_header_unique':second,'code5_available':code['available'],
+            'first_header_accepted':first,'second_header_unique':second,'code5_available':code['available'],'allocations_available':allocations.get('available',False),
             'report_path':file.with_name('index.html').relative_to(out).as_posix()}
 
 
@@ -61,7 +64,7 @@ def make_report(out, execution):
         sections.append(f'<section id="{key}"><h2>{title}</h2><p><b>输入：</b>{input_}<br><b>输出：</b>{output}</p><pre>{formula}</pre><p><a href="../../matlab/learning_receiver/+slrx/{module}">打开本模块源码</a> · {links}</p><pre>{esc(metrics)}</pre>{repeated}{figs}</section>')
     protocol=protocol_state(out,execution['requested_through'])
     if protocol['status']=='available':
-        sections.append(f'<section id="protocol"><h2>16～18. PN、PDU头部与Code5</h2><p>头部状态：{esc(protocol["configuration_header_status"])}；Code5可用：{protocol["code5_available"]}。</p><p><a href="{esc(protocol["report_path"])}">打开实际协议结果、三张教学图和独立源码身份</a></p><p>头部CRC和Code5属于条件编码关系，不能解释为完整业务明文或真实业务BER。</p></section>')
+        sections.append(f'<section id="protocol"><h2>16～20. PN、PDU头部、Code5与逐资源判决</h2><p>头部状态：{esc(protocol["configuration_header_status"])}；Code5可用：{protocol["code5_available"]}。</p><p><a href="{esc(protocol["report_path"])}">打开实际协议结果、教学图和独立源码身份</a></p><p>头部CRC和Code5属于条件编码关系，不能解释为完整业务明文或真实业务BER。</p></section>')
     cfg=json.loads((out/'lesson_config.json').read_text(encoding='utf-8')) if (out/'lesson_config.json').exists() else {}
     body=f'''<header><h1>单帧逐步接收学习记录</h1><p>版本 learning-receiver-v1 · codex_baseline。独立PSS/SSS捕获，不用作者TOA；默认每帧独立信道，没有合并其他帧SSS。</p><p>本次请求运行至第{execution['requested_through']}步；状态：{execution['status']}。配置头、真实业务位映射、FEC和CRC尚未恢复。</p></header><section><h2>怎样使用这份记录</h2><p>先看每一步的输入、输出和公式，再看MAT中的实际变量，最后看图。用MATLAB打开<a href="../../matlab/learning_receiver/START_HERE.m">START_HERE.m</a>，按Ctrl+Enter逐节运行；不必一次跑完整链路。</p><pre>D=load('06_fft_grid.mat','data');\nfrequencyGrid=D.data;\nsize(frequencyGrid.values)  % 1024×301</pre><p>第13步由13a～13h展开，重复第4～11步，各自的MAT/JSON/PNG保留在当前目录。既有步骤可回读恢复，改变DSP参数或代码则建立新目录。</p><p>输入窗口：{cfg.get('read_duration_s','?')}秒；原始起始复采样：{cfg.get('first_complex_sample','?')}；帧选择序号：{cfg.get('frame_rank','?')}。学习版窗口和单帧信道假设不同于旧50ms多帧共享模式，端到端结果不要求与旧结果逐值相同。</p><p><a href="execution.json">批处理记录</a> · <a href="lesson_config.json">本次参数</a> · <a href="lesson_lock.json">输入和代码记录</a> · <a href="../../docs/LEARNING_RECEIVER.zh-CN.md">完整学习说明</a></p></section>'''
     statement='头部CRC和Code5状态见新增协议页；真实业务位映射、完整业务明文和业务BER尚未恢复。' if protocol['status']=='available' else '本次未导出完整协议阶段；真实业务位映射、完整业务明文和业务BER尚未恢复。'
@@ -98,7 +101,7 @@ def run(args):
     print(json.dumps({'phase':'running','run_id':out.name,'through':args.through},ensure_ascii=False),flush=True)
     e=domain.native_run(out,expr,'learning_receiver',args.timeout)
     protocol=protocol_state(out,args.through)
-    status='completed' if e['status']=='passed' and args.through in (14,18) else 'partial' if e['status']=='passed' else 'failed'
+    status='completed' if e['status']=='passed' and args.through in (14,18,20) else 'partial' if e['status']=='passed' else 'failed'
     if e['status']=='passed' and protocol['status']=='missing_required_output':status='failed'
     record={'status':status,'owner':'codex_baseline','run_id':out.name,'requested_through':args.through,'execution':e,
             'configuration_header_status':protocol['configuration_header_status'],'protocol':protocol,
@@ -119,7 +122,7 @@ def run(args):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--through','--step',type=int,choices=[*range(1,15),18],default=8,help='1-14: original lesson; 18: include PN, PDU CRC and Code5; default8')
+    p.add_argument('--through','--step',type=int,choices=[*range(1,15),18,20],default=8,help='1-14: original lesson; 18: PN, PDU CRC and Code5; 20: conditional resource decisions; default8')
     p.add_argument('--resume',help='Existing codex-learning run_id')
     p.add_argument('--duration-ms',type=float)
     p.add_argument('--first-sample',type=int)

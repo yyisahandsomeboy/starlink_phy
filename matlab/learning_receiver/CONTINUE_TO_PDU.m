@@ -24,6 +24,14 @@ if lesson_cfg.stop_after<=17,return;end
 protocol_code5=slproto.analyzeCode5(protocol_stream,protocol_headers,protocol_opt);
 protocol_result=slproto.finishFrame(finalGrid.values,protocol_calibrated,protocol_reference, ...
     protocol_calibration,protocol_pn,protocol_headers,protocol_code5,protocol_opt);
+%% 19. 条件MCS长度 → r0资源分段（边界允许位于一列内部）
+if lesson_cfg.stop_after>=19
+    protocol_allocation_plan=slproto.planAllocations(protocol_headers);
+end
+%% 20. 分区域几何判决、留出资源检验和不受数量约束的边界对照
+if lesson_cfg.stop_after>=20
+    protocol_result.allocations=slproto.analyzeAllocations(protocol_stream,protocol_headers,protocol_calibrated,refs.pilots);
+end
 protocol_out=fullfile(lesson_cfg.run_dir,['protocol-teaching-' char(datetime('now','Format','yyyyMMdd-HHmmss-SSS'))]);
 protocol_source=struct('checkpoint',fullfile(lesson_cfg.run_dir,'13h_tracking.mat'), ...
     'sha256',slrx.sha256(fullfile(lesson_cfg.run_dir,'13h_tracking.mat')),'frame_index',lesson_cfg.frame_rank,'raw_BIN_reads',0);

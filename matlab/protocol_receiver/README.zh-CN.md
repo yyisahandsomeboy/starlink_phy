@@ -1,3 +1,5 @@
+> 当前v2另支持头部分配表及逐资源判决，详见[原理/接口](../../docs/RESOURCE_ALLOCATION_TEACHING.zh-CN.md)和[实测记录](../../docs/RESOURCE_ALLOCATION_VALIDATION.zh-CN.md)。高阶FEC、位映射仍未知。
+
 # Codex接收机协议升级：PN、PDU头部与Code5
 
 本模块把旧工程已经支持的“去PN后出现BPSK两点”继续接到BCC、组CRC、条件资源字段和一个已验证的Code5 QC-LDPC表示。依据[arXiv:2610.29387v2](https://arxiv.org/html/2610.29387v2)，实现身份为`codex_baseline`。
@@ -25,7 +27,7 @@ report = RUN_PROTOCOL_ANALYSIS('runs/你的学习运行目录');
 report = RUN_PROTOCOL_ANALYSIS('runs/你的完整接收目录', 'Frames', 1:9);
 ```
 
-默认每帧输出三张新教学图及本地HTML。每帧只读取最终网格所在的单个检查点，读取后释放；不加载整份九帧大MAT作为回退，不重读原始IQ。输出目录已存在时拒绝覆盖。
+默认每帧输出五张新教学图及本地HTML。每帧只读取最终网格所在的单个检查点，读取后释放；不加载整份九帧大MAT作为回退，不重读原始IQ。输出目录已存在时拒绝覆盖。
 
 ```matlab
 report = RUN_PROTOCOL_ANALYSIS(runDir, 'Frames', 1, ...
@@ -37,21 +39,21 @@ report = RUN_PROTOCOL_ANALYSIS(runDir, 'Frames', 1, ...
 
 ## 从原始IQ运行
 
-教学版默认运行到第18步：
+教学版默认运行到第20步：
 
 ```matlab
 open('matlab/learning_receiver/START_HERE.m')
 ```
 
-第16～18步由[CONTINUE_TO_PDU.m](../learning_receiver/CONTINUE_TO_PDU.m)分节展示，调用与完整入口相同的`slproto`函数。设`lesson_cfg.stop_after=14`可停在原接收链；16/17分别停在去PN/头部阶段。改变源码后使用新的运行目录。
+第16～20步由[CONTINUE_TO_PDU.m](../learning_receiver/CONTINUE_TO_PDU.m)分节展示，调用与完整入口相同的`slproto`函数。设`lesson_cfg.stop_after=14`可停在原接收链；16/17分别停在去PN/头部阶段。改变源码后使用新的运行目录。
 
-Ubuntu终端启动器仍默认先跑到第8步；导入原完整冻结夹具后，可明确请求完整第18步：
+Ubuntu终端启动器仍默认先跑到第8步；导入原完整冻结夹具后，可明确请求完整第20步：
 
 ```bash
-scripts/run_learning_receiver --through 18
+scripts/run_learning_receiver --through 20
 ```
 
-该终端入口现在支持原1～14步及完整18步，16/17的中途观察使用MATLAB分节。其批处理元数据读取实际协议摘要，不再无条件写“头部未解码”。本轮在Windows检查了参数和报告生成，未执行Linux原生启动器；仅准备公开资源的用户直接使用上面的MATLAB入口。
+该终端入口现在支持原1～14步及完整18/20步，16/17的中途观察使用MATLAB分节。其批处理元数据读取实际协议摘要，不再无条件写“头部未解码”。本轮在Windows检查了参数和报告生成，未执行Linux原生启动器；仅准备公开资源的用户直接使用上面的MATLAB入口。
 
 完整接收的新包装入口：
 

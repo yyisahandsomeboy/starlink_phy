@@ -1,3 +1,5 @@
+> 2026-11-03继续升级：当前默认到第20步，增加候选资源分配、同列混合调制的逐资源几何判决及2张教学图（完整教学共27张）。[本轮原理与限制](../../docs/RESOURCE_ALLOCATION_TEACHING.zh-CN.md)、[MATLAB实测](../../docs/RESOURCE_ALLOCATION_VALIDATION.zh-CN.md)。下文第18步/25张等数字描述前一阶段。高阶格式位映射、FEC与业务明文仍未确认。
+
 > GitHub源码版：`/path/to/starlink_phy`请换成你的克隆目录。历史 `runs/` 与图片不随仓库上传；资源准备及两种启动方式见[仓库README](../../README.md)。
 
 # 从这里学习 Codex 接收机

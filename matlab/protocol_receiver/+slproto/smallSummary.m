@@ -5,6 +5,10 @@ s.calibration=rmfield(s.calibration,{'phase_intercept_rad','phase_slope_rad_per_
 if s.code5.available
     s.code5.words=rmfield(s.code5.words,{'information_bits','decoded_codeword'});
 end
+if isfield(s,'allocations')&&s.allocations.available
+    s.allocations=rmfield(s.allocations,{'region_index','symbol_index','decided_symbol','boundary_uncertain'});
+    s.allocations.calibration=rmfield(s.allocations.calibration,{'gain_per_column','variance_per_column'});
+end
 s.headers.first=smallHeader(s.headers.first);
 if ~isempty(s.headers.second_candidates)
     s.headers.second_candidates=arrayfun(@smallHeader,s.headers.second_candidates);

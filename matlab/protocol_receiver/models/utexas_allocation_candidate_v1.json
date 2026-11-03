@@ -1,0 +1,106 @@
+{
+  "version": "utexas-exemplar-candidate-v1",
+  "scope": "Only public UT Austin exemplar250-257 capture; not a universal MCS table",
+  "raw_sha256": "c69e82022d45173cdcaf1a5fdc8a2b864e2d61e85ae819af54b16002044adae3",
+  "length_rule": "quantity * ceil(Nc / bits_per_symbol); reset packing at each unit",
+  "derived_from": "Previously inspected nine frames, macro-boundaries and header quantities; no blind holdout claim",
+  "limitations": [
+    "20-bit field layout conditional",
+    "Nc=16384 for b=5 is only one candidate in [16381,16385]",
+    "same-alphabet internal boundaries are not identifiable from point clouds",
+    "IDs78/88 each occur in one frame",
+    "symbol labels are enumerations, not verified transmitter bit mappings"
+  ],
+  "profiles": [
+    {
+      "id": 5,
+      "bits_per_symbol": 1,
+      "resources_per_unit": 2048,
+      "coded_bits_hypothesis": 2048,
+      "alphabet": "BPSK",
+      "FEC_verified": true,
+      "evidence": "fixed_code5_H",
+      "rare_single_frame": false
+    },
+    {
+      "id": 57,
+      "bits_per_symbol": 4,
+      "resources_per_unit": 2048,
+      "coded_bits_hypothesis": 8192,
+      "alphabet": "16QAM",
+      "FEC_verified": false,
+      "evidence": "conditional_geometry_and_length_only",
+      "rare_single_frame": false
+    },
+    {
+      "id": 66,
+      "bits_per_symbol": 4,
+      "resources_per_unit": 4096,
+      "coded_bits_hypothesis": 16384,
+      "alphabet": "16QAM",
+      "FEC_verified": false,
+      "evidence": "conditional_geometry_and_length_only",
+      "rare_single_frame": false
+    },
+    {
+      "id": 70,
+      "bits_per_symbol": 4,
+      "resources_per_unit": 4096,
+      "coded_bits_hypothesis": 16384,
+      "alphabet": "16QAM",
+      "FEC_verified": false,
+      "evidence": "conditional_geometry_and_length_only",
+      "rare_single_frame": false
+    },
+    {
+      "id": 71,
+      "bits_per_symbol": 5,
+      "resources_per_unit": 3277,
+      "coded_bits_hypothesis": 16384,
+      "alphabet": "32cross",
+      "FEC_verified": false,
+      "evidence": "conditional_geometry_and_length_only",
+      "rare_single_frame": false
+    },
+    {
+      "id": 78,
+      "bits_per_symbol": 5,
+      "resources_per_unit": 3277,
+      "coded_bits_hypothesis": 16384,
+      "alphabet": "32cross",
+      "FEC_verified": false,
+      "evidence": "conditional_geometry_and_length_only",
+      "rare_single_frame": true
+    },
+    {
+      "id": 85,
+      "bits_per_symbol": 5,
+      "resources_per_unit": 3277,
+      "coded_bits_hypothesis": 16384,
+      "alphabet": "32cross",
+      "FEC_verified": false,
+      "evidence": "conditional_geometry_and_length_only",
+      "rare_single_frame": false
+    },
+    {
+      "id": 88,
+      "bits_per_symbol": 5,
+      "resources_per_unit": 3277,
+      "coded_bits_hypothesis": 16384,
+      "alphabet": "32cross",
+      "FEC_verified": false,
+      "evidence": "conditional_geometry_and_length_only",
+      "rare_single_frame": true
+    },
+    {
+      "id": 92,
+      "bits_per_symbol": 5,
+      "resources_per_unit": 3277,
+      "coded_bits_hypothesis": 16384,
+      "alphabet": "32cross",
+      "FEC_verified": false,
+      "evidence": "conditional_geometry_and_length_only",
+      "rare_single_frame": false
+    }
+  ]
+}

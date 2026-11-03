@@ -1,3 +1,5 @@
+> 2026-11-03继续升级：当前默认到第20步，增加候选资源分配、同列混合调制的逐资源几何判决及2张教学图（完整教学共27张）。[本轮原理与限制](RESOURCE_ALLOCATION_TEACHING.zh-CN.md)、[MATLAB实测](RESOURCE_ALLOCATION_VALIDATION.zh-CN.md)。下文第18步/25张等数字描述前一阶段。高阶格式位映射、FEC与业务明文仍未确认。
+
 # PN/PDU/Code5升级实测记录（2026-11-03）
 
 基线：`0268bf60750515c2a5987fca0aa4b674fa8a318f`。MATLAB R2024b，Windows，实际执行新增单元测试、九帧历史网格后处理、原始IQ一帧重算及回读核验。实现身份`codex_baseline`。

@@ -1,3 +1,5 @@
+> 2026-11-03继续升级：当前默认到第20步，增加候选资源分配、同列混合调制的逐资源几何判决及2张教学图（完整教学共27张）。[本轮原理与限制](docs/RESOURCE_ALLOCATION_TEACHING.zh-CN.md)、[MATLAB实测](docs/RESOURCE_ALLOCATION_VALIDATION.zh-CN.md)。下文第18步/25张等数字描述前一阶段。高阶格式位映射、FEC与业务明文仍未确认。
+
 # Starlink PHY：Codex 接收机与分步学习版
 
 **2026-11-03协议升级：** 新版在原物理接收链后增加PN去旋转、BCC/组CRC、条件头部字段和Code5 QC-LDPC。教学入口默认继续到第18步；原核心22张图加3张协议图。完整入口与旧MAT只读升级见[协议模块](matlab/protocol_receiver/README.zh-CN.md)，数学和旧卡点见[教学说明](docs/PN_PDU_TEACHING.zh-CN.md)，实际范围见[验证记录](docs/PROTOCOL_UPGRADE_VALIDATION.zh-CN.md)。[论文与配套资源检索](docs/PAPER_2610_29387_SOURCES.zh-CN.md)明确区分作者公开材料与本工程独立实现。
@@ -31,7 +33,7 @@ reports/                  既有验证的文字/数值摘要，不含运行数�
 provenance/               代码来源、资源URL和固定SHA、出版核验记录
 ```
 
-这个仓库只交付所需源码和文档。原始 IQ、作者参考 MAT、历史运行数组、图片、DSH/在线模型环境、协议头后续研究和凭据不在 Git 中。作者序列由下面的资源脚本下载到被忽略的 `vendor/`，不会把第三方参考实现冒称为 Codex 编写。
+这个仓库只交付所需源码、文档和精简验证摘要。原始 IQ、作者参考 MAT、历史运行数组、图片、DSH/在线模型环境和凭据不在 Git 中。作者序列由下面的资源脚本下载到被忽略的 `vendor/`，不会把第三方参考实现冒称为 Codex 编写。
 
 ## 2. 环境与输入
 

@@ -7,4 +7,7 @@ assert(isequal(size(grid),[1024 301])&&all(isfinite(grid),'all'));
 values=after(c.payload_rows,2:301);stream=values(:);
 headers=slproto.findHeaders(stream,opt);coding=slproto.analyzeCode5(stream,headers,opt);
 result=slproto.finishFrame(grid,calibrated,R,calibration,pn,headers,coding,opt);
+if opt.enable_allocations
+    result.allocations=slproto.analyzeAllocations(stream,headers,calibrated,pilots);
+end
 end

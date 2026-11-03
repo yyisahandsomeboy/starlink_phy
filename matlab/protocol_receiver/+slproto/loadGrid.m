@@ -1,7 +1,10 @@
-function [grid,source] = loadGrid(runDir,frame)
+function [grid,source] = loadGrid(runDir,frame,stage)
 %LOADGRID 只加载最终网格所在的单个检查点；拒绝整份九帧巨型result.mat回退。
+if nargin<3,stage='final';end
+assert(ismember(stage,{'final','first_equalized'}));
 if isfile(fullfile(runDir,'lesson_config.mat'))
     assert(frame==1,'slproto:FrameIndex','学习运行每目录只有一帧');file=fullfile(runDir,'13h_tracking.mat');
+    if strcmp(stage,'first_equalized'),file=fullfile(runDir,'08_equalized.mat');end
     digest=slrx.sha256(file);x=load(file,'data');grid=x.data.values;
 else
     summary=jsondecode(fileread(fullfile(runDir,'result.json')));assert(frame>=1&&frame<=summary.frame_count);
@@ -12,7 +15,8 @@ else
     end
     assert(~isempty(file),'slproto:MissingCheckpoint','需要逐候选MAT，避免一次加载完整九帧数组');
     digest=slrx.sha256(file);x=load(file,'completed_frame');grid=x.completed_frame.grid_after;
+    if strcmp(stage,'first_equalized'),grid=x.completed_frame.intermediates.grid_first_equalized;end
 end
 assert(isequal(size(grid),[1024 301]));
-source=struct('checkpoint',file,'sha256',digest,'frame_index',frame,'raw_BIN_reads',0);
+source=struct('checkpoint',file,'sha256',digest,'frame_index',frame,'raw_BIN_reads',0,'stage',stage);
 end
