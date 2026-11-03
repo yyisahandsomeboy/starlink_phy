@@ -1,5 +1,7 @@
 # Starlink PHY：Codex 接收机与分步学习版
 
+**2026-11-03协议升级：** 新版在原物理接收链后增加PN去旋转、BCC/组CRC、条件头部字段和Code5 QC-LDPC。教学入口默认继续到第18步；原核心22张图加3张协议图。完整入口与旧MAT只读升级见[协议模块](matlab/protocol_receiver/README.zh-CN.md)，数学和旧卡点见[教学说明](docs/PN_PDU_TEACHING.zh-CN.md)，实际范围见[验证记录](docs/PROTOCOL_UPGRADE_VALIDATION.zh-CN.md)。[论文与配套资源检索](docs/PAPER_2610_29387_SOURCES.zh-CN.md)明确区分作者公开材料与本工程独立实现。
+
 本仓库保存两套原生 MATLAB 接收入口：**完整真实 IQ 接收机**与**模块化学习接收机**。DSP 源码来自同一工程提交 `f081bab`，逐文件来源与 SHA-256 见 [source_manifest.json](provenance/source_manifest.json)。
 
 | 目的 | 先看哪里 | 运行方式 |

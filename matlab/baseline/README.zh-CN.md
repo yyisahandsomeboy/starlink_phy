@@ -1,3 +1,5 @@
+> 2026-11-03：原物理接收机之后可接入共享PN/PDU/Code5协议模块。新包装入口为`RUN_CODEX_RECEIVER(cfg)`，已有逐候选MAT用`RUN_PROTOCOL_ANALYSIS`只读处理，见[协议README](../protocol_receiver/README.zh-CN.md)。原算法和冻结评价器不改；这里只恢复头部与条件Code5编码关系，未恢复完整业务载荷。
+
 # 完整 Codex 真实IQ接收机
 
 本目录的主入口是 `author_receiver.m`；主要数值运算在 `author_receiver_dsp.m`。两者按原工程逐字节导出，未在上传时改算法。它使用公开作者序列与公开方法，工程补齐部分标为 `codex_baseline`。

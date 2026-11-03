@@ -1,0 +1,1359 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-03",
+  "status": "passed_with_scope_limits",
+  "owner": "codex_baseline",
+  "base_commit": "0268bf60750515c2a5987fca0aa4b674fa8a318f",
+  "paper_version": "arXiv:2610.29387v2 (2026-10-29)",
+  "author_implementation_found": false,
+  "author_raw_18_frame_capture_found": false,
+  "source_bundle": {
+    "url": "https://arxiv.org/src/2610.29387v2",
+    "bytes": 6749950,
+    "sha256": "b6aeca3e2e3fc6fbb0b49c63a3f375fea994f4080de9242640935a2739d44434",
+    "status": "downloaded",
+    "receiver_code_or_IQ_files": [],
+    "metadata_JSON": [
+      "00README.json"
+    ]
+  },
+  "implementation": "Independent Codex implementation using published parameters and the previously validated UT Austin paired-PN anchor",
+  "core_DSP_modified": false,
+  "frozen_evaluator_or_thresholds_modified": false,
+  "existing_teaching_changes": [
+    "default stop_after=18",
+    "append shared protocol teaching stages16-18"
+  ],
+  "fresh_single_frame": {
+    "status": "passed",
+    "fresh_raw_IQ_core_run": true,
+    "core_resumed_steps": 0,
+    "protocol_presentation_retried_from_fresh_MAT": true,
+    "core_22_data_structs_exact": true,
+    "initial_presentation_failure": "row/column concatenation while sharing constellation limits; corrected then reran CONTINUE_TO_PDU from fresh final grid",
+    "comparisons": [
+      {
+        "file": "01_capture.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "02_resampled.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "03_sync.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "04_frame_time.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "05_without_cp.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "06_fft_grid.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "07_channel.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "08_equalized.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "09_pilot_observations.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "10_cardinality.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "11_tracking.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "12_refined_offsets.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "13a_frame_time.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "13b_without_cp.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "13c_fft_grid.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "13d_channel.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "13e_equalized.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "13f_pilots.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "13g_cardinality.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "13h_tracking.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "14_decisions.mat",
+        "data_isequaln": true
+      },
+      {
+        "file": "15_guard.mat",
+        "data_isequaln": true
+      }
+    ],
+    "learning_validation": {
+      "status": "passed",
+      "version": "learning-validation-v1",
+      "owner": "codex_baseline",
+      "single_frame_only": true,
+      "original_evaluator_changed": false,
+      "payload_bits_available": false,
+      "raw_readback_exact": true,
+      "nominal_sample_rate_hz": 240000000.0,
+      "independent_detection": true,
+      "start_sample_capture": 125001,
+      "model_and_capture_coordinate_identity": true,
+      "FFT_relative_error": 0,
+      "equalization_relative_error": 0,
+      "first_equalized_heldout_pilot_evm": 1.4788763263281632,
+      "front_end_checks": "passed",
+      "complete_single_frame_pipeline": true,
+      "final_heldout_pilot_evm": 0.21118250302583794,
+      "relative_improvement_vs_raw_fft": 0.789535336002731,
+      "valid_hard_symbol_count": 301200,
+      "original_full_multiframe_acceptance": "not_claimed_single_frame"
+    },
+    "unit_tests": {
+      "status": "passed",
+      "published_CRC_examples": 2,
+      "soft_BCC_and_error_correction": true,
+      "coordinate_cases": true,
+      "code5_H_rank": 1024,
+      "code5_GH_orthogonal": true,
+      "synthetic_minsum_changes": 2,
+      "QC_full_rank_and_reserved_error": true,
+      "rank_deficient_and_inconsistent_rejected": true
+    },
+    "protocol_first_CRC": true,
+    "protocol_second_CRC": true,
+    "code5_word_count": 4,
+    "core_pngs": 22,
+    "protocol_pngs": 3,
+    "protocol_report_relative_path": "protocol-teaching-20261103-152255-446/index.html"
+  },
+  "historical_nine_frame_postprocessing": {
+    "status": "passed",
+    "historical_result_postprocessing_only": true,
+    "new_nine_frame_DSP_run": false,
+    "first_headers_CRC_passed": 9,
+    "second_headers_CRC_passed": 9,
+    "reencoded_header_hard_errors": 0,
+    "second_header_block_counts": [
+      4,
+      4,
+      5,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "code5_words": 35,
+    "QC_development_words": 12,
+    "QC_verification_words": 23,
+    "QC_rank": 1024,
+    "raw_parity_prediction_errors": 2,
+    "code5_sparse_H_rank": 1024,
+    "all_code5_words_decoded_and_reencoded": true,
+    "wrong_reference_and_order_rejected": true,
+    "independent_QC_P_equals_fixed_sparse_H_generator": true,
+    "scope": "Existing capture, conditions fixed from publication plus frozen old PN anchor; no transmitted bit truth or application plaintext"
+  },
+  "per_frame": [
+    {
+      "frame": 1,
+      "first_words": [
+        "3048A020",
+        "000000AD"
+      ],
+      "first_CRC_predicted": 173,
+      "second_start_r0": 8420,
+      "second_blocks": 4,
+      "second_entries": 5,
+      "second_words": [
+        "342A9C80",
+        "042E4062",
+        "900E2800",
+        "AAD8000D"
+      ],
+      "second_CRC_predicted": 13,
+      "code5_words": 4,
+      "raw_parity_prediction_errors": 0,
+      "decoder_hard_changes": 0,
+      "source": {
+        "checkpoint": "runs/codex-author-real-20261014-170603-942987/frame_candidate_01.mat",
+        "sha256": "958e75ca8719aeb2ba81d62e89b377e7b1d39507289032ad22bd6e2975a415e0"
+      }
+    },
+    {
+      "frame": 2,
+      "first_words": [
+        "3048A020",
+        "000000AD"
+      ],
+      "first_CRC_predicted": 173,
+      "second_start_r0": 8420,
+      "second_blocks": 4,
+      "second_entries": 4,
+      "second_words": [
+        "342242E4",
+        "062900AA",
+        "3803A800",
+        "000000CD"
+      ],
+      "second_CRC_predicted": 205,
+      "code5_words": 4,
+      "raw_parity_prediction_errors": 0,
+      "decoder_hard_changes": 0,
+      "source": {
+        "checkpoint": "runs/codex-author-real-20261014-170603-942987/frame_candidate_04.mat",
+        "sha256": "a58ac38791b5a4d425b6c501a3bec52d8e44b8447f897a2a1b17c17faf370158"
+      }
+    },
+    {
+      "frame": 3,
+      "first_words": [
+        "3048A020",
+        "000000AD"
+      ],
+      "first_CRC_predicted": 173,
+      "second_start_r0": 8420,
+      "second_blocks": 5,
+      "second_entries": 6,
+      "second_words": [
+        "34A642E4",
+        "062100E2",
+        "80072800",
+        "AAD803A8",
+        "00000058"
+      ],
+      "second_CRC_predicted": 88,
+      "code5_words": 4,
+      "raw_parity_prediction_errors": 0,
+      "decoder_hard_changes": 0,
+      "source": {
+        "checkpoint": "runs/codex-author-real-20261014-170603-942987/frame_candidate_09.mat",
+        "sha256": "aefab547427c64888aa7048a451e4ec388c31a5e0c86dd5afb3baeb96dc1fd12"
+      }
+    },
+    {
+      "frame": 4,
+      "first_words": [
+        "3048A020",
+        "000000AD"
+      ],
+      "first_CRC_predicted": 173,
+      "second_start_r0": 8420,
+      "second_blocks": 4,
+      "second_entries": 5,
+      "second_words": [
+        "342A9C40",
+        "04264062",
+        "900E2800",
+        "AAD800C3"
+      ],
+      "second_CRC_predicted": 195,
+      "code5_words": 4,
+      "raw_parity_prediction_errors": 0,
+      "decoder_hard_changes": 0,
+      "source": {
+        "checkpoint": "runs/codex-author-real-20261014-170603-942987/frame_candidate_03.mat",
+        "sha256": "be45333b2ea01272710790b7199b6c6f5ef1d2d9364020902dff3e485a961917"
+      }
+    },
+    {
+      "frame": 5,
+      "first_words": [
+        "3048A020",
+        "000000AD"
+      ],
+      "first_CRC_predicted": 173,
+      "second_start_r0": 8420,
+      "second_blocks": 4,
+      "second_entries": 5,
+      "second_words": [
+        "342A42E4",
+        "062900AA",
+        "D801A800",
+        "3A800094"
+      ],
+      "second_CRC_predicted": 148,
+      "code5_words": 4,
+      "raw_parity_prediction_errors": 0,
+      "decoder_hard_changes": 0,
+      "source": {
+        "checkpoint": "runs/codex-author-real-20261014-170603-942987/frame_candidate_02.mat",
+        "sha256": "ba3b99000ff8af56af379021ca8729d2f4a8981cc885f0d2d813413851eb3300"
+      }
+    },
+    {
+      "frame": 6,
+      "first_words": [
+        "3048A020",
+        "000000AD"
+      ],
+      "first_CRC_predicted": 173,
+      "second_start_r0": 8420,
+      "second_blocks": 4,
+      "second_entries": 5,
+      "second_words": [
+        "342A9C80",
+        "04264062",
+        "900E2800",
+        "AA38005B"
+      ],
+      "second_CRC_predicted": 91,
+      "code5_words": 4,
+      "raw_parity_prediction_errors": 1,
+      "decoder_hard_changes": 1,
+      "source": {
+        "checkpoint": "runs/codex-author-real-20261014-170603-942987/frame_candidate_06.mat",
+        "sha256": "4d4667243c559f9eb6d3d41c4e7cb4dbc6c8ce59e5d5486b19f7fb01243ee7d9"
+      }
+    },
+    {
+      "frame": 7,
+      "first_words": [
+        "3048A020",
+        "000000AD"
+      ],
+      "first_CRC_predicted": 173,
+      "second_start_r0": 8420,
+      "second_blocks": 4,
+      "second_entries": 4,
+      "second_words": [
+        "34229C80",
+        "0424C062",
+        "B00AA900",
+        "000000DC"
+      ],
+      "second_CRC_predicted": 220,
+      "code5_words": 4,
+      "raw_parity_prediction_errors": 0,
+      "decoder_hard_changes": 0,
+      "source": {
+        "checkpoint": "runs/codex-author-real-20261014-170603-942987/frame_candidate_05.mat",
+        "sha256": "ab97b7633e913ff87b7ed1f0cfc137f953b01cd929c8453b3bcbe7c89afca5b3"
+      }
+    },
+    {
+      "frame": 8,
+      "first_words": [
+        "3048A020",
+        "000000AD"
+      ],
+      "first_CRC_predicted": 173,
+      "second_start_r0": 8420,
+      "second_blocks": 4,
+      "second_entries": 5,
+      "second_words": [
+        "342A9C80",
+        "042AC062",
+        "D00E2400",
+        "AA600085"
+      ],
+      "second_CRC_predicted": 133,
+      "code5_words": 4,
+      "raw_parity_prediction_errors": 1,
+      "decoder_hard_changes": 1,
+      "source": {
+        "checkpoint": "runs/codex-author-real-20261014-170603-942987/frame_candidate_08.mat",
+        "sha256": "c5010a5efd570c5af76026a4a7897443e190048a0ad3b0255ba5602d3431b720"
+      }
+    },
+    {
+      "frame": 9,
+      "first_words": [
+        "3048A0C0",
+        "0000002E"
+      ],
+      "first_CRC_predicted": 46,
+      "second_start_r0": 6372,
+      "second_blocks": 4,
+      "second_entries": 4,
+      "second_words": [
+        "34229C80",
+        "04294062",
+        "700AA280",
+        "0000009A"
+      ],
+      "second_CRC_predicted": 154,
+      "code5_words": 3,
+      "raw_parity_prediction_errors": 0,
+      "decoder_hard_changes": 0,
+      "source": {
+        "checkpoint": "runs/codex-author-real-20261014-170603-942987/frame_candidate_07.mat",
+        "sha256": "b7e1ea7639fd1685936fa0f660874f03dc33e43163bd02e7f10e540ade450ac0"
+      }
+    }
+  ],
+  "code5_signal_checks": {
+    "total_decoder_hard_changes": 2,
+    "parity_nmse_range": [
+      0.027862567337397465,
+      0.061142849663672234
+    ],
+    "parity_flip_control_nmse_range": [
+      3.9110682623461965,
+      4.016885782076452
+    ],
+    "all_35_words_decoded_and_reencoded": true,
+    "parity_resource_count_per_word": 1024,
+    "candidate_bit_disagreement_is_channel_BER": false
+  },
+  "recovery_tool": {
+    "N": 2048,
+    "K": 1024,
+    "Z": 128,
+    "sparse_H_rows": 1024,
+    "sparse_H_rank": 1024,
+    "row_weight": 6,
+    "GH_orthogonal": true,
+    "scope": "Conditional receiver code space; only development P used. No plaintext or standardized identity claim.",
+    "input_sha256": "5d8052998fbd7ddb596e6cd5bd998d4808fa0cafb83f75bf12fd97b82e1b5073",
+    "input_name": "code5_recovered.mat"
+  },
+  "recovered_seeds_equal_fixed_model": true,
+  "terminal_launcher_checks": {
+    "status": "passed",
+    "step18_parser": true,
+    "default_still8": true,
+    "unsupported_step19_rejected": true,
+    "missing_protocol_output_not_claimed_complete": true,
+    "actual_fresh_report_state": {
+      "status": "available",
+      "configuration_header_status": "crc_checked_units",
+      "first_header_accepted": true,
+      "second_header_unique": true,
+      "code5_available": true,
+      "report_path": "protocol-teaching-20261103-152255-446/index.html"
+    },
+    "HTML_export_from_actual_MATLAB_run": true,
+    "Linux_native_launcher_execution": "not run on Windows; parser/state/report tested without simulating a MATLAB run"
+  },
+  "matlab_static_analysis": {
+    "files": 29,
+    "advisory_ids": [
+      "ALIGN",
+      "ISCL",
+      "NASGU",
+      "NBRAK2"
+    ],
+    "syntax_error_ids": []
+  },
+  "source_code": [
+    {
+      "path": "matlab/baseline/RUN_CODEX_RECEIVER.m",
+      "sha256": "27492da244cdbe49bd2b6ca72d79467b440f2a66acc32440f56791cb5783bb4a"
+    },
+    {
+      "path": "matlab/learning_receiver/+slrx/defaultConfig.m",
+      "sha256": "b0751bb3320bb3ae8fc48a36660492a8f88e4fc946ea97a196ba65d95b2b0574"
+    },
+    {
+      "path": "matlab/learning_receiver/CONTINUE_TO_PDU.m",
+      "sha256": "64d9c975150a05c48a4b0033387470a87822f1336fddd049b2f78a4c30217369"
+    },
+    {
+      "path": "matlab/learning_receiver/START_HERE.m",
+      "sha256": "6319aa6416efd272805b8f800ddb7e9b0c2f13390bd31d7080bda8a068fd2631"
+    },
+    {
+      "path": "matlab/protocol_receiver/+slproto/analyzeCode5.m",
+      "sha256": "62d6acf0624aa9d881aff9ebdc79c73904e89e27c2cfa4bb25dd593168b01f0c"
+    },
+    {
+      "path": "matlab/protocol_receiver/+slproto/analyzeFrame.m",
+      "sha256": "15d420c5c2547f0ad376336ef82a7ee6c11e07c772d74bbe5c29967d5a871461"
+    },
+    {
+      "path": "matlab/protocol_receiver/+slproto/bccDecode.m",
+      "sha256": "ea7c8a7f4b6edd6cb8a23657b6f22d971d580e0a0f7e716dda704b95fc5dc98e"
+    },
+    {
+      "path": "matlab/protocol_receiver/+slproto/bccEncode.m",
+      "sha256": "8b9e7bf1eb5558dc1cb3e0e775c19a7db1cea2bba0ad76db10d22d1bfa3d1ddd"
+    },
+    {
+      "path": "matlab/protocol_receiver/+slproto/calibrateGrid.m",
+      "sha256": "08abc9e2bc94f4182899a3ac7ccc449bec73f5716cf7cb9d27667fd3bd6b3f7b"
+    },
+    {
+      "path": "matlab/protocol_receiver/+slproto/code5Model.m",
+      "sha256": "3037ff2cc0b1a5ac75211a017f67c186b7f4a56d92037a31a19560f50ea25ddb"
+    },
+    {
+      "path": "matlab/protocol_receiver/+slproto/coordinates.m",
+      "sha256": "563ec7617c0d5ab94741985b25e7479971413e47462f4d0a94d73da99826f632"
+    },
+    {
+      "path": "matlab/protocol_receiver/+slproto/crc8.m",
+      "sha256": "0f35b904811bdb54e197c2b4bcd0de02f7bdaef805f0c8fde8b5af7841420ca4"
+    },
+    {
+      "path": "matlab/protocol_receiver/+slproto/decodeGroup.m",
+      "sha256": "48db37e45819fbdb2cd19349ad3efb9481942a012b49bfa6211b8a1870db865b"
+    },
+    {
+      "path": "matlab/protocol_receiver/+slproto/defaultOptions.m",
+      "sha256": "35b8c7b0c839f8f7d0861166ad995abdefee007409b53c2d3d01a51788d64bb0"
+    },
+    {
+      "path": "matlab/protocol_receiver/+slproto/exportFrame.m",
+      "sha256": "129556c1ff0fbc49f76f4bf0341e20f07df8e15502844559149a586b052ebb0b"
+    },
+    {
+      "path": "matlab/protocol_receiver/+slproto/findHeaders.m",
+      "sha256": "b143c75f7cb56c1f63abcfbd444b12f08d12ad48938d8b0a813523965afbfa81"
+    },
+    {
+      "path": "matlab/protocol_receiver/+slproto/finishFrame.m",
+      "sha256": "536ec9370d1047fe438a63ee80b293f6d9284d9eb708f2dc84ccad6c2815dbad"
+    },
+    {
+      "path": "matlab/protocol_receiver/+slproto/gf2Solve.m",
+      "sha256": "6d0df6992f632f531ace66acc3722f4cc82f3fb63dbe4d7cc64758c54880fbcb"
+    },
+    {
+      "path": "matlab/protocol_receiver/+slproto/loadGrid.m",
+      "sha256": "5779d530d6459809760683dcf9e522907d1e0929ff7f6a9cd5628c9f917ee38c"
+    },
+    {
+      "path": "matlab/protocol_receiver/+slproto/minsum.m",
+      "sha256": "2edb2bcced634d227ed1840c5e4d709599747ceabb86cf33314ce5cabf661780"
+    },
+    {
+      "path": "matlab/protocol_receiver/+slproto/parseFields.m",
+      "sha256": "aecbb9f0eb0689406f7531f3afcee11bc0db376068f3fb7f077f443edb5f5807"
+    },
+    {
+      "path": "matlab/protocol_receiver/+slproto/plotFrame.m",
+      "sha256": "6b8969d0a409b3c9b1657894204203fbbb8d9189d3c4773a8fa26eea17d32f38"
+    },
+    {
+      "path": "matlab/protocol_receiver/+slproto/pnReference.m",
+      "sha256": "fb7b023b886add805719e81bdf62bcd3f8caaf8dbf1dac00dfcb1b216374e4bb"
+    },
+    {
+      "path": "matlab/protocol_receiver/+slproto/recoverQC.m",
+      "sha256": "42eeadd87bd662f89b7ea560c3a4d6be59124d7f06c659917ed4d3886be9950e"
+    },
+    {
+      "path": "matlab/protocol_receiver/+slproto/smallSummary.m",
+      "sha256": "609b0bec3a0d0320ca093fe2e52416f3ee615553cd21b001ff0da953822c2b2d"
+    },
+    {
+      "path": "matlab/protocol_receiver/+slproto/sourceManifest.m",
+      "sha256": "1cc108a4129d788334e322a7c6b0c0240777b137c16931460219f434589e8123"
+    },
+    {
+      "path": "matlab/protocol_receiver/+slproto/writeJSON.m",
+      "sha256": "f205821289232f36a3b174b38e430a38157ebc7179e3d3dbd35d2934fb79c32c"
+    },
+    {
+      "path": "matlab/protocol_receiver/RUN_PROTOCOL_ANALYSIS.m",
+      "sha256": "38429e7565d0f8b4d7f85bef8587cd6293560e7cf37b5d6c15c7cae454d3a38d"
+    },
+    {
+      "path": "matlab/protocol_receiver/tests/test_protocol_receiver.m",
+      "sha256": "334bb32f7dfa4862f772f7cbc820491e280921ff41b30f666d67a80d2fdc6816"
+    },
+    {
+      "path": "tools/learning_receiver.py",
+      "sha256": "3a2b3fc751d33609acdd10c965ba7aef683c87843d8995e36a6ff7bf76237d93"
+    },
+    {
+      "path": "tools/recover_qc_checks.py",
+      "sha256": "df388f25ebf84e51d8da2782c94658ff13055fbe982de296aa235f11f6d5fb5c"
+    }
+  ],
+  "memory": [
+    {
+      "run": "protocol_unit_20261103",
+      "status": "passed",
+      "elapsed_s": 35.453,
+      "exit_code": 0,
+      "peak_tree_private_bytes": 2295697408,
+      "minimum_available_bytes": 1693630464,
+      "reserve_bytes": 1342177280,
+      "job_private_limit_bytes": 3221225472
+    },
+    {
+      "run": "protocol_multiframe_20261103",
+      "status": "passed",
+      "elapsed_s": 83.031,
+      "exit_code": 0,
+      "peak_tree_private_bytes": 2388389888,
+      "minimum_available_bytes": 2598240256,
+      "reserve_bytes": 1342177280,
+      "job_private_limit_bytes": 3221225472
+    },
+    {
+      "run": "protocol_fresh_20261103",
+      "status": "failed",
+      "elapsed_s": 301.375,
+      "exit_code": 1,
+      "peak_tree_private_bytes": 2724278272,
+      "minimum_available_bytes": 2608443392,
+      "reserve_bytes": 1342177280,
+      "job_private_limit_bytes": 3221225472
+    },
+    {
+      "run": "protocol_fresh_finalize_20261103",
+      "status": "passed",
+      "elapsed_s": 31.875,
+      "exit_code": 0,
+      "peak_tree_private_bytes": 2417754112,
+      "minimum_available_bytes": 3682877440,
+      "reserve_bytes": 1342177280,
+      "job_private_limit_bytes": 3221225472
+    }
+  ],
+  "changed_files": [
+    "README.md",
+    "docs/LEARNING_RECEIVER.zh-CN.md",
+    "docs/PAPER_2610_29387_SOURCES.zh-CN.md",
+    "docs/PN_PDU_TEACHING.zh-CN.md",
+    "docs/PROTOCOL_UPGRADE_VALIDATION.zh-CN.md",
+    "docs/VISUAL_DIAGNOSTICS.zh-CN.md",
+    "docs/VISUAL_DIAGNOSTICS_FIGURES.zh-CN.md",
+    "matlab/baseline/README.zh-CN.md",
+    "matlab/baseline/RUN_CODEX_RECEIVER.m",
+    "matlab/learning_receiver/+slrx/defaultConfig.m",
+    "matlab/learning_receiver/CONTINUE_TO_PDU.m",
+    "matlab/learning_receiver/README.zh-CN.md",
+    "matlab/learning_receiver/START_HERE.m",
+    "matlab/protocol_receiver/+slproto/analyzeCode5.m",
+    "matlab/protocol_receiver/+slproto/analyzeFrame.m",
+    "matlab/protocol_receiver/+slproto/bccDecode.m",
+    "matlab/protocol_receiver/+slproto/bccEncode.m",
+    "matlab/protocol_receiver/+slproto/calibrateGrid.m",
+    "matlab/protocol_receiver/+slproto/code5Model.m",
+    "matlab/protocol_receiver/+slproto/coordinates.m",
+    "matlab/protocol_receiver/+slproto/crc8.m",
+    "matlab/protocol_receiver/+slproto/decodeGroup.m",
+    "matlab/protocol_receiver/+slproto/defaultOptions.m",
+    "matlab/protocol_receiver/+slproto/exportFrame.m",
+    "matlab/protocol_receiver/+slproto/findHeaders.m",
+    "matlab/protocol_receiver/+slproto/finishFrame.m",
+    "matlab/protocol_receiver/+slproto/gf2Solve.m",
+    "matlab/protocol_receiver/+slproto/loadGrid.m",
+    "matlab/protocol_receiver/+slproto/minsum.m",
+    "matlab/protocol_receiver/+slproto/parseFields.m",
+    "matlab/protocol_receiver/+slproto/plotFrame.m",
+    "matlab/protocol_receiver/+slproto/pnReference.m",
+    "matlab/protocol_receiver/+slproto/recoverQC.m",
+    "matlab/protocol_receiver/+slproto/smallSummary.m",
+    "matlab/protocol_receiver/+slproto/sourceManifest.m",
+    "matlab/protocol_receiver/+slproto/writeJSON.m",
+    "matlab/protocol_receiver/README.zh-CN.md",
+    "matlab/protocol_receiver/RUN_PROTOCOL_ANALYSIS.m",
+    "matlab/protocol_receiver/models/code5_qc128_utexas_v1.json",
+    "matlab/protocol_receiver/tests/test_protocol_receiver.m",
+    "provenance/protocol_upgrade_validation.json",
+    "tools/learning_receiver.py",
+    "tools/recover_qc_checks.py"
+  ],
+  "reports": {
+    "fresh": "runs/protocol-fresh-20261103/protocol-teaching-20261103-152255-446/index.html",
+    "nine_frames": "runs/protocol-upgrade-20261103/nine_frames/index.html"
+  },
+  "preserved_trials": [
+    "Sparse search initially found rank512; adding low-weight supports in the alternative basis yielded rank1024",
+    "Initially limited second header to paper-observed2-4 blocks; UT frame3 supports5 blocks by exact reencoding and group CRC",
+    "Fresh DSP and decoding completed; common-axis plotting concatenated a row with a column and failed. Fixed vectorization, reran teaching16-18 from fresh MAT, and validated all22 data checkpoints exactly"
+  ],
+  "limits": [
+    "Same previously studied UT Austin capture; no independent fresh acquisition",
+    "Not a reproduction of paper18-frame480MSps capture",
+    "Only the first allocation Code5 FEC is implemented; higher formats and full application payload remain unknown",
+    "19/20-bit header layouts and eighth index bit are not uniquely identified by CRC",
+    "Five-block group is supported on this capture; six/seven-block lengths are permitted hypotheses, not validated observations",
+    "Full50ms physical receiver wrapper was not rerun; one fresh complete4ms single-frame physical run plus historical nine-frame protocol postprocessing were executed"
+  ],
+  "integrity_and_render_QA": {
+    "status": "passed",
+    "protected_files": [
+      {
+        "path": "config/evaluation.json",
+        "sha256": "e1dcd236e6ab9ffe708e72761c72d6f376bcfde133a9e10ec421f5b5ac23215c",
+        "unchanged": true
+      },
+      {
+        "path": "config/evaluator_lock.json",
+        "sha256": "41ffd48560543230ee67ecf0ff49e3625021cfd2f4bba0eebd8a89b278d26450",
+        "unchanged": true
+      },
+      {
+        "path": "config/learning_validation_v1.json",
+        "sha256": "5b7cf1ab2f5ae31befe27cb3b252509b66004f764072d9afcf5694586f9b04a3",
+        "unchanged": true
+      },
+      {
+        "path": "data/reference/synthetic_awgn_only.mat",
+        "sha256": "cdf2604cb8d1ed059d59d22df1dd200bd20df4df44384873aec833dc865f1589",
+        "unchanged": true
+      },
+      {
+        "path": "data/reference/synthetic_cfo_only.mat",
+        "sha256": "d538b32406aa5f4ee813bd073a078d66377f1e24c7056cdf8b274e37d4a3c0ee",
+        "unchanged": true
+      },
+      {
+        "path": "data/reference/synthetic_holdout.mat",
+        "sha256": "0549e041a6790b7531ff270155c2c79b1a9161f55eeb7dfc5bc1aadd66e92c0b",
+        "unchanged": true
+      },
+      {
+        "path": "data/reference/synthetic_noiseless.mat",
+        "sha256": "49527e383b69602a3a4cc40ed56af257ad06107f3bf96686106057bd53f4cc48",
+        "unchanged": true
+      },
+      {
+        "path": "data/reference/synthetic_sfo_only.mat",
+        "sha256": "d97da1004817da584102f9837260736b0531062c50d2edfc0170e78cf8fa35e5",
+        "unchanged": true
+      },
+      {
+        "path": "data/reference/synthetic_training.mat",
+        "sha256": "c247d7ae355eb585e7cdefa3be83036d2e90fd8c8186651768d43ad84bcf9f74",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/baseline/author_receiver.m",
+        "sha256": "18d5854b4fbe49da5ff38780116adce7901f2c92ecebacfc6f5567ae54fdd520",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/baseline/author_receiver_dsp.m",
+        "sha256": "3012733f7bc7ef1d0b9327d6d4c3f403f5bcbe55447a0e3b38d01be2febd8bfc",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/baseline/author_sequences.m",
+        "sha256": "2778931a33eb1df85b220195fbab6773eafbdf3bd02da769a615fc460ef7a18b",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/baseline/bandlimited_sample.m",
+        "sha256": "1176538487548cec760f211ae296c0a365d85421f5b76c3368f0ec7e4a34e49f",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/baseline/baseline_manifest.m",
+        "sha256": "7546a3989d30ad4315de4cab6084325e68f50a37accba197b3c80cde0e1e819b",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/baseline/frame_guard_metrics.m",
+        "sha256": "fc28f8cdd5f7531c4b3aa980739149ace52bd147e6e530fad9b7963830b47c70",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/baseline/smoke.m",
+        "sha256": "7f680984b4f46f846fcd9bd13568a4ebb85d93a5b304773992e541f782d6c025",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/baseline/test_author_receiver_dsp.m",
+        "sha256": "063f800f1e250246236ae094da982f89410bc119aadc8c32a85e7ad402a922f4",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/baseline/test_frame_guard_metrics.m",
+        "sha256": "0dd4a9a8806e36c717c70703d7c4f69b5b6d85c19d8ad68372f8f59d359b0126",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/evaluation/evaluate_receiver.m",
+        "sha256": "dcf34f613fe23097dcc607391c8c9cac1730ee33d5dcff5b73fb01d55107a23b",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/evaluation/private/synthetic_awgn_only_truth.mat",
+        "sha256": "95412446ed2d6d3c7bbf4d8424bbb7b10c15679b6ddeac49e13210f38d4f2a30",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/evaluation/private/synthetic_cfo_only_truth.mat",
+        "sha256": "2f746d615456d8d4ce3455156d5b8778c50cce541a13602a2b20b3fa2326a610",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/evaluation/private/synthetic_holdout_truth.mat",
+        "sha256": "fd26abc793ed1386f577491e24335f7d8c1ef9c429b79e774b15c34f536a4698",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/evaluation/private/synthetic_noiseless_truth.mat",
+        "sha256": "0d4383b88c7c28140496fd6d3a98467534ff079ebab0a9c5e90ac732d7da356d",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/evaluation/private/synthetic_sfo_only_truth.mat",
+        "sha256": "a4667d851778a7d85cb6737e1dbb603ad41371619699965d0923dc3e9fd547d4",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/evaluation/private/synthetic_training_truth.mat",
+        "sha256": "203d9dcb1978349f282736010c2f87702f58f90ab1897132905221674e982002",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/+alg/cardinality.m",
+        "sha256": "f3c1b2940088e455823ad70e60d5f18b8a891f9e57d1687f3ab3555f10bb248d",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/+alg/detectSync.m",
+        "sha256": "14a5fcdf381131cf59a04b253d0085ffb595df808e11ebbe000e46cfc3ce9a2d",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/+alg/fitColumn.m",
+        "sha256": "1f442e333ddca783e1c5d8457ecfd1b0dd026d9a3d57d0f8e341f6da04f9d76d",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/+alg/fitSymbol.m",
+        "sha256": "73a1c778bd2d0a043815513ff4d98dc0bfccde3cdfca5d47080a7cef3c97dcae",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/+alg/interpolateSinc.m",
+        "sha256": "d3d6af552f74aac29276d285a5be13a0c879d200d32543beb20e9fe857e487f0",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/+alg/marginalNLL.m",
+        "sha256": "64956dabbc7a3b624d096f82a74737b4ed22e3ff607b47465842d492ff115937",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/+alg/ransacLine.m",
+        "sha256": "48c92c2f58e803d1d47d71227550ce0572d24016cffe7f4d926b5ef0606fa1d2",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/classifyColumns.m",
+        "sha256": "8aec86571ef9233911f3228fb1c14d23301843289901e77adedc32b76c5a2401",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/decideSymbols.m",
+        "sha256": "31c1b64fda7014aa289122d1ac816fd255b3882dc2f2cce371d4799b5bb97bf0",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/equalizeGrid.m",
+        "sha256": "1c24c5209e61a237452c39a900ffaec3c7dcd618151828fd51dbb237c5c9ed38",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/estimateChannel.m",
+        "sha256": "50b036f04226d7badd75211c25709d63f855180a3ff8b688a7132ddda996e313",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/extractFrame.m",
+        "sha256": "7fc4121ec55554964bac149615eff7ee6bebcaeff25ae203ccba4ac55e8af0e9",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/fftGrid.m",
+        "sha256": "4376e000e2bec1d17b7f3e0fb81fb07b278b54773fd965052ce4bc729b32632c",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/findFrame.m",
+        "sha256": "3efc47c10b067f4092b5001647a565c93f59f2a94762b03a9540b6df9bc8c4d3",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/measureGuard.m",
+        "sha256": "bfdbb983b3a33112c906d022fdc3dd64d3d94af95edc096321a0458a30123aa2",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/observePilots.m",
+        "sha256": "c707d31f4a0065f4c57fdd842def08e388efe222687715e4486833e54462c1fd",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/readIQ.m",
+        "sha256": "e6be919d68b055602ecf004c8dca4fba85c1a246cf7e1266d48850e2b81a1bac",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/references.m",
+        "sha256": "d21f4eed367d4714111f40c0dfbcaa66de6b6b653dc8b2532da3e65d572a9d1a",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/refineOffsets.m",
+        "sha256": "c4af06a66b41657aec15e231da0af5e3fde5ec49a1b28a15ebee995deb17e266",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/removeCP.m",
+        "sha256": "3bafa8dd7b5d91d5bfdf9170382c492f4ac2e13898536c03f8cfa83d5233a993",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/resampleCapture.m",
+        "sha256": "b7c4a9d9a851a7d95b98197f48cf470c2948ec65f7aae8a0c5361f7faeb62169",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/trackFrame.m",
+        "sha256": "4730bed4368a5b5dd00fd34df97048f80fa7e8bb7b52b3361eca829399761c68",
+        "unchanged": true
+      },
+      {
+        "path": "matlab/learning_receiver/+slrx/validateRun.m",
+        "sha256": "f44b4bc2a5d3fd1b317c66da6a8d880e953c9ae03ac63cc84fb248299dc0dc0b",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/loadAndPlotExemplarFrames.m",
+        "sha256": "96141f75d609aa70f8fe7b7919735b81ea0ddb405ef0c199e4df8b631f056e56",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/reference-template/correlateEdgePilots.m",
+        "sha256": "ccfe38772ea0bb6adbbc92a048425840e623443b7dc4680d5d7b6abe42dff7a7",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/reference-template/genEdgePilots.m",
+        "sha256": "906c1aa492351ea3ffb61551eb7439be7e5933cddece128a111b23b39aab904b",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/reference-template/genPss.m",
+        "sha256": "32c7a9a5844499e5f92dbd6503fdd0f2ebe178a1f6691313887f70b53e1d21b6",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/reference-template/genReferenceTemplate.m",
+        "sha256": "07965e1b49bae96f8fee74052f5eb7af017cc34b881c2cf6b51c31a6fe11fdda",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/reference-template/genSss.m",
+        "sha256": "b327682ef5adc9c2692c3a0332cd0a4c9a30bc262fad45824b770d9e3c2b5e3e",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/reference-template/referenceTemplate.mat",
+        "sha256": "ec77ad6f9a17c8b14451f7f3cea6114952d0ad3aca26b3eb8c0e9aec06b002cd",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/reference-template/sssVec.mat",
+        "sha256": "d1e35826279baf0fc3e5a6fa3d34e5a83dd525956132ad9cecdb2af48450f982",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/startup.m",
+        "sha256": "dcf83df7dc6fbd973cae43de59a95f94a9c57c168e2f4e84875744a87cf689bb",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/utils/complexConstellations/gen4QAMconst.m",
+        "sha256": "f5d460076ff3a4866eb8b7f3fd6fbfceabb13b9678e21abea5ce34e9ee1102d8",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/utils/complexConstellations/genQPSKconst.m",
+        "sha256": "39586d146adde8d303d2d421d6244c3c742cf957ea5801e99051a86b7732b41d",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/utils/complexConstellations/modEnum.m",
+        "sha256": "ffbcbc97cba7490605dd9950c50ca3f1e1b42805a84a79c37a37d74c94c63434",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/utils/complexConstellations/modulationMap.m",
+        "sha256": "3ee3e25cd5bff752b1d373cd6d40c906a8cfbf7177f865bbf1fca874bf50f329",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/utils/signalProcessing/fftcorr.m",
+        "sha256": "540797821c6bfd1916e66a4b95f3bda1a253d77f34325e3d0ccd0edadda68bfd",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/utils/signalProcessing/qpsk2rotations.m",
+        "sha256": "460f6f010909faddbd3b73e3990e85d85cc571c3755b470a86f2c15c19c7a6d2",
+        "unchanged": true
+      },
+      {
+        "path": "vendor/author_pilots/utils/signalProcessing/starlinkConstants.m",
+        "sha256": "06704563406a8c70c7e3178e3f003753cbda141f554dfc2d3102a8ffbd70a76b",
+        "unchanged": true
+      }
+    ],
+    "protected_count": 64,
+    "raw_BIN_sha256": "c69e82022d45173cdcaf1a5fdc8a2b864e2d61e85ae819af54b16002044adae3",
+    "all_consumed_nine_frame_checkpoint_hashes_unchanged": true,
+    "local_only_files_unchanged": true,
+    "only_existing_M_changes": [
+      "matlab/learning_receiver/+slrx/defaultConfig.m",
+      "matlab/learning_receiver/START_HERE.m"
+    ],
+    "protocol_source_manifest_matches_final_source": true,
+    "HTML_files": 12,
+    "HTML_links_checked": 194,
+    "Markdown_relative_links_checked": 136,
+    "PNG_files": 52,
+    "PNG_checks": [
+      {
+        "file": "runs/protocol-fresh-20261103/figures/01_capture.png",
+        "width": 1668,
+        "height": 1017,
+        "sha256": "479e97627a1fd5d49ed1bccc05f1cfb55bec62fbee25e27ee4386e4c0b301bd0"
+      },
+      {
+        "file": "runs/protocol-fresh-20261103/figures/02_resampled.png",
+        "width": 1906,
+        "height": 1187,
+        "sha256": "26e22c33789438a1229c8f693d3ea4c94a2a3fd0d96795020cff8652d5f79332"
+      },
+      {
+        "file": "runs/protocol-fresh-20261103/figures/03_sync_global.png",
+        "width": 1700,
+        "height": 1022,
+        "sha256": "97a72c0efe5d7b49528780b9cb525a7c127b2d9e4e3e42770a5f25874337d667"
+      },
+      {
+        "file": "runs/protocol-fresh-20261103/figures/03_sync_local.png",
+        "width": 1668,
+        "height": 996,
+        "sha256": "d77f9690363cd155603b722596e88c2a552e8634706ddca947f9ef2517c62e5c"
+      },
+      {
+        "file": "runs/protocol-fresh-20261103/figures/04_frame_time.png",
+        "width": 1965,
+        "height": 1221,
+        "sha256": "b859fe01b978c82cb18c85ed19d83130051a8f2b2a41c0ce8e13ec6054462d0e"
+      },
+      {
+        "file": "runs/protocol-fresh-20261103/figures/05_without_cp.png",
+        "width": 1668,
+        "height": 1017,
+        "sha256": "ac1dbd39eae97e7c19beda93e64e6b32cb5462828824f113cd42385505f16cc1"
+      },
+      {
+        "file": "runs/protocol-fresh-20261103/figures/06_fft_grid.png",
+        "width": 1668,
+        "height": 1017,
+        "sha256": "a6a7423dda8a7ad012784437eb592dd9d6102a76f7ac482e5bb686996d7fb110"
+      },
+      {
+        "file": "runs/protocol-fresh-20261103/figures/07_channel.png",
+        "width": 1668,
+        "height": 1187,
+        "sha256": "8b4f857b9f34d34569aadba322b96ef6ed5c0ba41ce613ee7d79c88a0d1e2dcf"
+      },
+      {
+        "file": "runs/protocol-fresh-20261103/figures/08_equalized.png",
+        "width": 1668,
+        "height": 1023,
+        "sha256": "f86650a611b6edc35a62775f0e2010417e45922f5782f3313afc3585634c3208"
+      },
+      {
+        "file": "runs/protocol-fresh-20261103/figures/09_pilot_observations.png",
+        "width": 1668,
+        "height": 1009,
+        "sha256": "34c37712a34457dae3cce0bc1a311352123ff0d641df2e17b1f4364f1cd4eff2"
+      },
+      {
+        "file": "runs/protocol-fresh-20261103/figures/10_cardinality.png",
+        "width": 1668,
+        "height": 1017,
+        "sha256": "fb3f82cffbb4a23f515761363d409ebe79e8f85c10dd64910f12ca354cf33454"
+      },
+      {
+        "file": "runs/protocol-fresh-20261103/figures/11_tracking.png",
+        "width": 1729,
+        "height": 1173,
+        "sha256": "971d7763e1131e184aef6042d8e40689f3c4647bb1f960caedbdc44ef04c7782"
+      },
+      {
+        "file": "runs/protocol-fresh-20261103/figures/13a_frame_time.png",
+        "width": 1965,
+        "height": 1221,
+        "sha256": "8342595f500aa9463404cdeb6089b84e3d875a2669d0bf51a45508be6562505c"
+      },
+      {
+        "file": "runs/protocol-fresh-20261103/figures/13b_without_cp.png",
+        "width": 1668,
+        "height": 1017,
+        "sha256": "26d03552022280bbb9b46013ef10375312c658d4a0d769115231ce717f14b8c9"
+      },
+      {
+        "file": "runs/protocol-fresh-20261103/figures/13c_fft_grid.png",
+        "width": 1668,
+        "height": 1017,
+        "sha256": "f62b45376cef1f0d3924ce551b3a51c6668b679950fe8bff7de21a0cd09d1bc6"
+      },
+      {
+        "file": "runs/protocol-fresh-20261103/figures/13d_channel.png",
+        "width": 1668,
+        "height": 1187,
+        "sha256": "5bab4c0db3e4b239b9c87bef528adca58d6bcc91294d6d33134bf81eb4eeb2d1"
+      },
+      {
+        "file": "runs/protocol-fresh-20261103/figures/13e_equalized.png",
+        "width": 1668,
+        "height": 1023,
+        "sha256": "c55b2be060a1d553502eb03d357b8c187499de184d357c82de50a69583f85366"
+      },
+      {
+        "file": "runs/protocol-fresh-20261103/figures/13f_pilots.png",
+        "width": 1668,
+        "height": 1009,
+        "sha256": "59cce81757863331a55eaa8373747e293c91de2c1c42b14938036c5106b00667"
+      },
+      {
+        "file": "runs/protocol-fresh-20261103/figures/13g_cardinality.png",
+        "width": 1668,
+        "height": 1017,
+        "sha256": "a62491ffea3791268f54c1c495705e5c79250ff5bb8a4a62d93334b67f2265b3"
+      },
+      {
+        "file": "runs/protocol-fresh-20261103/figures/13h_tracking.png",
+        "width": 1729,
+        "height": 1173,
+        "sha256": "1aaa9a81484e5487b2fe43e6c08d03c6658f3e9d7e669cf0489cf2db66e49c8b"
+      },
+      {
+        "file": "runs/protocol-fresh-20261103/figures/14_decisions.png",
+        "width": 1668,
+        "height": 1064,
+        "sha256": "5f4aee9f1be59ad7c9902b741d17355d87e5be28ce484389abcdf0a3a6ab0e7a"
+      },
+      {
+        "file": "runs/protocol-fresh-20261103/figures/15_guard.png",
+        "width": 1668,
+        "height": 1017,
+        "sha256": "ff3a4fe9a1009d1aad0ee1ae3f105d73688a8fa5200697eedb860487aa0d62bb"
+      },
+      {
+        "file": "runs/protocol-fresh-20261103/protocol-teaching-20261103-152255-446/figures/16_pn_bpsk.png",
+        "width": 1729,
+        "height": 1132,
+        "sha256": "8b0e98459d11704bf7211cc16086495f91e40e7e36f210295053dba3faa03865"
+      },
+      {
+        "file": "runs/protocol-fresh-20261103/protocol-teaching-20261103-152255-446/figures/17_bcc_crc.png",
+        "width": 1729,
+        "height": 1133,
+        "sha256": "0aa06e67a61782211234f4ab482998f3c4325dee8ccf458912a64e9d463ee2ac"
+      },
+      {
+        "file": "runs/protocol-fresh-20261103/protocol-teaching-20261103-152255-446/figures/18_code5_fec.png",
+        "width": 1729,
+        "height": 1132,
+        "sha256": "ae797c9fd2a4dcdf34cd64d6822f705250f648c35217a8c9edcc4bc15c8f7444"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_01/figures/16_pn_bpsk.png",
+        "width": 1729,
+        "height": 1132,
+        "sha256": "0c8ba215770b445167c8b2c2ea8df0bc11f4eb27c02839e8f5f17276dafe4268"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_01/figures/17_bcc_crc.png",
+        "width": 1729,
+        "height": 1133,
+        "sha256": "6b6d418cf6321d32405bc98e88c14a0eeadf58d8eb08d1ef77098c05d735e87f"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_01/figures/18_code5_fec.png",
+        "width": 1729,
+        "height": 1132,
+        "sha256": "0bbb036bc2f8c8b47d74dfd65dcf095ed4038aa943cdd32db46b2ead9e43b5bc"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_02/figures/16_pn_bpsk.png",
+        "width": 1729,
+        "height": 1132,
+        "sha256": "d21e7e0830349debc49d7783eea074ee835b6c5f5bcda0d7ce706855e4c60409"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_02/figures/17_bcc_crc.png",
+        "width": 1729,
+        "height": 1133,
+        "sha256": "dc7eeb88d72c76bddfc904c9b97f2402232d0fb7e6851b1b14c7db97fa41e3df"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_02/figures/18_code5_fec.png",
+        "width": 1729,
+        "height": 1132,
+        "sha256": "a899a0ca5a096c7229337fcb87ebe5976417edf7568418182a15a5c7dcf5786d"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_03/figures/16_pn_bpsk.png",
+        "width": 1729,
+        "height": 1132,
+        "sha256": "552d55450cb3d3f87412cdbf837a615f7427e55062625b4d8609a13f1dff8cb5"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_03/figures/17_bcc_crc.png",
+        "width": 1729,
+        "height": 1133,
+        "sha256": "b402d1114ef21e1c9a8ef1ef8defcfaf0920d33316573b25b847838a49055416"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_03/figures/18_code5_fec.png",
+        "width": 1729,
+        "height": 1132,
+        "sha256": "6ccf0075d207ddb80f037453c1d46f54616c558266ef0b5ca178264d6229ef5a"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_04/figures/16_pn_bpsk.png",
+        "width": 1729,
+        "height": 1132,
+        "sha256": "eb0c191df0883bbd65bf51b406b800182887eff3e9d7f59a072f55bbf7e7f981"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_04/figures/17_bcc_crc.png",
+        "width": 1729,
+        "height": 1133,
+        "sha256": "9221a41924e971ae3af97fb5c79ff6bc0e051f135bc064a84ba0aaf9a3293d54"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_04/figures/18_code5_fec.png",
+        "width": 1729,
+        "height": 1132,
+        "sha256": "f4615b2e499d19168b6f60d19ee72b08569c296d0e2f3b0b0007371f6b27ff4b"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_05/figures/16_pn_bpsk.png",
+        "width": 1729,
+        "height": 1132,
+        "sha256": "11e2105c3ff4f808e78db002ad80f26dac310ae912b33443c6a3e315518b02f0"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_05/figures/17_bcc_crc.png",
+        "width": 1729,
+        "height": 1133,
+        "sha256": "5de99ab7e2ac5ca0f265c282c4ce60f351bddea103e56d00af9ffc12621514cb"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_05/figures/18_code5_fec.png",
+        "width": 1729,
+        "height": 1132,
+        "sha256": "22e5bf3ca002cec8f342f21f24d731c483103d673032467587cca2b8b8e312a4"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_06/figures/16_pn_bpsk.png",
+        "width": 1729,
+        "height": 1132,
+        "sha256": "71f06c9262a6fc2c9fd053b42ee1c927cbb945a0a0282707218dba3ba66b3aad"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_06/figures/17_bcc_crc.png",
+        "width": 1729,
+        "height": 1133,
+        "sha256": "5eda1c4d95bff518c6f58f371d328405b1c19214b9c6fca92a185dba871cb3d2"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_06/figures/18_code5_fec.png",
+        "width": 1729,
+        "height": 1132,
+        "sha256": "551f5f7263a3e0b44f78602d930ca1e6c4e2b8cf6402b8cf6dbd3eb8eec9eeb5"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_07/figures/16_pn_bpsk.png",
+        "width": 1729,
+        "height": 1132,
+        "sha256": "98c26db264c0a780b6d92d496fdd8435cf9127bd1482ea9759d307f19e78517a"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_07/figures/17_bcc_crc.png",
+        "width": 1729,
+        "height": 1133,
+        "sha256": "f43b4563de87459763d0993eb787c269ee1be641c323bb5655a7c1569f3a2e25"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_07/figures/18_code5_fec.png",
+        "width": 1729,
+        "height": 1132,
+        "sha256": "cad586e403c2f443df501474458d0e235e307924e62838807586312a55743598"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_08/figures/16_pn_bpsk.png",
+        "width": 1729,
+        "height": 1132,
+        "sha256": "7340768a104a65a6a8ddcee2197b7f99493c65199b4360486f1e73a2aeb48ecb"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_08/figures/17_bcc_crc.png",
+        "width": 1729,
+        "height": 1133,
+        "sha256": "88fa832e6844932a58f02d73b3e34c50ad35aa425c84283f1fecb196504c102f"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_08/figures/18_code5_fec.png",
+        "width": 1729,
+        "height": 1132,
+        "sha256": "438346967594d55745f437d373ba68cf669ff8575400795d61447a2c439dfe6f"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_09/figures/16_pn_bpsk.png",
+        "width": 1729,
+        "height": 1132,
+        "sha256": "0d46b8fd9b142993c27a59cc419596750d870bfa71ec50b6e63e23908e68ea71"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_09/figures/17_bcc_crc.png",
+        "width": 1729,
+        "height": 1133,
+        "sha256": "1347f3ff32dc7fa09f9866f0bc90d2aa3e08ac1f810d05cb56beeef784379350"
+      },
+      {
+        "file": "runs/protocol-upgrade-20261103/nine_frames/frame_09/figures/18_code5_fec.png",
+        "width": 1729,
+        "height": 1132,
+        "sha256": "831649273a6196b03232f38bc769eea335dcdb7d1960c97e91fe9d668d351999"
+      }
+    ],
+    "changed_file_count": 43,
+    "raw_or_runtime_data_in_commit": false
+  }
+}

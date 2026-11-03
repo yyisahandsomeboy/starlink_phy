@@ -27,12 +27,25 @@ STEPS = [
 ('15_guard','补充：保护间隔','measureGuard.m','原IQ、帧头与最终SFO','预测边界、保护区短IQ与功率','1088/240MHz名义长度，经样本比例映射；不是噪声边缘检测')]
 
 
+def protocol_state(out, through):
+    if through < 18:
+        return {'status':'not_requested','configuration_header_status':'not_attempted'}
+    summaries=sorted(out.glob('protocol-teaching-*/protocol_summary.json'))
+    if not summaries:
+        return {'status':'missing_required_output','configuration_header_status':'not_decoded'}
+    file=summaries[-1];d=json.loads(file.read_text(encoding='utf-8'))
+    first=d['headers']['first']['accepted'];second=d['headers']['second_unique'];code=d['code5']
+    return {'status':'available','configuration_header_status':'crc_checked_units' if first and second else 'partial_or_not_supported',
+            'first_header_accepted':first,'second_header_unique':second,'code5_available':code['available'],
+            'report_path':file.with_name('index.html').relative_to(out).as_posix()}
+
+
 def make_report(out, execution):
     esc = html.escape
     sections=[]
     for key,title,module,input_,output,formula in STEPS:
         p=out/(key+'.json')
-        record=json.loads(p.read_text()) if p.exists() else None
+        record=json.loads(p.read_text(encoding='utf-8')) if p.exists() else None
         metrics=json.dumps(record['metrics'],indent=2,ensure_ascii=False) if record else '本次尚未运行到这里。'
         figs=''.join(f'<figure><a href="figures/{esc(f.name)}"><img src="figures/{esc(f.name)}" alt="{esc(f.stem)}"></a><figcaption>{esc(f.stem)}</figcaption></figure>' for f in sorted((out/'figures').glob(key+'*.png')))
         links=f'<a href="{key}.mat">完整MAT（变量data）</a> · <a href="{key}.json">数值摘要</a>' if record else ''
@@ -41,16 +54,24 @@ def make_report(out, execution):
             for sub,base in zip(['13a_frame_time','13b_without_cp','13c_fft_grid','13d_channel','13e_equalized','13f_pilots','13g_cardinality'],STEPS[3:10]):
                 summary=out/(sub+'.json')
                 if not summary.exists():continue
-                submetrics=json.dumps(json.loads(summary.read_text())['metrics'],indent=2,ensure_ascii=False)
+                submetrics=json.dumps(json.loads(summary.read_text(encoding='utf-8'))['metrics'],indent=2,ensure_ascii=False)
                 subfigs=''.join(f'<figure><img src="figures/{esc(f.name)}" alt="{esc(f.stem)}"><figcaption>{esc(f.stem)}</figcaption></figure>' for f in sorted((out/'figures').glob(sub+'*.png')))
                 repeated+=f'<h3>{sub}：{base[1]}</h3><p><a href="{sub}.mat">MAT变量</a> · <a href="{sub}.json">摘要</a> · <a href="../../matlab/learning_receiver/+slrx/{base[2]}">同一模块源码</a></p><pre>{esc(submetrics)}</pre>{subfigs}'
             if repeated:repeated='<details><summary>展开第二轮13a～13g的实际变量、数值和图片；13h最终跟踪见下方</summary>'+repeated+'</details>'
         sections.append(f'<section id="{key}"><h2>{title}</h2><p><b>输入：</b>{input_}<br><b>输出：</b>{output}</p><pre>{formula}</pre><p><a href="../../matlab/learning_receiver/+slrx/{module}">打开本模块源码</a> · {links}</p><pre>{esc(metrics)}</pre>{repeated}{figs}</section>')
-    cfg=json.loads((out/'lesson_config.json').read_text()) if (out/'lesson_config.json').exists() else {}
+    protocol=protocol_state(out,execution['requested_through'])
+    if protocol['status']=='available':
+        sections.append(f'<section id="protocol"><h2>16～18. PN、PDU头部与Code5</h2><p>头部状态：{esc(protocol["configuration_header_status"])}；Code5可用：{protocol["code5_available"]}。</p><p><a href="{esc(protocol["report_path"])}">打开实际协议结果、三张教学图和独立源码身份</a></p><p>头部CRC和Code5属于条件编码关系，不能解释为完整业务明文或真实业务BER。</p></section>')
+    cfg=json.loads((out/'lesson_config.json').read_text(encoding='utf-8')) if (out/'lesson_config.json').exists() else {}
     body=f'''<header><h1>单帧逐步接收学习记录</h1><p>版本 learning-receiver-v1 · codex_baseline。独立PSS/SSS捕获，不用作者TOA；默认每帧独立信道，没有合并其他帧SSS。</p><p>本次请求运行至第{execution['requested_through']}步；状态：{execution['status']}。配置头、真实业务位映射、FEC和CRC尚未恢复。</p></header><section><h2>怎样使用这份记录</h2><p>先看每一步的输入、输出和公式，再看MAT中的实际变量，最后看图。用MATLAB打开<a href="../../matlab/learning_receiver/START_HERE.m">START_HERE.m</a>，按Ctrl+Enter逐节运行；不必一次跑完整链路。</p><pre>D=load('06_fft_grid.mat','data');\nfrequencyGrid=D.data;\nsize(frequencyGrid.values)  % 1024×301</pre><p>第13步由13a～13h展开，重复第4～11步，各自的MAT/JSON/PNG保留在当前目录。既有步骤可回读恢复，改变DSP参数或代码则建立新目录。</p><p>输入窗口：{cfg.get('read_duration_s','?')}秒；原始起始复采样：{cfg.get('first_complex_sample','?')}；帧选择序号：{cfg.get('frame_rank','?')}。学习版窗口和单帧信道假设不同于旧50ms多帧共享模式，端到端结果不要求与旧结果逐值相同。</p><p><a href="execution.json">批处理记录</a> · <a href="lesson_config.json">本次参数</a> · <a href="lesson_lock.json">输入和代码记录</a> · <a href="../../docs/LEARNING_RECEIVER.zh-CN.md">完整学习说明</a></p></section>'''
+    statement='头部CRC和Code5状态见新增协议页；真实业务位映射、完整业务明文和业务BER尚未恢复。' if protocol['status']=='available' else '本次未导出完整协议阶段；真实业务位映射、完整业务明文和业务BER尚未恢复。'
+    body=body.replace('版本 learning-receiver-v1','版本 learning-receiver-pdu-v1').replace('配置头、真实业务位映射、FEC和CRC尚未恢复。',statement)
+    if not (out/'execution.json').exists():
+        evidence='<a href="upgrade_validation.json">本机实测记录</a>' if (out/'upgrade_validation.json').exists() else '尚无终端批处理记录'
+        body=body.replace('<a href="execution.json">批处理记录</a>',evidence)
     body+='<section><h2>按步骤跳转</h2><p>'+' · '.join(f'<a href="#{key}">{title}</a>' for key,title,*_ in STEPS)+'</p></section>'
     css='body{margin:0;background:#f1f5f7;color:#233d4b;font:16px/1.85 system-ui,sans-serif}main{max-width:1080px;margin:25px auto;padding:0 18px}header,section{background:white;border:1px solid #dce6eb;border-radius:12px;padding:25px;margin:20px 0}header{background:#153f4c;color:white}h1{font-size:28px}h2{font-size:23px}a{color:#087d84}pre{background:#edf3f7;padding:16px;overflow:auto;line-height:1.6}figure{margin:20px 0;border:1px solid #dce6eb}img{width:100%;height:auto;display:block}figcaption{padding:10px;font-size:13px}summary{cursor:pointer;color:#087d84}@media(max-width:650px){header,section{padding:16px}main{padding:0 8px}}'
-    (out/'learning_report.html').write_text('<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>逐步接收学习记录</title><style>'+css+'</style><main>'+body+''.join(sections)+'</main></html>')
+    (out/'learning_report.html').write_text('<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>逐步接收学习记录</title><style>'+css+'</style><main>'+body+''.join(sections)+'</main></html>', encoding='utf-8')
 
 
 def run(args):
@@ -58,7 +79,7 @@ def run(args):
     if not ok:raise RuntimeError(reason)
     if args.resume:
         out=domain.runpath(args.resume)
-        config=json.loads((out/'lesson_config.json').read_text())
+        config=json.loads((out/'lesson_config.json').read_text(encoding='utf-8'))
         for name,key,scale in [('duration_ms','read_duration_s',.001),('first_sample','first_complex_sample',1),('frame_rank','frame_rank',1)]:
             value=getattr(args,name)
             if value is not None and config[key]!=value*scale:raise ValueError('DSP参数变化需要新学习目录，不可恢复旧缓存')
@@ -76,26 +97,29 @@ def run(args):
           'slrx.runOne(lesson_cfg);slrx.validateRun('+q(out)+');')
     print(json.dumps({'phase':'running','run_id':out.name,'through':args.through},ensure_ascii=False),flush=True)
     e=domain.native_run(out,expr,'learning_receiver',args.timeout)
-    status='completed' if e['status']=='passed' and args.through==14 else 'partial' if e['status']=='passed' else 'failed'
+    protocol=protocol_state(out,args.through)
+    status='completed' if e['status']=='passed' and args.through in (14,18) else 'partial' if e['status']=='passed' else 'failed'
+    if e['status']=='passed' and protocol['status']=='missing_required_output':status='failed'
     record={'status':status,'owner':'codex_baseline','run_id':out.name,'requested_through':args.through,'execution':e,
-            'configuration_header_status':'not_decoded','business_bits_recovered':False,'original_evaluator_changed':False,'online_model_calls':0}
+            'configuration_header_status':protocol['configuration_header_status'],'protocol':protocol,
+            'business_bits_recovered':False,'original_evaluator_changed':False,'online_model_calls':0}
     domain.save(out/'execution.json',record)
     # Keep each invocation when the same learning directory is resumed.
     invocation=out/'invocations'/pathlib.Path(e.get('launcher_path','unavailable')).stem
     domain.save(invocation.with_suffix('.json'),record)
     if (out/'learning_validation.json').exists():
-        domain.save(invocation.with_name(invocation.name+'_validation.json'),json.loads((out/'learning_validation.json').read_text()))
+        domain.save(invocation.with_name(invocation.name+'_validation.json'),json.loads((out/'learning_validation.json').read_text(encoding='utf-8')))
     assert domain.verify_frozen_evaluator()[0]
     if (out/'lesson_config.json').exists():make_report(out,record)
     domain.save(ROOT/'reports/learning_receiver_latest.json',{**record,'report_path':domain.relative(out/'learning_report.html')})
     if status=='completed':domain.save(ROOT/'reports/learning_receiver_full.json',{**record,'report_path':domain.relative(out/'learning_report.html')})
     print(json.dumps(record,ensure_ascii=False),flush=True)
-    return 0 if e['status']=='passed' else 2
+    return 0 if status!='failed' else 2
 
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--through','--step',type=int,choices=range(1,15),default=8,help='Run through this step; existing steps are read from MAT')
+    p.add_argument('--through','--step',type=int,choices=[*range(1,15),18],default=8,help='1-14: original lesson; 18: include PN, PDU CRC and Code5; default8')
     p.add_argument('--resume',help='Existing codex-learning run_id')
     p.add_argument('--duration-ms',type=float)
     p.add_argument('--first-sample',type=int)

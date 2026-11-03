@@ -1,3 +1,5 @@
+> 2026-11-03补充：本文原第0～14步的基础接收说明保留。新版默认另执行16～18步PN/BCC/CRC/Code5，见[后续教学](PN_PDU_TEACHING.zh-CN.md)及[实测范围](PROTOCOL_UPGRADE_VALIDATION.zh-CN.md)。原文“CRC/FEC未知”的限制指当时版本和完整业务恢复，不能据此忽略本轮新增的头部CRC与条件Code5证据。
+
 > GitHub源码版：`/path/to/starlink_phy`请换成你的克隆目录。历史 `runs/` 与图片不随仓库上传；资源准备及两种启动方式见[仓库README](../README.md)。
 
 # Codex 接收机逐步学习手册

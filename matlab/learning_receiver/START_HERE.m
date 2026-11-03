@@ -353,3 +353,10 @@ guard = slrx.step( ...
 
 % fprintf按格式输出文字；%s放字符串、%d放整数，表示换行。
 fprintf('学习主链完成。结果保存在：%s\n', lesson_cfg.run_dir);
+
+%% 16～18. 协议后处理：PN去旋转、BCC/CRC与Code5
+% 与完整接收机共用slproto模块；原22个接收检查点保持原数值。
+% 如只需要原接收链，把lesson_cfg.stop_after设为14。
+if lesson_cfg.stop_after >= 16
+    run(fullfile(learning_folder,'CONTINUE_TO_PDU.m'));
+end
