@@ -1,0 +1,439 @@
+{
+  "date": "2026-11-04",
+  "owner": "codex_baseline",
+  "status": "passed",
+  "base_commit": "a5096e17a940a899f0c38ee0cec75bc9832aa86a",
+  "artifact_manifest": {
+    "schema": "starlink-frame-explorer-v1",
+    "owner": "codex_baseline",
+    "source": {
+      "protocol_mat": "frame_01/protocol.mat",
+      "protocol_mat_sha256": "5a7ae7196354a1c7ee1f0bb2148d347d070481dcbda3b5c0df7459a60ff7c6cf",
+      "protocol_summary_sha256": "f7980dbfc07099f4e5e9459f01d53dca4c787ed65831a595b0429f06d419b3f8",
+      "receiver_version": "pdu-receiver-v2",
+      "raw_capture_sha256": "c69e82022d45173cdcaf1a5fdc8a2b864e2d61e85ae819af54b16002044adae3",
+      "scope": "One already-inspected UT Austin public capture, frame1; conditional higher-order allocations",
+      "coordinate_system": "MATLAB column1=SSS, columns2..301=data. q0,r0 zero based; allocation ends exclusive.",
+      "before_stage": "FIT-pilot phase/slope calibrated final grid before PN",
+      "after_stage": "Same grid multiplied by conjugate of fixed PN reference; SSS shown without payload PN operation",
+      "precision": "little-endian float32, interleaved real/imag, column then original FFT row",
+      "float32_max_absolute_component_error": 1.0519713322665325e-07,
+      "source_PN_modulus_max_error": 4.440892098500626e-16
+    },
+    "headers": [
+      {
+        "words_hex": [
+          "3048A020",
+          "000000AD"
+        ],
+        "CRC": 173,
+        "crc_pass": true
+      },
+      {
+        "words_hex": [
+          "342A9C80",
+          "042E4062",
+          "900E2800",
+          "AAD8000D"
+        ],
+        "CRC": 13,
+        "crc_pass": true
+      }
+    ],
+    "regions": [
+      {
+        "kind": "header1",
+        "id": -1,
+        "quantity": 0,
+        "start_r0": 0,
+        "end_exclusive_r0": 228,
+        "resource_count": 228,
+        "bits_per_symbol": 1,
+        "alphabet": "BPSK",
+        "resources_per_unit": 0,
+        "coded_bits_hypothesis": 0,
+        "FEC_verified": true,
+        "start_column": 2,
+        "start_q0": 0,
+        "last_column": 2,
+        "same_alphabet_boundary_signal_identifiable": false
+      },
+      {
+        "kind": "first_body",
+        "id": 5,
+        "quantity": 4,
+        "start_r0": 228,
+        "end_exclusive_r0": 8420,
+        "resource_count": 8192,
+        "bits_per_symbol": 1,
+        "alphabet": "BPSK",
+        "resources_per_unit": 2048,
+        "coded_bits_hypothesis": 2048,
+        "FEC_verified": true,
+        "start_column": 2,
+        "start_q0": 228,
+        "last_column": 10,
+        "same_alphabet_boundary_signal_identifiable": false
+      },
+      {
+        "kind": "header2",
+        "id": -1,
+        "quantity": 0,
+        "start_r0": 8420,
+        "end_exclusive_r0": 8876,
+        "resource_count": 456,
+        "bits_per_symbol": 1,
+        "alphabet": "BPSK",
+        "resources_per_unit": 0,
+        "coded_bits_hypothesis": 0,
+        "FEC_verified": true,
+        "start_column": 10,
+        "start_q0": 388,
+        "last_column": 10,
+        "same_alphabet_boundary_signal_identifiable": false
+      },
+      {
+        "kind": "second_body",
+        "id": 57,
+        "quantity": 1,
+        "start_r0": 8876,
+        "end_exclusive_r0": 10924,
+        "resource_count": 2048,
+        "bits_per_symbol": 4,
+        "alphabet": "16QAM",
+        "resources_per_unit": 2048,
+        "coded_bits_hypothesis": 8192,
+        "FEC_verified": false,
+        "start_column": 10,
+        "start_q0": 844,
+        "last_column": 12,
+        "same_alphabet_boundary_signal_identifiable": false
+      },
+      {
+        "kind": "second_body",
+        "id": 66,
+        "quantity": 39,
+        "start_r0": 10924,
+        "end_exclusive_r0": 170668,
+        "resource_count": 159744,
+        "bits_per_symbol": 4,
+        "alphabet": "16QAM",
+        "resources_per_unit": 4096,
+        "coded_bits_hypothesis": 16384,
+        "FEC_verified": false,
+        "start_column": 12,
+        "start_q0": 884,
+        "last_column": 171,
+        "same_alphabet_boundary_signal_identifiable": false
+      },
+      {
+        "kind": "second_body",
+        "id": 70,
+        "quantity": 9,
+        "start_r0": 170668,
+        "end_exclusive_r0": 207532,
+        "resource_count": 36864,
+        "bits_per_symbol": 4,
+        "alphabet": "16QAM",
+        "resources_per_unit": 4096,
+        "coded_bits_hypothesis": 16384,
+        "FEC_verified": false,
+        "start_column": 171,
+        "start_q0": 992,
+        "last_column": 208,
+        "same_alphabet_boundary_signal_identifiable": false
+      },
+      {
+        "kind": "second_body",
+        "id": 71,
+        "quantity": 1,
+        "start_r0": 207532,
+        "end_exclusive_r0": 210809,
+        "resource_count": 3277,
+        "bits_per_symbol": 5,
+        "alphabet": "32cross",
+        "resources_per_unit": 3277,
+        "coded_bits_hypothesis": 16384,
+        "FEC_verified": false,
+        "start_column": 208,
+        "start_q0": 708,
+        "last_column": 211,
+        "same_alphabet_boundary_signal_identifiable": false
+      },
+      {
+        "kind": "second_body",
+        "id": 85,
+        "quantity": 27,
+        "start_r0": 210809,
+        "end_exclusive_r0": 299288,
+        "resource_count": 88479,
+        "bits_per_symbol": 5,
+        "alphabet": "32cross",
+        "resources_per_unit": 3277,
+        "coded_bits_hypothesis": 16384,
+        "FEC_verified": false,
+        "start_column": 211,
+        "start_q0": 973,
+        "last_column": 300,
+        "same_alphabet_boundary_signal_identifiable": false
+      },
+      {
+        "kind": "tail",
+        "id": -2,
+        "quantity": 0,
+        "start_r0": 299288,
+        "end_exclusive_r0": 301200,
+        "resource_count": 1912,
+        "bits_per_symbol": 1,
+        "alphabet": "BPSK",
+        "resources_per_unit": 0,
+        "coded_bits_hypothesis": 0,
+        "FEC_verified": false,
+        "start_column": 300,
+        "start_q0": 96,
+        "last_column": 301,
+        "same_alphabet_boundary_signal_identifiable": false
+      }
+    ],
+    "boundary": {
+      "available": true,
+      "reason": "Ordered mixture change-point, not a confidence interval or truth",
+      "uses_header_quantities_to_restrict_search": false,
+      "uses_header_end_as_anchor": true,
+      "fit_parity_r0": 0,
+      "predicted_r0": [
+        207532,
+        299288
+      ],
+      "signal_fit_r0": [
+        207419,
+        299287
+      ],
+      "offset_resources": [
+        -113,
+        -1
+      ],
+      "predicted_minus_signal_fit_NLL_fit": 5.853230046923272,
+      "predicted_minus_signal_fit_NLL_EVAL": -40.8867064146325,
+      "fit_minimum_NLL": 548434.4701254689,
+      "internal_same_alphabet_boundaries_identifiable": false
+    },
+    "source_unchanged": true,
+    "resource_count": 301200,
+    "file_bytes": 7882887,
+    "html_sha256": "bf58b3376c46569f31a4e4aea3863b6a10132967eb9cac3ba5c3775485f89425",
+    "builder_sources": {
+      "build_frame_explorer.py": "da8f2ce37dd535dc1505e7160d51db4c52f6beda753fbab4f65c79085d151b7a",
+      "frame_explorer.html": "471c9e58ec5112249a24fa93c80cb623441421f044a6e0ed92cd9d9b2470e34a",
+      "frame_explorer.css": "e23db7d679c37114fa90a76525f06aadd8fb9110a33a6fd3d508847283e2beee",
+      "frame_explorer.js": "ee6a486f0f84dbac1568c6a78521f954e135b19fa01688466e6315011f272fce"
+    }
+  },
+  "browser": {
+    "status": "passed",
+    "browser": "Chromium headless via CDP",
+    "offline_file_url": true,
+    "external_requests": [],
+    "runtime_exceptions": [],
+    "results": [
+      {
+        "initial": {
+          "state": {
+            "col": 208,
+            "bin": 140,
+            "colLo": 2,
+            "colHi": 301,
+            "binLo": -512,
+            "binHi": 511,
+            "header": 1,
+            "scope": "column",
+            "normalize": true,
+            "models": true,
+            "decision": false,
+            "showUncertain": true,
+            "colorMode": "region",
+            "includeSSS": false,
+            "hidden": [],
+            "explicit": [],
+            "selectedBit": null
+          },
+          "points": 1004,
+          "title": "第一帧 · Starlink 信号观察台",
+          "scrollWidth": 1425,
+          "innerWidth": 1440
+        }
+      },
+      {
+        "header_presets": [
+          228,
+          456
+        ],
+        "tail_resources": 1912,
+        "mixed_column_partition": [
+          708,
+          296
+        ]
+      },
+      {
+        "PN_modulus_max_error": 0
+      },
+      {
+        "firstCRC": {
+          "s": {
+            "col": 2,
+            "bin": -318,
+            "colLo": 2,
+            "colHi": 3,
+            "binLo": -338,
+            "binHi": -275,
+            "header": 0,
+            "scope": "selection",
+            "normalize": true,
+            "models": true,
+            "decision": false,
+            "showUncertain": true,
+            "colorMode": "header",
+            "includeSSS": false,
+            "hidden": [],
+            "explicit": [
+              186,
+              187,
+              188,
+              189,
+              190,
+              191,
+              192,
+              193,
+              194,
+              195,
+              196,
+              197,
+              198,
+              199,
+              200,
+              201,
+              202,
+              203,
+              204,
+              205,
+              206,
+              207,
+              208,
+              209
+            ],
+            "selectedBit": 56
+          },
+          "count": 24,
+          "crc": "0xAD"
+        }
+      },
+      {
+        "secondCRC": {
+          "s": {
+            "col": 10,
+            "bin": 302,
+            "colLo": 9,
+            "colHi": 11,
+            "binLo": 282,
+            "binHi": 345,
+            "header": 1,
+            "scope": "selection",
+            "normalize": true,
+            "models": true,
+            "decision": false,
+            "showUncertain": true,
+            "colorMode": "header",
+            "includeSSS": false,
+            "hidden": [],
+            "explicit": [
+              8834,
+              8835,
+              8836,
+              8837,
+              8838,
+              8839,
+              8840,
+              8841,
+              8842,
+              8843,
+              8844,
+              8845,
+              8846,
+              8847,
+              8848,
+              8849,
+              8850,
+              8851,
+              8852,
+              8853,
+              8854,
+              8855,
+              8856,
+              8857
+            ],
+            "selectedBit": 120
+          },
+          "count": 24,
+          "crc": "0x0D"
+        }
+      },
+      {
+        "CSV_rows": 24
+      },
+      {
+        "boundary": {
+          "a": {
+            "col": 208,
+            "bin": 95,
+            "row": 95,
+            "q": 595,
+            "r": 207419,
+            "index": 212063,
+            "region": 5,
+            "kind": "16QAM · ID70"
+          },
+          "b": {
+            "col": 208,
+            "bin": 208,
+            "row": 208,
+            "q": 708,
+            "r": 207532,
+            "index": 212176,
+            "region": 6,
+            "kind": "32点 · ID71"
+          }
+        }
+      },
+      {
+        "canvas_click": {
+          "col": 10,
+          "bin": 100
+        }
+      },
+      {
+        "mobile": {
+          "width": 390,
+          "scroll": 375
+        }
+      }
+    ]
+  },
+  "csv_float32_source_rows_exact": 24,
+  "all_301200_geometric_indices_checked": true,
+  "CRC_independently_rechecked": [
+    173,
+    13
+  ],
+  "BCC_reencoding_checked": true,
+  "protected_files_checked": 64,
+  "core_DSP_modified": false,
+  "raw_DSP_rerun": false,
+  "original_MAT_unchanged": true,
+  "external_assets_required": false,
+  "host_only_delivery": true,
+  "HTML_data_committed_to_Git": false,
+  "python_dependency_versions": {
+    "numpy": "2.5.4",
+    "h5py": "3.16.0"
+  }
+}
