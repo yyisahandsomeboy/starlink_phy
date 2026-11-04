@@ -89,6 +89,8 @@ test_mcs66_receiver(pwd)
 
 MATLAB批处理核验使用 `-nojvm` 及已有内存保护，只执行数值计算；普通导出入口的Java SHA与HTML/PNG导出不在本次无JVM执行范围内。376字检查约14秒，进程树私有内存峰值约1.11 GiB，宿主可用内存最低约1.70 GiB；最终集成检查约12秒、峰值约1.24 GiB、最低约1.83 GiB。预留1 GiB、MATLAB私有内存上限2 GiB，均未触发停止。这不是原始IQ全链路内存峰值，也不保证任意机器/数据不发生内存压力。
 
-## 第一帧HTML
+## 第一帧HTML的汇报版本
 
-更新版本机文件：`F:/codex_storage/frame_explorer_20261104/output-mcs66-v3/explorer.html`。保留原网格、CRC与113资源分歧，新增66编码状态、N/K/码率、39字通过及区域定位入口；其余高阶编号继续标为未验证。生成器接受匹配来源SHA的 `--mcs66` 摘要，复现方式见[观察台说明](FRAME1_EXPLORER.zh-CN.md)。
+按用户后续要求，首次汇报只展示解出MCS 66之前的阶段。交互源码已从Git恢复到 `1743f72`，汇报文件为 `F:/codex_storage/frame_explorer_20261104/report-before-mcs66/explorer.html`，不展示66译码状态。已有MCS66数值结果和接收/教学译码代码保留，不因页面回溯而撤销。之后只有用户明确要求时才升级交互界面。
+
+本报告此前记录的 `output-mcs66-v3/explorer.html` 是历史本机产物，不作为当前汇报入口。页面的历史验证仍保留在原验证记录中。[当前观察台说明](FRAME1_EXPLORER.zh-CN.md)给出固定版本的来源与生成方式。

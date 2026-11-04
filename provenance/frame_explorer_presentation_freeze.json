@@ -1,0 +1,25 @@
+{
+  "schema": "frame-explorer-presentation-freeze-v1",
+  "date": "2026-11-04",
+  "owner": "codex_baseline",
+  "previous_commit": "6953f2b67b708ee9ede9e62af7fa5716175c8ef7",
+  "restored_interface_commit": "1743f726c90f923c0c4126d4932f7ec97cd61122",
+  "user_scope": "First presentation stops before MCS66 recovery; no automatic interface updates until explicitly requested.",
+  "restored_sources_sha256": {
+    "tools/build_frame_explorer.py": "da8f2ce37dd535dc1505e7160d51db4c52f6beda753fbab4f65c79085d151b7a",
+    "tools/frame_explorer.html": "471c9e58ec5112249a24fa93c80cb623441421f044a6e0ed92cd9d9b2470e34a",
+    "tools/frame_explorer.css": "e23db7d679c37114fa90a76525f06aadd8fb9110a33a6fd3d508847283e2beee",
+    "tools/frame_explorer.js": "ee6a486f0f84dbac1568c6a78521f954e135b19fa01688466e6315011f272fce"
+  },
+  "receiver_files_unchanged": 45,
+  "decoding_results_preserved": true,
+  "html_sha256": "f36fad6b34e0532d317df69c8899e98dfd8a9a164a6487513ffa301e5a837a48",
+  "html_bytes": 7882887,
+  "html_matches_original_pre66_export_except_generation_timestamp": true,
+  "source_protocol_mat_sha256": "5a7ae7196354a1c7ee1f0bb2148d347d070481dcbda3b5c0df7459a60ff7c6cf",
+  "CRC_rechecks": [
+    173,
+    13
+  ],
+  "browser_validation_reused_by_exact_content_except_generation_timestamp": true
+}

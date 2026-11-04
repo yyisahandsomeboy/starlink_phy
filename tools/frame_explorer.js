@@ -138,7 +138,7 @@ function renderInspector(){
     if(reg)facts.push(['分配区间 r0',`${nf(reg.start_r0)}…${nf(reg.end_exclusive_r0-1)}`]);
     if(c.r>=0)facts.push(['边界标记',uncertain[c.r]?'待核验':'未落入分歧掩码']);
     $('resourceFacts').innerHTML=facts.map(([k,v])=>`<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('');
-    let message=reg?reg.kind==='first_body'?'固定 Code5 H/P 支持这一段。下方码字卡片可进一步查看。':reg.kind.startsWith('header')?'这是 BCC 编码后的头部资源；下方位图展示译码后的保留位。':reg.kind==='tail'?'尾部按 ±1 二值模型解释，信息含义仍未确认。':reg.id===66&&D.mcs66?.available?'编号66已有固定QC512模型，N16384/K12288、rate3/4；本帧全部码字通过软译码和重编码。':'调制与长度是本公开采集的候选解释；本编号的高阶位映射和 FEC 尚未确认。':c.col===1?'SSS 是同步 / 信道参考列，不使用载荷 PN 去旋转。':fit.has(c.row)?'FIT 导频参与校准，不混入载荷星座样本。':evaluation.has(c.row)?'EVAL 导频仅用于评价，不用于相位 / 增益拟合。':'当前为未加载 bin，不混入载荷判决。';
+    let message=reg?reg.kind==='first_body'?'固定 Code5 H/P 支持这一段。下方码字卡片可进一步查看。':reg.kind.startsWith('header')?'这是 BCC 编码后的头部资源；下方位图展示译码后的保留位。':reg.kind==='tail'?'尾部按 ±1 二值模型解释，信息含义仍未确认。':'调制与长度是本公开采集的候选解释；高阶位映射和 FEC 尚未确认。':c.col===1?'SSS 是同步 / 信道参考列，不使用载荷 PN 去旋转。':fit.has(c.row)?'FIT 导频参与校准，不混入载荷星座样本。':evaluation.has(c.row)?'EVAL 导频仅用于评价，不用于相位 / 增益拟合。':'当前为未加载 bin，不混入载荷判决。';
     $('resourceMessage').textContent=message;
     $('focusRegion').disabled=c.region<0&&c.col!==1;
     if(state.scope!=='selection')$('selectionHint').textContent=c.r>=0&&uncertain[c.r]?'这个资源落在预测 / 信号边界的分歧区及附近。':'';
@@ -221,7 +221,7 @@ function renderHeader(){
     $('codedGrid').innerHTML=h.blocks.map((block,bi)=>`<div class="coded-row"><span class="mono">B${bi+1}</span>`+block.hard_observed.map((v,k)=>{const inp=Math.floor(k/3),bit=inp<32?bi*32+inp:null,f=bit===null?{type:'tail',name:'归零尾'}:bitField(h,bit),r=h.start_r0+bi*114+k;return`<button class="coded-cell ${v?'one':''}" style="--field:${fieldColors[f.type]}" data-coded="${r}" title="r0=${r}；编码位=${v}；${esc(f.name)}" aria-label="编码资源${r}，值${v}"></button>`;}).join('')+'</div>').join('');
     let entries=h.fields.entries;if(!Array.isArray(entries))entries=[entries];
     const bodies=D.regions.map((r,i)=>({...r,region:i})).filter(r=>r.kind===(state.header===0?'first_body':'second_body'));
-    $('allocationRows').innerHTML=entries.map((e,i)=>{const r=bodies[i];return`<tr><td>${i+1}</td><td><span class="mcs-pill">${e.index8}</span></td><td><b>${e.quantity}</b> 单位</td><td><i class="swatch" style="background:${colors[r.region]}"></i> ${esc(r.alphabet==='32cross'?'交叉32点':r.alphabet)}${r.id===66&&D.mcs66?.available?' · LDPC已验证':''}</td><td>${nf(r.resources_per_unit)}</td><td class="length-formula">${e.quantity} × ${nf(r.resources_per_unit)} = ${nf(r.resource_count)}</td><td class="mono">[${nf(r.start_r0)}, ${nf(r.end_exclusive_r0)})</td><td><button data-allocation="${r.region}">定位 ↗</button></td></tr>`;}).join('');
+    $('allocationRows').innerHTML=entries.map((e,i)=>{const r=bodies[i];return`<tr><td>${i+1}</td><td><span class="mcs-pill">${e.index8}</span></td><td><b>${e.quantity}</b> 单位</td><td><i class="swatch" style="background:${colors[r.region]}"></i> ${esc(r.alphabet==='32cross'?'交叉32点':r.alphabet)}</td><td>${nf(r.resources_per_unit)}</td><td class="length-formula">${e.quantity} × ${nf(r.resources_per_unit)} = ${nf(r.resource_count)}</td><td class="mono">[${nf(r.start_r0)}, ${nf(r.end_exclusive_r0)})</td><td><button data-allocation="${r.region}">定位 ↗</button></td></tr>`;}).join('');
     renderBitDetail(h);
 }
 function renderBitDetail(h){
@@ -250,11 +250,6 @@ function renderBoundary(){
     $('inspectBoundary').onclick=()=>{state.col=pc.col;state.bin=(pc.bin+sc.bin)>>1;state.colLo=pc.col;state.colHi=pc.col;state.binLo=Math.max(-512,Math.min(pc.bin,sc.bin)-35);state.binHi=Math.min(511,Math.max(pc.bin,sc.bin)+35);state.scope='column';state.colorMode='region';rasterDirty=true;render();$('resourceSection').scrollIntoView({behavior:'smooth'});};
 }
 function renderCode5(){
-    if(D.mcs66?.available){
-        const q=D.mcs66;$('mcs66Status').hidden=false;
-        $('mcs66Status').innerHTML=`<b>新增：编号66 · QC512 LDPC已验证</b><br>N=${q.N}，K=${q.K}，码率3/4；本帧${q.word_count}字全部收敛、重编码一致。<br>每字4096资源：前3072为输入坐标，后1024为奇偶坐标。<button id="viewMCS66">查看66区域</button>`;
-        $('viewMCS66').onclick=()=>{selectRegion(4);$('constellationSection').scrollIntoView({behavior:'smooth'});};
-    }
     const c=D.code5;$('code5Status').textContent=`${c.words.filter(w=>w.converged).length}/${c.word_count} 字收敛`;
     $('code5Words').innerHTML=c.words.map((w,i)=>`<button class="code5-word" data-word="${i}"><strong>码字 ${i+1}<span>校验 ${w.initial_failed_checks} → ${w.final_failed_checks}</span></strong><small>硬位修改 ${w.decoder_hard_changes} · 重编码 ${w.reencode_matches_decoded_word?'一致':'不一致'}</small><small>奇偶重调制 NMSE ${w.parity_remodulation_nmse.toFixed(4)}</small><span class="mono">r0 ${w.start_r0}…${w.end_r0}</span></button>`).join('');
 }
@@ -290,7 +285,7 @@ $('colorMode').onchange=e=>{state.colorMode=e.target.value;rasterDirty=true;rend
 $('resetView').onclick=()=>preset('full');$('toggleRange').onclick=()=>$('rangeControls').hidden=!$('rangeControls').hidden;
 $('applyRange').onclick=()=>{const a=int($('colLo').value,1,301),b=int($('colHi').value,1,301),x=int($('binLo').value,-512,511),y=int($('binHi').value,-512,511);state.colLo=Math.min(a,b);state.colHi=Math.max(a,b);state.binLo=Math.min(x,y);state.binHi=Math.max(x,y);state.includeSSS=state.colLo===1;render();};
 document.querySelectorAll('[data-action]').forEach(b=>b.onclick=()=>{const a=b.dataset.action;if(a==='pss')toast('PSS位于时域同步段，不在本次1024×301频域检查点中。SSS可直接点击查看。');else preset(a==='sss'?'sss':'full');});
-$('downloadMeta').onclick=()=>download('frame1-summary.json',JSON.stringify({source:D.source,headers:D.headers.map(h=>({words_hex:h.words_hex,crc_pass:h.crc_pass,crc_observed:h.crc_observed,fields:h.fields})),regions:D.regions,boundary:D.boundary,code5:D.code5,mcs66:D.mcs66},null,2));
+$('downloadMeta').onclick=()=>download('frame1-summary.json',JSON.stringify({source:D.source,headers:D.headers.map(h=>({words_hex:h.words_hex,crc_pass:h.crc_pass,crc_observed:h.crc_observed,fields:h.fields})),regions:D.regions,boundary:D.boundary,code5:D.code5},null,2));
 $('downloadCSV').onclick=()=>{let text='ofdm_column,fft_row_1based,bin,q0,r0,region,mcs_index,before_I,before_Q,after_I,after_Q,boundary_uncertain,geometric_symbol_index\n';
     for(const i of currentSelection){const col=1+Math.floor(i/1024),c=info(col,D.bins[i%1024]),reg=c.region>=0?D.regions[c.region]:null,a=col>1?after:before;text+=[col,c.row+1,c.bin,c.r>=0?c.q:'',c.r>=0?c.r:'',c.kind,reg?.id>=0?reg.id:'',before[2*i],before[2*i+1],a[2*i],a[2*i+1],c.r>=0?uncertain[c.r]:'',c.r>=0?symbolIndex[c.r]:''].join(',')+'\n';}
     download('frame1-selected-resources.csv','\uFEFF'+text,'text/csv;charset=utf-8');toast(`已导出${nf(currentSelection.length)}个资源，CSV为未作显示增益归一化的原坐标。`);};
