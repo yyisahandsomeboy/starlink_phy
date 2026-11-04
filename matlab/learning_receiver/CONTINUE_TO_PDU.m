@@ -31,6 +31,8 @@ end
 %% 20. 分区域几何判决、留出资源检验和不受数量约束的边界对照
 if lesson_cfg.stop_after>=20
     protocol_result.allocations=slproto.analyzeAllocations(protocol_stream,protocol_headers,protocol_calibrated,refs.pilots);
+    % 对已识别的66继续独立FEC检验；其他高阶编号保留未知。
+    protocol_result.mcs66=slproto.analyzeMCS66(protocol_stream,protocol_headers,protocol_result.allocations.calibration,protocol_opt);
 end
 protocol_out=fullfile(lesson_cfg.run_dir,['protocol-teaching-' char(datetime('now','Format','yyyyMMdd-HHmmss-SSS'))]);
 protocol_source=struct('checkpoint',fullfile(lesson_cfg.run_dir,'13h_tracking.mat'), ...

@@ -33,7 +33,7 @@ def alphabet(name):
     scale=(sum(x*x+y*y for x,y in c)/len(c))**.5
     return [[x/scale,y/scale] for x,y in c]
 
-def build(source,out):
+def build(source,out,mcs66_file=None):
     import numpy as np
     import h5py
     source=source.resolve();out=out.resolve()
@@ -43,6 +43,12 @@ def build(source,out):
     assert summary['allocations']['complete'] and summary['headers']['second_unique']
     assert summary['source']['frame_index']==1,'This viewer currently targets frame1 only'
     digest=sha(source);regions=summary['allocations']['plan']['regions']
+    mcs66=summary.get('mcs66')
+    if mcs66_file:
+        mcs66=json.loads(Path(mcs66_file).read_text(encoding='utf-8'))
+        assert mcs66['source']['protocol_mat_sha256']==digest,'MCS66 sidecar refers to a different source grid'
+    if mcs66:
+        assert mcs66['available'] and mcs66['all_converged'] and mcs66['all_reencode_matches']
     assert [r['id'] for r in regions]==[-1,5,-1,57,66,70,71,85,-2], 'Frame1 profile changed; update the viewer palette/labels explicitly'
     assert regions[0]['start_r0']==0 and regions[-1]['end_exclusive_r0']==301200
     assert all(a['end_exclusive_r0']==b['start_r0'] for a,b in zip(regions,regions[1:]))
@@ -105,7 +111,7 @@ def build(source,out):
         'bins':bins.tolist(),'payload_rows0':payload.tolist(),'loaded_rows0':loaded.tolist(),
         'fit_rows0':[488,490,492,494,528,530,532,534],'eval_rows0':[489,491,493,495,529,531,533,535],
         'headers':headers,'regions':regions,'region_metrics':summary['allocations']['regions'],
-        'code5':summary['code5'],'boundary':summary['allocations']['boundaries'],
+        'code5':summary['code5'],'mcs66':mcs66,'boundary':summary['allocations']['boundaries'],
         'mixed_columns':summary['allocations']['mixed_columns'],
         'gain':[1]+gain.tolist(),'alphabets':{n:alphabet(n) for n in ('BPSK','16QAM','32cross')},
         'before_b64':pre,'after_b64':post,'region_b64':pack(ri,'u1'),
@@ -118,7 +124,7 @@ def build(source,out):
     assert '__FRAME_DATA__' not in template and '__EXPLORER_JS__' not in template
     out.mkdir(parents=True);target=out/'explorer.html';target.write_text(template,encoding='utf-8')
     manifest={'schema':data['schema'],'owner':'codex_baseline','source':data['source'],'headers':[{'words_hex':h['words_hex'],'CRC':h['crc_observed'],'crc_pass':h['crc_pass']} for h in headers],
-        'regions':regions,'boundary':data['boundary'],'source_unchanged':True,'resource_count':len(ri),
+        'regions':regions,'mcs66':mcs66,'boundary':data['boundary'],'source_unchanged':True,'resource_count':len(ri),
         'file_bytes':target.stat().st_size,'html_sha256':sha(target),
         'builder_sources':{n:sha(template_dir/n) for n in ['build_frame_explorer.py','frame_explorer.html','frame_explorer.css','frame_explorer.js']}}
     (out/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
@@ -127,4 +133,4 @@ def build(source,out):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--input',type=Path,required=True);p.add_argument('--output',type=Path,required=True)
-    args=p.parse_args();build(args.input,args.output)
+    p.add_argument('--mcs66',type=Path,help='Optional verified sidecar with matching source SHA');args=p.parse_args();build(args.input,args.output,args.mcs66)

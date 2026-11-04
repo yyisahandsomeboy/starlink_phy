@@ -20,7 +20,9 @@
       "alphabet": "BPSK",
       "FEC_verified": true,
       "evidence": "fixed_code5_H",
-      "rare_single_frame": false
+      "rare_single_frame": false,
+      "K": 1024,
+      "coding_model": "code5-qc128-utexas-v1"
     },
     {
       "id": 57,
@@ -30,7 +32,9 @@
       "alphabet": "16QAM",
       "FEC_verified": false,
       "evidence": "conditional_geometry_and_length_only",
-      "rare_single_frame": false
+      "rare_single_frame": false,
+      "K": null,
+      "coding_model": ""
     },
     {
       "id": 66,
@@ -38,9 +42,11 @@
       "resources_per_unit": 4096,
       "coded_bits_hypothesis": 16384,
       "alphabet": "16QAM",
-      "FEC_verified": false,
-      "evidence": "conditional_geometry_and_length_only",
-      "rare_single_frame": false
+      "FEC_verified": true,
+      "evidence": "fixed_mcs66_QC512_H_and_reencoding",
+      "rare_single_frame": false,
+      "K": 12288,
+      "coding_model": "mcs66-qc512-utexas-v1"
     },
     {
       "id": 70,
@@ -50,7 +56,9 @@
       "alphabet": "16QAM",
       "FEC_verified": false,
       "evidence": "conditional_geometry_and_length_only",
-      "rare_single_frame": false
+      "rare_single_frame": false,
+      "K": null,
+      "coding_model": ""
     },
     {
       "id": 71,
@@ -60,7 +68,9 @@
       "alphabet": "32cross",
       "FEC_verified": false,
       "evidence": "conditional_geometry_and_length_only",
-      "rare_single_frame": false
+      "rare_single_frame": false,
+      "K": null,
+      "coding_model": ""
     },
     {
       "id": 78,
@@ -70,7 +80,9 @@
       "alphabet": "32cross",
       "FEC_verified": false,
       "evidence": "conditional_geometry_and_length_only",
-      "rare_single_frame": true
+      "rare_single_frame": true,
+      "K": null,
+      "coding_model": ""
     },
     {
       "id": 85,
@@ -80,7 +92,9 @@
       "alphabet": "32cross",
       "FEC_verified": false,
       "evidence": "conditional_geometry_and_length_only",
-      "rare_single_frame": false
+      "rare_single_frame": false,
+      "K": null,
+      "coding_model": ""
     },
     {
       "id": 88,
@@ -90,7 +104,9 @@
       "alphabet": "32cross",
       "FEC_verified": false,
       "evidence": "conditional_geometry_and_length_only",
-      "rare_single_frame": true
+      "rare_single_frame": true,
+      "K": null,
+      "coding_model": ""
     },
     {
       "id": 92,
@@ -100,7 +116,9 @@
       "alphabet": "32cross",
       "FEC_verified": false,
       "evidence": "conditional_geometry_and_length_only",
-      "rare_single_frame": false
+      "rare_single_frame": false,
+      "K": null,
+      "coding_model": ""
     }
   ]
 }

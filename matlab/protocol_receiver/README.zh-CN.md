@@ -1,8 +1,8 @@
-> 当前v2另支持头部分配表及逐资源判决，详见[原理/接口](../../docs/RESOURCE_ALLOCATION_TEACHING.zh-CN.md)和[实测记录](../../docs/RESOURCE_ALLOCATION_VALIDATION.zh-CN.md)。高阶FEC、位映射仍未知。
+> 当前v3已新增编号66的固定QC512、N16384/K12288、3/4编码关系，376/376历史码字通过；其他高阶编号仍未知。[本轮恢复与验证](../../docs/MCS66_RECOVERY_VALIDATION.zh-CN.md)。候选分配接口见[资源分配说明](../../docs/RESOURCE_ALLOCATION_TEACHING.zh-CN.md)。
 
 # Codex接收机协议升级：PN、PDU头部与Code5
 
-本模块把旧工程已经支持的“去PN后出现BPSK两点”继续接到BCC、组CRC、条件资源字段和一个已验证的Code5 QC-LDPC表示。依据[arXiv:2610.29387v2](https://arxiv.org/html/2610.29387v2)，实现身份为`codex_baseline`。
+本模块把旧工程已经支持的“去PN后出现BPSK两点”继续接到BCC、组CRC、条件资源字段和一个已验证的Code5 QC-LDPC表示；v3另接入编号66。依据[arXiv:2610.29387v2](https://arxiv.org/html/2610.29387v2)，实现身份为`codex_baseline`。
 
 这是根据论文参数与本地旧代码独立实现的版本。截至2026-11-03，没有找到可核实属于论文作者的配套接收代码、原始18帧采集或码矩阵下载；arXiv源包仅提供正文、引用及图表。不能把本模块冒称为作者开源实现。详见[论文、代码与数据来源](../../docs/PAPER_2610_29387_SOURCES.zh-CN.md)。
 
@@ -71,7 +71,7 @@ output = RUN_CODEX_RECEIVER(cfg);
 
 每帧的`protocol.mat`保留实际校准/去PN网格、参考、候选编码位、译码输入及重编码；`protocol_summary.json`只保存指标与来源SHA；`figures/16_pn_bpsk.png`、`17_bcc_crc.png`、`18_code5_fec.png`分别回答旋转、头部编码与奇偶约束的问题。
 
-`code5.words.information_bits`是该条件编码器的输入位；可能仍含上层编码、源扰码或其他协议内容，不能称为网络明文。全载荷、未识别格式和真实业务BER仍未恢复。CRC匹配也不认证发射方。
+`code5.words.information_bits`与`mcs66.words.information_bits`是各条件编码器的输入位；可能仍含上层编码、源扰码或其他协议内容，不能称为网络明文。全载荷、未识别格式和真实业务BER仍未恢复。CRC匹配也不认证发射方。
 
 数学、旧卡点与索引约定见[教学说明](../../docs/PN_PDU_TEACHING.zh-CN.md)。
 
@@ -94,3 +94,7 @@ python tools/recover_qc_checks.py --input my-development-P.mat --output my-QC-ch
 ```
 
 工具只支持本版Code5的1024×1024、QC128、行重6预算。秩不足、P不可逆或没有得到1024个独立稀疏校验时拒绝输出成功模型；不会替调用者猜补缺失的编码器。
+
+## 编号66
+
+默认共享后处理启用编号66，教学第20步调用相同实现。已有协议MAT可用`RUN_MCS66_ANALYSIS(protocolMat,newOutputDir)`只读补算；`RUN_PROTOCOL_ANALYSIS(...,'EnableMCS66',false)`可关闭。输出`result.mcs66`保存每字译码、重编码、奇偶重调制及0.04/0.08尝试记录。完整模型与复现方式见[本轮报告](../../docs/MCS66_RECOVERY_VALIDATION.zh-CN.md)。

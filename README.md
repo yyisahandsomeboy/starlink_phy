@@ -1,6 +1,8 @@
+> 2026-11-04：编号66已恢复条件LDPC模型（16QAM、N16384/K12288、3/4），376/376历史码字通过MATLAB译码、重编码，接入教学第20步与第一帧HTML。[方法、实测与限制](docs/MCS66_RECOVERY_VALIDATION.zh-CN.md)。其他高阶编号与业务明文仍未恢复。
+
 > 2026-11-04：新增[第一帧离线交互观察台](docs/FRAME1_EXPLORER.zh-CN.md)，联动1024×300资源网格、去PN前后星座、CRC位图、MCS分配和边界不确定区。HTML为本机单文件产物，源码生成器与实测摘要随仓库提供。
 
-> 2026-11-03继续升级：当前默认到第20步，增加候选资源分配、同列混合调制的逐资源几何判决及2张教学图（完整教学共27张）。[本轮原理与限制](docs/RESOURCE_ALLOCATION_TEACHING.zh-CN.md)、[MATLAB实测](docs/RESOURCE_ALLOCATION_VALIDATION.zh-CN.md)。下文第18步/25张等数字描述前一阶段。高阶格式位映射、FEC与业务明文仍未确认。
+> 2026-11-03继续升级：当前默认到第20步，增加候选资源分配、同列混合调制的逐资源几何判决及2张教学图（完整教学共27张）。[本轮原理与限制](docs/RESOURCE_ALLOCATION_TEACHING.zh-CN.md)、[MATLAB实测](docs/RESOURCE_ALLOCATION_VALIDATION.zh-CN.md)。下文第18步/25张等数字描述前一阶段。其余高阶格式位映射、FEC与业务明文仍未确认。
 
 # Starlink PHY：Codex 接收机与分步学习版
 

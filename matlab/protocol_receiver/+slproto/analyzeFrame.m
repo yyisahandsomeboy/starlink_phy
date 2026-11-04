@@ -10,4 +10,8 @@ result=slproto.finishFrame(grid,calibrated,R,calibration,pn,headers,coding,opt);
 if opt.enable_allocations
     result.allocations=slproto.analyzeAllocations(stream,headers,calibrated,pilots);
 end
+if isfield(opt,'enable_mcs66')&&opt.enable_mcs66
+    gainCalibration=slproto.resourceCalibration(calibrated,pilots);
+    result.mcs66=slproto.analyzeMCS66(stream,headers,gainCalibration,opt);
+end
 end

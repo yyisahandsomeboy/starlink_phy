@@ -1,3 +1,5 @@
+> 2026-11-04更新：编号66已接入教学第20步，固定16QAM/QC512、N16384/K12288、3/4模型，376/376历史字通过。本文早期高阶FEC未知的描述请结合[最新恢复记录](MCS66_RECOVERY_VALIDATION.zh-CN.md)阅读；其余高阶编号及业务明文仍未知。
+
 > 2026-11-03继续升级：当前默认到第20步，增加候选资源分配、同列混合调制的逐资源几何判决及2张教学图（完整教学共27张）。[本轮原理与限制](RESOURCE_ALLOCATION_TEACHING.zh-CN.md)、[MATLAB实测](RESOURCE_ALLOCATION_VALIDATION.zh-CN.md)。下文第18步/25张等数字描述前一阶段。高阶格式位映射、FEC与业务明文仍未确认。
 
 # 从“QPSK变BPSK”继续到PDU头部和Code5

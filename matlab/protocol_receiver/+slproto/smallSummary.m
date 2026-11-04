@@ -9,6 +9,9 @@ if isfield(s,'allocations')&&s.allocations.available
     s.allocations=rmfield(s.allocations,{'region_index','symbol_index','decided_symbol','boundary_uncertain'});
     s.allocations.calibration=rmfield(s.allocations.calibration,{'gain_per_column','variance_per_column'});
 end
+if isfield(s,'mcs66')&&s.mcs66.available
+    s.mcs66.words=rmfield(s.mcs66.words,{'information_bits','decoded_codeword'});
+end
 s.headers.first=smallHeader(s.headers.first);
 if ~isempty(s.headers.second_candidates)
     s.headers.second_candidates=arrayfun(@smallHeader,s.headers.second_candidates);

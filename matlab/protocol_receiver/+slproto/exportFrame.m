@@ -17,6 +17,9 @@ fprintf(fid,'<p>Code5可用：%d；仅恢复条件编码器输入，不代表业
 if isfield(report,'allocations')
     fprintf(fid,'<p>逐资源判决采用UT公开采集专用候选表，完整分配=%d。高阶格式的几何索引不是已确认发射位映射；边界偏差保留，未知格式停止推算。详见数值摘要。</p>',report.allocations.complete);
 end
+if isfield(report,'mcs66')&&report.mcs66.available
+    fprintf(fid,'<p>编号66：N=16384、K=12288、rate=3/4；%d个字，全收敛=%d，重编码一致=%d。其他未识别格式保持未知。</p>',report.mcs66.word_count,report.mcs66.all_converged,report.mcs66.all_reencode_matches);
+end
 for j=1:numel(report.figures),fprintf(fid,'<p><img src="%s" alt="PN/BCC/LDPC教学图%d"></p>',report.figures{j},j);end
 fprintf(fid,'<p>论文：<a href="https://arxiv.org/html/2610.29387v2">arXiv:2610.29387v2</a>。本实现由Codex依据论文和旧工程独立实现，不冒称作者配套源码。</p></body></html>');
 end

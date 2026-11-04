@@ -1,3 +1,5 @@
+> 2026-11-04更新：编号66已接入教学第20步，固定16QAM/QC512、N16384/K12288、3/4模型，376/376历史字通过。本文早期高阶FEC未知的描述请结合[最新恢复记录](MCS66_RECOVERY_VALIDATION.zh-CN.md)阅读；其余高阶编号及业务明文仍未知。
+
 > 2026-11-03继续升级：当前默认到第20步，增加候选资源分配、同列混合调制的逐资源几何判决及2张教学图（完整教学共27张）。[本轮原理与限制](RESOURCE_ALLOCATION_TEACHING.zh-CN.md)、[MATLAB实测](RESOURCE_ALLOCATION_VALIDATION.zh-CN.md)。下文第18步/25张等数字描述前一阶段。高阶格式位映射、FEC与业务明文仍未确认。
 
 > 2026-11-03补充：本文原第0～14步的基础接收说明保留。新版默认另执行16～18步PN/BCC/CRC/Code5，见[后续教学](PN_PDU_TEACHING.zh-CN.md)及[实测范围](PROTOCOL_UPGRADE_VALIDATION.zh-CN.md)。原文“CRC/FEC未知”的限制指当时版本和完整业务恢复，不能据此忽略本轮新增的头部CRC与条件Code5证据。

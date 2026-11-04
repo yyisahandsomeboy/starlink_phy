@@ -1,0 +1,720 @@
+{
+  "status": "passed",
+  "target_id": 66,
+  "N": 16384,
+  "K": 12288,
+  "H_rank": 4096,
+  "Hp_rank": 4096,
+  "rate": "3/4",
+  "Q": 4096,
+  "word_count": 376,
+  "parameter_selection_word_count": 8,
+  "words_excluded_from_parameter_selection": 368,
+  "converged_words": 376,
+  "hard_changes_total": 63702,
+  "iterations_range": [
+    2,
+    5
+  ],
+  "parity_NMSE_range": [
+    0.026887878994736665,
+    0.0718718748172319
+  ],
+  "parity_flip_NMSE_range": [
+    2.666345764647281,
+    3.588441845603969
+  ],
+  "scale_sensitivity_all_same": false,
+  "scale_sensitivity_counts": [
+    {
+      "scale": 0.02,
+      "converged": 375,
+      "same_word": 375
+    },
+    {
+      "scale": 0.08,
+      "converged": 376,
+      "same_word": 376
+    }
+  ],
+  "nominal_likelihood_scale": 0.04,
+  "message_clip": 50,
+  "source_capture_count": 1,
+  "new_capture_blind_test": false,
+  "plaintext_recovered": false,
+  "controls": [
+    {
+      "initial": 2016,
+      "final": 1210,
+      "iterations": 80,
+      "changes": 617,
+      "converged": false,
+      "name": "wrong_mapping_signI_innerI",
+      "frame": 5,
+      "word": 1
+    },
+    {
+      "initial": 2054,
+      "final": 1133,
+      "iterations": 80,
+      "changes": 674,
+      "converged": false,
+      "name": "wrong_shortening_blocks23",
+      "frame": 5,
+      "word": 1
+    },
+    {
+      "initial": 2003,
+      "final": 1163,
+      "iterations": 80,
+      "changes": 697,
+      "converged": false,
+      "name": "symbol_shuffle",
+      "frame": 5,
+      "word": 1
+    },
+    {
+      "initial": 504,
+      "final": 0,
+      "iterations": 7,
+      "changes": 180,
+      "converged": true,
+      "name": "actual_stream_shift_1_resources",
+      "frame": 5,
+      "word": 1
+    },
+    {
+      "initial": 2044,
+      "final": 1123,
+      "iterations": 80,
+      "changes": 740,
+      "converged": false,
+      "name": "actual_stream_shift_257_resources",
+      "frame": 5,
+      "word": 1
+    }
+  ],
+  "model_sha256": "183132276a399a905ac85845f5732dd38d891894415476e22b7d45bd5b792301",
+  "schema": "mcs66-recovery-validation-v1",
+  "date": "2026-11-04",
+  "owner": "codex_baseline",
+  "base_commit": "1743f726c90f923c0c4126d4932f7ec97cd61122",
+  "candidate_selection": [
+    {
+      "id": 57,
+      "words": 7,
+      "CRC_anchored_words": 7,
+      "Q_candidate": 2048,
+      "N_candidate": 8192,
+      "DD_NMSE_range": [
+        0.03118802865681851,
+        0.04113763533596655
+      ],
+      "minimum_pair_hamming": 1908,
+      "near_duplicate_pairs": [],
+      "near_duplicate_pair_count": 0
+    },
+    {
+      "id": 66,
+      "words": 376,
+      "CRC_anchored_words": 117,
+      "Q_candidate": 4096,
+      "N_candidate": 16384,
+      "DD_NMSE_range": [
+        0.027206403729043184,
+        0.05030899799662571
+      ],
+      "minimum_pair_hamming": 4935,
+      "near_duplicate_pairs": [],
+      "near_duplicate_pair_count": 0
+    },
+    {
+      "id": 70,
+      "words": 91,
+      "CRC_anchored_words": 0,
+      "Q_candidate": 4096,
+      "N_candidate": 16384,
+      "DD_NMSE_range": [
+        0.027324303435410716,
+        0.044652590657715326
+      ],
+      "minimum_pair_hamming": 4810,
+      "near_duplicate_pairs": [],
+      "near_duplicate_pair_count": 0
+    }
+  ],
+  "source_capture": {
+    "path": "data/raw/exemplar250-257/exemplar250-257.bin",
+    "sha256": "c69e82022d45173cdcaf1a5fdc8a2b864e2d61e85ae819af54b16002044adae3"
+  },
+  "source_checkpoints": [
+    {
+      "frame": 1,
+      "path": "runs\\allocation-upgrade-20261103\\nine_frames\\frame_01\\protocol.mat",
+      "sha256": "5a7ae7196354a1c7ee1f0bb2148d347d070481dcbda3b5c0df7459a60ff7c6cf"
+    },
+    {
+      "frame": 2,
+      "path": "runs\\allocation-upgrade-20261103\\nine_frames\\frame_02\\protocol.mat",
+      "sha256": "6b6cde82bedecb3423a672e5584fb006f2b73a440bccabe07f5e88a5271b4aa4"
+    },
+    {
+      "frame": 3,
+      "path": "runs\\allocation-upgrade-20261103\\nine_frames\\frame_03\\protocol.mat",
+      "sha256": "68d32963fca0503e471c49f0388603eb64446f145d1a3d376fe52ad04dbbd0a7"
+    },
+    {
+      "frame": 4,
+      "path": "runs\\allocation-upgrade-20261103\\nine_frames\\frame_04\\protocol.mat",
+      "sha256": "dea7a4128f859e5a9e45eed0ccee7cc54abaec2d639f735cb3c0d70e17faddbe"
+    },
+    {
+      "frame": 5,
+      "path": "runs\\allocation-upgrade-20261103\\nine_frames\\frame_05\\protocol.mat",
+      "sha256": "5c67f932f2870c64a96376c9b820040e926f9312090f19b8165be723a3aff61f"
+    },
+    {
+      "frame": 6,
+      "path": "runs\\allocation-upgrade-20261103\\nine_frames\\frame_06\\protocol.mat",
+      "sha256": "17b324d4dae2d0b24d2f4f3836e276050b2fff8d2998e69537ea5216ee4f2551"
+    },
+    {
+      "frame": 7,
+      "path": "runs\\allocation-upgrade-20261103\\nine_frames\\frame_07\\protocol.mat",
+      "sha256": "708a86f5bf93238e8950017121e0f239001c62f99968129771a7c48c6a697b56"
+    },
+    {
+      "frame": 8,
+      "path": "runs\\allocation-upgrade-20261103\\nine_frames\\frame_08\\protocol.mat",
+      "sha256": "74cc26f040d0b62a72832ef1658b6386b9b7ef5a339165a11ec0cbd4ae7267b9"
+    },
+    {
+      "frame": 9,
+      "path": "runs\\allocation-upgrade-20261103\\nine_frames\\frame_09\\protocol.mat",
+      "sha256": "110b550f87a018a04c1e62a5ed1b86654ac2d711f650be6b4a507f57b3f38e78"
+    }
+  ],
+  "public_family_search": {
+    "development_frames": [
+      2
+    ],
+    "development_units": 8,
+    "Code5_reference_exact_match": {
+      "stored_checks": 1024,
+      "public_candidate_checks": 1024,
+      "identical_supports": true,
+      "shared_rows": 1024
+    },
+    "mother_models": 131,
+    "bit_mappings": 216,
+    "polarity_cases_per_mapping": 16,
+    "tested_models_and_mappings": 28296,
+    "hits": [
+      {
+        "KB": 8,
+        "M": 2048,
+        "puncture": "p0",
+        "shortened_blocks": [
+          0,
+          1
+        ],
+        "mapping_masks": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "polarity_mask": 0,
+        "failed_fraction": 0.14453125
+      }
+    ],
+    "scope": "Finite public-table family and whole-block shortening test; not all possible codes"
+  },
+  "search_screening": {
+    "random_seed": 1991,
+    "sampled_check_rows_per_model": 128,
+    "hard_syndrome_fraction_screen": 0.25,
+    "only_model_below_screen": true,
+    "not_a_frozen_evaluator_threshold": true
+  },
+  "matlab_environment": "Windows MATLAB R2024b -nojvm",
+  "native_units": {
+    "status": "passed",
+    "Hp_inverse_all_coordinates": true,
+    "implicit_GH_orthogonal": true,
+    "synthetic_2bit_correction": true,
+    "original_minsum_agreement": true,
+    "mapper_exact_inverse": true
+  },
+  "frames": [
+    {
+      "frame": 1,
+      "words": 39,
+      "converged": 39,
+      "all_reencode_matches": true,
+      "hard_changes": 4412
+    },
+    {
+      "frame": 2,
+      "words": 39,
+      "converged": 39,
+      "all_reencode_matches": true,
+      "hard_changes": 6588
+    },
+    {
+      "frame": 3,
+      "words": 39,
+      "converged": 39,
+      "all_reencode_matches": true,
+      "hard_changes": 6350
+    },
+    {
+      "frame": 4,
+      "words": 38,
+      "converged": 38,
+      "all_reencode_matches": true,
+      "hard_changes": 9055
+    },
+    {
+      "frame": 5,
+      "words": 39,
+      "converged": 39,
+      "all_reencode_matches": true,
+      "hard_changes": 6076
+    },
+    {
+      "frame": 6,
+      "words": 38,
+      "converged": 38,
+      "all_reencode_matches": true,
+      "hard_changes": 7353
+    },
+    {
+      "frame": 7,
+      "words": 50,
+      "converged": 50,
+      "all_reencode_matches": true,
+      "hard_changes": 6524
+    },
+    {
+      "frame": 8,
+      "words": 53,
+      "converged": 53,
+      "all_reencode_matches": true,
+      "hard_changes": 9805
+    },
+    {
+      "frame": 9,
+      "words": 41,
+      "converged": 41,
+      "all_reencode_matches": true,
+      "hard_changes": 7539
+    }
+  ],
+  "integration": {
+    "status": "passed",
+    "old_tests": {
+      "protocol": {
+        "status": "passed",
+        "published_CRC_examples": 2,
+        "soft_BCC_and_error_correction": true,
+        "coordinate_cases": true,
+        "code5_H_rank": 1024,
+        "code5_GH_orthogonal": true,
+        "synthetic_minsum_changes": 2,
+        "QC_full_rank_and_reserved_error": true,
+        "rank_deficient_and_inconsistent_rejected": true
+      },
+      "allocation": {
+        "status": "passed",
+        "per_unit_rounding_differs_from_joint_packing": true,
+        "inside_column_mapping": true,
+        "unknown_ID_stops_plan": true,
+        "scalar_likelihood_check": true,
+        "synthetic_mixed_and_pure_negative_control": true,
+        "transmitter_bit_mapping_claimed": false
+      }
+    },
+    "shared_analyzeFrame_mcs66_words": 39,
+    "header_and_Code5_bits_unchanged": true,
+    "disable_flag_preserves_observations": true,
+    "small_summary_omits_decoded_bits": true,
+    "actual_teaching_computation_words": 39,
+    "actual_teaching_all_converged": true,
+    "actual_teaching_retried_words": 2,
+    "fresh_raw_physical_DSP_rerun": false,
+    "actual_teaching_retry_details": [
+      {
+        "ordinal": 17,
+        "start_r0": 76460,
+        "end_r0": 80555,
+        "initial_failed_checks": 486,
+        "final_failed_checks": 0,
+        "decoder_hard_changes": 159,
+        "iterations": 8,
+        "converged": true,
+        "initial_attempt_final_failed_checks": 3,
+        "used_likelihood_scale": 0.08,
+        "attempts": [
+          {
+            "scale": 0.04,
+            "converged": false,
+            "final_failed_checks": 3,
+            "iterations": 60
+          },
+          {
+            "scale": 0.08,
+            "converged": true,
+            "final_failed_checks": 0,
+            "iterations": 8
+          }
+        ],
+        "reencode_matches_decoded_word": true,
+        "parity_remodulation_nmse": 0.04647989004573329,
+        "parity_flip_control_nmse": 2.8030351458649716
+      },
+      {
+        "ordinal": 25,
+        "start_r0": 109228,
+        "end_r0": 113323,
+        "initial_failed_checks": 503,
+        "final_failed_checks": 0,
+        "decoder_hard_changes": 172,
+        "iterations": 7,
+        "converged": true,
+        "initial_attempt_final_failed_checks": 2,
+        "used_likelihood_scale": 0.08,
+        "attempts": [
+          {
+            "scale": 0.04,
+            "converged": false,
+            "final_failed_checks": 2,
+            "iterations": 60
+          },
+          {
+            "scale": 0.08,
+            "converged": true,
+            "final_failed_checks": 0,
+            "iterations": 7
+          }
+        ],
+        "reencode_matches_decoded_word": true,
+        "parity_remodulation_nmse": 0.03579409271328544,
+        "parity_flip_control_nmse": 2.9302031677213294
+      }
+    ]
+  },
+  "python_matlab_bitwise_agreement": {
+    "all_codeword_bits": 6160384,
+    "same": true,
+    "native_uint8_bits_sha256": "27d2f0c5c3d2c80dc0d670b21b11305e21594b15b7e39aed48d62f6a7743906d",
+    "teaching_frame1_bits": 638976,
+    "teaching_equals_historical_frame1": true,
+    "teaching_uint8_bits_sha256": "de97f4d7e882bf5aa3fee0418f93f903113a8754429bd0019e2d80efa12866a9"
+  },
+  "memory": {
+    "all_376": {
+      "status": "passed",
+      "elapsed_s": 14.06,
+      "peak_tree_private_bytes": 1189683200,
+      "minimum_available_bytes": 1822457856,
+      "reserve_bytes": 1073741824,
+      "job_private_limit_bytes": 2147483648,
+      "exit_code": 0
+    },
+    "integration": {
+      "status": "passed",
+      "elapsed_s": 11.556,
+      "peak_tree_private_bytes": 1326653440,
+      "minimum_available_bytes": 1967333376,
+      "reserve_bytes": 1073741824,
+      "job_private_limit_bytes": 2147483648,
+      "exit_code": 0
+    }
+  },
+  "caveats": [
+    "One previously inspected capture; 368 words excluded from parameter selection are not blind new-capture validation.",
+    "Parity resources enter soft decoding; re-encoding/remodulation is a consistency check, not unseen-parity prediction.",
+    "A one-resource stream shift also converges in a control; code membership alone cannot authenticate boundaries.",
+    "Fresh cached teaching grid needs scale .08 for words 17 and 25 after .04 failure; both attempts are recorded.",
+    "No authenticated commercial code identity, application plaintext, true BER, or blanket validation of other MCS IDs."
+  ],
+  "physical_DSP_rerun": false,
+  "local_evidence_sha256": {
+    "validation.json": "97b5fc3b2148d532d2ef54c9f21708b06e3319c6b4d1d40a5ce1a740f06c9349",
+    "native_validation.json": "18d590f54643d643b86d7f9e5e794fc6caf8d5971561d4593d53b309d486c978",
+    "integration_validation.json": "2c5e73cef9db3e488d21b1cc69f4b19bd7085670088c97c490a453ed0ea8d9db",
+    "public_family_probe.json": "c6d5ce711e70ff586f2fa18815d5d054750c133c3a348f13e20a89dc6a664034",
+    "candidate_audit.json": "475db5ba2b9ff3f07378e15a408cb1219c74f02cf5a8e0c2332cc28c303c3149"
+  },
+  "references": [
+    {
+      "title": "CCSDS 131.0-B-5, AR4JA permutations",
+      "url": "https://ccsds.org/Pubs/131x0b5.pdf",
+      "local_reference_sha256": "46e42acff79265c9e6b7b295cafcad77fcc3d142ea507feb257dbd043db370b0"
+    },
+    {
+      "title": "Numeric table cross-check (third-party implementation, research only)",
+      "url": "https://github.com/GalenMui/ccsds-ar4ja-ldpc-decoder/blob/main/models/ar4ja_matrix.py"
+    },
+    {
+      "title": "Paper motivating protocol/FEC recovery workflow",
+      "url": "https://arxiv.org/html/2610.29387v2"
+    }
+  ],
+  "unchanged_checks": {
+    "protected_file_count": 64,
+    "all_protected_hashes_match": true,
+    "source_protocol_mats": 9,
+    "all_source_hashes_match": true,
+    "local_only_files_preserved": [
+      ".gitattributes",
+      "config/payload_analysis_v1.json"
+    ],
+    "unexpected_changed_tracked_files": []
+  },
+  "offline_html": {
+    "artifact": "<local-frame-explorer>/output-mcs66-v3/explorer.html",
+    "sha256": "b54921810df09acd81e16df8b5f2e4f3d1d4a24bdbd6f2a9933467ecfb34a0cf",
+    "bytes": 7895751,
+    "source_sha256": "5a7ae7196354a1c7ee1f0bb2148d347d070481dcbda3b5c0df7459a60ff7c6cf",
+    "browser_QA": {
+      "status": "passed",
+      "browser": "Chromium headless via CDP",
+      "offline_file_url": true,
+      "mcs66": {
+        "N": 16384,
+        "K": 12288,
+        "words": 39,
+        "all": true,
+        "reencoded": true,
+        "visible": true,
+        "text": "新增：编号66 · QC512 LDPC已验证N=16384，K=12288，码率3/4；本帧39字全部收敛、重编码一致。每字4096资源：前3072为输入坐标，后1024为奇偶坐标。查看66区域"
+      },
+      "external_requests": [],
+      "runtime_exceptions": [],
+      "results": [
+        {
+          "initial": {
+            "state": {
+              "col": 208,
+              "bin": 140,
+              "colLo": 206,
+              "colHi": 210,
+              "binLo": -512,
+              "binHi": 511,
+              "header": 1,
+              "scope": "column",
+              "normalize": true,
+              "models": true,
+              "decision": false,
+              "showUncertain": true,
+              "colorMode": "region",
+              "includeSSS": false,
+              "hidden": [],
+              "explicit": [],
+              "selectedBit": null
+            },
+            "points": 1004,
+            "title": "第一帧 · Starlink 信号观察台",
+            "scrollWidth": 1425,
+            "innerWidth": 1440
+          }
+        },
+        {
+          "header_presets": [
+            228,
+            456
+          ],
+          "tail_resources": 1912,
+          "mixed_column_partition": [
+            708,
+            296
+          ]
+        },
+        {
+          "PN_modulus_max_error": 0
+        },
+        {
+          "firstCRC": {
+            "s": {
+              "col": 2,
+              "bin": -318,
+              "colLo": 2,
+              "colHi": 3,
+              "binLo": -338,
+              "binHi": -275,
+              "header": 0,
+              "scope": "selection",
+              "normalize": true,
+              "models": true,
+              "decision": false,
+              "showUncertain": true,
+              "colorMode": "header",
+              "includeSSS": false,
+              "hidden": [],
+              "explicit": [
+                186,
+                187,
+                188,
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203,
+                204,
+                205,
+                206,
+                207,
+                208,
+                209
+              ],
+              "selectedBit": 56
+            },
+            "count": 24,
+            "crc": "0xAD"
+          }
+        },
+        {
+          "secondCRC": {
+            "s": {
+              "col": 10,
+              "bin": 302,
+              "colLo": 9,
+              "colHi": 11,
+              "binLo": 282,
+              "binHi": 345,
+              "header": 1,
+              "scope": "selection",
+              "normalize": true,
+              "models": true,
+              "decision": false,
+              "showUncertain": true,
+              "colorMode": "header",
+              "includeSSS": false,
+              "hidden": [],
+              "explicit": [
+                8834,
+                8835,
+                8836,
+                8837,
+                8838,
+                8839,
+                8840,
+                8841,
+                8842,
+                8843,
+                8844,
+                8845,
+                8846,
+                8847,
+                8848,
+                8849,
+                8850,
+                8851,
+                8852,
+                8853,
+                8854,
+                8855,
+                8856,
+                8857
+              ],
+              "selectedBit": 120
+            },
+            "count": 24,
+            "crc": "0x0D"
+          }
+        },
+        {
+          "CSV_rows": 24
+        },
+        {
+          "boundary": {
+            "a": {
+              "col": 208,
+              "bin": 95,
+              "row": 95,
+              "q": 595,
+              "r": 207419,
+              "index": 212063,
+              "region": 5,
+              "kind": "16QAM · ID70"
+            },
+            "b": {
+              "col": 208,
+              "bin": 208,
+              "row": 208,
+              "q": 708,
+              "r": 207532,
+              "index": 212176,
+              "region": 6,
+              "kind": "32点 · ID71"
+            }
+          }
+        },
+        {
+          "canvas_click": {
+            "col": 10,
+            "bin": 100
+          }
+        },
+        {
+          "mobile": {
+            "width": 390,
+            "scroll": 375
+          }
+        }
+      ]
+    }
+  },
+  "changed_sources_sha256": {
+    "README.md": "a802cf56c54de1c3d6fccb415eaa9ca2f127c78a552376f146d7130be427bc79",
+    "docs/FRAME1_EXPLORER.zh-CN.md": "1ef382dc547d565553ddba2fbad7f7ad8e62b83dd5b87ff42d6d7a0e50160839",
+    "docs/LEARNING_RECEIVER.zh-CN.md": "a2c8933343785d232b7c394f233850caedcc385aa078fc07528150e3d154a4fe",
+    "docs/MCS66_RECOVERY_VALIDATION.zh-CN.md": "88f221d57674b91ab6dff96fc30877b25f41cbb72b5eb0e07de53b850de43a91",
+    "docs/PN_PDU_TEACHING.zh-CN.md": "c499e32115763d61e3d19fe0f6acd1e1973f36b7b168c0dd409b98f9b367ba80",
+    "docs/RESOURCE_ALLOCATION_TEACHING.zh-CN.md": "be4bb72398de835a408820ced36431c28fc5959ef20aec8e104ddd2dbc872487",
+    "matlab/learning_receiver/CONTINUE_TO_PDU.m": "add5619367b160d4219c78866cec805bad75e388daca56bcd919241d10e3301b",
+    "matlab/protocol_receiver/+slproto/analyzeFrame.m": "4218de490cd678473228e38e41025aee4f08c9784271a74b158baebb83ee8083",
+    "matlab/protocol_receiver/+slproto/analyzeMCS66.m": "471076b6e3cc57524eaa6c85992b5c152d92fd0ac7ddc22e6eb5919484f346f6",
+    "matlab/protocol_receiver/+slproto/defaultOptions.m": "77501a8a08dfb0349ce2038729a78726d5abd23142fba64b126cfe3472bc0a05",
+    "matlab/protocol_receiver/+slproto/encodeMCS66.m": "b348e040ecf392a649c4a105e61e9bf69db4da8e8424a9063799d41904575e20",
+    "matlab/protocol_receiver/+slproto/exportFrame.m": "b1cf804cc264d35945d7a0428e782dc3f1a29842b654c7a45f46b7e0a2a938e8",
+    "matlab/protocol_receiver/+slproto/mcs66LLR.m": "bc0113ea79e7a6d3a6d0e2e8af22f37f4f214aa72ad0d8e6fb92acdcc30edd51",
+    "matlab/protocol_receiver/+slproto/mcs66Model.m": "807e05907f78aa70b4ce463edf97c9df9782551f11143225a2517667ce256195",
+    "matlab/protocol_receiver/+slproto/minsumRegular.m": "cc079dfe9bd4e4c0f2655716180c131ebbe7ff983ab9209a93ddbe42e7463953",
+    "matlab/protocol_receiver/+slproto/plotFrame.m": "b9feca8984c9c2cb45e7f371dc38973e733c5a5069721b9459ba8537b5310931",
+    "matlab/protocol_receiver/+slproto/smallSummary.m": "ee891c1e45207e0e6bea26ea077ca0ec5641e50c1bbc69d8539cec8fbcc43239",
+    "matlab/protocol_receiver/README.zh-CN.md": "b2090a45784c84ff41e5c7a4d796f7cb9df07ab3f268c0d78b59eb214cc4ed57",
+    "matlab/protocol_receiver/RUN_MCS66_ANALYSIS.m": "d8d593e5858409d17ddfca106ece7b4b3115b773635c671cc6e4ca981b953eca",
+    "matlab/protocol_receiver/RUN_PROTOCOL_ANALYSIS.m": "3736168f948365858436fa66432c087bbefd098cb04c6b2eb4b2e91bf86a5867",
+    "matlab/protocol_receiver/models/mcs66_qc512_utexas_v1.json": "183132276a399a905ac85845f5732dd38d891894415476e22b7d45bd5b792301",
+    "matlab/protocol_receiver/models/utexas_allocation_candidate_v1.json": "eb86de19cda3e96ed0af6ed0dbb94ccbf6b080830890b60a9f114dc258fd6079",
+    "matlab/protocol_receiver/tests/test_mcs66_receiver.m": "c397111841f620355d971e055679a39d70efbcde526d590901e0602d0e92c094",
+    "tools/build_frame_explorer.py": "e237104ea3e10b3ab73caa4149a2492f2448fa756356029e03518a585680521a",
+    "tools/frame_explorer.html": "a00697ff419b8bd94fad8932ec4a8e6465a7a525570a993d73b60ae5063e760b",
+    "tools/frame_explorer.js": "ad8aa567da6f377419833f22612851d1b50065b3b7dbfa26ac97ad69b0eaeee8",
+    "tools/learning_receiver.py": "dedbdcd99b4e801ff5663a4030be1abcd043a2543cebdc8dfa44a1486b487df8"
+  },
+  "validation_scope": {
+    "MATLAB_all_376": true,
+    "MATLAB_shared_and_teaching_computation": true,
+    "raw_DSP_rerun": false,
+    "regular_JVM_export_entry_executed": false,
+    "Linux_native_execution": false,
+    "MATLAB_code_analyzer_syntax_errors": 0,
+    "MATLAB_code_analyzer_existing_style_notes_in_plotFrame": 4,
+    "Python_ast_parse": true,
+    "browser_runtime_and_offline_checks": true
+  }
+}
