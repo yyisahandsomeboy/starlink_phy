@@ -33,6 +33,8 @@ if lesson_cfg.stop_after>=20
     protocol_result.allocations=slproto.analyzeAllocations(protocol_stream,protocol_headers,protocol_calibrated,refs.pilots);
     % 对已识别的66继续独立FEC检验；其他高阶编号保留未知。
     protocol_result.mcs66=slproto.analyzeMCS66(protocol_stream,protocol_headers,protocol_result.allocations.calibration,protocol_opt);
+    % 70共享16QAM标签，使用自己的QC模型和不同行重的译码。
+    protocol_result.mcs70=slproto.analyzeMCS70(protocol_stream,protocol_headers,protocol_result.allocations.calibration,protocol_opt);
 end
 protocol_out=fullfile(lesson_cfg.run_dir,['protocol-teaching-' char(datetime('now','Format','yyyyMMdd-HHmmss-SSS'))]);
 protocol_source=struct('checkpoint',fullfile(lesson_cfg.run_dir,'13h_tracking.mat'), ...

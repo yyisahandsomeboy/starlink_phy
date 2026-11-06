@@ -1,6 +1,10 @@
+> 2026-11-06：MCS70恢复接收等价QC512模型（N16384/K12800，25/32），142/142真实字经MATLAB译码与重编码通过，接入共享后处理及教学第20步。[验证报告](docs/MCS70_RECOVERY_VALIDATION.zh-CN.md)。新增[从真实MCS66走完编码恢复的离线HTML](docs/MCS66_LDPC_WALKTHROUGH.html)（下载后浏览器打开）、[使用与重建说明](docs/CODING_WALKTHROUGH.zh-CN.md)。原首次汇报页面仍冻结；业务明文仍未知。
+
+> 2026-11-06：MCS70恢复接收等价QC512模型（N16384/K12800，25/32），142/142真实字经MATLAB译码与重编码通过，接入共享后处理及教学第20步。[验证报告](docs/MCS70_RECOVERY_VALIDATION.zh-CN.md)。新增[从真实MCS66走完编码恢复的离线HTML](docs/MCS66_LDPC_WALKTHROUGH.html)（下载后浏览器打开）、[使用与重建说明](docs/CODING_WALKTHROUGH.zh-CN.md)。原首次汇报页面仍冻结；业务明文仍未知。
+
 > 首次汇报用交互界面已按用户要求固定在解出MCS 66之前的 `1743f72` 版本，后续解码研究不自动更新页面。[汇报页面说明](docs/FRAME1_EXPLORER.zh-CN.md)。
 
-> 2026-11-04：编号66已恢复条件LDPC模型（16QAM、N16384/K12288、3/4），376/376历史码字通过MATLAB译码、重编码，接入教学第20步。[方法、实测与限制](docs/MCS66_RECOVERY_VALIDATION.zh-CN.md)。其他高阶编号与业务明文仍未恢复。
+> 2026-11-04：编号66已恢复条件LDPC模型（16QAM、N16384/K12288、3/4），376/376历史码字通过MATLAB译码、重编码，接入教学第20步。[方法、实测与限制](docs/MCS66_RECOVERY_VALIDATION.zh-CN.md)。当时其他高阶编号与业务明文仍未恢复；70的后续结果见上方2026-11-06报告。
 
 > 2026-11-04：新增[第一帧离线交互观察台](docs/FRAME1_EXPLORER.zh-CN.md)，联动1024×300资源网格、去PN前后星座、CRC位图、MCS分配和边界不确定区。HTML为本机单文件产物，源码生成器与实测摘要随仓库提供。
 

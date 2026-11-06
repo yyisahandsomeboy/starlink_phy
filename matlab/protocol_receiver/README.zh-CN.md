@@ -1,3 +1,7 @@
+> 2026-11-06：v4已接入70自己的QC512、N16384/K12800、25/32模型，142/142真实字通过。见[70验证与调用](../../docs/MCS70_RECOVERY_VALIDATION.zh-CN.md)。下文v3状态为历史；66模型保持不变。独立[真实过程教学HTML](../../docs/MCS66_LDPC_WALKTHROUGH.html)需要下载到浏览器打开。
+
+> 2026-11-06：v4已接入70自己的QC512、N16384/K12800、25/32模型，142/142真实字通过。见[70验证与调用](../../docs/MCS70_RECOVERY_VALIDATION.zh-CN.md)。下文v3状态为历史；66模型保持不变。独立[真实过程教学HTML](../../docs/MCS66_LDPC_WALKTHROUGH.html)需要下载到浏览器打开。
+
 > 当前v3已新增编号66的固定QC512、N16384/K12288、3/4编码关系，376/376历史码字通过；其他高阶编号仍未知。[本轮恢复与验证](../../docs/MCS66_RECOVERY_VALIDATION.zh-CN.md)。候选分配接口见[资源分配说明](../../docs/RESOURCE_ALLOCATION_TEACHING.zh-CN.md)。
 
 # Codex接收机协议升级：PN、PDU头部与Code5

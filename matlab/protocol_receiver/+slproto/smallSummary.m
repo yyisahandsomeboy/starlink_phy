@@ -12,6 +12,9 @@ end
 if isfield(s,'mcs66')&&s.mcs66.available
     s.mcs66.words=rmfield(s.mcs66.words,{'information_bits','decoded_codeword'});
 end
+if isfield(s,'mcs70')&&s.mcs70.available
+    s.mcs70.words=rmfield(s.mcs70.words,{'information_bits','decoded_codeword'});
+end
 s.headers.first=smallHeader(s.headers.first);
 if ~isempty(s.headers.second_candidates)
     s.headers.second_candidates=arrayfun(@smallHeader,s.headers.second_candidates);

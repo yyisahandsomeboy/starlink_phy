@@ -1,0 +1,138 @@
+{
+  "schema": "coding-walkthrough-validation-v1",
+  "date": "2026-11-06",
+  "owner": "codex_baseline",
+  "status": "passed",
+  "html_path": "docs/MCS66_LDPC_WALKTHROUGH.html",
+  "html_sha256": "242347c19e1417aa7e890c8560746b514ebfb32121fb789485ba21e5e9c3d2fd",
+  "html_bytes": 1315119,
+  "evidence_sha256": "a8f9b82470171fe2680fc317da69c7755c2b38800e64b1849e2486e1c43222c6",
+  "browser_QA": {
+    "status": "passed",
+    "offline_file_url": true,
+    "browser": "Chrome headless via CDP",
+    "external_requests": [],
+    "runtime_exceptions": [],
+    "results": [
+      {
+        "algebra": [
+          {
+            "frame": 5,
+            "before": 370,
+            "after": 0,
+            "full_generator_columns_compared": 12,
+            "trace": [
+              370,
+              31,
+              4,
+              0
+            ]
+          },
+          {
+            "frame": 2,
+            "before": 530,
+            "after": 0,
+            "full_generator_columns_compared": 12,
+            "trace": [
+              530,
+              72,
+              4,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "controls": "CRC flip, sparse row, exact G, decoder steps, case and metric switches, evidence download"
+      },
+      {
+        "layout": {
+          "width": 390,
+          "scroll": 375
+        }
+      },
+      {
+        "layout": {
+          "width": 320,
+          "scroll": 305
+        }
+      }
+    ]
+  },
+  "case_metrics": [
+    {
+      "frame": 5,
+      "selection_word": false,
+      "trace": [
+        {
+          "iteration": 0,
+          "failed": 370,
+          "hard_changes": 0
+        },
+        {
+          "iteration": 1,
+          "failed": 31,
+          "hard_changes": 116
+        },
+        {
+          "iteration": 2,
+          "failed": 4,
+          "hard_changes": 121
+        },
+        {
+          "iteration": 3,
+          "failed": 0,
+          "hard_changes": 121
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "selection_word": true,
+      "trace": [
+        {
+          "iteration": 0,
+          "failed": 530,
+          "hard_changes": 0
+        },
+        {
+          "iteration": 1,
+          "failed": 72,
+          "hard_changes": 161
+        },
+        {
+          "iteration": 2,
+          "failed": 4,
+          "hard_changes": 172
+        },
+        {
+          "iteration": 3,
+          "failed": 0,
+          "hard_changes": 174
+        }
+      ]
+    }
+  ],
+  "builder_sources_sha256": {
+    "tools/build_coding_walkthrough.py": "dd724d1f4d3468dc27c6f25ff66d749a1719395c78de04f75503e5b1c4fe19a7",
+    "tools/coding_walkthrough/app.js": "e5327a10af44e5f596be7d3404bb009b8d52f2d9df170eaecb52712920fbb6c3",
+    "tools/coding_walkthrough/page.html": "3b9be24a39ee3ae2d0931e92d5596ddde2b1bf2ce660d9fb62d95ca91aafcb94",
+    "tools/coding_walkthrough/style.css": "719599d1201c661074d9693006f215ff5da665a9729839c57b724f7fb6a4156d",
+    "tools/collect_coding_evidence.py": "b471fe547e7182b6e9924213dc12413b2785cf45c29698f5e422b89a271095dc"
+  },
+  "current_presentation": {
+    "old_artifact_sha256": "f36fad6b34e0532d317df69c8899e98dfd8a9a164a6487513ffa301e5a837a48",
+    "old_sources_sha256": {
+      "tools/build_frame_explorer.py": "da8f2ce37dd535dc1505e7160d51db4c52f6beda753fbab4f65c79085d151b7a",
+      "tools/frame_explorer.html": "471c9e58ec5112249a24fa93c80cb623441421f044a6e0ed92cd9d9b2470e34a",
+      "tools/frame_explorer.css": "e23db7d679c37114fa90a76525f06aadd8fb9110a33a6fd3d508847283e2beee",
+      "tools/frame_explorer.js": "ee6a486f0f84dbac1568c6a78521f954e135b19fa01688466e6315011f272fce"
+    },
+    "untouched": true
+  },
+  "limits": [
+    "MCS66 identified within a finite public permutation family, not blind arbitrary UP=V fitting from index/length",
+    "Not new-capture blind validation; recovered inputs are opaque bits, not plaintext",
+    "Exact G columns use decoded systematic inputs and are not unseen-parity predictions"
+  ]
+}

@@ -54,11 +54,11 @@
       "resources_per_unit": 4096,
       "coded_bits_hypothesis": 16384,
       "alphabet": "16QAM",
-      "FEC_verified": false,
-      "evidence": "conditional_geometry_and_length_only",
+      "FEC_verified": true,
+      "evidence": "fixed_mcs70_QC512_H_rank3584_and_reencoding",
       "rare_single_frame": false,
-      "K": null,
-      "coding_model": ""
+      "K": 12800,
+      "coding_model": "mcs70-qc512-utexas-v1"
     },
     {
       "id": 71,
