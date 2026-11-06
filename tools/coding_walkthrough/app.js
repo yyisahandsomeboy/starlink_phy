@@ -112,7 +112,7 @@ function staticViews(){
  $('control-table').innerHTML='<table><thead><tr><th>真实对照条件</th><th>初始失败</th><th>最终失败</th><th>迭代</th><th>结果</th></tr></thead><tbody>'+D.validation66.controls.map(r=>`<tr><td>${names[r.name]}</td><td>${r.initial}</td><td>${r.final}</td><td>${r.iterations}</td><td class="${r.converged?'warn-text':'fail-text'}">${r.converged?'仍能收敛 · 边界反例':'未收敛'}</td></tr>`).join('')+'</tbody></table>';
  $('qc-group').innerHTML=Array.from({length:8},(_,i)=>`<option value="${i}">${i}</option>`).join('');
  $('example').innerHTML=D.examples.map((r,i)=>`<option value="${i}">第${r.frame}帧 · 第1个66码字${r.selection_word?'（参数选择样本）':'（未参与本轮参数选择）'}</option>`).join('');
- $('hashes').innerHTML=`<p>原始exemplar250-257.bin SHA-256<br>c69e82022d45173cdcaf1a5fdc8a2b864e2d61e85ae819af54b16002044adae3</p><p>MCS66冻结模型 SHA-256<br>${D.model66_sha256}</p><p>MCS70冻结模型 SHA-256<br>${D.mcs70.summary.model_sha256}</p>`+D.sources.filter(s=>[2,5].includes(s.frame)).map(s=>`<p>第${s.frame}帧protocol.mat SHA-256<br>${s.sha256}</p>`).join('');
+ $('hashes').innerHTML=`<p>原始exemplar250-257.bin SHA-256<br>c69e82022d45173cdcaf1a5fdc8a2b864e2d61e85ae819af54b16002044adae3</p><p>MCS66冻结模型 SHA-256<br>${D.model66_sha256}</p><p>MCS70冻结模型 SHA-256<br>${D.mcs70.summary.model_sha256}</p>`+D.sources.filter(s=>[1,2,5].includes(s.frame)).map(s=>`<p>第${s.frame}帧protocol.mat SHA-256<br>${s.sha256}</p>`).join('');
 }
 function setExample(i){
  example=i;e=D.examples[i];hard=bits64(e.hard_bits_b64,N);decoded=bits64(e.decoded_bits_b64,N);traceStep=0;
@@ -129,7 +129,7 @@ $('parity-index').addEventListener('input',renderGenerator);
 $('trace-step').addEventListener('input',()=>{traceStep=Number($('trace-step').value);renderTrace();});
 $('trace-prev').addEventListener('click',()=>{traceStep=Math.max(0,traceStep-1);renderTrace();});$('trace-next').addEventListener('click',()=>{traceStep=Math.min(e.trace.length-1,traceStep+1);renderTrace();});
 $('metric').addEventListener('change',drawValidation);
-$('download').addEventListener('click',()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(D,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='coding-walkthrough-evidence-v2.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),10000);});
+$('download').addEventListener('click',()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(D,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='coding-walkthrough-evidence-v3.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),10000);});
 let resizeTimer;window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{drawScatter();drawQC();renderGenerator();renderTrace();drawValidation();},100);});
 window.walkthrough={ready:true,setExample,generatorColumn,support,crc,bits64,repaint(){renderHeader();drawScatter();renderQC();renderGenerator();renderTrace();drawValidation();},get data(){return D;},get state(){return {example,selectedRow,traceStep,hard,decoded};}};
 })();

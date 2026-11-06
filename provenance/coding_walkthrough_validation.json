@@ -1,94 +1,193 @@
 {
-  "schema": "coding-walkthrough-validation-v2",
+  "schema": "coding-walkthrough-validation-v3",
   "date": "2026-11-06",
   "owner": "codex_baseline",
   "status": "passed",
+  "chapter_count": 33,
+  "default_mode": "complete",
+  "overview_retained": true,
   "html_path": "docs/MCS66_LDPC_WALKTHROUGH.html",
-  "html_sha256": "1bce1f34a2edc2f3fb6c9be003ec627dcf55fae26710a7d4542f1addfd7291ce",
-  "html_bytes": 1868149,
-  "evidence_sha256": "0d363ff9e9dbc0c4bfb13f6c8cba921d80b1f642234a2644e6dfe77e785f768b",
+  "html_sha256": "e324277840df08a54735bfdc15396417213e748f456055c89bfc859281ab457b",
+  "html_bytes": 4968060,
+  "evidence_sha256": "d6b7f4b451bc59c1d987657461231cf33c6ef8629afd0485d93e11a072176924",
   "predecessor": {
-    "git_commit": "96de2a7289e5ba3d69d708e174d1f0574c5d0903",
-    "html_sha256": "242347c19e1417aa7e890c8560746b514ebfb32121fb789485ba21e5e9c3d2fd"
+    "commit": "de4fb71fe91d1599c76e976e45a6d4dac3e5e9a5",
+    "html_sha256": "1bce1f34a2edc2f3fb6c9be003ec627dcf55fae26710a7d4542f1addfd7291ce"
+  },
+  "builder_sources_sha256": {
+    "tools/build_coding_walkthrough.py": "9322d1061269396aa383f2585d2acefbfcd655ac43d2b4e387065b2769a9d4bd",
+    "tools/coding_walkthrough/app.js": "3a3505c13e353bffbf58721745354d4af7237b050360dff39f9fc0062d38b16b",
+    "tools/coding_walkthrough/complete.css": "730e8ac80c97a922597042895f1c0c51b7292e239d49d75d8f23cdd572d7e0f2",
+    "tools/coding_walkthrough/complete.js": "95c4423e2a8a79129478bcccee2cee4504509fa94cfba8ae188a97ea085fd83c",
+    "tools/coding_walkthrough/complete_algebra.js": "ddb3752e0a16725afa360315fc85241f0dd73a79b4f77dacddb843e95851251a",
+    "tools/coding_walkthrough/complete_decoding.js": "b85243e48b4a1b7d7281952728359de3b0d680f81a18c13134c8c1f1821904d3",
+    "tools/coding_walkthrough/complete_steps.js": "cafebfdcef8c99ca60ab61aece5c201345400938fee0b9cf28f17d648eade4b5",
+    "tools/coding_walkthrough/complete_structure.js": "105c96e8fab8bf31e4b96b6504454960122eeec9a805b2470dc70081418087bd",
+    "tools/coding_walkthrough/grid.js": "7f3d437bd134f333cb3674ac27de92e19cd754ef45a2ff08ee4351b813924455",
+    "tools/coding_walkthrough/page.template": "b89552e0ab67461609e69e7fe74bb3aa274567ccef1bcdd186eefad196163967",
+    "tools/collect_complete_coding_evidence.py": "2fddce9356ca51b8f7aeca94fa4afd54e7089a8a2dbd9725be23d001b0137ca7"
   },
   "browser_QA": {
     "status": "passed",
     "offline_file_url": true,
-    "browser": "Chrome headless via CDP",
+    "browser": "Chrome headless CDP",
+    "chapter_count": 33,
     "external_requests": [],
     "runtime_exceptions": [],
     "results": [
       {
-        "algebra": {
+        "frozen_math": {
           "examples": [
             {
               "frame": 1,
-              "before": 546,
-              "after": 0,
-              "exact_generator_columns": 12,
-              "coordinate_goldens": 9,
               "trace": [
                 546,
                 52,
                 5,
                 0
-              ]
+              ],
+              "all16384_bits_each_iteration_equal_Python": true,
+              "all_4096_syndrome_bits_each_iteration_equal": true,
+              "message_goldens": 24,
+              "full_reencoding_mismatches": 0,
+              "LLR_max_float32_difference": 1.2073111079757837e-06
             },
             {
               "frame": 5,
-              "before": 370,
-              "after": 0,
-              "exact_generator_columns": 12,
-              "coordinate_goldens": 9,
               "trace": [
                 370,
                 31,
                 4,
                 0
-              ]
+              ],
+              "all16384_bits_each_iteration_equal_Python": true,
+              "all_4096_syndrome_bits_each_iteration_equal": true,
+              "message_goldens": 24,
+              "full_reencoding_mismatches": 0,
+              "LLR_max_float32_difference": 1.7686894224766547e-06
             },
             {
               "frame": 2,
-              "before": 530,
-              "after": 0,
-              "exact_generator_columns": 12,
-              "coordinate_goldens": 9,
               "trace": [
                 530,
                 72,
                 4,
                 0
-              ]
+              ],
+              "all16384_bits_each_iteration_equal_Python": true,
+              "all_4096_syndrome_bits_each_iteration_equal": true,
+              "message_goldens": 24,
+              "full_reencoding_mismatches": 0,
+              "LLR_max_float32_difference": 2.5931743721230305e-06
             }
           ],
-          "resource_bijections": 301200,
-          "pilot_and_DC_cells_excluded": 6000
+          "mother_H_goldens": 8,
+          "score_entries": 452736,
+          "score_rechecks_across_families": 10,
+          "polarity_hits": 2,
+          "viterbi_state_updates_checked": 29184,
+          "forward_samples": [
+            {
+              "row": 0,
+              "xors": 0,
+              "pivot": 0
+            },
+            {
+              "row": 1,
+              "xors": 0,
+              "pivot": 1
+            },
+            {
+              "row": 511,
+              "xors": 0,
+              "pivot": 511
+            },
+            {
+              "row": 512,
+              "xors": 0,
+              "pivot": 512
+            },
+            {
+              "row": 1024,
+              "xors": 0,
+              "pivot": 1024
+            },
+            {
+              "row": 2048,
+              "xors": 2,
+              "pivot": 2048
+            },
+            {
+              "row": 3072,
+              "xors": 269,
+              "pivot": 3071
+            },
+            {
+              "row": 3584,
+              "xors": 521,
+              "pivot": 3583
+            },
+            {
+              "row": 4080,
+              "xors": 818,
+              "pivot": 4080
+            },
+            {
+              "row": 4095,
+              "xors": 752,
+              "pivot": 4095
+            }
+          ],
+          "backward_samples": 8,
+          "all_inverse_identity_rows": 4096
         }
       },
       {
-        "canvas_links": "Physical grid and strip clicks checked at actual browser pixel coordinates; exact slider resource2000; real IQ/LLR update"
+        "all33_chapters_rendered": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ]
       },
       {
         "mobile_width": 390,
-        "all_five_steps_no_horizontal_overflow": true
+        "all33_no_horizontal_overflow": true
       },
       {
         "mobile_width": 320,
-        "all_five_steps_no_horizontal_overflow": true
-      },
-      {
-        "source_entry_redirect": true
+        "all33_no_horizontal_overflow": true
       }
     ]
-  },
-  "builder_sources_sha256": {
-    "tools/build_coding_walkthrough.py": "2eae3cbc6871f60f273a7a584b350c6e876ac50d3d9050484b20a32f0bdac5de",
-    "tools/coding_walkthrough/app.js": "6601825204fb773f8264ac2158c078079b618366647f8619bb9e395f655acbe0",
-    "tools/coding_walkthrough/grid.js": "8813bc5dff1dfe8c4e4af90e0b302deeb03591b617a4b685909230152ddad9e3",
-    "tools/coding_walkthrough/page.html": "df7a1aaa38ae3dda4a2168b6d4225bbd80b133bda1d060cbe78f4f4d6400270d",
-    "tools/coding_walkthrough/page.template": "3d94121224a1c4eaa70c41366f9e9e6604a54b197f8bfd9653f70eb0ef885bf7",
-    "tools/coding_walkthrough/style.css": "07cf311696943704b4507f1b9e3978ec299b29926f1a5ad3d5ba1ea1eb93ab25",
-    "tools/collect_coding_evidence.py": "465ae2a3b28f9719983ebef918cb859d5d0299a556bd418b783012d5b1e6ec33"
   },
   "unchanged_checks": {
     "protected_files": 64,
@@ -98,11 +197,5 @@
     "old_presentation_unchanged": true,
     "unexpected_changes": [],
     "raw_DSP_rerun": false
-  },
-  "limits": [
-    "Grid colors are conditional allocation labels, not received power or proof of unknown FEC",
-    "MCS66 is identified within a finite public family; index and length alone do not determine G",
-    "Three measured codewords drive the walkthrough; 376-word totals retain their original validation scope",
-    "No new-capture blind verification, actual BER or application plaintext claim"
-  ]
+  }
 }

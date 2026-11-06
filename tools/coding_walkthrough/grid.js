@@ -88,7 +88,7 @@ window.addEventListener('walkthrough:symbol',()=>{if(W.state.example===bitmapExa
 window.addEventListener('walkthrough:parity',()=>{if(lesson===3)drawGeneratorStrip();});
 window.addEventListener('walkthrough:example',()=>{bitmap=null;bitmapExample=-1;chosenR0=current().metrics.start_r0;redraw();});
 window.addEventListener('resize',()=>requestAnimationFrame(redraw));
-Object.assign(W,{activateLesson:activate,selectResource,setFocus,coordinate:coord,resourceAt:resource,getMapGeometry:id=>geometry.get(id),getLesson:()=>lesson,getSelection:()=>({focus,r0:chosenR0})});
+Object.assign(W,{activateLesson:activate,selectResource,setFocus,coordinate:coord,resourceAt:resource,drawGrid,getMapGeometry:id=>geometry.get(id),getLesson:()=>lesson,getSelection:()=>({focus,r0:chosenR0})});
 chosenR0=current().metrics.start_r0;activate(0,false);
 // Old bookmarked chapter fragments now open the matching teaching step.
 const route={'#known':0,'#signal':1,'#search':2,'#qc':2,'#generator':3,'#decode':4,'#validate':4};if(location.hash in route)activate(route[location.hash],false);

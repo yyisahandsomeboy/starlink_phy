@@ -1,8 +1,10 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none';script-src 'unsafe-inline';style-src 'unsafe-inline';img-src data:;connect-src 'none';base-uri 'none';object-src 'none'"><title>MCS 66 图解：从帧中取出码字，再看它怎样通过校验</title><style>__STYLE__</style></head>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none';script-src 'unsafe-inline';style-src 'unsafe-inline';img-src data:;connect-src 'none';base-uri 'none';object-src 'none'"><title>MCS66完整推导：从真实资源到H、G及逐消息校验</title><style>__STYLE__</style></head>
 <body><main>
-<header class="hero"><div class="eyebrow">STARLINK PHY / 真实数据图解 / 2026.11.06</div><h1>先找到一个码字，再看它怎样通过校验。</h1><p>从整帧的位置图，一步步走到比特、编码矩阵与真实译码。每一步只看一件事。</p></header>
+<header class="hero"><div class="eyebrow">STARLINK PHY / 真实数据图解 / 2026.11.06</div><h1>把MCS 66恢复过程，一步一步算出来。</h1><p>完整讲解默认按顺序展开：实际输入、每个计算、中间状态和证据边界。五步总览仍可切换查看。</p></header>
 <div class="case-bar"><label for="example">真实例子</label><select id="example"></select><span id="case-status" class="badge"></span><button id="open-reference" type="button">数据与依据</button></div>
+<div class="course-mode" aria-label="阅读方式"><button type="button" data-course-mode="full" aria-pressed="true">完整逐步讲解</button><button type="button" data-course-mode="overview" aria-pressed="false">五步图解总览</button><p>矩阵均用0基列号；OFDM列号与MATLAB接收矩阵一致。</p></div>
+<section id="complete-course"><div class="complete-toolbar"><button id="complete-prev" type="button">← 上一步</button><select id="complete-step" aria-label="选择完整推导步骤"></select><span id="complete-position"></span><button id="complete-next" class="primary" type="button">下一步 →</button></div><article class="complete-chapter" id="complete-body"></article></section>
 <nav class="step-nav" aria-label="教学步骤"><button type="button" data-lesson="0" aria-current="step"><b>1</b><span>帧里在哪里</span></button><button type="button" data-lesson="1"><b>2</b><span>取出一个码字</span></button><button type="button" data-lesson="2"><b>3</b><span>找出编码规律</span></button><button type="button" data-lesson="3"><b>4</b><span>算一个奇偶位</span></button><button type="button" data-lesson="4"><b>5</b><span>看真实校验</span></button></nav>
 <div id="lesson-status" class="sr-only" aria-live="polite"></div><noscript><p class="notice">本页图解需要JavaScript。请用普通Chrome或Edge打开完整HTML文件。</p></noscript>
 <section class="lesson-step" data-panel="0" id="locate">
