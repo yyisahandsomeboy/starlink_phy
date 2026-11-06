@@ -1,3 +1,5 @@
+> 2026-11-06：新增[全部9帧离线信号观察台](docs/MULTIFRAME_EXPLORER.zh-CN.md)，可切换当前采集全部9帧，联动资源网格、去PN前后星座、配置头CRC与MCS分配，按页载入当前帧。原首次汇报单帧版本保持原样。
+
 > 2026-11-06完整教程：按用户要求，[MCS66交互HTML](docs/MCS66_LDPC_WALKTHROUGH.html)默认改为33步完整讲解，逐项展示控制头、候选构造、H的每个1、完整消元/回代、G及实际消息；保留五步总览。[范围与复核](docs/CODING_WALKTHROUGH.zh-CN.md)。完整重放明确极性0/15并列；接收数值代码和冻结模型未改变。
 
 > 2026-11-06教学页面更新：新增[五步图解](docs/MCS66_LDPC_WALKTHROUGH.html)（下载后离线打开），联动真实OFDM位置图、码字条带、星座/LLR、隐式生成器和实际译码。源码目录的page.html也会跳到完整成品；[阅读说明](docs/CODING_WALKTHROUGH.zh-CN.md)。原首次汇报观察台及所有数值接收代码保持原版本。

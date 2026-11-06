@@ -1,0 +1,893 @@
+{
+  "schema": "starlink-multiframe-validation-v1",
+  "date": "2026-11-06",
+  "owner": "codex_baseline",
+  "status": "passed",
+  "user_scope": "All nine complete frames of the existing capture, excluding separate author 1009-frame data",
+  "previous_commit": "aef53bb6712a98c4774d907e1549717a381e4ed0",
+  "artifacts": {
+    "local_entry": "F:/codex_storage/frame_explorer_all_20261106/viewer/explorer.html",
+    "generated_numeric_pages_tracked": false,
+    "frame_count": 9,
+    "total_resource_count": 2710800,
+    "html_and_assets_bytes": 70608009,
+    "manifest_sha256": "49c2c158fef32d2702717918a253fcbaf4ace9523c9d102751037c482e0b1b27",
+    "files_sha256": {
+      "explorer.html": "ccf0a3e43294371b5d30a136e970795bb9749f577b0c6995d0c6b79bdf671a28",
+      "frames/frame-02.html": "bd70bf297a8fd6492d1e34c5057d53ea4d223e004a269e2205c6dcaf0c53d5a7",
+      "frames/frame-03.html": "6845afd31111d29bbe46e2896f2d6eab488930a9a7821145b89c176f3a73fddb",
+      "frames/frame-04.html": "143ed46da6d7f14bf1bf336a0625e7f5c2fb611633d0cb6e9ebba6fd0f366784",
+      "frames/frame-05.html": "718919f160040ed537b249982d472e96891047319980dadc1734c8e32e253152",
+      "frames/frame-06.html": "de86acac1ad24147420099e1a3bcfad841050d20246f170c4c4065e95d08747a",
+      "frames/frame-07.html": "178c98e0dae47daef7d7007b11793d8821f96b562b7486da23f98627025ffea4",
+      "frames/frame-08.html": "2f9a2f28e5fa0edbbc27b385bb63b834625bea7b0895644c0a2dbceec9dcbc92",
+      "frames/frame-09.html": "f7040a631fff9503a1d82dead84657ae4c7930a223401ed743005c0b5c751e07",
+      "assets/multiframe_explorer.css": "5a3e6cb655967479da92981d9126b0d7a222b85005533acf6f9513ad6d872310",
+      "assets/multiframe_explorer.js": "b108708225a9bffb2754da8183f8abd3c12968be1b09675306a9e79791b51358"
+    },
+    "loading": "One document/frame at a time; shared assets; location.replace on frame switch; old arrays become eligible for browser garbage collection"
+  },
+  "sources": [
+    {
+      "frame": 1,
+      "page": "explorer.html",
+      "bytes": 7839167,
+      "sha256": "ccf0a3e43294371b5d30a136e970795bb9749f577b0c6995d0c6b79bdf671a28",
+      "source": {
+        "protocol_mat": "frame_01/protocol.mat",
+        "protocol_mat_sha256": "5a7ae7196354a1c7ee1f0bb2148d347d070481dcbda3b5c0df7459a60ff7c6cf",
+        "protocol_summary_sha256": "f7980dbfc07099f4e5e9459f01d53dca4c787ed65831a595b0429f06d419b3f8",
+        "receiver_version": "pdu-receiver-v2",
+        "raw_capture_sha256": "c69e82022d45173cdcaf1a5fdc8a2b864e2d61e85ae819af54b16002044adae3",
+        "original_checkpoint": "frame_candidate_01.mat",
+        "original_checkpoint_sha256": "958e75ca8719aeb2ba81d62e89b377e7b1d39507289032ad22bd6e2975a415e0",
+        "scope": "Receiver result frame 1/9 from the already-inspected UT Austin exemplar250-257 capture; IDs preserve existing receiver order, not chronological order.",
+        "coordinate_system": "MATLAB column1=SSS; columns2..301=data; q0/r0 zero based; ends exclusive",
+        "before_stage": "FIT-pilot phase/slope calibrated final grid before fixed PN reference removal",
+        "after_stage": "Same grid multiplied by conjugate PN; viewer keeps SSS as the same observation",
+        "precision": "little-endian float32, interleaved real/imag, column then original FFT row",
+        "float32_max_absolute_component_error": 1.0519713322665325e-07,
+        "source_PN_modulus_max_error": 4.440892098500626e-16,
+        "presentation_scope": "Original geometry/header/Code5 observation stage; later MCS66/70 FEC work is documented separately."
+      },
+      "headers": [
+        {
+          "N": 2,
+          "CRC": 173,
+          "bits": 64
+        },
+        {
+          "N": 4,
+          "CRC": 13,
+          "bits": 128
+        }
+      ],
+      "region_count": 9,
+      "region_resources": [
+        228,
+        8192,
+        456,
+        2048,
+        159744,
+        36864,
+        3277,
+        88479,
+        1912
+      ],
+      "all_301200_geometry_indices_checked": true,
+      "source_unchanged": true,
+      "code5_words": 4
+    },
+    {
+      "frame": 2,
+      "page": "frames/frame-02.html",
+      "bytes": 7837922,
+      "sha256": "bd70bf297a8fd6492d1e34c5057d53ea4d223e004a269e2205c6dcaf0c53d5a7",
+      "source": {
+        "protocol_mat": "frame_02/protocol.mat",
+        "protocol_mat_sha256": "6b6cde82bedecb3423a672e5584fb006f2b73a440bccabe07f5e88a5271b4aa4",
+        "protocol_summary_sha256": "8885a6ece8d3a85c1684a6bebcd07106ea0e6abd3df1e611d2949c212d076540",
+        "receiver_version": "pdu-receiver-v2",
+        "raw_capture_sha256": "c69e82022d45173cdcaf1a5fdc8a2b864e2d61e85ae819af54b16002044adae3",
+        "original_checkpoint": "frame_candidate_04.mat",
+        "original_checkpoint_sha256": "a58ac38791b5a4d425b6c501a3bec52d8e44b8447f897a2a1b17c17faf370158",
+        "scope": "Receiver result frame 2/9 from the already-inspected UT Austin exemplar250-257 capture; IDs preserve existing receiver order, not chronological order.",
+        "coordinate_system": "MATLAB column1=SSS; columns2..301=data; q0/r0 zero based; ends exclusive",
+        "before_stage": "FIT-pilot phase/slope calibrated final grid before fixed PN reference removal",
+        "after_stage": "Same grid multiplied by conjugate PN; viewer keeps SSS as the same observation",
+        "precision": "little-endian float32, interleaved real/imag, column then original FFT row",
+        "float32_max_absolute_component_error": 5.960395621507075e-08,
+        "source_PN_modulus_max_error": 4.440892098500626e-16,
+        "presentation_scope": "Original geometry/header/Code5 observation stage; later MCS66/70 FEC work is documented separately."
+      },
+      "headers": [
+        {
+          "N": 2,
+          "CRC": 173,
+          "bits": 64
+        },
+        {
+          "N": 4,
+          "CRC": 205,
+          "bits": 128
+        }
+      ],
+      "region_count": 8,
+      "region_resources": [
+        228,
+        8192,
+        456,
+        159744,
+        36864,
+        91756,
+        3277,
+        683
+      ],
+      "all_301200_geometry_indices_checked": true,
+      "source_unchanged": true,
+      "code5_words": 4
+    },
+    {
+      "frame": 3,
+      "page": "frames/frame-03.html",
+      "bytes": 7841231,
+      "sha256": "6845afd31111d29bbe46e2896f2d6eab488930a9a7821145b89c176f3a73fddb",
+      "source": {
+        "protocol_mat": "frame_03/protocol.mat",
+        "protocol_mat_sha256": "68d32963fca0503e471c49f0388603eb64446f145d1a3d376fe52ad04dbbd0a7",
+        "protocol_summary_sha256": "abb6a9be534a8c7e9bdd80685053c4a8db479c141b606edd0da68db096b8fe42",
+        "receiver_version": "pdu-receiver-v2",
+        "raw_capture_sha256": "c69e82022d45173cdcaf1a5fdc8a2b864e2d61e85ae819af54b16002044adae3",
+        "original_checkpoint": "frame_candidate_09.mat",
+        "original_checkpoint_sha256": "aefab547427c64888aa7048a451e4ec388c31a5e0c86dd5afb3baeb96dc1fd12",
+        "scope": "Receiver result frame 3/9 from the already-inspected UT Austin exemplar250-257 capture; IDs preserve existing receiver order, not chronological order.",
+        "coordinate_system": "MATLAB column1=SSS; columns2..301=data; q0/r0 zero based; ends exclusive",
+        "before_stage": "FIT-pilot phase/slope calibrated final grid before fixed PN reference removal",
+        "after_stage": "Same grid multiplied by conjugate PN; viewer keeps SSS as the same observation",
+        "precision": "little-endian float32, interleaved real/imag, column then original FFT row",
+        "float32_max_absolute_component_error": 5.960430504714509e-08,
+        "source_PN_modulus_max_error": 4.440892098500626e-16,
+        "presentation_scope": "Original geometry/header/Code5 observation stage; later MCS66/70 FEC work is documented separately."
+      },
+      "headers": [
+        {
+          "N": 2,
+          "CRC": 173,
+          "bits": 64
+        },
+        {
+          "N": 5,
+          "CRC": 88,
+          "bits": 160
+        }
+      ],
+      "region_count": 10,
+      "region_resources": [
+        228,
+        8192,
+        570,
+        159744,
+        32768,
+        3277,
+        3277,
+        88479,
+        3277,
+        1388
+      ],
+      "all_301200_geometry_indices_checked": true,
+      "source_unchanged": true,
+      "code5_words": 4
+    },
+    {
+      "frame": 4,
+      "page": "frames/frame-04.html",
+      "bytes": 7839151,
+      "sha256": "143ed46da6d7f14bf1bf336a0625e7f5c2fb611633d0cb6e9ebba6fd0f366784",
+      "source": {
+        "protocol_mat": "frame_04/protocol.mat",
+        "protocol_mat_sha256": "dea7a4128f859e5a9e45eed0ccee7cc54abaec2d639f735cb3c0d70e17faddbe",
+        "protocol_summary_sha256": "2a2a0af86d667362c228dabdf97937cab645cbbc1e76e56980bdfe7f5d331036",
+        "receiver_version": "pdu-receiver-v2",
+        "raw_capture_sha256": "c69e82022d45173cdcaf1a5fdc8a2b864e2d61e85ae819af54b16002044adae3",
+        "original_checkpoint": "frame_candidate_03.mat",
+        "original_checkpoint_sha256": "be45333b2ea01272710790b7199b6c6f5ef1d2d9364020902dff3e485a961917",
+        "scope": "Receiver result frame 4/9 from the already-inspected UT Austin exemplar250-257 capture; IDs preserve existing receiver order, not chronological order.",
+        "coordinate_system": "MATLAB column1=SSS; columns2..301=data; q0/r0 zero based; ends exclusive",
+        "before_stage": "FIT-pilot phase/slope calibrated final grid before fixed PN reference removal",
+        "after_stage": "Same grid multiplied by conjugate PN; viewer keeps SSS as the same observation",
+        "precision": "little-endian float32, interleaved real/imag, column then original FFT row",
+        "float32_max_absolute_component_error": 5.960435833785027e-08,
+        "source_PN_modulus_max_error": 4.440892098500626e-16,
+        "presentation_scope": "Original geometry/header/Code5 observation stage; later MCS66/70 FEC work is documented separately."
+      },
+      "headers": [
+        {
+          "N": 2,
+          "CRC": 173,
+          "bits": 64
+        },
+        {
+          "N": 4,
+          "CRC": 195,
+          "bits": 128
+        }
+      ],
+      "region_count": 9,
+      "region_resources": [
+        228,
+        8192,
+        456,
+        4096,
+        155648,
+        36864,
+        3277,
+        88479,
+        3960
+      ],
+      "all_301200_geometry_indices_checked": true,
+      "source_unchanged": true,
+      "code5_words": 4
+    },
+    {
+      "frame": 5,
+      "page": "frames/frame-05.html",
+      "bytes": 7839171,
+      "sha256": "718919f160040ed537b249982d472e96891047319980dadc1734c8e32e253152",
+      "source": {
+        "protocol_mat": "frame_05/protocol.mat",
+        "protocol_mat_sha256": "5c67f932f2870c64a96376c9b820040e926f9312090f19b8165be723a3aff61f",
+        "protocol_summary_sha256": "85bf1caeda5ca15eb088de6ec21d027c992cd908c8822d865a215951fb87417b",
+        "receiver_version": "pdu-receiver-v2",
+        "raw_capture_sha256": "c69e82022d45173cdcaf1a5fdc8a2b864e2d61e85ae819af54b16002044adae3",
+        "original_checkpoint": "frame_candidate_02.mat",
+        "original_checkpoint_sha256": "ba3b99000ff8af56af379021ca8729d2f4a8981cc885f0d2d813413851eb3300",
+        "scope": "Receiver result frame 5/9 from the already-inspected UT Austin exemplar250-257 capture; IDs preserve existing receiver order, not chronological order.",
+        "coordinate_system": "MATLAB column1=SSS; columns2..301=data; q0/r0 zero based; ends exclusive",
+        "before_stage": "FIT-pilot phase/slope calibrated final grid before fixed PN reference removal",
+        "after_stage": "Same grid multiplied by conjugate PN; viewer keeps SSS as the same observation",
+        "precision": "little-endian float32, interleaved real/imag, column then original FFT row",
+        "float32_max_absolute_component_error": 5.960439208863022e-08,
+        "source_PN_modulus_max_error": 4.440892098500626e-16,
+        "presentation_scope": "Original geometry/header/Code5 observation stage; later MCS66/70 FEC work is documented separately."
+      },
+      "headers": [
+        {
+          "N": 2,
+          "CRC": 173,
+          "bits": 64
+        },
+        {
+          "N": 4,
+          "CRC": 148,
+          "bits": 128
+        }
+      ],
+      "region_count": 9,
+      "region_resources": [
+        228,
+        8192,
+        456,
+        159744,
+        36864,
+        88479,
+        3277,
+        3277,
+        683
+      ],
+      "all_301200_geometry_indices_checked": true,
+      "source_unchanged": true,
+      "code5_words": 4
+    },
+    {
+      "frame": 6,
+      "page": "frames/frame-06.html",
+      "bytes": 7839143,
+      "sha256": "de86acac1ad24147420099e1a3bcfad841050d20246f170c4c4065e95d08747a",
+      "source": {
+        "protocol_mat": "frame_06/protocol.mat",
+        "protocol_mat_sha256": "17b324d4dae2d0b24d2f4f3836e276050b2fff8d2998e69537ea5216ee4f2551",
+        "protocol_summary_sha256": "c9fc7beef126b01c8c81af9cc66c108faeb4cdf0ad5cd3fe323bfadbdda1ee0e",
+        "receiver_version": "pdu-receiver-v2",
+        "raw_capture_sha256": "c69e82022d45173cdcaf1a5fdc8a2b864e2d61e85ae819af54b16002044adae3",
+        "original_checkpoint": "frame_candidate_06.mat",
+        "original_checkpoint_sha256": "4d4667243c559f9eb6d3d41c4e7cb4dbc6c8ce59e5d5486b19f7fb01243ee7d9",
+        "scope": "Receiver result frame 6/9 from the already-inspected UT Austin exemplar250-257 capture; IDs preserve existing receiver order, not chronological order.",
+        "coordinate_system": "MATLAB column1=SSS; columns2..301=data; q0/r0 zero based; ends exclusive",
+        "before_stage": "FIT-pilot phase/slope calibrated final grid before fixed PN reference removal",
+        "after_stage": "Same grid multiplied by conjugate PN; viewer keeps SSS as the same observation",
+        "precision": "little-endian float32, interleaved real/imag, column then original FFT row",
+        "float32_max_absolute_component_error": 5.960447868602614e-08,
+        "source_PN_modulus_max_error": 4.440892098500626e-16,
+        "presentation_scope": "Original geometry/header/Code5 observation stage; later MCS66/70 FEC work is documented separately."
+      },
+      "headers": [
+        {
+          "N": 2,
+          "CRC": 173,
+          "bits": 64
+        },
+        {
+          "N": 4,
+          "CRC": 91,
+          "bits": 128
+        }
+      ],
+      "region_count": 9,
+      "region_resources": [
+        228,
+        8192,
+        456,
+        2048,
+        155648,
+        36864,
+        3277,
+        91756,
+        2731
+      ],
+      "all_301200_geometry_indices_checked": true,
+      "source_unchanged": true,
+      "code5_words": 4
+    },
+    {
+      "frame": 7,
+      "page": "frames/frame-07.html",
+      "bytes": 7837906,
+      "sha256": "178c98e0dae47daef7d7007b11793d8821f96b562b7486da23f98627025ffea4",
+      "source": {
+        "protocol_mat": "frame_07/protocol.mat",
+        "protocol_mat_sha256": "708a86f5bf93238e8950017121e0f239001c62f99968129771a7c48c6a697b56",
+        "protocol_summary_sha256": "7c9edf2b22be4078d21f67e27a1ac19c8548eb7bcde0f498e4c06015bb49b863",
+        "receiver_version": "pdu-receiver-v2",
+        "raw_capture_sha256": "c69e82022d45173cdcaf1a5fdc8a2b864e2d61e85ae819af54b16002044adae3",
+        "original_checkpoint": "frame_candidate_05.mat",
+        "original_checkpoint_sha256": "ab97b7633e913ff87b7ed1f0cfc137f953b01cd929c8453b3bcbe7c89afca5b3",
+        "scope": "Receiver result frame 7/9 from the already-inspected UT Austin exemplar250-257 capture; IDs preserve existing receiver order, not chronological order.",
+        "coordinate_system": "MATLAB column1=SSS; columns2..301=data; q0/r0 zero based; ends exclusive",
+        "before_stage": "FIT-pilot phase/slope calibrated final grid before fixed PN reference removal",
+        "after_stage": "Same grid multiplied by conjugate PN; viewer keeps SSS as the same observation",
+        "precision": "little-endian float32, interleaved real/imag, column then original FFT row",
+        "float32_max_absolute_component_error": 5.9604441826621724e-08,
+        "source_PN_modulus_max_error": 4.440892098500626e-16,
+        "presentation_scope": "Original geometry/header/Code5 observation stage; later MCS66/70 FEC work is documented separately."
+      },
+      "headers": [
+        {
+          "N": 2,
+          "CRC": 173,
+          "bits": 64
+        },
+        {
+          "N": 4,
+          "CRC": 220,
+          "bits": 128
+        }
+      ],
+      "region_count": 8,
+      "region_resources": [
+        228,
+        8192,
+        456,
+        2048,
+        204800,
+        53248,
+        29493,
+        2735
+      ],
+      "all_301200_geometry_indices_checked": true,
+      "source_unchanged": true,
+      "code5_words": 4
+    },
+    {
+      "frame": 8,
+      "page": "frames/frame-08.html",
+      "bytes": 7839163,
+      "sha256": "2f9a2f28e5fa0edbbc27b385bb63b834625bea7b0895644c0a2dbceec9dcbc92",
+      "source": {
+        "protocol_mat": "frame_08/protocol.mat",
+        "protocol_mat_sha256": "74cc26f040d0b62a72832ef1658b6386b9b7ef5a339165a11ec0cbd4ae7267b9",
+        "protocol_summary_sha256": "cab7240a6c0c09600f02ee7cd8a90983576f5f8ca4b8f4d6dbca23a2fb58bb8d",
+        "receiver_version": "pdu-receiver-v2",
+        "raw_capture_sha256": "c69e82022d45173cdcaf1a5fdc8a2b864e2d61e85ae819af54b16002044adae3",
+        "original_checkpoint": "frame_candidate_08.mat",
+        "original_checkpoint_sha256": "c5010a5efd570c5af76026a4a7897443e190048a0ad3b0255ba5602d3431b720",
+        "scope": "Receiver result frame 8/9 from the already-inspected UT Austin exemplar250-257 capture; IDs preserve existing receiver order, not chronological order.",
+        "coordinate_system": "MATLAB column1=SSS; columns2..301=data; q0/r0 zero based; ends exclusive",
+        "before_stage": "FIT-pilot phase/slope calibrated final grid before fixed PN reference removal",
+        "after_stage": "Same grid multiplied by conjugate PN; viewer keeps SSS as the same observation",
+        "precision": "little-endian float32, interleaved real/imag, column then original FFT row",
+        "float32_max_absolute_component_error": 5.9603535662589024e-08,
+        "source_PN_modulus_max_error": 4.440892098500626e-16,
+        "presentation_scope": "Original geometry/header/Code5 observation stage; later MCS66/70 FEC work is documented separately."
+      },
+      "headers": [
+        {
+          "N": 2,
+          "CRC": 173,
+          "bits": 64
+        },
+        {
+          "N": 4,
+          "CRC": 133,
+          "bits": 128
+        }
+      ],
+      "region_count": 9,
+      "region_resources": [
+        228,
+        8192,
+        456,
+        2048,
+        217088,
+        45056,
+        6554,
+        19662,
+        1916
+      ],
+      "all_301200_geometry_indices_checked": true,
+      "source_unchanged": true,
+      "code5_words": 4
+    },
+    {
+      "frame": 9,
+      "page": "frames/frame-09.html",
+      "bytes": 7837515,
+      "sha256": "f7040a631fff9503a1d82dead84657ae4c7930a223401ed743005c0b5c751e07",
+      "source": {
+        "protocol_mat": "frame_09/protocol.mat",
+        "protocol_mat_sha256": "110b550f87a018a04c1e62a5ed1b86654ac2d711f650be6b4a507f57b3f38e78",
+        "protocol_summary_sha256": "d6116c6c7a5767fb3ed2690dbe38c24be718bd00b03f9f1abae235152feea931",
+        "receiver_version": "pdu-receiver-v2",
+        "raw_capture_sha256": "c69e82022d45173cdcaf1a5fdc8a2b864e2d61e85ae819af54b16002044adae3",
+        "original_checkpoint": "frame_candidate_07.mat",
+        "original_checkpoint_sha256": "b7e1ea7639fd1685936fa0f660874f03dc33e43163bd02e7f10e540ade450ac0",
+        "scope": "Receiver result frame 9/9 from the already-inspected UT Austin exemplar250-257 capture; IDs preserve existing receiver order, not chronological order.",
+        "coordinate_system": "MATLAB column1=SSS; columns2..301=data; q0/r0 zero based; ends exclusive",
+        "before_stage": "FIT-pilot phase/slope calibrated final grid before fixed PN reference removal",
+        "after_stage": "Same grid multiplied by conjugate PN; viewer keeps SSS as the same observation",
+        "precision": "little-endian float32, interleaved real/imag, column then original FFT row",
+        "float32_max_absolute_component_error": 5.960404547700193e-08,
+        "source_PN_modulus_max_error": 4.440892098500626e-16,
+        "presentation_scope": "Original geometry/header/Code5 observation stage; later MCS66/70 FEC work is documented separately."
+      },
+      "headers": [
+        {
+          "N": 2,
+          "CRC": 46,
+          "bits": 64
+        },
+        {
+          "N": 4,
+          "CRC": 154,
+          "bits": 128
+        }
+      ],
+      "region_count": 8,
+      "region_resources": [
+        228,
+        6144,
+        456,
+        2048,
+        167936,
+        57344,
+        65540,
+        1504
+      ],
+      "all_301200_geometry_indices_checked": true,
+      "source_unchanged": true,
+      "code5_words": 3
+    }
+  ],
+  "source_files_sha256": {
+    "tools/build_multiframe_explorer.py": "998de744f1005466709e8c00620eafbe6b43a15d2c91633b1ce73e3a0389f4c6",
+    "tools/multiframe_explorer.html": "07eea2f03d33b308be2672a9ad9362e96e7a08d0a2f6fcd9a5425c27c7a3171a",
+    "tools/multiframe_explorer.css": "5a3e6cb655967479da92981d9126b0d7a222b85005533acf6f9513ad6d872310",
+    "tools/multiframe_explorer.js": "b108708225a9bffb2754da8183f8abd3c12968be1b09675306a9e79791b51358"
+  },
+  "original_shared_helper_sha256": "da8f2ce37dd535dc1505e7160d51db4c52f6beda753fbab4f65c79085d151b7a",
+  "browser": {
+    "status": "passed",
+    "browser": "Chrome headless CDP",
+    "offline_file_url": true,
+    "frames_checked": 9,
+    "CRC_checks": 18,
+    "actual_CSV_exports": 9,
+    "actual_summary_exports": 9,
+    "mobile_widths": [
+      390,
+      320
+    ],
+    "actual_next_frame_navigation_and_preserved_column_checked": true,
+    "special_5_block_header_and_3_word_Code5_checked": true,
+    "all_nine_sources_distinct": true,
+    "stable_ID66_color": true,
+    "allocation_ranges_hidden_regions_tail_SSS_and_PN_checked": true,
+    "external_requests": [],
+    "runtime_exceptions": [],
+    "per_frame": [
+      {
+        "frame": 1,
+        "source": "frame_candidate_01.mat",
+        "header_blocks": [
+          2,
+          4
+        ],
+        "CRC_output_ranges": [
+          {
+            "value": 173,
+            "start": 186,
+            "end": 210
+          },
+          {
+            "value": 13,
+            "start": 8834,
+            "end": 8858
+          }
+        ],
+        "second_header_resources": 456,
+        "mixed_column": 208,
+        "mixed_histogram": {
+          "5": 708,
+          "6": 296
+        },
+        "code5_words": 4,
+        "boundary_delta": -113,
+        "tail_count": 1912,
+        "PN_max_float32_error": 0
+      },
+      {
+        "frame": 2,
+        "source": "frame_candidate_04.mat",
+        "header_blocks": [
+          2,
+          4
+        ],
+        "CRC_output_ranges": [
+          {
+            "value": 173,
+            "start": 186,
+            "end": 210
+          },
+          {
+            "value": 205,
+            "start": 8834,
+            "end": 8858
+          }
+        ],
+        "second_header_resources": 456,
+        "mixed_column": 206,
+        "mixed_histogram": {
+          "4": 668,
+          "5": 336
+        },
+        "code5_words": 4,
+        "boundary_delta": -9,
+        "tail_count": 683,
+        "PN_max_float32_error": 0
+      },
+      {
+        "frame": 3,
+        "source": "frame_candidate_09.mat",
+        "header_blocks": [
+          2,
+          5
+        ],
+        "CRC_output_ranges": [
+          {
+            "value": 173,
+            "start": 186,
+            "end": 210
+          },
+          {
+            "value": 88,
+            "start": 8948,
+            "end": 8972
+          }
+        ],
+        "second_header_resources": 570,
+        "mixed_column": 202,
+        "mixed_histogram": {
+          "4": 702,
+          "5": 302
+        },
+        "code5_words": 4,
+        "boundary_delta": -1,
+        "tail_count": 1388,
+        "PN_max_float32_error": 0
+      },
+      {
+        "frame": 4,
+        "source": "frame_candidate_03.mat",
+        "header_blocks": [
+          2,
+          4
+        ],
+        "CRC_output_ranges": [
+          {
+            "value": 173,
+            "start": 186,
+            "end": 210
+          },
+          {
+            "value": 195,
+            "start": 8834,
+            "end": 8858
+          }
+        ],
+        "second_header_resources": 456,
+        "mixed_column": 206,
+        "mixed_histogram": {
+          "5": 668,
+          "6": 336
+        },
+        "code5_words": 4,
+        "boundary_delta": 7,
+        "tail_count": 3960,
+        "PN_max_float32_error": 0
+      },
+      {
+        "frame": 5,
+        "source": "frame_candidate_02.mat",
+        "header_blocks": [
+          2,
+          4
+        ],
+        "CRC_output_ranges": [
+          {
+            "value": 173,
+            "start": 186,
+            "end": 210
+          },
+          {
+            "value": 148,
+            "start": 8834,
+            "end": 8858
+          }
+        ],
+        "second_header_resources": 456,
+        "mixed_column": 206,
+        "mixed_histogram": {
+          "4": 668,
+          "5": 336
+        },
+        "code5_words": 4,
+        "boundary_delta": -1,
+        "tail_count": 683,
+        "PN_max_float32_error": 0
+      },
+      {
+        "frame": 6,
+        "source": "frame_candidate_06.mat",
+        "header_blocks": [
+          2,
+          4
+        ],
+        "CRC_output_ranges": [
+          {
+            "value": 173,
+            "start": 186,
+            "end": 210
+          },
+          {
+            "value": 91,
+            "start": 8834,
+            "end": 8858
+          }
+        ],
+        "second_header_resources": 456,
+        "mixed_column": 204,
+        "mixed_histogram": {
+          "5": 628,
+          "6": 376
+        },
+        "code5_words": 4,
+        "boundary_delta": 11,
+        "tail_count": 2731,
+        "PN_max_float32_error": 0
+      },
+      {
+        "frame": 7,
+        "source": "frame_candidate_05.mat",
+        "header_blocks": [
+          2,
+          4
+        ],
+        "CRC_output_ranges": [
+          {
+            "value": 173,
+            "start": 186,
+            "end": 210
+          },
+          {
+            "value": 220,
+            "start": 8834,
+            "end": 8858
+          }
+        ],
+        "second_header_resources": 456,
+        "mixed_column": 269,
+        "mixed_histogram": {
+          "5": 904,
+          "6": 100
+        },
+        "code5_words": 4,
+        "boundary_delta": -1,
+        "tail_count": 2735,
+        "PN_max_float32_error": 0
+      },
+      {
+        "frame": 8,
+        "source": "frame_candidate_08.mat",
+        "header_blocks": [
+          2,
+          4
+        ],
+        "CRC_output_ranges": [
+          {
+            "value": 173,
+            "start": 186,
+            "end": 210
+          },
+          {
+            "value": 133,
+            "start": 8834,
+            "end": 8858
+          }
+        ],
+        "second_header_resources": 456,
+        "mixed_column": 273,
+        "mixed_histogram": {
+          "5": 984,
+          "6": 20
+        },
+        "code5_words": 4,
+        "boundary_delta": -3,
+        "tail_count": 1916,
+        "PN_max_float32_error": 0
+      },
+      {
+        "frame": 9,
+        "source": "frame_candidate_07.mat",
+        "header_blocks": [
+          2,
+          4
+        ],
+        "CRC_output_ranges": [
+          {
+            "value": 46,
+            "start": 186,
+            "end": 210
+          },
+          {
+            "value": 154,
+            "start": 6786,
+            "end": 6810
+          }
+        ],
+        "second_header_resources": 456,
+        "mixed_column": 235,
+        "mixed_histogram": {
+          "5": 224,
+          "6": 780
+        },
+        "code5_words": 3,
+        "boundary_delta": 5,
+        "tail_count": 1504,
+        "PN_max_float32_error": 0
+      }
+    ]
+  },
+  "independent_numerical_comparison": {
+    "status": "passed",
+    "frames": [
+      {
+        "frame": 1,
+        "all_grid_float32_components_checked": 1232896,
+        "all_resource_classification_entries_checked": 903600,
+        "browser_sample_points_checked": 7,
+        "browser_CSV_rows_checked": 24,
+        "all_control_header_bits_and_words_checked": true,
+        "protocol_mat_sha256": "5a7ae7196354a1c7ee1f0bb2148d347d070481dcbda3b5c0df7459a60ff7c6cf",
+        "protocol_summary_sha256": "f7980dbfc07099f4e5e9459f01d53dca4c787ed65831a595b0429f06d419b3f8"
+      },
+      {
+        "frame": 2,
+        "all_grid_float32_components_checked": 1232896,
+        "all_resource_classification_entries_checked": 903600,
+        "browser_sample_points_checked": 7,
+        "browser_CSV_rows_checked": 24,
+        "all_control_header_bits_and_words_checked": true,
+        "protocol_mat_sha256": "6b6cde82bedecb3423a672e5584fb006f2b73a440bccabe07f5e88a5271b4aa4",
+        "protocol_summary_sha256": "8885a6ece8d3a85c1684a6bebcd07106ea0e6abd3df1e611d2949c212d076540"
+      },
+      {
+        "frame": 3,
+        "all_grid_float32_components_checked": 1232896,
+        "all_resource_classification_entries_checked": 903600,
+        "browser_sample_points_checked": 7,
+        "browser_CSV_rows_checked": 24,
+        "all_control_header_bits_and_words_checked": true,
+        "protocol_mat_sha256": "68d32963fca0503e471c49f0388603eb64446f145d1a3d376fe52ad04dbbd0a7",
+        "protocol_summary_sha256": "abb6a9be534a8c7e9bdd80685053c4a8db479c141b606edd0da68db096b8fe42"
+      },
+      {
+        "frame": 4,
+        "all_grid_float32_components_checked": 1232896,
+        "all_resource_classification_entries_checked": 903600,
+        "browser_sample_points_checked": 7,
+        "browser_CSV_rows_checked": 24,
+        "all_control_header_bits_and_words_checked": true,
+        "protocol_mat_sha256": "dea7a4128f859e5a9e45eed0ccee7cc54abaec2d639f735cb3c0d70e17faddbe",
+        "protocol_summary_sha256": "2a2a0af86d667362c228dabdf97937cab645cbbc1e76e56980bdfe7f5d331036"
+      },
+      {
+        "frame": 5,
+        "all_grid_float32_components_checked": 1232896,
+        "all_resource_classification_entries_checked": 903600,
+        "browser_sample_points_checked": 7,
+        "browser_CSV_rows_checked": 24,
+        "all_control_header_bits_and_words_checked": true,
+        "protocol_mat_sha256": "5c67f932f2870c64a96376c9b820040e926f9312090f19b8165be723a3aff61f",
+        "protocol_summary_sha256": "85bf1caeda5ca15eb088de6ec21d027c992cd908c8822d865a215951fb87417b"
+      },
+      {
+        "frame": 6,
+        "all_grid_float32_components_checked": 1232896,
+        "all_resource_classification_entries_checked": 903600,
+        "browser_sample_points_checked": 7,
+        "browser_CSV_rows_checked": 24,
+        "all_control_header_bits_and_words_checked": true,
+        "protocol_mat_sha256": "17b324d4dae2d0b24d2f4f3836e276050b2fff8d2998e69537ea5216ee4f2551",
+        "protocol_summary_sha256": "c9fc7beef126b01c8c81af9cc66c108faeb4cdf0ad5cd3fe323bfadbdda1ee0e"
+      },
+      {
+        "frame": 7,
+        "all_grid_float32_components_checked": 1232896,
+        "all_resource_classification_entries_checked": 903600,
+        "browser_sample_points_checked": 7,
+        "browser_CSV_rows_checked": 24,
+        "all_control_header_bits_and_words_checked": true,
+        "protocol_mat_sha256": "708a86f5bf93238e8950017121e0f239001c62f99968129771a7c48c6a697b56",
+        "protocol_summary_sha256": "7c9edf2b22be4078d21f67e27a1ac19c8548eb7bcde0f498e4c06015bb49b863"
+      },
+      {
+        "frame": 8,
+        "all_grid_float32_components_checked": 1232896,
+        "all_resource_classification_entries_checked": 903600,
+        "browser_sample_points_checked": 7,
+        "browser_CSV_rows_checked": 24,
+        "all_control_header_bits_and_words_checked": true,
+        "protocol_mat_sha256": "74cc26f040d0b62a72832ef1658b6386b9b7ef5a339165a11ec0cbd4ae7267b9",
+        "protocol_summary_sha256": "cab7240a6c0c09600f02ee7cd8a90983576f5f8ca4b8f4d6dbca23a2fb58bb8d"
+      },
+      {
+        "frame": 9,
+        "all_grid_float32_components_checked": 1232896,
+        "all_resource_classification_entries_checked": 903600,
+        "browser_sample_points_checked": 7,
+        "browser_CSV_rows_checked": 24,
+        "all_control_header_bits_and_words_checked": true,
+        "protocol_mat_sha256": "110b550f87a018a04c1e62a5ed1b86654ac2d711f650be6b4a507f57b3f38e78",
+        "protocol_summary_sha256": "d6116c6c7a5767fb3ed2690dbe38c24be718bd00b03f9f1abae235152feea931"
+      }
+    ],
+    "all_float32_grid_components_checked": 11096064,
+    "all_resource_classification_entries_checked": 8132400,
+    "actual_browser_CSV_rows_checked": 216,
+    "actual_browser_summary_exports_checked": 9,
+    "frozen_single_frame_sources_checked": {
+      "tools/build_frame_explorer.py": "da8f2ce37dd535dc1505e7160d51db4c52f6beda753fbab4f65c79085d151b7a",
+      "tools/frame_explorer.html": "471c9e58ec5112249a24fa93c80cb623441421f044a6e0ed92cd9d9b2470e34a",
+      "tools/frame_explorer.css": "e23db7d679c37114fa90a76525f06aadd8fb9110a33a6fd3d508847283e2beee",
+      "tools/frame_explorer.js": "ee6a486f0f84dbac1568c6a78521f954e135b19fa01688466e6315011f272fce"
+    },
+    "old_presentation_html_sha256": "f36fad6b34e0532d317df69c8899e98dfd8a9a164a6487513ffa301e5a837a48",
+    "protected_files_checked": 64,
+    "raw_IQ_sha256": "c69e82022d45173cdcaf1a5fdc8a2b864e2d61e85ae819af54b16002044adae3"
+  },
+  "validation_scripts_sha256": {
+    "browser_qa.js": "f5ca66f4023ac1cfa2d1061e322a8d94277092dd4684b255807a5c16cb088bfa",
+    "verify_export.py": "1e2249e0cbd1c62abf0e196e9e6be1901272b9aa021b4025e22f60057a4f3d83"
+  },
+  "no_MATLAB_or_DSP_rerun": true,
+  "interpretation": "Original geometry/header/Code5 presentation stage. High-order colors remain conditional allocation evidence; later MCS66/70 FEC is in the separate walkthrough. No claim of recovered business plaintext."
+}
