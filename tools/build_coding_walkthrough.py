@@ -9,7 +9,7 @@ import argparse, json, hashlib
 
 def build(evidence_path, out, template_dir):
     data=json.loads(evidence_path.read_text(encoding='utf-8'))
-    assert data['schema']=='coding-walkthrough-evidence-v1'
+    assert data['schema']=='coding-walkthrough-evidence-v2'
     model=data['model66']
     assert (model['N'],model['K'],model['Z'])==(16384,12288,512)
     assert data['validation66']['converged_words']==376
@@ -17,9 +17,9 @@ def build(evidence_path, out, template_dir):
     for e in data['examples']:
         assert e['header']['crc_pass'] and e['trace'][-1]['failed_checks']==0
     encoded=json.dumps(data,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')
-    html=(template_dir/'page.html').read_text(encoding='utf-8')
+    html=(template_dir/'page.template').read_text(encoding='utf-8')
     replacements={'__STYLE__':(template_dir/'style.css').read_text(encoding='utf-8'),
-                  '__DATA__':encoded,'__SCRIPT__':(template_dir/'app.js').read_text(encoding='utf-8'),
+                  '__DATA__':encoded,'__SCRIPT__':(template_dir/'app.js').read_text(encoding='utf-8')+'\n'+(template_dir/'grid.js').read_text(encoding='utf-8'),
                   '__EVIDENCE_SHA__':hashlib.sha256(evidence_path.read_bytes()).hexdigest()}
     for key,value in replacements.items():
         assert html.count(key)==1,key

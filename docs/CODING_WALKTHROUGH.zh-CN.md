@@ -1,32 +1,52 @@
-# QC-LDPC恢复过程：独立交互教学页
+# MCS66：从帧位置到编码校验的五步图解
 
-2026-11-06，新建独立页面，不替换固定在1743f72的首次汇报观察台。
+2026-11-06，按用户要求改为“先看图，再展开文字”的教学页面。独立教程升级；首次汇报使用的旧第一帧观察台仍保持1743f72版本，接收机DSP、编码模型与译码结果不变。
 
-下载或克隆仓库后，直接用Windows浏览器打开 [MCS66_LDPC_WALKTHROUGH.html](MCS66_LDPC_WALKTHROUGH.html)。GitHub网页只显示源码时，请先下载该HTML再双击；它自带脚本、样式和证据，无需服务器、MATLAB或联网。本机交付为 `F:/codex_storage/coding_walkthrough_20261106/mcs66-ldpc-walkthrough.html`，与仓库文件逐字节相同。
+## 打开完整页面
 
-页面用MCS66第5帧第1字贯穿讲解（未参与模型选择），也可切换第2帧第1字（模型选择样本）。章节按控制头→复数观测和位标签→有限公开族识别→QC与Z→Hp逆和隐式G→真实译码迭代→完整统计和反例→论文方法区别排列，最后对照MCS70新进展。
+下载或克隆后，用Chrome/Edge打开 [MCS66_LDPC_WALKTHROUGH.html](MCS66_LDPC_WALKTHROUGH.html)。它自带样式、数据与图表，支持file://离线打开。GitHub网页显示源码时，请下载该HTML再双击。
 
-可操作内容：CRC位翻转实验、4096资源的I/Q和LLR、512位块内循环移位、14位稀疏校验的真实XOR、4096个奇偶位对应P列的按需精确计算、实际综合征网格和逐次迭代、376字指标切换、全部证据JSON导出。所有人为翻转均标为教学实验，不改真实结果。
+本机新入口：`F:/codex_storage/coding_visual_20261106/mcs66-ldpc-walkthrough.html`。原本机完整教程路径也同步更新；此前误打开的`coding_walkthrough/page.html`现在会自动转到完整教程。真正的未填充模板改用`.template`扩展名，避免再被误认成成品。
 
-不能误述：index/length本身不能推出G。66本次先利用Code5与公开AR4JA置换族吻合，识别H，再推导隐式G；没有执行一次仅靠8字、满秩的任意UP=V盲恢复。零综合征不认证绝对码字边界；偏移1资源仍通过的反例在页面中保留。重编码输入取自软译码结果，不是未见奇偶位预测。改变量不是BER；未恢复业务明文。
+## 为什么采用多种图，而不是把所有内容塞进OFDM网格
 
-页面保存真实接收点的两个小子集、精确位/综合征、冻结66模型和逐字精简指标，不含原始IQ、完整作者MAT或历史大运行数组。数据署名和CC BY 4.0说明在页面末尾，数值置换来源链接CCSDS官方文档。
+OFDM网格用于解释位置；码字跨越多个OFDM符号，一维资源条带更适合看单位和边界；生成关系和LDPC检查则用编码流程、矩阵系数和综合征表示。采用五步逐页显示，不再同时铺开十节长文，公式、来源和完整统计可按需展开。
 
-## 从已导出的证据重建
+1. **帧里在哪里**：1024×300 OFDM位置图，标出控制头、编号66分配、当前第1字、输入/奇偶区、CRC输入位对应的编码输出时刻；与整帧资源条带联动。
+2. **取出一个码字**：放大它跨越的5个OFDM列；点击网格/条带定位资源，并联动真实星座点、四路LLR、初始硬位及译码位。默认第一帧，还可切换第五/第二帧。
+3. **找出编码规律**：图示Code5结构线索→公开族候选→8字筛选→冻结H；展示真实失败比例和QC循环块。保留N/K/Z各自的证据来源。
+4. **算一个奇偶位**：输入u→Hu右端项→Hp逆→奇偶p的编码流程。可选4096个奇偶位之一，浏览器从冻结模型精确计算P列及真实XOR结果；并指出该位回到OFDM的坐标。
+5. **看真实校验**：14位稀疏XOR、真实逐次译码曲线、4096条检查的综合征。完整376字统计、尺度敏感性和错误候选反例折叠展示。
 
-页面末尾点“下载本页完整分析证据JSON”，然后在仓库根目录：
+网格颜色表示**条件资源解释，不是功率热图**。导频/DC不计入r0；当前码字输入/奇偶分色使用恢复后的66模型，不是仅靠星座外观作出的判定。显示300列时，一个像素可能覆盖多个载波；点击取该显示像素映射的资源，精确选择请用码字内资源滑块（方向键可逐个调整）。
+
+CRC位图属于BCC译码后的128个信息位。网格的CRC标记是8个CRC输入位对应的24个卷积编码输出时刻，不是24个独立空口CRC位；编码器记忆和后续尾部影响在页面中明确说明。
+
+## 真实数据与限制
+
+第一帧第1字来自r0[10924,15020)，从接收矩阵第12列k384到第16列k−463；前3072资源为输入坐标、后1024为奇偶坐标。第一帧起点还使用前置57的候选长度。第五/第二帧66直接接CRC通过的头部，r0从8876开始。
+
+三字实际轨迹分别为：第一帧546→52→5→0；第五帧370→31→4→0；第二帧530→72→4→0。第一/第五帧未参与本轮66参数选择，第二帧此字参与。轨迹按complex64研究缓存重算并与历史译码位一致；只有这三个例子新增轨迹，全376字统计沿用既有验证。
+
+仅凭index和length不能推出G。本次仍是公开族识别H后求隐式G，没有改写成一次满秩任意UP=V盲拟合。重编码使用已译码输入，不是未见奇偶预测；改变量不是BER，零综合征不独自认证绝对边界。所有数据属于同一次旧采集，业务明文仍未知。
+
+公开数据署名、CC BY 4.0、原始SHA、三个protocol.mat的SHA、冻结模型与证据SHA均在页面末尾。只嵌入三个码字的小型接收观测及精简指标，不上传原始IQ或完整作者MAT。
+
+## 重建与复核
+
+页面末尾下载完整证据JSON，然后：
 
 ```bash
-python tools/build_coding_walkthrough.py --evidence coding-walkthrough-evidence-v1.json --out my-walkthrough.html
+python tools/build_coding_walkthrough.py --evidence coding-walkthrough-evidence-v2.json --out my-guide.html
 ```
 
-此步骤仅需Python标准库。重新提取完整精度的真实轨迹则需要本机先前研究缓存（不随源码Git分发）、9个protocol.mat、NumPy和h5py：
+只需Python标准库。若要从本机研究缓存重新导出三字、头部和网格坐标，还需NumPy/h5py、既有66/70缓存与protocol.mat：
 
 ```bash
-python tools/collect_coding_evidence.py --cache66 /path/to/mcs66-research-cache --cache70 /path/to/mcs70-research-cache --repo /path/to/starlink_phy --out evidence.json
-python tools/build_coding_walkthrough.py --evidence evidence.json --out my-walkthrough.html
+python tools/collect_coding_evidence.py --cache66 /path/to/cache66 --cache70 /path/to/cache70 --repo /path/to/starlink_phy --out evidence.json
+python tools/build_coding_walkthrough.py --evidence evidence.json --out my-guide.html
 ```
 
-收集器只读取既有冻结模型、真实资源单位与MAT头部，重算两字迭代轨迹，并与原译码位逐位比较；它不重新搜索码型。独立数据导出需要缓存，单文件HTML阅读与从页内JSON重建不需要这些缓存。
+收集器不重新搜索码型，不重跑原始DSP。v2需要新增的真实网格字段；v1证据可用96de2a7版本的生成器重建旧教程。
 
-浏览器QA：file://离线打开、无外部请求/运行异常，验证两个真实字全部4096条检查，24个P列（每字12列，覆盖8个QC组及块边界）的全部12288个系数与Python参考相同；检查CRC翻转、校验行导航、位翻转、例子/迭代/指标切换、证据下载，以及1440/390/320像素布局。见[精简记录](../provenance/coding_walkthrough_validation.json)。
+浏览器核验了三字全部4096条检查、36个完整P列（覆盖8个QC组及块边界）、27个Python坐标参考、301200资源的正反映射、排除6000个导频/DC格子、网格/条带/星座联动、五步导航、CRC/校验实验、证据下载与源码入口跳转。390/320宽度下5步均无水平溢出，无外部请求与运行异常。[机器记录](../provenance/coding_walkthrough_validation.json)。

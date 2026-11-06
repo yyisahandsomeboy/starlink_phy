@@ -1,3 +1,5 @@
+> 2026-11-06教学页面更新：新增[五步图解](docs/MCS66_LDPC_WALKTHROUGH.html)（下载后离线打开），联动真实OFDM位置图、码字条带、星座/LLR、隐式生成器和实际译码。源码目录的page.html也会跳到完整成品；[阅读说明](docs/CODING_WALKTHROUGH.zh-CN.md)。原首次汇报观察台及所有数值接收代码保持原版本。
+
 > 2026-11-06：MCS70恢复接收等价QC512模型（N16384/K12800，25/32），142/142真实字经MATLAB译码与重编码通过，接入共享后处理及教学第20步。[验证报告](docs/MCS70_RECOVERY_VALIDATION.zh-CN.md)。新增[从真实MCS66走完编码恢复的离线HTML](docs/MCS66_LDPC_WALKTHROUGH.html)（下载后浏览器打开）、[使用与重建说明](docs/CODING_WALKTHROUGH.zh-CN.md)。原首次汇报页面仍冻结；业务明文仍未知。
 
 > 2026-11-06：MCS70恢复接收等价QC512模型（N16384/K12800，25/32），142/142真实字经MATLAB译码与重编码通过，接入共享后处理及教学第20步。[验证报告](docs/MCS70_RECOVERY_VALIDATION.zh-CN.md)。新增[从真实MCS66走完编码恢复的离线HTML](docs/MCS66_LDPC_WALKTHROUGH.html)（下载后浏览器打开）、[使用与重建说明](docs/CODING_WALKTHROUGH.zh-CN.md)。原首次汇报页面仍冻结；业务明文仍未知。

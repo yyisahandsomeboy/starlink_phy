@@ -2,7 +2,7 @@
 'use strict';
 const D=JSON.parse(document.getElementById('evidence').textContent), model=D.model66;
 const $=id=>document.getElementById(id), N=model.N,K=model.K,Z=model.Z,M=N-K;
-const C={ink:'#152d3b',muted:'#526775',line:'#dce4e6',blue:'#19749a',teal:'#087f77',purple:'#8155ad',orange:'#b76712',zero:'#e7edef'};
+const C={ink:'#173348',muted:'#506b7d',line:'#dce6eb',blue:'#23789b',teal:'#087e77',purple:'#8a55ad',orange:'#bc7324',zero:'#e7edef'};
 const fmt=n=>Number(n).toLocaleString('en-US'), fixed=(n,d=5)=>Number(n).toFixed(d);
 const bits64=(s,n)=>{const b=Uint8Array.from(atob(s),c=>c.charCodeAt(0));return Uint8Array.from({length:n},(_,i)=>(b[i>>3]>>(i&7))&1);};
 const bytes64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
@@ -24,7 +24,7 @@ function generatorColumn(j){
  }
  if(columnCache.size>32)columnCache.clear();columnCache.set(j,a);return a;
 }
-function setupCanvas(id){const el=$(id),w=el.clientWidth,h=el.clientHeight,dpr=Math.min(window.devicePixelRatio||1,2);el.width=Math.round(w*dpr);el.height=Math.round(h*dpr);const ctx=el.getContext('2d');ctx.scale(dpr,dpr);ctx.clearRect(0,0,w,h);ctx.font='12px "Segoe UI","Microsoft YaHei",sans-serif';ctx.fillStyle=C.ink;ctx.lineWidth=1;return {ctx,w,h};}
+function setupCanvas(id){const el=$(id),w=el.clientWidth||600,h=el.clientHeight||250,dpr=Math.min(window.devicePixelRatio||1,2);el.width=Math.round(w*dpr);el.height=Math.round(h*dpr);const ctx=el.getContext('2d');ctx.scale(dpr,dpr);ctx.clearRect(0,0,w,h);ctx.font='12px "Segoe UI","Microsoft YaHei",sans-serif';ctx.fillStyle=C.ink;ctx.lineWidth=1;return {ctx,w,h};}
 function line(ctx,x1,y1,x2,y2,color=C.line){ctx.beginPath();ctx.strokeStyle=color;ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();}
 function text(ctx,s,x,y,color=C.muted,align='left'){ctx.fillStyle=color;ctx.textAlign=align;ctx.fillText(s,x,y);}
 function drawScatter(){
@@ -35,18 +35,18 @@ function drawScatter(){
  ctx.strokeStyle=C.ink;for(const a of [-3,-1,1,3])for(const b of [-3,-1,1,3])ctx.strokeRect(x(a/Math.sqrt(10))-3,y(b/Math.sqrt(10))-3,6,6);
  const j=Number($('symbol').value),p=e.normalized_received_IQ[j];ctx.beginPath();ctx.strokeStyle=C.orange;ctx.lineWidth=2;ctx.arc(x(p[0]),y(p[1]),7,0,2*Math.PI);ctx.stroke();text(ctx,'I',left+size+12,y(0),C.ink);text(ctx,'Q',x(0)+8,top+5,C.ink);
 }
-function renderSymbol(){const j=Number($('symbol').value),p=e.normalized_received_IQ[j],llr=e.llr[j];$('symbol-value').value=fmt(j);$('symbol-detail').innerHTML=`接收 z = ${fixed(p[0])} ${p[1]>=0?'+':'−'} ${fixed(Math.abs(p[1]))}j<br>初始硬位 <b>${Array.from(hard.slice(j*4,j*4+4)).join(' ')}</b> → 译码位 <b>${Array.from(decoded.slice(j*4,j*4+4)).join(' ')}</b><br>四路LLR [${llr.map(v=>fixed(v,3)).join(', ')}]<br>全局资源 r0 = ${fmt(e.metrics.start_r0+j)}；${j<3072?'恢复模型的信息坐标':'恢复模型的奇偶坐标'}`;drawScatter();}
+function renderSymbol(){const j=Number($('symbol').value),p=e.normalized_received_IQ[j],llr=e.llr[j];$('symbol-value').value=fmt(j);$('symbol-detail').innerHTML=`接收 z = ${fixed(p[0])} ${p[1]>=0?'+':'−'} ${fixed(Math.abs(p[1]))}j<br>初始硬位 <b>${Array.from(hard.slice(j*4,j*4+4)).join(' ')}</b> → 译码位 <b>${Array.from(decoded.slice(j*4,j*4+4)).join(' ')}</b><br>四路LLR [${llr.map(v=>fixed(v,3)).join(', ')}]<br>全局资源 r0 = ${fmt(e.metrics.start_r0+j)}；${j<3072?'恢复模型的信息坐标':'恢复模型的奇偶坐标'}`;drawScatter();window.dispatchEvent(new Event('walkthrough:symbol'));}
 function renderHeader(){
- const h=e.header,entries=h.entries,Dn=entries.length,end=16+Dn*20;
- $('header-bits').innerHTML=h.bits.map((b,i)=>{let cls=i<16?'prefix':i>=120?'crc':i>=end?'pad':'';if(i>=16&&i<36)cls+=' selected';return `<span class="${cls}" title="信息位${i}（0基）">${b}</span>`;}).join('');
+ const h=e.header,entries=h.entries,Dn=entries.length,end=16+Dn*20,target=entries.find(v=>v.index7===66),first=16+(target.ordinal-1)*20;
+ $('header-bits').innerHTML=h.bits.map((b,i)=>{let cls=i<16?'prefix':i>=120?'crc':i>=end?'pad':'';if(i>=first&&i<first+20)cls+=' selected';return `<span class="${cls}" title="信息位${i}（0基）">${b}</span>`;}).join('');
  $('crc-status').textContent=`CRC通过 · ${hex(h.crc_observed)}`;
  $('header-caption').textContent=`第${e.frame}帧第二头部：r0 [${fmt(h.start_r0)}, ${fmt(h.end_r0_inclusive+1)})，456个已编码资源 → 4×32=128个保留信息位；描述项D=${Dn}。`;
- const b=entries[0].raw_bits;
+ const b=target.raw_bits;
  $('entry-bits').innerHTML=`${b.slice(0,7).join('')} | ${b[7]} | ${b.slice(8).join('')}<br>LSB先行：index ${little(b.slice(0,7))} · 未决位 ${b[7]} · length ${little(b.slice(8))}`;
  $('crc-detail').textContent=`本例存储CRC ${hex(h.crc_observed)}，对前120位重新计算也得到${hex(crc(h.bits.slice(0,120)))}。参数：多项式掩码0x4D，初值0xFF，无反射、无末异或。`;
- const experiment=h.bits.slice(0,120);if($('crc-flip').checked)experiment[16]^=1;const value=crc(experiment);
- $('crc-experiment').innerHTML=`${$('crc-flip').checked?'仅教学实验，翻转信息位16后':'原始头部'}：计算 ${hex(value)}，存储 ${hex(h.crc_observed)} → <b class="${value===h.crc_observed?'good-text':'fail-text'}">${value===h.crc_observed?'相同':'不相同'}</b>`;
- const start=e.metrics.start_r0; $('resource-detail').textContent=`本例39单位：r0 [${fmt(start)}, ${fmt(start+39*4096)})；本页第1字：[${fmt(start)}, ${fmt(start+4096)})，共4096资源。`;
+ const experiment=h.bits.slice(0,120);if($('crc-flip').checked)experiment[first]^=1;const value=crc(experiment);
+ $('crc-experiment').innerHTML=`${$('crc-flip').checked?'仅教学实验，翻转信息位'+first+'后':'原始头部'}：计算 ${hex(value)}，存储 ${hex(h.crc_observed)} → <b class="${value===h.crc_observed?'good-text':'fail-text'}">${value===h.crc_observed?'相同':'不相同'}</b>`;
+ const start=e.metrics.start_r0; $('resource-detail').textContent=`本例${target.quantity}单位：r0 [${fmt(start)}, ${fmt(start+target.quantity*4096)})；本页第1字：[${fmt(start)}, ${fmt(start+4096)})。区间统一左闭右开；第1帧起点还用到了前置57的候选长度。`;
 }
 function drawQC(){
  const {ctx,w,h}=setupCanvas('qc-grid'),left=25,top=35,cw=(w-left-7)/32,rh=(h-top-28)/8,g=Math.floor(selectedRow/Z);
@@ -81,6 +81,7 @@ function renderGenerator(){
  const {ctx,w,h}=setupCanvas('generator-column'),cw=w/128,ch=h/96;
  ctx.fillStyle=C.zero;ctx.fillRect(0,0,w,h);ctx.fillStyle=C.purple;
  for(let k=0;k<K;k++)if(coeff[k])ctx.fillRect((k%128)*cw,Math.floor(k/128)*ch,Math.max(cw,1),Math.max(ch,1));
+ window.dispatchEvent(new Event('walkthrough:parity'));
 }
 function renderTrace(){
  const seq=e.trace;traceStep=Math.min(traceStep,seq.length-1);$('trace-step').max=seq.length-1;$('trace-step').value=traceStep;$('trace-value').value=seq[traceStep].iteration;
@@ -110,13 +111,14 @@ function staticViews(){
  const names={wrong_mapping_signI_innerI:'错误位标签：交换符号位和幅度位',wrong_shortening_blocks23:'错误缩短：改为信息块2、3',symbol_shuffle:'固定随机打乱资源顺序',actual_stream_shift_1_resources:'真实资源流起点偏移1资源',actual_stream_shift_257_resources:'真实资源流起点偏移257资源'};
  $('control-table').innerHTML='<table><thead><tr><th>真实对照条件</th><th>初始失败</th><th>最终失败</th><th>迭代</th><th>结果</th></tr></thead><tbody>'+D.validation66.controls.map(r=>`<tr><td>${names[r.name]}</td><td>${r.initial}</td><td>${r.final}</td><td>${r.iterations}</td><td class="${r.converged?'warn-text':'fail-text'}">${r.converged?'仍能收敛 · 边界反例':'未收敛'}</td></tr>`).join('')+'</tbody></table>';
  $('qc-group').innerHTML=Array.from({length:8},(_,i)=>`<option value="${i}">${i}</option>`).join('');
+ $('example').innerHTML=D.examples.map((r,i)=>`<option value="${i}">第${r.frame}帧 · 第1个66码字${r.selection_word?'（参数选择样本）':'（未参与本轮参数选择）'}</option>`).join('');
  $('hashes').innerHTML=`<p>原始exemplar250-257.bin SHA-256<br>c69e82022d45173cdcaf1a5fdc8a2b864e2d61e85ae819af54b16002044adae3</p><p>MCS66冻结模型 SHA-256<br>${D.model66_sha256}</p><p>MCS70冻结模型 SHA-256<br>${D.mcs70.summary.model_sha256}</p>`+D.sources.filter(s=>[2,5].includes(s.frame)).map(s=>`<p>第${s.frame}帧protocol.mat SHA-256<br>${s.sha256}</p>`).join('');
 }
 function setExample(i){
  example=i;e=D.examples[i];hard=bits64(e.hard_bits_b64,N);decoded=bits64(e.decoded_bits_b64,N);traceStep=0;
  $('example').value=i;$('case-status').textContent=e.selection_word?'模型选择样本':'未参与模型选择';$('case-status').className='badge '+(e.selection_word?'':'good');
  if(crc(e.header.bits.slice(0,120))!==e.header.crc_observed)throw Error('Header CRC integrity check failed');
- $('crc-flip').checked=false;$('check-flip').checked=false;renderHeader();renderSymbol();renderQC();renderGenerator();renderTrace();drawValidation();
+ $('crc-flip').checked=false;$('check-flip').checked=false;renderHeader();renderSymbol();renderQC();renderGenerator();renderTrace();drawValidation();window.dispatchEvent(new Event('walkthrough:example'));
 }
 staticViews();setExample(0);
 $('example').addEventListener('change',()=>setExample(Number($('example').value)));
@@ -127,7 +129,7 @@ $('parity-index').addEventListener('input',renderGenerator);
 $('trace-step').addEventListener('input',()=>{traceStep=Number($('trace-step').value);renderTrace();});
 $('trace-prev').addEventListener('click',()=>{traceStep=Math.max(0,traceStep-1);renderTrace();});$('trace-next').addEventListener('click',()=>{traceStep=Math.min(e.trace.length-1,traceStep+1);renderTrace();});
 $('metric').addEventListener('change',drawValidation);
-$('download').addEventListener('click',()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(D,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='coding-walkthrough-evidence-v1.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),10000);});
+$('download').addEventListener('click',()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(D,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='coding-walkthrough-evidence-v2.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),10000);});
 let resizeTimer;window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{drawScatter();drawQC();renderGenerator();renderTrace();drawValidation();},100);});
-window.walkthrough={ready:true,setExample,generatorColumn,support,crc,bits64,get data(){return D;},get state(){return {example,selectedRow,traceStep,hard,decoded};}};
+window.walkthrough={ready:true,setExample,generatorColumn,support,crc,bits64,repaint(){renderHeader();drawScatter();renderQC();renderGenerator();renderTrace();drawValidation();},get data(){return D;},get state(){return {example,selectedRow,traceStep,hard,decoded};}};
 })();

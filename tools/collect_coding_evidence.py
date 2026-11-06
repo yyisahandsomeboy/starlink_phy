@@ -52,7 +52,12 @@ audit=read(P/'candidate_audit.json');val=read(P/'validation.json');search=read(P
 units=np.load(P/'candidate_units.npz')['z_66'];expected=np.load(P/'decoded_mcs66.npz')['bits']
 origins=[r for r in audit['units'] if r['id']==66]
 examples=[]
-for frame in [5,2]:
+bins=np.r_[np.arange(512),np.arange(-512,0)]
+pilots=np.r_[np.arange(488,496),np.arange(528,536)]
+loaded=sorted(range(2,1022),key=lambda i:int(bins[i]))
+payload=[i for i in loaded if i not in set(pilots)]
+assert len(payload)==1004 and bins[payload[0]]==-512
+for frame in [1,5,2]:
  i=next(i for i,r in enumerate(origins) if r['frame']==frame and r['word']==1);z=units[i];llr=llr16(z)
  coded,steps=trace(llr);assert np.array_equal(coded,expected[i]);assert np.array_equal(encode(coded[:K]),coded)
  metric=val['words'][i];assert steps[0]['failed_checks']==metric['initial'] and steps[-1]['hard_changes']==metric['changes']
@@ -71,6 +76,15 @@ for frame in [5,2]:
     v=np.asarray(value).reshape(-1)
     entry[key]=v.astype(int).tolist() if len(v)>1 else int(v[0])
    header['entries'].append(entry)
+ summary=read(source.with_name('protocol_summary.json'))
+ regions=summary['allocations']['plan']['regions']
+ assert regions[0]['start_r0']==0 and regions[-1]['end_exclusive_r0']==301200
+ assert all(a['end_exclusive_r0']==b['start_r0'] for a,b in zip(regions,regions[1:]))
+ assert next(r for r in regions if r['id']==66)['start_r0']==metric['start_r0']
+ def coord(r0):
+  q=int(r0)%1004;row=payload[q]
+  return dict(r0=int(r0),column=2+int(r0)//1004,q0=q,fft_row1=row+1,bin=int(bins[row]))
+ coordinate_golden=[coord(v) for v in [0,227,header['start_r0'],header['end_r0_inclusive'],metric['start_r0'],metric['start_r0']+3071,metric['start_r0']+3072,metric['start_r0']+4095,301199]]
  golden=[]
  for j in [0,1,511,512,1024,1536,2047,2048,2560,3072,3584,4095]:
   row=int.from_bytes(inverse[j].tobytes(),'little');coeff=0
@@ -79,12 +93,13 @@ for frame in [5,2]:
   coefficient_bits=np.unpackbits(np.frombuffer(coeff.to_bytes(K//8,'little'),dtype=np.uint8),bitorder='little').astype(bool)
   value=int(np.bitwise_xor.reduce(coded[:K][coefficient_bits]));assert value==int(coded[K+j])
   golden.append(dict(parity_index=j,coefficient_b64=pack(coefficient_bits),weight=coeff.bit_count(),value=value))
- examples.append(dict(frame=frame,word=1,selection_word=frame==2,metrics=metric,header=header,
+ examples.append(dict(frame=frame,word=1,selection_word=frame==2,metrics=metric,header=header,regions=regions,coordinate_golden=coordinate_golden,
    normalized_received_IQ=np.round(np.stack([z.real,z.imag],axis=1),7).tolist(),llr=np.round(llr.reshape(-1,4),5).tolist(),
    hard_bits_b64=pack(llr<0),decoded_bits_b64=pack(coded),trace=steps,generator_golden=golden,
    raw_systematic_reencode_parity_disagreements=int(np.count_nonzero(encode((llr<0)[:K])[K:]!=(llr<0)[K:]))))
 native70=read(W/'native70_validation.json');py70=read(W/'python70_validation.json');ctrl70=read(W/'controls70_final.json')
-evidence=dict(schema='coding-walkthrough-evidence-v1',created='2026-11-06',owner='codex_baseline',
+evidence=dict(schema='coding-walkthrough-evidence-v2',created='2026-11-06',owner='codex_baseline',
+ coordinates=dict(bins=bins.tolist(),payload_rows0=payload,pilot_rows0=pilots.tolist(),resources_per_data_column=1004,data_columns=[2,301],grid_shape=[1024,300],r0_order='Ascending frequency within column, then MATLAB columns 2..301; pilots and DC excluded'),
  model66=model,model66_sha256=sha(P/'mcs66_qc512_utexas_v1.json'),search66=search,
  validation66=val,examples=examples,sources=audit['sources'],
  mcs70=dict(model={k:v for k,v in read(W/'mcs70_qc512_utexas_v1.json').items() if not k.startswith('parity_inverse')},
@@ -96,4 +111,4 @@ evidence=dict(schema='coding-walkthrough-evidence-v1',created='2026-11-06',owner
  note='Full precision cached observations drive the new trace. IQ shown to 7 decimal places; packed bits/syndromes and generator calculations are exact. No generic UP=V recovery is claimed for MCS66.')
 args.out.parent.mkdir(parents=True,exist_ok=True)
 args.out.write_text(json.dumps(evidence,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')
-print(json.dumps(dict(out=str(args.out),bytes=args.out.stat().st_size,sha256=sha(args.out),examples=[dict(frame=e['frame'],trace=[(t['iteration'],t['failed_checks'],t['hard_changes']) for t in e['trace']],entries=e['header']['entries']) for e in examples]),ensure_ascii=False))
+print(json.dumps(dict(out=str(args.out),bytes=args.out.stat().st_size,sha256=sha(args.out),examples=[dict(frame=e['frame'],trace=[(t['iteration'],t['failed_checks'],t['hard_changes']) for t in e['trace']],coordinate_checks=len(e['coordinate_golden'])) for e in examples]),ensure_ascii=False))

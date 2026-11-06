@@ -1,12 +1,16 @@
 {
-  "schema": "coding-walkthrough-validation-v1",
+  "schema": "coding-walkthrough-validation-v2",
   "date": "2026-11-06",
   "owner": "codex_baseline",
   "status": "passed",
   "html_path": "docs/MCS66_LDPC_WALKTHROUGH.html",
-  "html_sha256": "242347c19e1417aa7e890c8560746b514ebfb32121fb789485ba21e5e9c3d2fd",
-  "html_bytes": 1315119,
-  "evidence_sha256": "a8f9b82470171fe2680fc317da69c7755c2b38800e64b1849e2486e1c43222c6",
+  "html_sha256": "1bce1f34a2edc2f3fb6c9be003ec627dcf55fae26710a7d4542f1addfd7291ce",
+  "html_bytes": 1868149,
+  "evidence_sha256": "0d363ff9e9dbc0c4bfb13f6c8cba921d80b1f642234a2644e6dfe77e785f768b",
+  "predecessor": {
+    "git_commit": "96de2a7289e5ba3d69d708e174d1f0574c5d0903",
+    "html_sha256": "242347c19e1417aa7e890c8560746b514ebfb32121fb789485ba21e5e9c3d2fd"
+  },
   "browser_QA": {
     "status": "passed",
     "offline_file_url": true,
@@ -15,124 +19,90 @@
     "runtime_exceptions": [],
     "results": [
       {
-        "algebra": [
-          {
-            "frame": 5,
-            "before": 370,
-            "after": 0,
-            "full_generator_columns_compared": 12,
-            "trace": [
-              370,
-              31,
-              4,
-              0
-            ]
-          },
-          {
-            "frame": 2,
-            "before": 530,
-            "after": 0,
-            "full_generator_columns_compared": 12,
-            "trace": [
-              530,
-              72,
-              4,
-              0
-            ]
-          }
-        ]
-      },
-      {
-        "controls": "CRC flip, sparse row, exact G, decoder steps, case and metric switches, evidence download"
-      },
-      {
-        "layout": {
-          "width": 390,
-          "scroll": 375
+        "algebra": {
+          "examples": [
+            {
+              "frame": 1,
+              "before": 546,
+              "after": 0,
+              "exact_generator_columns": 12,
+              "coordinate_goldens": 9,
+              "trace": [
+                546,
+                52,
+                5,
+                0
+              ]
+            },
+            {
+              "frame": 5,
+              "before": 370,
+              "after": 0,
+              "exact_generator_columns": 12,
+              "coordinate_goldens": 9,
+              "trace": [
+                370,
+                31,
+                4,
+                0
+              ]
+            },
+            {
+              "frame": 2,
+              "before": 530,
+              "after": 0,
+              "exact_generator_columns": 12,
+              "coordinate_goldens": 9,
+              "trace": [
+                530,
+                72,
+                4,
+                0
+              ]
+            }
+          ],
+          "resource_bijections": 301200,
+          "pilot_and_DC_cells_excluded": 6000
         }
       },
       {
-        "layout": {
-          "width": 320,
-          "scroll": 305
-        }
+        "canvas_links": "Physical grid and strip clicks checked at actual browser pixel coordinates; exact slider resource2000; real IQ/LLR update"
+      },
+      {
+        "mobile_width": 390,
+        "all_five_steps_no_horizontal_overflow": true
+      },
+      {
+        "mobile_width": 320,
+        "all_five_steps_no_horizontal_overflow": true
+      },
+      {
+        "source_entry_redirect": true
       }
     ]
   },
-  "case_metrics": [
-    {
-      "frame": 5,
-      "selection_word": false,
-      "trace": [
-        {
-          "iteration": 0,
-          "failed": 370,
-          "hard_changes": 0
-        },
-        {
-          "iteration": 1,
-          "failed": 31,
-          "hard_changes": 116
-        },
-        {
-          "iteration": 2,
-          "failed": 4,
-          "hard_changes": 121
-        },
-        {
-          "iteration": 3,
-          "failed": 0,
-          "hard_changes": 121
-        }
-      ]
-    },
-    {
-      "frame": 2,
-      "selection_word": true,
-      "trace": [
-        {
-          "iteration": 0,
-          "failed": 530,
-          "hard_changes": 0
-        },
-        {
-          "iteration": 1,
-          "failed": 72,
-          "hard_changes": 161
-        },
-        {
-          "iteration": 2,
-          "failed": 4,
-          "hard_changes": 172
-        },
-        {
-          "iteration": 3,
-          "failed": 0,
-          "hard_changes": 174
-        }
-      ]
-    }
-  ],
   "builder_sources_sha256": {
-    "tools/build_coding_walkthrough.py": "dd724d1f4d3468dc27c6f25ff66d749a1719395c78de04f75503e5b1c4fe19a7",
-    "tools/coding_walkthrough/app.js": "e5327a10af44e5f596be7d3404bb009b8d52f2d9df170eaecb52712920fbb6c3",
-    "tools/coding_walkthrough/page.html": "3b9be24a39ee3ae2d0931e92d5596ddde2b1bf2ce660d9fb62d95ca91aafcb94",
-    "tools/coding_walkthrough/style.css": "719599d1201c661074d9693006f215ff5da665a9729839c57b724f7fb6a4156d",
-    "tools/collect_coding_evidence.py": "b471fe547e7182b6e9924213dc12413b2785cf45c29698f5e422b89a271095dc"
+    "tools/build_coding_walkthrough.py": "2eae3cbc6871f60f273a7a584b350c6e876ac50d3d9050484b20a32f0bdac5de",
+    "tools/coding_walkthrough/app.js": "6601825204fb773f8264ac2158c078079b618366647f8619bb9e395f655acbe0",
+    "tools/coding_walkthrough/grid.js": "8813bc5dff1dfe8c4e4af90e0b302deeb03591b617a4b685909230152ddad9e3",
+    "tools/coding_walkthrough/page.html": "df7a1aaa38ae3dda4a2168b6d4225bbd80b133bda1d060cbe78f4f4d6400270d",
+    "tools/coding_walkthrough/page.template": "3d94121224a1c4eaa70c41366f9e9e6604a54b197f8bfd9653f70eb0ef885bf7",
+    "tools/coding_walkthrough/style.css": "07cf311696943704b4507f1b9e3978ec299b29926f1a5ad3d5ba1ea1eb93ab25",
+    "tools/collect_coding_evidence.py": "465ae2a3b28f9719983ebef918cb859d5d0299a556bd418b783012d5b1e6ec33"
   },
-  "current_presentation": {
-    "old_artifact_sha256": "f36fad6b34e0532d317df69c8899e98dfd8a9a164a6487513ffa301e5a837a48",
-    "old_sources_sha256": {
-      "tools/build_frame_explorer.py": "da8f2ce37dd535dc1505e7160d51db4c52f6beda753fbab4f65c79085d151b7a",
-      "tools/frame_explorer.html": "471c9e58ec5112249a24fa93c80cb623441421f044a6e0ed92cd9d9b2470e34a",
-      "tools/frame_explorer.css": "e23db7d679c37114fa90a76525f06aadd8fb9110a33a6fd3d508847283e2beee",
-      "tools/frame_explorer.js": "ee6a486f0f84dbac1568c6a78521f954e135b19fa01688466e6315011f272fce"
-    },
-    "untouched": true
+  "unchanged_checks": {
+    "protected_files": 64,
+    "all_protected_hashes_match": true,
+    "all_MATLAB_and_model_files_unchanged": true,
+    "source_protocol_mats": 9,
+    "old_presentation_unchanged": true,
+    "unexpected_changes": [],
+    "raw_DSP_rerun": false
   },
   "limits": [
-    "MCS66 identified within a finite public permutation family, not blind arbitrary UP=V fitting from index/length",
-    "Not new-capture blind validation; recovered inputs are opaque bits, not plaintext",
-    "Exact G columns use decoded systematic inputs and are not unseen-parity predictions"
+    "Grid colors are conditional allocation labels, not received power or proof of unknown FEC",
+    "MCS66 is identified within a finite public family; index and length alone do not determine G",
+    "Three measured codewords drive the walkthrough; 376-word totals retain their original validation scope",
+    "No new-capture blind verification, actual BER or application plaintext claim"
   ]
 }
