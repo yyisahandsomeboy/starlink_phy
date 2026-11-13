@@ -1,0 +1,2439 @@
+{
+  "discovery_words": 25,
+  "holdout_words": 24,
+  "tested_point_labelings": 40320,
+  "hard_prefix_checks": {
+    "recognized_prefix": 624
+  },
+  "candidates": [
+    {
+      "point_to_value": [
+        1,
+        5,
+        4,
+        7,
+        0,
+        6,
+        2,
+        3
+      ],
+      "leading_bits": 0,
+      "pn_phase": 0,
+      "discovery": {
+        "hard": [
+          {
+            "frame": 468,
+            "r0": 9104,
+            "word": 1,
+            "quantity": 2,
+            "fit": true,
+            "pass": true,
+            "length": 88,
+            "header_hex": "58 00 07 EA 07 C7 23 33 20 C0 6A 00 A7 24 13 5F 60 05 00 A7 5E 73 4F 60 21 07 43 F3 50 73 00 C3 F8 20 09 00 33 26 40 BF 00 13 D2 10 C1 00 07 00 13 D3 40 BF 00 83 4F 60 5F 00 F7 16 73 C8 B0 BD 07 83 B1 F0 6B 00 A3 FE 10 02 00 F7 3C F3 8E 10 15 00 FF 42 FF A6 1D A8",
+            "calculated_crc": "65B815",
+            "received_crc": "65B815",
+            "descriptors": [
+              [
+                {
+                  "descriptor_offset": 7,
+                  "bytes": 1708,
+                  "identifier_candidate": 515
+                },
+                {
+                  "descriptor_offset": 14,
+                  "bytes": 86,
+                  "identifier_candidate": 1521
+                },
+                {
+                  "descriptor_offset": 21,
+                  "bytes": 29206,
+                  "identifier_candidate": 1271
+                },
+                {
+                  "descriptor_offset": 26,
+                  "bytes": 1845,
+                  "identifier_candidate": 3892
+                },
+                {
+                  "descriptor_offset": 31,
+                  "bytes": 146,
+                  "identifier_candidate": 3980
+                },
+                {
+                  "descriptor_offset": 36,
+                  "bytes": 3060,
+                  "identifier_candidate": 611
+                },
+                {
+                  "descriptor_offset": 41,
+                  "bytes": 3089,
+                  "identifier_candidate": 3361
+                },
+                {
+                  "descriptor_offset": 48,
+                  "bytes": 3060,
+                  "identifier_candidate": 3377
+                },
+                {
+                  "descriptor_offset": 53,
+                  "bytes": 1526,
+                  "identifier_candidate": 1272
+                },
+                {
+                  "descriptor_offset": 60,
+                  "bytes": 31707,
+                  "identifier_candidate": 3207
+                },
+                {
+                  "descriptor_offset": 65,
+                  "bytes": 1727,
+                  "identifier_candidate": 2840
+                },
+                {
+                  "descriptor_offset": 70,
+                  "bytes": 33,
+                  "identifier_candidate": 4074
+                },
+                {
+                  "descriptor_offset": 77,
+                  "bytes": 337,
+                  "identifier_candidate": 2287
+                }
+              ],
+              [
+                5,
+                12,
+                19,
+                46,
+                58,
+                75
+              ],
+              82,
+              1
+            ],
+            "descriptor_structure_recognized": true
+          },
+          {
+            "frame": 470,
+            "r0": 9104,
+            "word": 1,
+            "quantity": 2,
+            "fit": true,
+            "pass": true,
+            "length": 104,
+            "header_hex": "68 00 07 EA 07 C7 24 53 5E C0 68 00 C7 25 F3 61 40 04 00 13 5F D0 0B 00 D7 5C 53 ED 60 17 07 03 02 40 04 00 73 4F 40 04 00 43 F3 90 E1 00 E3 68 20 09 00 C3 F8 20 09 00 33 26 E0 BA 00 13 D2 90 BC 00 07 00 13 D3 40 AC 00 53 1C 60 18 00 83 4F 60 65 00 07 11 A3 FE 40 A5 07 F7 3B F3 8E 10 24 00 1F 5A FF FF DD E2 B5",
+            "calculated_crc": "BB47AD",
+            "received_crc": "BB47AD",
+            "descriptors": [
+              [
+                {
+                  "descriptor_offset": 7,
+                  "bytes": 1676,
+                  "identifier_candidate": 1509
+                },
+                {
+                  "descriptor_offset": 14,
+                  "bytes": 68,
+                  "identifier_candidate": 1567
+                },
+                {
+                  "descriptor_offset": 19,
+                  "bytes": 189,
+                  "identifier_candidate": 1521
+                },
+                {
+                  "descriptor_offset": 26,
+                  "bytes": 29046,
+                  "identifier_candidate": 3797
+                },
+                {
+                  "descriptor_offset": 31,
+                  "bytes": 68,
+                  "identifier_candidate": 32
+                },
+                {
+                  "descriptor_offset": 36,
+                  "bytes": 68,
+                  "identifier_candidate": 1271
+                },
+                {
+                  "descriptor_offset": 41,
+                  "bytes": 3609,
+                  "identifier_candidate": 3892
+                },
+                {
+                  "descriptor_offset": 46,
+                  "bytes": 146,
+                  "identifier_candidate": 1678
+                },
+                {
+                  "descriptor_offset": 51,
+                  "bytes": 146,
+                  "identifier_candidate": 3980
+                },
+                {
+                  "descriptor_offset": 56,
+                  "bytes": 2990,
+                  "identifier_candidate": 611
+                },
+                {
+                  "descriptor_offset": 61,
+                  "bytes": 3017,
+                  "identifier_candidate": 3361
+                },
+                {
+                  "descriptor_offset": 68,
+                  "bytes": 2756,
+                  "identifier_candidate": 3377
+                },
+                {
+                  "descriptor_offset": 73,
+                  "bytes": 390,
+                  "identifier_candidate": 453
+                },
+                {
+                  "descriptor_offset": 78,
+                  "bytes": 1622,
+                  "identifier_candidate": 1272
+                },
+                {
+                  "descriptor_offset": 85,
+                  "bytes": 31316,
+                  "identifier_candidate": 4074
+                },
+                {
+                  "descriptor_offset": 92,
+                  "bytes": 577,
+                  "identifier_candidate": 2287
+                }
+              ],
+              [
+                5,
+                12,
+                24,
+                66,
+                83,
+                90
+              ],
+              97,
+              2
+            ],
+            "descriptor_structure_recognized": true
+          },
+          {
+            "frame": 471,
+            "r0": 9104,
+            "word": 1,
+            "quantity": 2,
+            "fit": true,
+            "pass": true,
+            "length": 92,
+            "header_hex": "5C 00 07 EA 07 37 26 43 A1 10 68 00 C7 25 33 20 40 04 00 33 20 60 08 00 13 5F 00 0F 00 07 00 83 B3 A0 08 07 43 F3 00 14 00 73 4F F0 23 00 13 D2 F0 10 01 C3 F8 A0 B9 00 33 26 A0 B9 00 87 09 13 D3 60 BE 00 83 4F 30 26 00 A7 16 A3 FE 30 A3 07 27 45 F3 8E E0 1A 00 5F 55 C7 A4 DC",
+            "calculated_crc": "E3253B",
+            "received_crc": "E3253B",
+            "descriptors": [
+              [
+                {
+                  "descriptor_offset": 7,
+                  "bytes": 1665,
+                  "identifier_candidate": 2580
+                },
+                {
+                  "descriptor_offset": 14,
+                  "bytes": 68,
+                  "identifier_candidate": 515
+                },
+                {
+                  "descriptor_offset": 19,
+                  "bytes": 134,
+                  "identifier_candidate": 515
+                },
+                {
+                  "descriptor_offset": 24,
+                  "bytes": 240,
+                  "identifier_candidate": 1521
+                },
+                {
+                  "descriptor_offset": 31,
+                  "bytes": 28810,
+                  "identifier_candidate": 2872
+                },
+                {
+                  "descriptor_offset": 36,
+                  "bytes": 320,
+                  "identifier_candidate": 3892
+                },
+                {
+                  "descriptor_offset": 41,
+                  "bytes": 575,
+                  "identifier_candidate": 1271
+                },
+                {
+                  "descriptor_offset": 46,
+                  "bytes": 4367,
+                  "identifier_candidate": 3361
+                },
+                {
+                  "descriptor_offset": 51,
+                  "bytes": 2970,
+                  "identifier_candidate": 3980
+                },
+                {
+                  "descriptor_offset": 56,
+                  "bytes": 2970,
+                  "identifier_candidate": 611
+                },
+                {
+                  "descriptor_offset": 63,
+                  "bytes": 3046,
+                  "identifier_candidate": 3377
+                },
+                {
+                  "descriptor_offset": 68,
+                  "bytes": 611,
+                  "identifier_candidate": 1272
+                },
+                {
+                  "descriptor_offset": 75,
+                  "bytes": 31283,
+                  "identifier_candidate": 4074
+                },
+                {
+                  "descriptor_offset": 82,
+                  "bytes": 430,
+                  "identifier_candidate": 2287
+                }
+              ],
+              [
+                5,
+                12,
+                29,
+                61,
+                73,
+                80
+              ],
+              87,
+              0
+            ],
+            "descriptor_structure_recognized": true
+          },
+          {
+            "frame": 479,
+            "r0": 7056,
+            "word": 1,
+            "quantity": 4,
+            "fit": true,
+            "pass": true,
+            "length": 128,
+            "header_hex": "80 00 07 EA 07 77 00 53 07 90 1F 01 A7 21 33 20 60 08 00 B3 F2 40 04 00 B3 F2 40 04 00 07 52 73 D1 80 05 00 93 BD E0 01 00 73 D1 40 04 00 A3 2D 60 08 00 83 77 40 04 00 73 4F 40 04 00 73 D1 50 1B 00 43 F3 E0 10 00 13 D2 80 27 00 C3 F8 B0 DD 01 33 26 B0 DD 01 07 00 83 4F F0 19 02 13 D3 40 04 00 57 3E A3 FE 70 11 00 83 B1 40 04 00 A3 FE 50 AE 00 B7 52 F3 8E C0 1A 00 FF 05 FF 79 D0 19",
+            "calculated_crc": "9E0B98",
+            "received_crc": "9E0B98",
+            "descriptors": [
+              [
+                {
+                  "descriptor_offset": 7,
+                  "bytes": 4601,
+                  "identifier_candidate": 117
+                },
+                {
+                  "descriptor_offset": 14,
+                  "bytes": 134,
+                  "identifier_candidate": 515
+                },
+                {
+                  "descriptor_offset": 19,
+                  "bytes": 68,
+                  "identifier_candidate": 3883
+                },
+                {
+                  "descriptor_offset": 24,
+                  "bytes": 68,
+                  "identifier_candidate": 3883
+                },
+                {
+                  "descriptor_offset": 31,
+                  "bytes": 88,
+                  "identifier_candidate": 3351
+                },
+                {
+                  "descriptor_offset": 36,
+                  "bytes": 30,
+                  "identifier_candidate": 3033
+                },
+                {
+                  "descriptor_offset": 41,
+                  "bytes": 68,
+                  "identifier_candidate": 3351
+                },
+                {
+                  "descriptor_offset": 46,
+                  "bytes": 134,
+                  "identifier_candidate": 730
+                },
+                {
+                  "descriptor_offset": 51,
+                  "bytes": 68,
+                  "identifier_candidate": 1912
+                },
+                {
+                  "descriptor_offset": 56,
+                  "bytes": 68,
+                  "identifier_candidate": 1271
+                },
+                {
+                  "descriptor_offset": 61,
+                  "bytes": 437,
+                  "identifier_candidate": 3351
+                },
+                {
+                  "descriptor_offset": 66,
+                  "bytes": 270,
+                  "identifier_candidate": 3892
+                },
+                {
+                  "descriptor_offset": 71,
+                  "bytes": 632,
+                  "identifier_candidate": 3361
+                },
+                {
+                  "descriptor_offset": 76,
+                  "bytes": 7643,
+                  "identifier_candidate": 3980
+                },
+                {
+                  "descriptor_offset": 81,
+                  "bytes": 7643,
+                  "identifier_candidate": 611
+                },
+                {
+                  "descriptor_offset": 88,
+                  "bytes": 8607,
+                  "identifier_candidate": 1272
+                },
+                {
+                  "descriptor_offset": 93,
+                  "bytes": 68,
+                  "identifier_candidate": 3377
+                },
+                {
+                  "descriptor_offset": 100,
+                  "bytes": 279,
+                  "identifier_candidate": 4074
+                },
+                {
+                  "descriptor_offset": 105,
+                  "bytes": 68,
+                  "identifier_candidate": 2840
+                },
+                {
+                  "descriptor_offset": 110,
+                  "bytes": 2789,
+                  "identifier_candidate": 4074
+                },
+                {
+                  "descriptor_offset": 117,
+                  "bytes": 428,
+                  "identifier_candidate": 2287
+                }
+              ],
+              [
+                5,
+                12,
+                29,
+                86,
+                98,
+                115
+              ],
+              122,
+              1
+            ],
+            "descriptor_structure_recognized": true
+          }
+        ],
+        "low_confidence_corrections": [
+          {
+            "frame": 464,
+            "r0": 9104,
+            "word": 1,
+            "quantity": 2,
+            "fit": true,
+            "alternatives_tested": 153,
+            "symbol_positions": [
+              183,
+              315
+            ],
+            "score_penalty": 0.0945120269764188,
+            "pass": true,
+            "length": 120,
+            "header_hex": "78 00 07 EA 07 77 26 53 5E 10 66 00 27 24 F3 61 E0 05 00 23 29 40 04 00 13 5F 40 04 00 07 00 53 ED 80 B7 06 E3 31 40 04 00 73 4F 40 04 00 43 F3 E0 63 00 13 D2 40 31 00 C3 F8 B0 B4 00 33 26 B0 B4 00 07 60 13 D3 00 B9 00 53 1C 30 67 00 83 4F 20 56 00 A7 47 73 C8 10 83 07 73 C8 40 04 00 83 B1 A0 36 00 A3 FE 70 8C 00 07 40 F3 8E B0 18 00 1F 2F FF FF FF D5 64 30",
+            "calculated_crc": "AB260C",
+            "received_crc": "AB260C",
+            "descriptors": [
+              [
+                {
+                  "descriptor_offset": 7,
+                  "bytes": 1633,
+                  "identifier_candidate": 1509
+                },
+                {
+                  "descriptor_offset": 14,
+                  "bytes": 94,
+                  "identifier_candidate": 1567
+                },
+                {
+                  "descriptor_offset": 19,
+                  "bytes": 68,
+                  "identifier_candidate": 658
+                },
+                {
+                  "descriptor_offset": 24,
+                  "bytes": 68,
+                  "identifier_candidate": 1521
+                },
+                {
+                  "descriptor_offset": 31,
+                  "bytes": 27512,
+                  "identifier_candidate": 3797
+                },
+                {
+                  "descriptor_offset": 36,
+                  "bytes": 68,
+                  "identifier_candidate": 798
+                },
+                {
+                  "descriptor_offset": 41,
+                  "bytes": 68,
+                  "identifier_candidate": 1271
+                },
+                {
+                  "descriptor_offset": 46,
+                  "bytes": 1598,
+                  "identifier_candidate": 3892
+                },
+                {
+                  "descriptor_offset": 51,
+                  "bytes": 788,
+                  "identifier_candidate": 3361
+                },
+                {
+                  "descriptor_offset": 56,
+                  "bytes": 2891,
+                  "identifier_candidate": 3980
+                },
+                {
+                  "descriptor_offset": 61,
+                  "bytes": 2891,
+                  "identifier_candidate": 611
+                },
+                {
+                  "descriptor_offset": 68,
+                  "bytes": 2960,
+                  "identifier_candidate": 3377
+                },
+                {
+                  "descriptor_offset": 73,
+                  "bytes": 1651,
+                  "identifier_candidate": 453
+                },
+                {
+                  "descriptor_offset": 78,
+                  "bytes": 1378,
+                  "identifier_candidate": 1272
+                },
+                {
+                  "descriptor_offset": 85,
+                  "bytes": 30769,
+                  "identifier_candidate": 3207
+                },
+                {
+                  "descriptor_offset": 90,
+                  "bytes": 68,
+                  "identifier_candidate": 3207
+                },
+                {
+                  "descriptor_offset": 95,
+                  "bytes": 874,
+                  "identifier_candidate": 2840
+                },
+                {
+                  "descriptor_offset": 100,
+                  "bytes": 2247,
+                  "identifier_candidate": 4074
+                },
+                {
+                  "descriptor_offset": 107,
+                  "bytes": 395,
+                  "identifier_candidate": 2287
+                }
+              ],
+              [
+                5,
+                12,
+                29,
+                66,
+                83,
+                105
+              ],
+              112,
+              3
+            ],
+            "descriptor_structure_recognized": true
+          },
+          {
+            "frame": 469,
+            "r0": 7056,
+            "word": 1,
+            "quantity": 2,
+            "fit": true,
+            "alternatives_tested": 153,
+            "symbol_positions": [
+              57,
+              179
+            ],
+            "score_penalty": 0.06029303958473595,
+            "pass": true,
+            "length": 112,
+            "header_hex": "70 00 07 EA 07 D7 21 53 5E 30 6B 00 43 A1 E0 09 00 17 13 23 29 10 0D 00 13 5F E0 01 00 07 00 83 B3 20 1E 07 C3 F8 40 04 00 A3 FA 40 04 00 73 4F 40 04 00 23 F3 F0 07 01 E3 68 B0 0B 00 13 D2 E0 07 00 C3 F8 D0 B9 00 33 26 D0 B9 00 97 29 13 D3 90 BE 00 83 4F 40 6E 00 37 22 73 C8 90 A3 07 27 36 43 3C E0 29 00 F3 8E 60 08 00 4F 2B 34 83 2D",
+            "calculated_crc": "2CC1B4",
+            "received_crc": "2CC1B4",
+            "descriptors": [
+              [
+                {
+                  "descriptor_offset": 7,
+                  "bytes": 1715,
+                  "identifier_candidate": 1509
+                },
+                {
+                  "descriptor_offset": 12,
+                  "bytes": 158,
+                  "identifier_candidate": 2580
+                },
+                {
+                  "descriptor_offset": 19,
+                  "bytes": 209,
+                  "identifier_candidate": 658
+                },
+                {
+                  "descriptor_offset": 24,
+                  "bytes": 30,
+                  "identifier_candidate": 1521
+                },
+                {
+                  "descriptor_offset": 31,
+                  "bytes": 29154,
+                  "identifier_candidate": 2872
+                },
+                {
+                  "descriptor_offset": 36,
+                  "bytes": 68,
+                  "identifier_candidate": 3980
+                },
+                {
+                  "descriptor_offset": 41,
+                  "bytes": 68,
+                  "identifier_candidate": 4010
+                },
+                {
+                  "descriptor_offset": 46,
+                  "bytes": 68,
+                  "identifier_candidate": 1271
+                },
+                {
+                  "descriptor_offset": 51,
+                  "bytes": 4223,
+                  "identifier_candidate": 3890
+                },
+                {
+                  "descriptor_offset": 56,
+                  "bytes": 187,
+                  "identifier_candidate": 1678
+                },
+                {
+                  "descriptor_offset": 61,
+                  "bytes": 126,
+                  "identifier_candidate": 3361
+                },
+                {
+                  "descriptor_offset": 66,
+                  "bytes": 2973,
+                  "identifier_candidate": 3980
+                },
+                {
+                  "descriptor_offset": 71,
+                  "bytes": 2973,
+                  "identifier_candidate": 611
+                },
+                {
+                  "descriptor_offset": 78,
+                  "bytes": 3049,
+                  "identifier_candidate": 3377
+                },
+                {
+                  "descriptor_offset": 83,
+                  "bytes": 1764,
+                  "identifier_candidate": 1272
+                },
+                {
+                  "descriptor_offset": 90,
+                  "bytes": 31289,
+                  "identifier_candidate": 3207
+                },
+                {
+                  "descriptor_offset": 97,
+                  "bytes": 670,
+                  "identifier_candidate": 964
+                },
+                {
+                  "descriptor_offset": 102,
+                  "bytes": 134,
+                  "identifier_candidate": 2287
+                }
+              ],
+              [
+                5,
+                17,
+                29,
+                76,
+                88,
+                95
+              ],
+              107,
+              0
+            ],
+            "descriptor_structure_recognized": true
+          },
+          {
+            "frame": 472,
+            "r0": 11152,
+            "word": 1,
+            "quantity": 2,
+            "fit": true,
+            "alternatives_tested": 153,
+            "symbol_positions": [
+              57,
+              329
+            ],
+            "score_penalty": 0.15173774574660565,
+            "pass": true,
+            "length": 128,
+            "header_hex": "80 00 07 EA 07 A3 7E 20 09 00 27 1A F3 61 C0 68 00 83 7D 00 09 00 13 5F 60 09 00 37 52 33 26 70 1B 07 73 4F 40 04 00 E3 68 60 08 00 73 4F 40 04 00 83 B3 40 4D 00 43 F3 80 16 00 C3 F8 E0 1C 00 33 26 B0 BB 00 13 D2 60 BD 00 07 00 53 C3 70 B1 00 13 00 40 04 00 13 D3 60 08 00 53 1C 80 51 00 83 4F A0 34 00 07 50 F3 04 40 A5 07 C7 57 83 B1 40 04 00 D7 56 F3 8E 30 09 00 AF 39 FF 99 FD E4",
+            "calculated_crc": "99BF27",
+            "received_crc": "99BF27",
+            "descriptors": [
+              [
+                {
+                  "descriptor_offset": 5,
+                  "bytes": 146,
+                  "identifier_candidate": 2026
+                },
+                {
+                  "descriptor_offset": 12,
+                  "bytes": 1676,
+                  "identifier_candidate": 1567
+                },
+                {
+                  "descriptor_offset": 17,
+                  "bytes": 144,
+                  "identifier_candidate": 2008
+                },
+                {
+                  "descriptor_offset": 22,
+                  "bytes": 150,
+                  "identifier_candidate": 1521
+                },
+                {
+                  "descriptor_offset": 29,
+                  "bytes": 29111,
+                  "identifier_candidate": 611
+                },
+                {
+                  "descriptor_offset": 34,
+                  "bytes": 68,
+                  "identifier_candidate": 1271
+                },
+                {
+                  "descriptor_offset": 39,
+                  "bytes": 134,
+                  "identifier_candidate": 1678
+                },
+                {
+                  "descriptor_offset": 44,
+                  "bytes": 68,
+                  "identifier_candidate": 1271
+                },
+                {
+                  "descriptor_offset": 49,
+                  "bytes": 1236,
+                  "identifier_candidate": 2872
+                },
+                {
+                  "descriptor_offset": 54,
+                  "bytes": 360,
+                  "identifier_candidate": 3892
+                },
+                {
+                  "descriptor_offset": 59,
+                  "bytes": 462,
+                  "identifier_candidate": 3980
+                },
+                {
+                  "descriptor_offset": 64,
+                  "bytes": 3003,
+                  "identifier_candidate": 611
+                },
+                {
+                  "descriptor_offset": 69,
+                  "bytes": 3030,
+                  "identifier_candidate": 3361
+                },
+                {
+                  "descriptor_offset": 76,
+                  "bytes": 2839,
+                  "identifier_candidate": 3125
+                },
+                {
+                  "descriptor_offset": 81,
+                  "bytes": 68,
+                  "identifier_candidate": 1
+                },
+                {
+                  "descriptor_offset": 86,
+                  "bytes": 134,
+                  "identifier_candidate": 3377
+                },
+                {
+                  "descriptor_offset": 91,
+                  "bytes": 1304,
+                  "identifier_candidate": 453
+                },
+                {
+                  "descriptor_offset": 96,
+                  "bytes": 842,
+                  "identifier_candidate": 1272
+                },
+                {
+                  "descriptor_offset": 103,
+                  "bytes": 31316,
+                  "identifier_candidate": 79
+                },
+                {
+                  "descriptor_offset": 110,
+                  "bytes": 68,
+                  "identifier_candidate": 2840
+                },
+                {
+                  "descriptor_offset": 117,
+                  "bytes": 147,
+                  "identifier_candidate": 2287
+                }
+              ],
+              [
+                10,
+                27,
+                74,
+                101,
+                108,
+                115
+              ],
+              122,
+              1
+            ],
+            "descriptor_structure_recognized": true
+          },
+          {
+            "frame": 475,
+            "r0": 9104,
+            "word": 1,
+            "quantity": 3,
+            "fit": true,
+            "alternatives_tested": 17,
+            "symbol_positions": [
+              128
+            ],
+            "score_penalty": 0.024653931446006028,
+            "pass": true,
+            "length": 120,
+            "header_hex": "78 00 07 EA 07 27 20 13 FA 60 B6 00 03 AA 60 08 00 33 20 60 08 00 A7 4A E3 31 A0 04 00 73 4F 60 08 00 83 B3 80 DC 00 43 F3 40 08 00 83 77 80 05 00 13 D2 80 AB 00 C3 F8 D0 18 01 33 26 D0 18 01 07 00 53 1C 40 E0 00 13 D3 40 04 00 83 4F 90 63 00 67 0E 73 C8 D0 BD 07 A3 FE 30 CE 00 83 B1 A0 19 00 F7 39 83 CF 40 1E 01 C7 5F F3 8E 40 04 00 3F 4B FF FF FF CA 90 9F",
+            "calculated_crc": "5309F9",
+            "received_crc": "5309F9",
+            "descriptors": [
+              [
+                {
+                  "descriptor_offset": 7,
+                  "bytes": 2918,
+                  "identifier_candidate": 4001
+                },
+                {
+                  "descriptor_offset": 12,
+                  "bytes": 134,
+                  "identifier_candidate": 2720
+                },
+                {
+                  "descriptor_offset": 17,
+                  "bytes": 134,
+                  "identifier_candidate": 515
+                },
+                {
+                  "descriptor_offset": 24,
+                  "bytes": 74,
+                  "identifier_candidate": 798
+                },
+                {
+                  "descriptor_offset": 29,
+                  "bytes": 134,
+                  "identifier_candidate": 1271
+                },
+                {
+                  "descriptor_offset": 34,
+                  "bytes": 3528,
+                  "identifier_candidate": 2872
+                },
+                {
+                  "descriptor_offset": 39,
+                  "bytes": 132,
+                  "identifier_candidate": 3892
+                },
+                {
+                  "descriptor_offset": 44,
+                  "bytes": 88,
+                  "identifier_candidate": 1912
+                },
+                {
+                  "descriptor_offset": 49,
+                  "bytes": 2744,
+                  "identifier_candidate": 3361
+                },
+                {
+                  "descriptor_offset": 54,
+                  "bytes": 4493,
+                  "identifier_candidate": 3980
+                },
+                {
+                  "descriptor_offset": 59,
+                  "bytes": 4493,
+                  "identifier_candidate": 611
+                },
+                {
+                  "descriptor_offset": 66,
+                  "bytes": 3588,
+                  "identifier_candidate": 453
+                },
+                {
+                  "descriptor_offset": 71,
+                  "bytes": 68,
+                  "identifier_candidate": 3377
+                },
+                {
+                  "descriptor_offset": 76,
+                  "bytes": 1593,
+                  "identifier_candidate": 1272
+                },
+                {
+                  "descriptor_offset": 83,
+                  "bytes": 31709,
+                  "identifier_candidate": 3207
+                },
+                {
+                  "descriptor_offset": 88,
+                  "bytes": 3299,
+                  "identifier_candidate": 4074
+                },
+                {
+                  "descriptor_offset": 93,
+                  "bytes": 410,
+                  "identifier_candidate": 2840
+                },
+                {
+                  "descriptor_offset": 100,
+                  "bytes": 4580,
+                  "identifier_candidate": 3320
+                },
+                {
+                  "descriptor_offset": 107,
+                  "bytes": 68,
+                  "identifier_candidate": 2287
+                }
+              ],
+              [
+                5,
+                22,
+                64,
+                81,
+                98,
+                105
+              ],
+              112,
+              3
+            ],
+            "descriptor_structure_recognized": true
+          }
+        ],
+        "unresolved": [
+          {
+            "frame": 456,
+            "r0": 6942,
+            "word": 1,
+            "quantity": 3,
+            "fit": true,
+            "alternatives_tested": 153,
+            "crc_matches": 0
+          },
+          {
+            "frame": 457,
+            "r0": 6942,
+            "word": 1,
+            "quantity": 22,
+            "fit": true,
+            "alternatives_tested": 136,
+            "crc_matches": 0
+          },
+          {
+            "frame": 458,
+            "r0": 8990,
+            "word": 1,
+            "quantity": 23,
+            "fit": true,
+            "alternatives_tested": 153,
+            "crc_matches": 0
+          },
+          {
+            "frame": 459,
+            "r0": 8990,
+            "word": 1,
+            "quantity": 4,
+            "fit": true,
+            "alternatives_tested": 136,
+            "crc_matches": 0
+          },
+          {
+            "frame": 460,
+            "r0": 8990,
+            "word": 1,
+            "quantity": 4,
+            "fit": true,
+            "alternatives_tested": 153,
+            "crc_matches": 0
+          },
+          {
+            "frame": 461,
+            "r0": 9104,
+            "word": 1,
+            "quantity": 2,
+            "fit": true,
+            "alternatives_tested": 153,
+            "crc_matches": 0
+          },
+          {
+            "frame": 462,
+            "r0": 11152,
+            "word": 1,
+            "quantity": 6,
+            "fit": true,
+            "alternatives_tested": 153,
+            "crc_matches": 0
+          },
+          {
+            "frame": 463,
+            "r0": 8990,
+            "word": 1,
+            "quantity": 3,
+            "fit": true,
+            "alternatives_tested": 153,
+            "crc_matches": 0
+          },
+          {
+            "frame": 465,
+            "r0": 9104,
+            "word": 1,
+            "quantity": 2,
+            "fit": true,
+            "alternatives_tested": 153,
+            "crc_matches": 0
+          },
+          {
+            "frame": 466,
+            "r0": 11152,
+            "word": 1,
+            "quantity": 2,
+            "fit": true,
+            "alternatives_tested": 153,
+            "crc_matches": 0
+          },
+          {
+            "frame": 467,
+            "r0": 11152,
+            "word": 1,
+            "quantity": 2,
+            "fit": true,
+            "alternatives_tested": 153,
+            "crc_matches": 0
+          },
+          {
+            "frame": 473,
+            "r0": 7056,
+            "word": 1,
+            "quantity": 2,
+            "fit": true,
+            "alternatives_tested": 120,
+            "crc_matches": 0
+          },
+          {
+            "frame": 474,
+            "r0": 8876,
+            "word": 1,
+            "quantity": 3,
+            "fit": true,
+            "alternatives_tested": 153,
+            "crc_matches": 0
+          },
+          {
+            "frame": 476,
+            "r0": 8876,
+            "word": 1,
+            "quantity": 4,
+            "fit": true,
+            "alternatives_tested": 153,
+            "crc_matches": 0
+          },
+          {
+            "frame": 477,
+            "r0": 11038,
+            "word": 1,
+            "quantity": 4,
+            "fit": true,
+            "alternatives_tested": 105,
+            "crc_matches": 0
+          },
+          {
+            "frame": 478,
+            "r0": 8990,
+            "word": 1,
+            "quantity": 4,
+            "fit": true,
+            "alternatives_tested": 153,
+            "crc_matches": 0
+          },
+          {
+            "frame": 480,
+            "r0": 8990,
+            "word": 1,
+            "quantity": 4,
+            "fit": true,
+            "alternatives_tested": 120,
+            "crc_matches": 0
+          }
+        ],
+        "single_bit_negative_controls": {
+          "message": 3200,
+          "field": 96
+        }
+      },
+      "holdout": {
+        "hard": [
+          {
+            "frame": 488,
+            "r0": 13200,
+            "word": 1,
+            "quantity": 4,
+            "fit": false,
+            "pass": true,
+            "length": 124,
+            "header_hex": "7C 00 07 EA 07 E7 1F 53 5E 60 00 01 27 20 13 5F E0 09 00 03 1B 00 07 00 F3 61 40 06 00 87 4A 13 D2 40 08 00 83 77 40 04 00 23 F3 40 04 00 83 77 40 04 00 73 4F D0 31 00 43 F3 00 1F 00 A3 2D 10 33 00 C3 F8 80 05 00 33 26 D0 CB 01 13 D2 D0 D0 01 07 00 13 D3 40 A9 01 13 D3 40 04 00 83 4F 70 1B 00 77 2A 83 B1 E0 09 00 83 B1 40 04 00 E7 55 F3 8E E0 05 00 2F 13 FF FF 69 0C BD",
+            "calculated_crc": "9630BD",
+            "received_crc": "9630BD",
+            "descriptors": [
+              [
+                {
+                  "descriptor_offset": 7,
+                  "bytes": 4102,
+                  "identifier_candidate": 1509
+                },
+                {
+                  "descriptor_offset": 14,
+                  "bytes": 158,
+                  "identifier_candidate": 1521
+                },
+                {
+                  "descriptor_offset": 19,
+                  "bytes": 112,
+                  "identifier_candidate": 432
+                },
+                {
+                  "descriptor_offset": 24,
+                  "bytes": 100,
+                  "identifier_candidate": 1567
+                },
+                {
+                  "descriptor_offset": 31,
+                  "bytes": 132,
+                  "identifier_candidate": 3361
+                },
+                {
+                  "descriptor_offset": 36,
+                  "bytes": 68,
+                  "identifier_candidate": 1912
+                },
+                {
+                  "descriptor_offset": 41,
+                  "bytes": 68,
+                  "identifier_candidate": 3890
+                },
+                {
+                  "descriptor_offset": 46,
+                  "bytes": 68,
+                  "identifier_candidate": 1912
+                },
+                {
+                  "descriptor_offset": 51,
+                  "bytes": 797,
+                  "identifier_candidate": 1271
+                },
+                {
+                  "descriptor_offset": 56,
+                  "bytes": 496,
+                  "identifier_candidate": 3892
+                },
+                {
+                  "descriptor_offset": 61,
+                  "bytes": 817,
+                  "identifier_candidate": 730
+                },
+                {
+                  "descriptor_offset": 66,
+                  "bytes": 88,
+                  "identifier_candidate": 3980
+                },
+                {
+                  "descriptor_offset": 71,
+                  "bytes": 7357,
+                  "identifier_candidate": 611
+                },
+                {
+                  "descriptor_offset": 76,
+                  "bytes": 7437,
+                  "identifier_candidate": 3361
+                },
+                {
+                  "descriptor_offset": 83,
+                  "bytes": 6804,
+                  "identifier_candidate": 3377
+                },
+                {
+                  "descriptor_offset": 88,
+                  "bytes": 68,
+                  "identifier_candidate": 3377
+                },
+                {
+                  "descriptor_offset": 93,
+                  "bytes": 439,
+                  "identifier_candidate": 1272
+                },
+                {
+                  "descriptor_offset": 100,
+                  "bytes": 158,
+                  "identifier_candidate": 2840
+                },
+                {
+                  "descriptor_offset": 105,
+                  "bytes": 68,
+                  "identifier_candidate": 2840
+                },
+                {
+                  "descriptor_offset": 112,
+                  "bytes": 94,
+                  "identifier_candidate": 2287
+                }
+              ],
+              [
+                5,
+                12,
+                29,
+                81,
+                98,
+                110
+              ],
+              117,
+              2
+            ],
+            "descriptor_structure_recognized": true
+          },
+          {
+            "frame": 490,
+            "r0": 15248,
+            "word": 1,
+            "quantity": 4,
+            "fit": false,
+            "pass": true,
+            "length": 104,
+            "header_hex": "68 00 07 EA 07 77 20 43 A1 10 01 01 67 25 E3 05 A0 04 00 03 1B 40 04 00 B7 52 93 48 10 09 00 33 26 40 04 00 93 B0 E0 01 00 83 77 E0 01 00 43 F3 A0 77 00 13 D2 80 29 00 C3 F8 E0 C6 01 33 26 E0 C6 01 47 3D 53 1C E0 CB 01 13 D3 40 04 00 83 4F 10 13 00 17 30 83 B1 A0 0C 00 47 43 F3 8E C0 1C 00 0F 00 FF FF 85 55 41",
+            "calculated_crc": "A1AA82",
+            "received_crc": "A1AA82",
+            "descriptors": [
+              [
+                {
+                  "descriptor_offset": 7,
+                  "bytes": 4113,
+                  "identifier_candidate": 2580
+                },
+                {
+                  "descriptor_offset": 14,
+                  "bytes": 74,
+                  "identifier_candidate": 94
+                },
+                {
+                  "descriptor_offset": 19,
+                  "bytes": 68,
+                  "identifier_candidate": 432
+                },
+                {
+                  "descriptor_offset": 26,
+                  "bytes": 145,
+                  "identifier_candidate": 1161
+                },
+                {
+                  "descriptor_offset": 31,
+                  "bytes": 68,
+                  "identifier_candidate": 611
+                },
+                {
+                  "descriptor_offset": 36,
+                  "bytes": 30,
+                  "identifier_candidate": 2825
+                },
+                {
+                  "descriptor_offset": 41,
+                  "bytes": 30,
+                  "identifier_candidate": 1912
+                },
+                {
+                  "descriptor_offset": 46,
+                  "bytes": 1914,
+                  "identifier_candidate": 3892
+                },
+                {
+                  "descriptor_offset": 51,
+                  "bytes": 664,
+                  "identifier_candidate": 3361
+                },
+                {
+                  "descriptor_offset": 56,
+                  "bytes": 7278,
+                  "identifier_candidate": 3980
+                },
+                {
+                  "descriptor_offset": 61,
+                  "bytes": 7278,
+                  "identifier_candidate": 611
+                },
+                {
+                  "descriptor_offset": 68,
+                  "bytes": 7358,
+                  "identifier_candidate": 453
+                },
+                {
+                  "descriptor_offset": 73,
+                  "bytes": 68,
+                  "identifier_candidate": 3377
+                },
+                {
+                  "descriptor_offset": 78,
+                  "bytes": 305,
+                  "identifier_candidate": 1272
+                },
+                {
+                  "descriptor_offset": 85,
+                  "bytes": 202,
+                  "identifier_candidate": 2840
+                },
+                {
+                  "descriptor_offset": 92,
+                  "bytes": 460,
+                  "identifier_candidate": 2287
+                }
+              ],
+              [
+                5,
+                12,
+                24,
+                66,
+                83,
+                90
+              ],
+              97,
+              2
+            ],
+            "descriptor_structure_recognized": true
+          },
+          {
+            "frame": 491,
+            "r0": 4666,
+            "word": 1,
+            "quantity": 5,
+            "fit": false,
+            "pass": true,
+            "length": 32,
+            "header_hex": "20 00 07 EA 07 27 3D C3 F8 E0 32 01 33 26 A0 22 02 97 05 F3 8E D0 23 02 0F 00 FF FF FF 78 93 FD",
+            "calculated_crc": "1EC9BF",
+            "received_crc": "1EC9BF",
+            "descriptors": [
+              [
+                {
+                  "descriptor_offset": 7,
+                  "bytes": 4910,
+                  "identifier_candidate": 3980
+                },
+                {
+                  "descriptor_offset": 12,
+                  "bytes": 8746,
+                  "identifier_candidate": 611
+                },
+                {
+                  "descriptor_offset": 19,
+                  "bytes": 8765,
+                  "identifier_candidate": 2287
+                }
+              ],
+              [
+                5,
+                17
+              ],
+              24,
+              3
+            ],
+            "descriptor_structure_recognized": true
+          },
+          {
+            "frame": 492,
+            "r0": 15248,
+            "word": 1,
+            "quantity": 4,
+            "fit": false,
+            "pass": true,
+            "length": 108,
+            "header_hex": "6C 00 07 EA 07 57 12 43 A1 F0 0E 01 67 25 33 20 A0 04 00 37 5B 93 B0 D0 04 00 93 BD 40 04 00 A3 2D 40 04 00 83 77 B0 05 00 93 B0 E0 2D 00 73 4F A0 0F 00 93 BD F0 73 00 43 F3 E0 07 00 C3 F8 70 1F 00 33 26 20 E5 01 17 5B 13 D3 E0 EC 01 83 4F 10 20 00 27 10 83 B1 D0 23 00 A3 FE E0 05 00 27 41 F3 8E 00 19 00 0F 00 FF 26 08 B6",
+            "calculated_crc": "64106D",
+            "received_crc": "64106D",
+            "descriptors": [
+              [
+                {
+                  "descriptor_offset": 7,
+                  "bytes": 4335,
+                  "identifier_candidate": 2580
+                },
+                {
+                  "descriptor_offset": 14,
+                  "bytes": 74,
+                  "identifier_candidate": 515
+                },
+                {
+                  "descriptor_offset": 21,
+                  "bytes": 77,
+                  "identifier_candidate": 2825
+                },
+                {
+                  "descriptor_offset": 26,
+                  "bytes": 68,
+                  "identifier_candidate": 3033
+                },
+                {
+                  "descriptor_offset": 31,
+                  "bytes": 68,
+                  "identifier_candidate": 730
+                },
+                {
+                  "descriptor_offset": 36,
+                  "bytes": 91,
+                  "identifier_candidate": 1912
+                },
+                {
+                  "descriptor_offset": 41,
+                  "bytes": 734,
+                  "identifier_candidate": 2825
+                },
+                {
+                  "descriptor_offset": 46,
+                  "bytes": 250,
+                  "identifier_candidate": 1271
+                },
+                {
+                  "descriptor_offset": 51,
+                  "bytes": 1855,
+                  "identifier_candidate": 3033
+                },
+                {
+                  "descriptor_offset": 56,
+                  "bytes": 126,
+                  "identifier_candidate": 3892
+                },
+                {
+                  "descriptor_offset": 61,
+                  "bytes": 503,
+                  "identifier_candidate": 3980
+                },
+                {
+                  "descriptor_offset": 66,
+                  "bytes": 7762,
+                  "identifier_candidate": 611
+                },
+                {
+                  "descriptor_offset": 73,
+                  "bytes": 7886,
+                  "identifier_candidate": 3377
+                },
+                {
+                  "descriptor_offset": 78,
+                  "bytes": 513,
+                  "identifier_candidate": 1272
+                },
+                {
+                  "descriptor_offset": 85,
+                  "bytes": 573,
+                  "identifier_candidate": 2840
+                },
+                {
+                  "descriptor_offset": 90,
+                  "bytes": 94,
+                  "identifier_candidate": 4074
+                },
+                {
+                  "descriptor_offset": 97,
+                  "bytes": 400,
+                  "identifier_candidate": 2287
+                }
+              ],
+              [
+                5,
+                12,
+                19,
+                71,
+                83,
+                95
+              ],
+              102,
+              1
+            ],
+            "descriptor_structure_recognized": true
+          },
+          {
+            "frame": 494,
+            "r0": 8876,
+            "word": 1,
+            "quantity": 3,
+            "fit": false,
+            "pass": true,
+            "length": 36,
+            "header_hex": "24 00 07 EA 07 F7 31 13 5F D0 A9 00 67 4E C3 F8 A0 51 0B 33 26 70 30 01 57 59 F3 8E 40 32 01 0F 00 72 DC 5D",
+            "calculated_crc": "4E3BBA",
+            "received_crc": "4E3BBA",
+            "descriptors": [
+              [
+                {
+                  "descriptor_offset": 7,
+                  "bytes": 2717,
+                  "identifier_candidate": 1521
+                },
+                {
+                  "descriptor_offset": 14,
+                  "bytes": 46362,
+                  "identifier_candidate": 3980
+                },
+                {
+                  "descriptor_offset": 19,
+                  "bytes": 4871,
+                  "identifier_candidate": 611
+                },
+                {
+                  "descriptor_offset": 26,
+                  "bytes": 4900,
+                  "identifier_candidate": 2287
+                }
+              ],
+              [
+                5,
+                12,
+                24
+              ],
+              31,
+              0
+            ],
+            "descriptor_structure_recognized": true
+          },
+          {
+            "frame": 497,
+            "r0": 8876,
+            "word": 1,
+            "quantity": 18,
+            "fit": false,
+            "pass": true,
+            "length": 32,
+            "header_hex": "20 00 07 EA 07 27 00 E3 05 E0 31 05 F7 4D 33 26 10 12 00 07 00 F3 8E 00 FC 08 DF 30 FF 29 73 8F",
+            "calculated_crc": "94CEF1",
+            "received_crc": "94CEF1",
+            "descriptors": [
+              [
+                {
+                  "descriptor_offset": 7,
+                  "bytes": 21278,
+                  "identifier_candidate": 94
+                },
+                {
+                  "descriptor_offset": 14,
+                  "bytes": 289,
+                  "identifier_candidate": 611
+                },
+                {
+                  "descriptor_offset": 21,
+                  "bytes": 36800,
+                  "identifier_candidate": 2287
+                }
+              ],
+              [
+                5,
+                12,
+                19
+              ],
+              26,
+              1
+            ],
+            "descriptor_structure_recognized": true
+          },
+          {
+            "frame": 498,
+            "r0": 9104,
+            "word": 1,
+            "quantity": 4,
+            "fit": false,
+            "pass": true,
+            "length": 124,
+            "header_hex": "7C 00 07 EA 07 C7 19 03 AA 80 06 01 33 20 40 04 00 B3 F2 00 0F 00 03 AA E0 09 00 13 5F 20 0F 00 E3 05 40 04 00 03 1B A0 33 00 F7 54 43 F3 F0 06 00 83 77 20 09 00 93 B0 30 4E 00 53 ED 40 04 00 73 4F 40 04 00 13 D2 00 14 00 C3 F8 00 A5 01 33 26 E0 A1 01 57 48 83 4F 00 D9 01 13 D3 00 05 00 C7 19 83 B1 40 35 00 67 03 83 CF A0 5C 00 C7 5F F3 8E 40 04 00 9F 24 FF FF 94 EA 30",
+            "calculated_crc": "29570C",
+            "received_crc": "29570C",
+            "descriptors": [
+              [
+                {
+                  "descriptor_offset": 7,
+                  "bytes": 4200,
+                  "identifier_candidate": 2720
+                },
+                {
+                  "descriptor_offset": 12,
+                  "bytes": 68,
+                  "identifier_candidate": 515
+                },
+                {
+                  "descriptor_offset": 17,
+                  "bytes": 240,
+                  "identifier_candidate": 3883
+                },
+                {
+                  "descriptor_offset": 22,
+                  "bytes": 158,
+                  "identifier_candidate": 2720
+                },
+                {
+                  "descriptor_offset": 27,
+                  "bytes": 242,
+                  "identifier_candidate": 1521
+                },
+                {
+                  "descriptor_offset": 32,
+                  "bytes": 68,
+                  "identifier_candidate": 94
+                },
+                {
+                  "descriptor_offset": 37,
+                  "bytes": 826,
+                  "identifier_candidate": 432
+                },
+                {
+                  "descriptor_offset": 44,
+                  "bytes": 111,
+                  "identifier_candidate": 3892
+                },
+                {
+                  "descriptor_offset": 49,
+                  "bytes": 146,
+                  "identifier_candidate": 1912
+                },
+                {
+                  "descriptor_offset": 54,
+                  "bytes": 1251,
+                  "identifier_candidate": 2825
+                },
+                {
+                  "descriptor_offset": 59,
+                  "bytes": 68,
+                  "identifier_candidate": 3797
+                },
+                {
+                  "descriptor_offset": 64,
+                  "bytes": 68,
+                  "identifier_candidate": 1271
+                },
+                {
+                  "descriptor_offset": 69,
+                  "bytes": 320,
+                  "identifier_candidate": 3361
+                },
+                {
+                  "descriptor_offset": 74,
+                  "bytes": 6736,
+                  "identifier_candidate": 3980
+                },
+                {
+                  "descriptor_offset": 79,
+                  "bytes": 6686,
+                  "identifier_candidate": 611
+                },
+                {
+                  "descriptor_offset": 86,
+                  "bytes": 7568,
+                  "identifier_candidate": 1272
+                },
+                {
+                  "descriptor_offset": 91,
+                  "bytes": 80,
+                  "identifier_candidate": 3377
+                },
+                {
+                  "descriptor_offset": 98,
+                  "bytes": 852,
+                  "identifier_candidate": 2840
+                },
+                {
+                  "descriptor_offset": 105,
+                  "bytes": 1482,
+                  "identifier_candidate": 3320
+                },
+                {
+                  "descriptor_offset": 112,
+                  "bytes": 68,
+                  "identifier_candidate": 2287
+                }
+              ],
+              [
+                5,
+                42,
+                84,
+                96,
+                103,
+                110
+              ],
+              117,
+              2
+            ],
+            "descriptor_structure_recognized": true
+          },
+          {
+            "frame": 499,
+            "r0": 13086,
+            "word": 1,
+            "quantity": 8,
+            "fit": false,
+            "pass": true,
+            "length": 112,
+            "header_hex": "70 00 07 EA 07 27 0D 13 5F E0 3B 02 B3 F2 E0 01 00 03 1B 40 04 00 B3 F2 70 12 00 77 42 73 4F 00 05 00 43 F3 E0 01 00 43 F3 40 04 00 13 D2 A0 04 00 83 77 20 A5 00 73 4F 30 57 00 C3 F8 20 DE 00 33 26 10 D9 03 07 00 83 4F C0 05 04 83 4F 40 04 00 13 D3 00 05 00 C7 39 73 C8 00 11 00 83 B1 40 04 00 A7 39 F3 8E 20 E2 00 3F 10 FF FF 01 77 14",
+            "calculated_crc": "80EE28",
+            "received_crc": "80EE28",
+            "descriptors": [
+              [
+                {
+                  "descriptor_offset": 7,
+                  "bytes": 9150,
+                  "identifier_candidate": 1521
+                },
+                {
+                  "descriptor_offset": 12,
+                  "bytes": 30,
+                  "identifier_candidate": 3883
+                },
+                {
+                  "descriptor_offset": 17,
+                  "bytes": 68,
+                  "identifier_candidate": 432
+                },
+                {
+                  "descriptor_offset": 22,
+                  "bytes": 295,
+                  "identifier_candidate": 3883
+                },
+                {
+                  "descriptor_offset": 29,
+                  "bytes": 80,
+                  "identifier_candidate": 1271
+                },
+                {
+                  "descriptor_offset": 34,
+                  "bytes": 30,
+                  "identifier_candidate": 3892
+                },
+                {
+                  "descriptor_offset": 39,
+                  "bytes": 68,
+                  "identifier_candidate": 3892
+                },
+                {
+                  "descriptor_offset": 44,
+                  "bytes": 74,
+                  "identifier_candidate": 3361
+                },
+                {
+                  "descriptor_offset": 49,
+                  "bytes": 2642,
+                  "identifier_candidate": 1912
+                },
+                {
+                  "descriptor_offset": 54,
+                  "bytes": 1395,
+                  "identifier_candidate": 1271
+                },
+                {
+                  "descriptor_offset": 59,
+                  "bytes": 3554,
+                  "identifier_candidate": 3980
+                },
+                {
+                  "descriptor_offset": 64,
+                  "bytes": 15761,
+                  "identifier_candidate": 611
+                },
+                {
+                  "descriptor_offset": 71,
+                  "bytes": 16476,
+                  "identifier_candidate": 1272
+                },
+                {
+                  "descriptor_offset": 76,
+                  "bytes": 68,
+                  "identifier_candidate": 1272
+                },
+                {
+                  "descriptor_offset": 81,
+                  "bytes": 80,
+                  "identifier_candidate": 3377
+                },
+                {
+                  "descriptor_offset": 88,
+                  "bytes": 272,
+                  "identifier_candidate": 3207
+                },
+                {
+                  "descriptor_offset": 93,
+                  "bytes": 68,
+                  "identifier_candidate": 2840
+                },
+                {
+                  "descriptor_offset": 100,
+                  "bytes": 3618,
+                  "identifier_candidate": 2287
+                }
+              ],
+              [
+                5,
+                27,
+                69,
+                86,
+                98
+              ],
+              105,
+              2
+            ],
+            "descriptor_structure_recognized": true
+          },
+          {
+            "frame": 500,
+            "r0": 4552,
+            "word": 1,
+            "quantity": 25,
+            "fit": false,
+            "pass": true,
+            "length": 24,
+            "header_hex": "18 00 07 EA 07 C7 3D C3 F8 C0 FA 06 33 26 70 06 03 0F 00 FF FF 75 53 EC",
+            "calculated_crc": "AECA37",
+            "received_crc": "AECA37",
+            "descriptors": [
+              [
+                {
+                  "descriptor_offset": 7,
+                  "bytes": 28588,
+                  "identifier_candidate": 3980
+                },
+                {
+                  "descriptor_offset": 12,
+                  "bytes": 12391,
+                  "identifier_candidate": 611
+                }
+              ],
+              [
+                5
+              ],
+              17,
+              2
+            ],
+            "descriptor_structure_recognized": true
+          },
+          {
+            "frame": 501,
+            "r0": 8876,
+            "word": 1,
+            "quantity": 37,
+            "fit": false,
+            "pass": true,
+            "length": 32,
+            "header_hex": "20 00 07 EA 07 07 00 23 29 00 B0 0A 27 58 A3 FE E0 07 00 B7 4A F3 8E 50 15 00 BF 5D FF 0B 3B AF",
+            "calculated_crc": "D0DCF5",
+            "received_crc": "D0DCF5",
+            "descriptors": [
+              [
+                {
+                  "descriptor_offset": 7,
+                  "bytes": 43776,
+                  "identifier_candidate": 658
+                },
+                {
+                  "descriptor_offset": 14,
+                  "bytes": 126,
+                  "identifier_candidate": 4074
+                },
+                {
+                  "descriptor_offset": 21,
+                  "bytes": 341,
+                  "identifier_candidate": 2287
+                }
+              ],
+              [
+                5,
+                12,
+                19
+              ],
+              26,
+              1
+            ],
+            "descriptor_structure_recognized": true
+          },
+          {
+            "frame": 504,
+            "r0": 15134,
+            "word": 1,
+            "quantity": 4,
+            "fit": false,
+            "pass": true,
+            "length": 92,
+            "header_hex": "5C 00 07 EA 07 37 05 E3 05 10 1D 01 33 20 40 04 00 F3 61 D0 2B 00 B3 F2 60 18 00 37 57 73 4F 60 80 00 43 F3 10 65 00 A3 FA 10 12 00 13 00 00 07 00 83 77 30 0A 00 27 10 83 4F 90 F7 00 13 D3 80 21 00 E7 3D A3 FE A0 48 00 57 48 F3 8E B0 17 00 F3 8E 40 04 00 7F 59 FF FF 35 35 26",
+            "calculated_crc": "ACAC64",
+            "received_crc": "ACAC64",
+            "descriptors": [
+              [
+                {
+                  "descriptor_offset": 7,
+                  "bytes": 4561,
+                  "identifier_candidate": 94
+                },
+                {
+                  "descriptor_offset": 12,
+                  "bytes": 68,
+                  "identifier_candidate": 515
+                },
+                {
+                  "descriptor_offset": 17,
+                  "bytes": 701,
+                  "identifier_candidate": 1567
+                },
+                {
+                  "descriptor_offset": 22,
+                  "bytes": 390,
+                  "identifier_candidate": 3883
+                },
+                {
+                  "descriptor_offset": 29,
+                  "bytes": 2054,
+                  "identifier_candidate": 1271
+                },
+                {
+                  "descriptor_offset": 34,
+                  "bytes": 1617,
+                  "identifier_candidate": 3892
+                },
+                {
+                  "descriptor_offset": 39,
+                  "bytes": 289,
+                  "identifier_candidate": 4010
+                },
+                {
+                  "descriptor_offset": 44,
+                  "bytes": 112,
+                  "identifier_candidate": 1
+                },
+                {
+                  "descriptor_offset": 49,
+                  "bytes": 163,
+                  "identifier_candidate": 1912
+                },
+                {
+                  "descriptor_offset": 56,
+                  "bytes": 3961,
+                  "identifier_candidate": 1272
+                },
+                {
+                  "descriptor_offset": 61,
+                  "bytes": 536,
+                  "identifier_candidate": 3377
+                },
+                {
+                  "descriptor_offset": 68,
+                  "bytes": 1162,
+                  "identifier_candidate": 4074
+                },
+                {
+                  "descriptor_offset": 75,
+                  "bytes": 379,
+                  "identifier_candidate": 2287
+                },
+                {
+                  "descriptor_offset": 80,
+                  "bytes": 68,
+                  "identifier_candidate": 2287
+                }
+              ],
+              [
+                5,
+                27,
+                54,
+                66,
+                73
+              ],
+              85,
+              2
+            ],
+            "descriptor_structure_recognized": true
+          },
+          {
+            "frame": 506,
+            "r0": 8762,
+            "word": 1,
+            "quantity": 5,
+            "fit": false,
+            "pass": true,
+            "length": 36,
+            "header_hex": "24 00 07 EA 07 27 2E 73 4F A0 41 01 C3 F8 00 05 00 F7 19 43 3C 10 99 0B F3 8E 40 04 00 BF 32 FF FF 83 A2 F6",
+            "calculated_crc": "C1456F",
+            "received_crc": "C1456F",
+            "descriptors": [
+              [
+                {
+                  "descriptor_offset": 7,
+                  "bytes": 5146,
+                  "identifier_candidate": 1271
+                },
+                {
+                  "descriptor_offset": 12,
+                  "bytes": 80,
+                  "identifier_candidate": 3980
+                },
+                {
+                  "descriptor_offset": 19,
+                  "bytes": 47505,
+                  "identifier_candidate": 964
+                },
+                {
+                  "descriptor_offset": 24,
+                  "bytes": 68,
+                  "identifier_candidate": 2287
+                }
+              ],
+              [
+                5,
+                17
+              ],
+              29,
+              2
+            ],
+            "descriptor_structure_recognized": true
+          }
+        ],
+        "low_confidence_corrections": [
+          {
+            "frame": 484,
+            "r0": 9104,
+            "word": 1,
+            "quantity": 2,
+            "fit": false,
+            "alternatives_tested": 17,
+            "symbol_positions": [
+              87
+            ],
+            "score_penalty": 0.04867436656348445,
+            "pass": true,
+            "length": 112,
+            "header_hex": "70 00 07 EA 07 67 00 53 5E A0 8C 00 27 22 23 29 E0 07 00 E3 05 E0 10 00 13 5F 00 05 00 A7 1B 83 B3 80 8E 09 83 77 40 04 00 93 BD 70 07 00 43 F3 B0 AA 00 73 4F B0 19 00 C3 F8 90 95 01 33 26 C0 F9 00 13 D2 00 FF 00 07 00 83 4F A0 19 01 57 45 73 C8 B0 0E 00 83 B1 D0 3A 00 A3 FE E0 05 00 37 07 43 3C 20 18 00 F3 8E 40 04 00 3F 39 8A 70 6E",
+            "calculated_crc": "510E76",
+            "received_crc": "510E76",
+            "descriptors": [
+              [
+                {
+                  "descriptor_offset": 7,
+                  "bytes": 2250,
+                  "identifier_candidate": 1509
+                },
+                {
+                  "descriptor_offset": 14,
+                  "bytes": 126,
+                  "identifier_candidate": 658
+                },
+                {
+                  "descriptor_offset": 19,
+                  "bytes": 270,
+                  "identifier_candidate": 94
+                },
+                {
+                  "descriptor_offset": 24,
+                  "bytes": 80,
+                  "identifier_candidate": 1521
+                },
+                {
+                  "descriptor_offset": 31,
+                  "bytes": 39144,
+                  "identifier_candidate": 2872
+                },
+                {
+                  "descriptor_offset": 36,
+                  "bytes": 68,
+                  "identifier_candidate": 1912
+                },
+                {
+                  "descriptor_offset": 41,
+                  "bytes": 119,
+                  "identifier_candidate": 3033
+                },
+                {
+                  "descriptor_offset": 46,
+                  "bytes": 2731,
+                  "identifier_candidate": 3892
+                },
+                {
+                  "descriptor_offset": 51,
+                  "bytes": 411,
+                  "identifier_candidate": 1271
+                },
+                {
+                  "descriptor_offset": 56,
+                  "bytes": 6489,
+                  "identifier_candidate": 3980
+                },
+                {
+                  "descriptor_offset": 61,
+                  "bytes": 3996,
+                  "identifier_candidate": 611
+                },
+                {
+                  "descriptor_offset": 66,
+                  "bytes": 4080,
+                  "identifier_candidate": 3361
+                },
+                {
+                  "descriptor_offset": 73,
+                  "bytes": 4506,
+                  "identifier_candidate": 1272
+                },
+                {
+                  "descriptor_offset": 80,
+                  "bytes": 235,
+                  "identifier_candidate": 3207
+                },
+                {
+                  "descriptor_offset": 85,
+                  "bytes": 941,
+                  "identifier_candidate": 2840
+                },
+                {
+                  "descriptor_offset": 90,
+                  "bytes": 94,
+                  "identifier_candidate": 4074
+                },
+                {
+                  "descriptor_offset": 97,
+                  "bytes": 386,
+                  "identifier_candidate": 964
+                },
+                {
+                  "descriptor_offset": 102,
+                  "bytes": 68,
+                  "identifier_candidate": 2287
+                }
+              ],
+              [
+                5,
+                12,
+                29,
+                71,
+                78,
+                95
+              ],
+              107,
+              0
+            ],
+            "descriptor_structure_recognized": true
+          },
+          {
+            "frame": 495,
+            "r0": 15248,
+            "word": 1,
+            "quantity": 4,
+            "fit": false,
+            "alternatives_tested": 17,
+            "symbol_positions": [
+              126
+            ],
+            "score_penalty": 0.01086777100095171,
+            "pass": true,
+            "length": 104,
+            "header_hex": "68 00 07 EA 07 97 12 53 5E F0 0E 01 27 20 13 FA E0 09 00 03 AA 60 08 00 B3 F2 40 04 00 33 20 00 05 00 A7 45 83 77 C0 08 00 73 4F 50 45 00 43 F3 00 90 00 13 D2 90 21 00 C3 F8 E0 10 00 33 26 A0 E2 01 87 3F 13 D3 20 EA 01 83 4F A0 14 00 67 3A 83 B1 00 05 00 A3 FE A0 0B 00 17 3E F3 8E 50 16 00 0F 00 FF FF 0A 52 80",
+            "calculated_crc": "504A01",
+            "received_crc": "504A01",
+            "descriptors": [
+              [
+                {
+                  "descriptor_offset": 7,
+                  "bytes": 4335,
+                  "identifier_candidate": 1509
+                },
+                {
+                  "descriptor_offset": 14,
+                  "bytes": 158,
+                  "identifier_candidate": 4001
+                },
+                {
+                  "descriptor_offset": 19,
+                  "bytes": 134,
+                  "identifier_candidate": 2720
+                },
+                {
+                  "descriptor_offset": 24,
+                  "bytes": 68,
+                  "identifier_candidate": 3883
+                },
+                {
+                  "descriptor_offset": 29,
+                  "bytes": 80,
+                  "identifier_candidate": 515
+                },
+                {
+                  "descriptor_offset": 36,
+                  "bytes": 140,
+                  "identifier_candidate": 1912
+                },
+                {
+                  "descriptor_offset": 41,
+                  "bytes": 1109,
+                  "identifier_candidate": 1271
+                },
+                {
+                  "descriptor_offset": 46,
+                  "bytes": 2304,
+                  "identifier_candidate": 3892
+                },
+                {
+                  "descriptor_offset": 51,
+                  "bytes": 537,
+                  "identifier_candidate": 3361
+                },
+                {
+                  "descriptor_offset": 56,
+                  "bytes": 270,
+                  "identifier_candidate": 3980
+                },
+                {
+                  "descriptor_offset": 61,
+                  "bytes": 7722,
+                  "identifier_candidate": 611
+                },
+                {
+                  "descriptor_offset": 68,
+                  "bytes": 7842,
+                  "identifier_candidate": 3377
+                },
+                {
+                  "descriptor_offset": 73,
+                  "bytes": 330,
+                  "identifier_candidate": 1272
+                },
+                {
+                  "descriptor_offset": 80,
+                  "bytes": 80,
+                  "identifier_candidate": 2840
+                },
+                {
+                  "descriptor_offset": 85,
+                  "bytes": 186,
+                  "identifier_candidate": 4074
+                },
+                {
+                  "descriptor_offset": 92,
+                  "bytes": 357,
+                  "identifier_candidate": 2287
+                }
+              ],
+              [
+                5,
+                12,
+                34,
+                66,
+                78,
+                90
+              ],
+              97,
+              2
+            ],
+            "descriptor_structure_recognized": true
+          },
+          {
+            "frame": 496,
+            "r0": 4666,
+            "word": 1,
+            "quantity": 5,
+            "fit": false,
+            "alternatives_tested": 14,
+            "symbol_positions": [
+              22
+            ],
+            "score_penalty": 0.05725785349413395,
+            "pass": true,
+            "length": 24,
+            "header_hex": "18 00 07 EA 07 E7 21 33 26 A0 4E 01 87 02 F3 8E 80 55 02 0F 00 11 34 B6",
+            "calculated_crc": "882C6D",
+            "received_crc": "882C6D",
+            "descriptors": [
+              [
+                {
+                  "descriptor_offset": 7,
+                  "bytes": 5354,
+                  "identifier_candidate": 611
+                },
+                {
+                  "descriptor_offset": 14,
+                  "bytes": 9560,
+                  "identifier_candidate": 2287
+                }
+              ],
+              [
+                5,
+                12
+              ],
+              19,
+              0
+            ],
+            "descriptor_structure_recognized": true
+          },
+          {
+            "frame": 502,
+            "r0": 4552,
+            "word": 1,
+            "quantity": 54,
+            "fit": false,
+            "alternatives_tested": 14,
+            "symbol_positions": [
+              21
+            ],
+            "score_penalty": 0.01005063957791727,
+            "pass": true,
+            "length": 12,
+            "header_hex": "0C 00 07 EA 07 0F 00 FF FF 64 6B 0D",
+            "calculated_crc": "26D6B0",
+            "received_crc": "26D6B0",
+            "descriptors": [
+              [],
+              [],
+              5,
+              2
+            ],
+            "descriptor_structure_recognized": true
+          }
+        ],
+        "unresolved": [
+          {
+            "frame": 481,
+            "r0": 9104,
+            "word": 1,
+            "quantity": 3,
+            "fit": false,
+            "alternatives_tested": 153,
+            "crc_matches": 0
+          },
+          {
+            "frame": 482,
+            "r0": 9218,
+            "word": 1,
+            "quantity": 3,
+            "fit": false,
+            "alternatives_tested": 153,
+            "crc_matches": 0
+          },
+          {
+            "frame": 483,
+            "r0": 10924,
+            "word": 1,
+            "quantity": 3,
+            "fit": false,
+            "alternatives_tested": 153,
+            "crc_matches": 0
+          },
+          {
+            "frame": 485,
+            "r0": 9104,
+            "word": 1,
+            "quantity": 2,
+            "fit": false,
+            "alternatives_tested": 153,
+            "crc_matches": 0
+          },
+          {
+            "frame": 486,
+            "r0": 9104,
+            "word": 1,
+            "quantity": 4,
+            "fit": false,
+            "alternatives_tested": 136,
+            "crc_matches": 0
+          },
+          {
+            "frame": 487,
+            "r0": 8990,
+            "word": 1,
+            "quantity": 5,
+            "fit": false,
+            "alternatives_tested": 120,
+            "crc_matches": 0
+          },
+          {
+            "frame": 489,
+            "r0": 6942,
+            "word": 1,
+            "quantity": 4,
+            "fit": false,
+            "alternatives_tested": 153,
+            "crc_matches": 0
+          },
+          {
+            "frame": 493,
+            "r0": 17068,
+            "word": 1,
+            "quantity": 3,
+            "fit": false,
+            "alternatives_tested": 105,
+            "crc_matches": 0
+          }
+        ],
+        "single_bit_negative_controls": {
+          "message": 6560,
+          "field": 288
+        }
+      }
+    }
+  ],
+  "independent_full_ldpc_crosscheck": {
+    "discovery_hard_byte_identical": 4,
+    "discovery_low_confidence_corrections_byte_identical": 4,
+    "holdout_hard_byte_identical": 12,
+    "holdout_low_confidence_corrections_byte_identical": 4
+  }
+}

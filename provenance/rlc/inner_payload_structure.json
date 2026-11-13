@@ -1,0 +1,425 @@
+{
+  "lengths": {
+    "UT": {
+      "mode": {
+        "whole": {
+          "total": 1278,
+          "key_in_discovery": 1278,
+          "mode_matches": 913
+        },
+        "seen_mcs": {
+          "total": 1263,
+          "key_in_discovery": 1263,
+          "mode_matches": 910
+        },
+        "new_mcs_for_key": {
+          "total": 15,
+          "key_in_discovery": 15,
+          "mode_matches": 3
+        },
+        "rejoined": {
+          "total": 132,
+          "key_in_discovery": 132,
+          "mode_matches": 127
+        }
+      },
+      "earlier_complete_record": {
+        "across_frames": {
+          "pairs": 66,
+          "same_length": 25,
+          "frozen_flow_mode": 32,
+          "frozen_mode_differs_from_previous": 38,
+          "discovery_baseline_available": 66
+        },
+        "same_container": {
+          "pairs": 956,
+          "same_length": 884,
+          "frozen_flow_mode": 738,
+          "frozen_mode_differs_from_previous": 216,
+          "discovery_baseline_available": 956,
+          "shuffle_within_key_and_container": {
+            "groups": 129,
+            "expected_equal_pairs": 860.2125,
+            "permutations": 512,
+            "minimum": 849,
+            "maximum": 874,
+            "at_least_observed": 0
+          }
+        }
+      },
+      "nonmodal_run_examples": [
+        {
+          "previous": {
+            "capture": "UT",
+            "frame": 6,
+            "mcs": 85,
+            "offset": 2181,
+            "bytes": 1520,
+            "key": "0E535E3303",
+            "sn": "40F9"
+          },
+          "record": {
+            "capture": "UT",
+            "frame": 6,
+            "mcs": 85,
+            "offset": 5540,
+            "bytes": 1520,
+            "key": "0E535E3303",
+            "sn": "40FA"
+          },
+          "frozen_mode": 1524,
+          "owner": {
+            "capture": "UT",
+            "frame": 6,
+            "mcs": 85,
+            "offset": 0,
+            "bytes": 37886
+          },
+          "owner_tag": "B8"
+        },
+        {
+          "previous": {
+            "capture": "UT",
+            "frame": 6,
+            "mcs": 85,
+            "offset": 5540,
+            "bytes": 1520,
+            "key": "0E535E3303",
+            "sn": "40FA"
+          },
+          "record": {
+            "capture": "UT",
+            "frame": 6,
+            "mcs": 85,
+            "offset": 8584,
+            "bytes": 1520,
+            "key": "0E535E3303",
+            "sn": "40FB"
+          },
+          "frozen_mode": 1524,
+          "owner": {
+            "capture": "UT",
+            "frame": 6,
+            "mcs": 85,
+            "offset": 0,
+            "bytes": 37886
+          },
+          "owner_tag": "B8"
+        },
+        {
+          "previous": {
+            "capture": "UT",
+            "frame": 6,
+            "mcs": 85,
+            "offset": 11628,
+            "bytes": 1520,
+            "key": "0E535E3303",
+            "sn": "40FD"
+          },
+          "record": {
+            "capture": "UT",
+            "frame": 6,
+            "mcs": 85,
+            "offset": 13148,
+            "bytes": 1520,
+            "key": "0E535E3303",
+            "sn": "40FE"
+          },
+          "frozen_mode": 1524,
+          "owner": {
+            "capture": "UT",
+            "frame": 6,
+            "mcs": 85,
+            "offset": 0,
+            "bytes": 37886
+          },
+          "owner_tag": "B8"
+        }
+      ],
+      "known_keys": 43,
+      "training_key_frames": {
+        "023C774C00": 4,
+        "0CEE036E01": 38,
+        "0E437B8900": 41,
+        "01F10D1E00": 3,
+        "0D536FA100": 41,
+        "0BEF53A701": 38,
+        "05311A0A01": 34,
+        "08E4778D00": 55,
+        "0D6B4D9D00": 64,
+        "013A229F00": 47,
+        "08CE121401": 46,
+        "02CF002A01": 3,
+        "0B00699C00": 1,
+        "0FAD614600": 10,
+        "0E535E3303": 11,
+        "06072D1103": 9,
+        "02E27D1B00": 8,
+        "09D347BB00": 1,
+        "071B178900": 5,
+        "0FA163A403": 5,
+        "0B1E63B900": 12,
+        "04DB07AF03": 7,
+        "085B061401": 1,
+        "072002FF00": 1,
+        "04425FA300": 1,
+        "0276781800": 4,
+        "06E6187A00": 13,
+        "0DAF781901": 4,
+        "051917A600": 4,
+        "09EF7B2C03": 3,
+        "09D46D2200": 1,
+        "0992164400": 1,
+        "027D706100": 13,
+        "063546B200": 3,
+        "00BD14E000": 5,
+        "03CD624E00": 3,
+        "02742F2A00": 4,
+        "0154483D03": 3,
+        "06AC254800": 3,
+        "07E6625200": 2,
+        "01613EAC00": 2,
+        "0AB64AE300": 3,
+        "0F18583700": 1
+      }
+    },
+    "Xidian": {
+      "mode": {
+        "whole": {
+          "total": 159,
+          "key_in_discovery": 154,
+          "mode_matches": 137
+        },
+        "seen_mcs": {
+          "total": 154,
+          "key_in_discovery": 154,
+          "mode_matches": 137
+        },
+        "rejoined": {
+          "total": 6,
+          "key_in_discovery": 6,
+          "mode_matches": 6
+        }
+      },
+      "earlier_complete_record": {
+        "across_frames": {
+          "pairs": 6,
+          "same_length": 0,
+          "frozen_flow_mode": 0,
+          "frozen_mode_differs_from_previous": 5,
+          "discovery_baseline_available": 6
+        },
+        "same_container": {
+          "pairs": 144,
+          "same_length": 137,
+          "frozen_flow_mode": 133,
+          "frozen_mode_differs_from_previous": 11,
+          "discovery_baseline_available": 143,
+          "shuffle_within_key_and_container": {
+            "groups": 9,
+            "expected_equal_pairs": 134.75,
+            "permutations": 512,
+            "minimum": 133,
+            "maximum": 137,
+            "at_least_observed": 17
+          }
+        }
+      },
+      "nonmodal_run_examples": [
+        {
+          "previous": {
+            "capture": "Xidian",
+            "frame": 10,
+            "mcs": 10,
+            "offset": 236,
+            "bytes": 92,
+            "key": "0D36004D00",
+            "sn": "6844"
+          },
+          "record": {
+            "capture": "Xidian",
+            "frame": 10,
+            "mcs": 10,
+            "offset": 328,
+            "bytes": 92,
+            "key": "0D36004D00",
+            "sn": "6845"
+          },
+          "frozen_mode": 96,
+          "owner": {
+            "capture": "Xidian",
+            "frame": 10,
+            "mcs": 10,
+            "offset": 24,
+            "bytes": 6329
+          },
+          "owner_tag": "B8"
+        },
+        {
+          "previous": {
+            "capture": "Xidian",
+            "frame": 10,
+            "mcs": 10,
+            "offset": 420,
+            "bytes": 1316,
+            "key": "0D36004D00",
+            "sn": "6846"
+          },
+          "record": {
+            "capture": "Xidian",
+            "frame": 10,
+            "mcs": 10,
+            "offset": 1736,
+            "bytes": 1316,
+            "key": "0D36004D00",
+            "sn": "6847"
+          },
+          "frozen_mode": 96,
+          "owner": {
+            "capture": "Xidian",
+            "frame": 10,
+            "mcs": 10,
+            "offset": 24,
+            "bytes": 6329
+          },
+          "owner_tag": "B8"
+        },
+        {
+          "previous": {
+            "capture": "Xidian",
+            "frame": 10,
+            "mcs": 10,
+            "offset": 1736,
+            "bytes": 1316,
+            "key": "0D36004D00",
+            "sn": "6847"
+          },
+          "record": {
+            "capture": "Xidian",
+            "frame": 10,
+            "mcs": 10,
+            "offset": 3052,
+            "bytes": 1316,
+            "key": "0D36004D00",
+            "sn": "6848"
+          },
+          "frozen_mode": 96,
+          "owner": {
+            "capture": "Xidian",
+            "frame": 10,
+            "mcs": 10,
+            "offset": 24,
+            "bytes": 6329
+          },
+          "owner_tag": "B8"
+        }
+      ],
+      "known_keys": 10,
+      "training_key_frames": {
+        "00233BCC00": 3,
+        "0552AE3400": 3,
+        "0D36004D00": 2,
+        "027C374400": 2,
+        "0C7EBAAC00": 2,
+        "072BA0AE00": 1,
+        "0E4EC7E200": 1,
+        "036E257300": 1,
+        "0810A9C500": 1,
+        "0359534A01": 1
+      }
+    }
+  },
+  "internet_at_offsets_20_through_51": {
+    "groups": {
+      "UT_discovery": {
+        "records": 3574,
+        "tested_offsets_and_bit_orders": 227256,
+        "ipv4_version_and_lengths_fit": 186,
+        "ipv4_header_checksum_and_lengths_fit": 0,
+        "ipv4_header_checksum_and_exact_boundary": 0,
+        "ipv4_tcp_udp_checksum": 0,
+        "ipv6_lengths_close_at_record_end": 0,
+        "ipv6_tcp_udp_checksum_and_exact_boundary": 0
+      },
+      "UT_holdout": {
+        "records": 1278,
+        "tested_offsets_and_bit_orders": 81164,
+        "ipv4_version_and_lengths_fit": 67,
+        "ipv4_header_checksum_and_lengths_fit": 0,
+        "ipv4_header_checksum_and_exact_boundary": 0,
+        "ipv4_tcp_udp_checksum": 0,
+        "ipv6_lengths_close_at_record_end": 0,
+        "ipv6_tcp_udp_checksum_and_exact_boundary": 0
+      },
+      "Xidian_discovery": {
+        "records": 168,
+        "tested_offsets_and_bit_orders": 10738,
+        "ipv4_version_and_lengths_fit": 6,
+        "ipv4_header_checksum_and_lengths_fit": 0,
+        "ipv4_header_checksum_and_exact_boundary": 0,
+        "ipv4_tcp_udp_checksum": 0,
+        "ipv6_lengths_close_at_record_end": 0,
+        "ipv6_tcp_udp_checksum_and_exact_boundary": 0
+      },
+      "Xidian_holdout": {
+        "records": 159,
+        "tested_offsets_and_bit_orders": 10162,
+        "ipv4_version_and_lengths_fit": 5,
+        "ipv4_header_checksum_and_lengths_fit": 0,
+        "ipv4_header_checksum_and_exact_boundary": 0,
+        "ipv4_tcp_udp_checksum": 0,
+        "ipv6_lengths_close_at_record_end": 0,
+        "ipv6_tcp_udp_checksum_and_exact_boundary": 0
+      },
+      "Xidian_rejoined": {
+        "records": 6,
+        "tested_offsets_and_bit_orders": 384,
+        "ipv4_version_and_lengths_fit": 1,
+        "ipv4_header_checksum_and_lengths_fit": 0,
+        "ipv4_header_checksum_and_exact_boundary": 0,
+        "ipv4_tcp_udp_checksum": 0,
+        "ipv6_lengths_close_at_record_end": 0,
+        "ipv6_tcp_udp_checksum_and_exact_boundary": 0
+      },
+      "UT_rejoined": {
+        "records": 132,
+        "tested_offsets_and_bit_orders": 8448,
+        "ipv4_version_and_lengths_fit": 8,
+        "ipv4_header_checksum_and_lengths_fit": 0,
+        "ipv4_header_checksum_and_exact_boundary": 0,
+        "ipv4_tcp_udp_checksum": 0,
+        "ipv6_lengths_close_at_record_end": 0,
+        "ipv6_tcp_udp_checksum_and_exact_boundary": 0
+      }
+    },
+    "hits": [],
+    "controls": {
+      "IPv4_UDP": {
+        "checksum_detected": true,
+        "payload_bit_flip_rejected": true
+      },
+      "IPv4_TCP": {
+        "checksum_detected": true,
+        "payload_bit_flip_rejected": true
+      },
+      "IPv6_UDP": {
+        "checksum_detected": true,
+        "payload_bit_flip_rejected": true
+      },
+      "IPv6_TCP": {
+        "checksum_detected": true,
+        "payload_bit_flip_rejected": true
+      }
+    }
+  },
+  "body_repetition": {
+    "records": 5317,
+    "duplicate_bodies": 0,
+    "windows_eight_bytes": 6408290,
+    "duplicate_windows_eight_bytes": 0,
+    "trailing_zero_bytes": {
+      "0": 5292,
+      "1": 25
+    }
+  }
+}

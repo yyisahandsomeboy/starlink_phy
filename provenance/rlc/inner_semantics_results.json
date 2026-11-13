@@ -1,0 +1,1233 @@
+{
+  "UT": {
+    "records": 4984,
+    "classes": {
+      "by_type": {
+        "10": {
+          "discovery": 1063,
+          "length64": 0,
+          "high12_zero": 0,
+          "b2_low2_00": 1581,
+          "b3_00": 8,
+          "b3_C0": 1441,
+          "b3_80": 132,
+          "holdout": 501,
+          "reconstructed": 17
+        },
+        "20": {
+          "discovery": 1412,
+          "length64": 0,
+          "high12_zero": 0,
+          "b2_low2_00": 1877,
+          "b3_C0": 1865,
+          "b3_00": 12,
+          "holdout": 446,
+          "reconstructed": 19
+        },
+        "40": {
+          "discovery": 85,
+          "length64": 121,
+          "high12_zero": 121,
+          "b2_low2_01": 107,
+          "b3_40": 121,
+          "b2_low2_11": 14,
+          "holdout": 36
+        },
+        "00": {
+          "discovery": 975,
+          "length64": 0,
+          "high12_zero": 0,
+          "b2_low2_00": 1359,
+          "b3_C0": 1348,
+          "holdout": 288,
+          "b3_00": 11,
+          "reconstructed": 96
+        },
+        "D0": {
+          "discovery": 39,
+          "length64": 0,
+          "high12_zero": 0,
+          "b2_low2_10": 18,
+          "b3_00": 18,
+          "b2_low2_11": 28,
+          "b3_40": 28,
+          "holdout": 7
+        }
+      },
+      "independent_bytes_prediction": {
+        "discovery": {
+          "total": 3574,
+          "classified": 3574,
+          "high12_zero_predicts_64": 3574
+        },
+        "holdout": {
+          "total": 1278,
+          "classified": 1278,
+          "high12_zero_predicts_64": 1278
+        },
+        "reconstructed": {
+          "total": 132,
+          "classified": 132,
+          "high12_zero_predicts_64": 132
+        }
+      }
+    },
+    "nibbles": {
+      "short_keys": 41,
+      "short_key_variant_groups": 54,
+      "short_keys_with_multiple_low4": 11,
+      "short_key_variant_groups_with_multiple_low4": 0,
+      "held_short_records": 36,
+      "frozen_predictions": {
+        "without_40": {
+          "comparable": 13,
+          "predictions": {
+            "key": {
+              "compared": 16,
+              "correct": 13,
+              "variants": {
+                "0": 13,
+                "1": 3
+              },
+              "comparable_correct": 13,
+              "mismatches": [
+                {
+                  "capture": "UT",
+                  "frame": 317,
+                  "mcs": 66,
+                  "offset": 100,
+                  "bytes": 64,
+                  "partition": "holdout",
+                  "key": "0E437B8900",
+                  "variant": 1,
+                  "low4": "3",
+                  "sequence_value": "4750",
+                  "first20": "10 40 EB 40 00 03 47 50 3D AE 0E 43 00 6B 7B 89 00 B3 FF D0",
+                  "predicted": "B"
+                },
+                {
+                  "capture": "UT",
+                  "frame": 347,
+                  "mcs": 70,
+                  "offset": 204,
+                  "bytes": 64,
+                  "partition": "holdout",
+                  "key": "0D536FA100",
+                  "variant": 1,
+                  "low4": "3",
+                  "sequence_value": "9184",
+                  "first20": "10 40 EB 40 00 03 91 84 3D AE 0D 53 00 6B 6F A1 00 B3 FF D0",
+                  "predicted": "A"
+                },
+                {
+                  "capture": "UT",
+                  "frame": 350,
+                  "mcs": 85,
+                  "offset": 6,
+                  "bytes": 64,
+                  "partition": "holdout",
+                  "key": "0FAD614600",
+                  "variant": 1,
+                  "low4": "A",
+                  "sequence_value": "D88D",
+                  "first20": "10 40 EB 40 00 0A D8 8D 3D AC 0F AD 00 6B 61 46 00 B3 FF D0",
+                  "predicted": "B"
+                }
+              ]
+            },
+            "key_and_variant": {
+              "compared": 18,
+              "correct": 18,
+              "variants": {
+                "0": 17,
+                "1": 1
+              },
+              "comparable_correct": 13,
+              "mismatches": []
+            }
+          }
+        },
+        "all_discovery": {
+          "comparable": 18,
+          "predictions": {
+            "key": {
+              "compared": 22,
+              "correct": 18,
+              "variants": {
+                "0": 18,
+                "1": 4
+              },
+              "comparable_correct": 18,
+              "mismatches": [
+                {
+                  "capture": "UT",
+                  "frame": 317,
+                  "mcs": 66,
+                  "offset": 100,
+                  "bytes": 64,
+                  "partition": "holdout",
+                  "key": "0E437B8900",
+                  "variant": 1,
+                  "low4": "3",
+                  "sequence_value": "4750",
+                  "first20": "10 40 EB 40 00 03 47 50 3D AE 0E 43 00 6B 7B 89 00 B3 FF D0",
+                  "predicted": "B"
+                },
+                {
+                  "capture": "UT",
+                  "frame": 341,
+                  "mcs": 70,
+                  "offset": 6,
+                  "bytes": 64,
+                  "partition": "holdout",
+                  "key": "09EF7B2C03",
+                  "variant": 1,
+                  "low4": "2",
+                  "sequence_value": "B032",
+                  "first20": "10 40 EB 40 00 02 B0 32 3D D2 09 EF 00 6B 7B 2C 03 B3 FF D0",
+                  "predicted": "A"
+                },
+                {
+                  "capture": "UT",
+                  "frame": 347,
+                  "mcs": 70,
+                  "offset": 204,
+                  "bytes": 64,
+                  "partition": "holdout",
+                  "key": "0D536FA100",
+                  "variant": 1,
+                  "low4": "3",
+                  "sequence_value": "9184",
+                  "first20": "10 40 EB 40 00 03 91 84 3D AE 0D 53 00 6B 6F A1 00 B3 FF D0",
+                  "predicted": "A"
+                },
+                {
+                  "capture": "UT",
+                  "frame": 350,
+                  "mcs": 85,
+                  "offset": 6,
+                  "bytes": 64,
+                  "partition": "holdout",
+                  "key": "0FAD614600",
+                  "variant": 1,
+                  "low4": "A",
+                  "sequence_value": "D88D",
+                  "first20": "10 40 EB 40 00 0A D8 8D 3D AC 0F AD 00 6B 61 46 00 B3 FF D0",
+                  "predicted": "B"
+                }
+              ]
+            },
+            "key_and_variant": {
+              "compared": 29,
+              "correct": 29,
+              "variants": {
+                "0": 28,
+                "1": 1
+              },
+              "comparable_correct": 18,
+              "mismatches": []
+            }
+          }
+        }
+      },
+      "offset9_by_key": {
+        "compared": 1396,
+        "correct": 1396,
+        "keys": 29
+      },
+      "variant_witnesses": [
+        {
+          "capture": "UT",
+          "frame": 289,
+          "mcs": 66,
+          "offset": 88,
+          "bytes": 64,
+          "partition": "discovery",
+          "key": "0E437B8900",
+          "variant": 0,
+          "low4": "B",
+          "sequence_value": "470D",
+          "first20": "10 40 E9 40 00 0B 47 0D 3D AE 0E 43 00 6B 7B 89 00 B3 FF D0"
+        },
+        {
+          "capture": "UT",
+          "frame": 317,
+          "mcs": 66,
+          "offset": 100,
+          "bytes": 64,
+          "partition": "holdout",
+          "key": "0E437B8900",
+          "variant": 1,
+          "low4": "3",
+          "sequence_value": "4750",
+          "first20": "10 40 EB 40 00 03 47 50 3D AE 0E 43 00 6B 7B 89 00 B3 FF D0"
+        },
+        {
+          "capture": "UT",
+          "frame": 338,
+          "mcs": 66,
+          "offset": 104,
+          "bytes": 64,
+          "partition": "holdout",
+          "key": "0E437B8900",
+          "variant": 0,
+          "low4": "B",
+          "sequence_value": "4EB8",
+          "first20": "10 40 E9 40 00 0B 4E B8 3D AE 0E 43 00 6B 7B 89 00 B3 FF D0"
+        }
+      ]
+    },
+    "occupied_sequences": {
+      "frame_window": 1,
+      "statistics": {
+        "discovery": {
+          "short_records": 85,
+          "at_least_one_neighbor": 17,
+          "negative_offset_-16": 0,
+          "negative_offset_-8": 0,
+          "negative_offset_-2": 0,
+          "negative_offset_-1": 0,
+          "negative_offset_1": 0,
+          "negative_offset_2": 2,
+          "negative_offset_8": 0,
+          "negative_offset_16": 0,
+          "negative_offset_16384": 0,
+          "sandwiched": 8,
+          "same_mcs": 8,
+          "all_heldout": 0
+        },
+        "holdout": {
+          "short_records": 36,
+          "at_least_one_neighbor": 8,
+          "negative_offset_-16": 0,
+          "negative_offset_-8": 0,
+          "negative_offset_-2": 0,
+          "negative_offset_-1": 0,
+          "negative_offset_1": 0,
+          "negative_offset_2": 0,
+          "negative_offset_8": 0,
+          "negative_offset_16": 0,
+          "negative_offset_16384": 0,
+          "sandwiched": 4,
+          "same_mcs": 4,
+          "all_heldout": 4
+        }
+      },
+      "matches": [
+        {
+          "short": {
+            "capture": "UT",
+            "frame": 3,
+            "mcs": 70,
+            "offset": 72,
+            "bytes": 64,
+            "partition": "discovery",
+            "key": "0BEF53A701",
+            "variant": 0,
+            "low4": "E",
+            "sequence_value": "7184",
+            "first20": "10 40 E9 40 00 0E 71 84 3D A8 0B EF 00 6B 53 A7 01 B3 FF D0"
+          },
+          "before": [
+            {
+              "capture": "UT",
+              "frame": 2,
+              "mcs": 70,
+              "offset": 397,
+              "bytes": 70,
+              "partition": "discovery",
+              "key": "0BEF53A701",
+              "variant": 0,
+              "low4": "E",
+              "sequence_value": "7183",
+              "first20": "10 20 E8 C0 CD 3E 71 83 3D A8 0B EF 00 6B 53 A7 01 B3 FF D0"
+            }
+          ],
+          "after": [
+            {
+              "capture": "UT",
+              "frame": 3,
+              "mcs": 70,
+              "offset": 1817,
+              "bytes": 70,
+              "partition": "discovery",
+              "key": "0BEF53A701",
+              "variant": 0,
+              "low4": "E",
+              "sequence_value": "7185",
+              "first20": "10 20 E8 C0 69 3E 71 85 3D A8 0B EF 00 6B 53 A7 01 B3 FF D0"
+            }
+          ]
+        },
+        {
+          "short": {
+            "capture": "UT",
+            "frame": 260,
+            "mcs": 70,
+            "offset": 4,
+            "bytes": 64,
+            "partition": "discovery",
+            "key": "0D536FA100",
+            "variant": 0,
+            "low4": "A",
+            "sequence_value": "BF29",
+            "first20": "10 40 E9 40 00 0A BF 29 3D AE 0D 53 00 6B 6F A1 00 B3 FF D0"
+          },
+          "before": [
+            {
+              "capture": "UT",
+              "frame": 260,
+              "mcs": 70,
+              "offset": 8554,
+              "bytes": 1320,
+              "partition": "discovery",
+              "key": "0D536FA100",
+              "variant": 0,
+              "low4": "A",
+              "sequence_value": "BF28",
+              "first20": "10 20 E8 C0 DC 9A BF 28 3D AE 0D 53 00 6B 6F A1 00 B3 FF D0"
+            }
+          ],
+          "after": [
+            {
+              "capture": "UT",
+              "frame": 261,
+              "mcs": 70,
+              "offset": 13,
+              "bytes": 886,
+              "partition": "discovery",
+              "key": "0D536FA100",
+              "variant": 0,
+              "low4": "A",
+              "sequence_value": "BF2A",
+              "first20": "10 20 E8 C0 2F 6A BF 2A 3D AE 0D 53 00 6B 6F A1 00 B3 FF D0"
+            }
+          ]
+        },
+        {
+          "short": {
+            "capture": "UT",
+            "frame": 265,
+            "mcs": 70,
+            "offset": 4,
+            "bytes": 64,
+            "partition": "discovery",
+            "key": "05311A0A01",
+            "variant": 0,
+            "low4": "0",
+            "sequence_value": "7A20",
+            "first20": "10 40 E9 40 00 00 7A 20 3D A8 05 31 00 6B 1A 0A 01 B3 FF D0"
+          },
+          "before": [
+            {
+              "capture": "UT",
+              "frame": 265,
+              "mcs": 70,
+              "offset": 2739,
+              "bytes": 166,
+              "partition": "discovery",
+              "key": "05311A0A01",
+              "variant": 0,
+              "low4": "0",
+              "sequence_value": "7A1F",
+              "first20": "10 00 E8 C0 B5 80 7A 1F 3D A8 05 31 00 6B 1A 0A 01 B3 FF D0"
+            }
+          ],
+          "after": [
+            {
+              "capture": "UT",
+              "frame": 265,
+              "mcs": 70,
+              "offset": 2905,
+              "bytes": 84,
+              "partition": "discovery",
+              "key": "05311A0A01",
+              "variant": 0,
+              "low4": "0",
+              "sequence_value": "7A21",
+              "first20": "10 00 E8 C0 38 30 7A 21 3D A8 05 31 00 6B 1A 0A 01 B3 FF D0"
+            }
+          ]
+        },
+        {
+          "short": {
+            "capture": "UT",
+            "frame": 218,
+            "mcs": 70,
+            "offset": 72,
+            "bytes": 64,
+            "partition": "discovery",
+            "key": "0D536FA100",
+            "variant": 0,
+            "low4": "A",
+            "sequence_value": "BEB4",
+            "first20": "10 40 E9 40 00 0A BE B4 3D AE 0D 53 00 6B 6F A1 00 B3 FF D0"
+          },
+          "before": [
+            {
+              "capture": "UT",
+              "frame": 217,
+              "mcs": 70,
+              "offset": 13856,
+              "bytes": 1303,
+              "partition": "discovery",
+              "key": "0D536FA100",
+              "variant": 0,
+              "low4": "A",
+              "sequence_value": "BEB3",
+              "first20": "10 20 E8 C0 DC 9A BE B3 3D AE 0D 53 00 6B 6F A1 00 B3 FF D0"
+            }
+          ],
+          "after": [
+            {
+              "capture": "UT",
+              "frame": 219,
+              "mcs": 70,
+              "offset": 81,
+              "bytes": 774,
+              "partition": "discovery",
+              "key": "0D536FA100",
+              "variant": 0,
+              "low4": "A",
+              "sequence_value": "BEB5",
+              "first20": "10 20 E8 C0 2F 6A BE B5 3D AE 0D 53 00 6B 6F A1 00 B3 FF D0"
+            }
+          ]
+        },
+        {
+          "short": {
+            "capture": "UT",
+            "frame": 283,
+            "mcs": 70,
+            "offset": 4,
+            "bytes": 64,
+            "partition": "discovery",
+            "key": "0D536FA100",
+            "variant": 0,
+            "low4": "A",
+            "sequence_value": "BF63",
+            "first20": "10 40 E9 40 00 0A BF 63 3D AE 0D 53 00 6B 6F A1 00 B3 FF D0"
+          },
+          "before": [
+            {
+              "capture": "UT",
+              "frame": 283,
+              "mcs": 70,
+              "offset": 1380,
+              "bytes": 324,
+              "partition": "discovery",
+              "key": "0D536FA100",
+              "variant": 0,
+              "low4": "A",
+              "sequence_value": "BF62",
+              "first20": "10 20 E8 C0 A4 8A BF 62 3D AE 0D 53 00 6B 6F A1 00 B3 FF D0"
+            }
+          ],
+          "after": [
+            {
+              "capture": "UT",
+              "frame": 283,
+              "mcs": 70,
+              "offset": 1704,
+              "bytes": 128,
+              "partition": "discovery",
+              "key": "0D536FA100",
+              "variant": 0,
+              "low4": "A",
+              "sequence_value": "BF64",
+              "first20": "10 10 E8 00 08 6A BF 64 3D AE 0D 53 00 6B 6F A1 00 B3 FF D0"
+            }
+          ]
+        },
+        {
+          "short": {
+            "capture": "UT",
+            "frame": 283,
+            "mcs": 70,
+            "offset": 72,
+            "bytes": 64,
+            "partition": "discovery",
+            "key": "08CE121401",
+            "variant": 0,
+            "low4": "3",
+            "sequence_value": "C144",
+            "first20": "10 40 E9 40 00 03 C1 44 3D A8 08 CE 00 6B 12 14 01 B3 FF D0"
+          },
+          "before": [
+            {
+              "capture": "UT",
+              "frame": 283,
+              "mcs": 70,
+              "offset": 3763,
+              "bytes": 1318,
+              "partition": "discovery",
+              "key": "08CE121401",
+              "variant": 0,
+              "low4": "3",
+              "sequence_value": "C143",
+              "first20": "10 00 E8 C0 18 E3 C1 43 3D A8 08 CE 00 6B 12 14 01 B3 FF D0"
+            }
+          ],
+          "after": [
+            {
+              "capture": "UT",
+              "frame": 283,
+              "mcs": 70,
+              "offset": 5225,
+              "bytes": 1318,
+              "partition": "discovery",
+              "key": "08CE121401",
+              "variant": 0,
+              "low4": "3",
+              "sequence_value": "C145",
+              "first20": "10 00 E8 C0 FF 23 C1 45 3D A8 08 CE 00 6B 12 14 01 B3 FF D0"
+            }
+          ]
+        },
+        {
+          "short": {
+            "capture": "UT",
+            "frame": 289,
+            "mcs": 66,
+            "offset": 88,
+            "bytes": 64,
+            "partition": "discovery",
+            "key": "0E437B8900",
+            "variant": 0,
+            "low4": "B",
+            "sequence_value": "470D",
+            "first20": "10 40 E9 40 00 0B 47 0D 3D AE 0E 43 00 6B 7B 89 00 B3 FF D0"
+          },
+          "before": [
+            {
+              "capture": "UT",
+              "frame": 290,
+              "mcs": 66,
+              "offset": 38672,
+              "bytes": 1524,
+              "partition": "discovery",
+              "key": "0E437B8900",
+              "variant": 0,
+              "low4": "B",
+              "sequence_value": "470C",
+              "first20": "10 10 E8 C0 BC FB 47 0C 3D AE 0E 43 00 6B 7B 89 00 B3 FF D0"
+            }
+          ],
+          "after": [
+            {
+              "capture": "UT",
+              "frame": 290,
+              "mcs": 66,
+              "offset": 41720,
+              "bytes": 1524,
+              "partition": "discovery",
+              "key": "0E437B8900",
+              "variant": 0,
+              "low4": "B",
+              "sequence_value": "470E",
+              "first20": "10 10 E8 C0 BC FB 47 0E 3D AE 0E 43 00 6B 7B 89 00 B3 FF D0"
+            }
+          ]
+        },
+        {
+          "short": {
+            "capture": "UT",
+            "frame": 295,
+            "mcs": 70,
+            "offset": 70,
+            "bytes": 64,
+            "partition": "discovery",
+            "key": "0BEF53A701",
+            "variant": 0,
+            "low4": "E",
+            "sequence_value": "720D",
+            "first20": "10 40 E9 40 00 0E 72 0D 3D A8 0B EF 00 6B 53 A7 01 B3 FF D0"
+          },
+          "before": [
+            {
+              "capture": "UT",
+              "frame": 295,
+              "mcs": 70,
+              "offset": 143,
+              "bytes": 70,
+              "partition": "discovery",
+              "key": "0BEF53A701",
+              "variant": 0,
+              "low4": "E",
+              "sequence_value": "720C",
+              "first20": "10 20 E8 C0 69 3E 72 0C 3D A8 0B EF 00 6B 53 A7 01 B3 FF D0"
+            }
+          ],
+          "after": [
+            {
+              "capture": "UT",
+              "frame": 295,
+              "mcs": 70,
+              "offset": 213,
+              "bytes": 70,
+              "partition": "discovery",
+              "key": "0BEF53A701",
+              "variant": 0,
+              "low4": "E",
+              "sequence_value": "720E",
+              "first20": "10 20 E8 C0 CD 3E 72 0E 3D A8 0B EF 00 6B 53 A7 01 B3 FF D0"
+            }
+          ]
+        },
+        {
+          "short": {
+            "capture": "UT",
+            "frame": 317,
+            "mcs": 70,
+            "offset": 4,
+            "bytes": 64,
+            "partition": "holdout",
+            "key": "0BEF53A701",
+            "variant": 0,
+            "low4": "E",
+            "sequence_value": "725B",
+            "first20": "10 40 E9 40 00 0E 72 5B 3D A8 0B EF 00 6B 53 A7 01 B3 FF D0"
+          },
+          "before": [
+            {
+              "capture": "UT",
+              "frame": 317,
+              "mcs": 70,
+              "offset": 226,
+              "bytes": 76,
+              "partition": "holdout",
+              "key": "0BEF53A701",
+              "variant": 0,
+              "low4": "E",
+              "sequence_value": "725A",
+              "first20": "10 20 E8 C0 69 3E 72 5A 3D A8 0B EF 00 6B 53 A7 01 B3 FF D0"
+            }
+          ],
+          "after": [
+            {
+              "capture": "UT",
+              "frame": 317,
+              "mcs": 70,
+              "offset": 156,
+              "bytes": 70,
+              "partition": "holdout",
+              "key": "0BEF53A701",
+              "variant": 0,
+              "low4": "E",
+              "sequence_value": "725C",
+              "first20": "10 20 E8 C0 CD 3E 72 5C 3D A8 0B EF 00 6B 53 A7 01 B3 FF D0"
+            }
+          ]
+        },
+        {
+          "short": {
+            "capture": "UT",
+            "frame": 322,
+            "mcs": 70,
+            "offset": 4,
+            "bytes": 64,
+            "partition": "holdout",
+            "key": "0DAF781901",
+            "variant": 0,
+            "low4": "6",
+            "sequence_value": "FD20",
+            "first20": "10 40 E9 40 00 06 FD 20 3D A8 0D AF 00 6B 78 19 01 B3 FF D0"
+          },
+          "before": [
+            {
+              "capture": "UT",
+              "frame": 323,
+              "mcs": 70,
+              "offset": 9971,
+              "bytes": 1524,
+              "partition": "holdout",
+              "key": "0DAF781901",
+              "variant": 0,
+              "low4": "6",
+              "sequence_value": "FD1F",
+              "first20": "10 20 E8 C0 8B 56 FD 1F 3D A8 0D AF 00 6B 78 19 01 B3 FF D0"
+            }
+          ],
+          "after": [
+            {
+              "capture": "UT",
+              "frame": 323,
+              "mcs": 70,
+              "offset": 11495,
+              "bytes": 1524,
+              "partition": "holdout",
+              "key": "0DAF781901",
+              "variant": 0,
+              "low4": "6",
+              "sequence_value": "FD21",
+              "first20": "10 20 E8 C0 8B 56 FD 21 3D A8 0D AF 00 6B 78 19 01 B3 FF D0"
+            }
+          ]
+        },
+        {
+          "short": {
+            "capture": "UT",
+            "frame": 338,
+            "mcs": 66,
+            "offset": 104,
+            "bytes": 64,
+            "partition": "holdout",
+            "key": "0E437B8900",
+            "variant": 0,
+            "low4": "B",
+            "sequence_value": "4EB8",
+            "first20": "10 40 E9 40 00 0B 4E B8 3D AE 0E 43 00 6B 7B 89 00 B3 FF D0"
+          },
+          "before": [
+            {
+              "capture": "UT",
+              "frame": 339,
+              "mcs": 66,
+              "offset": 16893,
+              "bytes": 1524,
+              "partition": "holdout",
+              "key": "0E437B8900",
+              "variant": 0,
+              "low4": "B",
+              "sequence_value": "4EB7",
+              "first20": "10 10 E8 C0 BC FB 4E B7 3D AE 0E 43 00 6B 7B 89 00 B3 FF D0"
+            }
+          ],
+          "after": [
+            {
+              "capture": "UT",
+              "frame": 339,
+              "mcs": 66,
+              "offset": 18417,
+              "bytes": 1524,
+              "partition": "holdout",
+              "key": "0E437B8900",
+              "variant": 0,
+              "low4": "B",
+              "sequence_value": "4EB9",
+              "first20": "10 10 E8 C0 BC FB 4E B9 3D AE 0E 43 00 6B 7B 89 00 B3 FF D0"
+            }
+          ]
+        },
+        {
+          "short": {
+            "capture": "UT",
+            "frame": 338,
+            "mcs": 70,
+            "offset": 4,
+            "bytes": 64,
+            "partition": "holdout",
+            "key": "0BEF53A701",
+            "variant": 0,
+            "low4": "E",
+            "sequence_value": "72CC",
+            "first20": "10 40 E9 40 00 0E 72 CC 3D A8 0B EF 00 6B 53 A7 01 B3 FF D0"
+          },
+          "before": [
+            {
+              "capture": "UT",
+              "frame": 338,
+              "mcs": 70,
+              "offset": 3605,
+              "bytes": 70,
+              "partition": "holdout",
+              "key": "0BEF53A701",
+              "variant": 0,
+              "low4": "E",
+              "sequence_value": "72CB",
+              "first20": "10 20 E8 C0 CD 3E 72 CB 3D A8 0B EF 00 6B 53 A7 01 B3 FF D0"
+            }
+          ],
+          "after": [
+            {
+              "capture": "UT",
+              "frame": 339,
+              "mcs": 70,
+              "offset": 2877,
+              "bytes": 70,
+              "partition": "holdout",
+              "key": "0BEF53A701",
+              "variant": 0,
+              "low4": "E",
+              "sequence_value": "72CD",
+              "first20": "10 20 E8 C0 8E 0E 72 CD 3D A8 0B EF 00 6B 53 A7 01 B3 FF D0"
+            }
+          ]
+        }
+      ]
+    },
+    "length": {
+      "same_prefix_without_sequence_multiple_lengths": 73,
+      "flow_keys_with_that_counterexample": 23,
+      "same_length_consecutive_sequence_high12_changes": 178,
+      "flow_keys_with_high12_changes": 11,
+      "high12_change_examples": [
+        [
+          {
+            "capture": "UT",
+            "frame": 6,
+            "mcs": 57,
+            "offset": 80,
+            "bytes": 70,
+            "partition": "holdout",
+            "key": "023C774C00",
+            "variant": 0,
+            "low4": "8",
+            "sequence_value": "C7DB",
+            "first20": "10 20 E8 C0 FC E8 C7 DB 3D AE 02 3C 00 6B 77 4C 00 B3 FF D0"
+          },
+          {
+            "capture": "UT",
+            "frame": 9,
+            "mcs": 57,
+            "offset": 148,
+            "bytes": 70,
+            "partition": "holdout",
+            "key": "023C774C00",
+            "variant": 0,
+            "low4": "8",
+            "sequence_value": "C7DC",
+            "first20": "10 20 E8 C0 65 18 C7 DC 3D AE 02 3C 00 6B 77 4C 00 B3 FF D0"
+          }
+        ],
+        [
+          {
+            "capture": "UT",
+            "frame": 7,
+            "mcs": 70,
+            "offset": 18256,
+            "bytes": 1318,
+            "partition": "holdout",
+            "key": "08CE121401",
+            "variant": 0,
+            "low4": "3",
+            "sequence_value": "C0E9",
+            "first20": "10 00 E8 C0 26 73 C0 E9 3D A8 08 CE 00 6B 12 14 01 B3 FF D0"
+          },
+          {
+            "capture": "UT",
+            "frame": 9,
+            "mcs": 70,
+            "offset": 15950,
+            "bytes": 1318,
+            "partition": "holdout",
+            "key": "08CE121401",
+            "variant": 0,
+            "low4": "3",
+            "sequence_value": "C0EA",
+            "first20": "10 00 E8 C0 18 E3 C0 EA 3D A8 08 CE 00 6B 12 14 01 B3 FF D0"
+          }
+        ],
+        [
+          {
+            "capture": "UT",
+            "frame": 8,
+            "mcs": 70,
+            "offset": 539,
+            "bytes": 84,
+            "partition": "holdout",
+            "key": "05311A0A01",
+            "variant": 0,
+            "low4": "0",
+            "sequence_value": "7A0F",
+            "first20": "10 00 E8 C0 38 30 7A 0F 3D A8 05 31 00 6B 1A 0A 01 B3 FF D0"
+          },
+          {
+            "capture": "UT",
+            "frame": 8,
+            "mcs": 70,
+            "offset": 251,
+            "bytes": 84,
+            "partition": "holdout",
+            "key": "05311A0A01",
+            "variant": 0,
+            "low4": "0",
+            "sequence_value": "7A10",
+            "first20": "10 00 E8 C0 11 20 7A 10 3D A8 05 31 00 6B 1A 0A 01 B3 FF D0"
+          }
+        ],
+        [
+          {
+            "capture": "UT",
+            "frame": 9,
+            "mcs": 70,
+            "offset": 1311,
+            "bytes": 70,
+            "partition": "holdout",
+            "key": "0BEF53A701",
+            "variant": 0,
+            "low4": "E",
+            "sequence_value": "718C",
+            "first20": "10 20 E8 C0 69 3E 71 8C 3D A8 0B EF 00 6B 53 A7 01 B3 FF D0"
+          },
+          {
+            "capture": "UT",
+            "frame": 9,
+            "mcs": 70,
+            "offset": 1241,
+            "bytes": 70,
+            "partition": "holdout",
+            "key": "0BEF53A701",
+            "variant": 0,
+            "low4": "E",
+            "sequence_value": "718D",
+            "first20": "10 20 E8 C0 63 0E 71 8D 3D A8 0B EF 00 6B 53 A7 01 B3 FF D0"
+          }
+        ]
+      ]
+    }
+  },
+  "Xidian": {
+    "records": 333,
+    "classes": {
+      "by_type": {
+        "00": {
+          "discovery": 167,
+          "length64": 0,
+          "high12_zero": 0,
+          "b2_low2_00": 328,
+          "b3_C0": 328,
+          "holdout": 155,
+          "reconstructed": 6
+        },
+        "40": {
+          "discovery": 1,
+          "length64": 2,
+          "high12_zero": 2,
+          "b2_low2_01": 2,
+          "b3_40": 2,
+          "holdout": 1
+        },
+        "D0": {
+          "holdout": 3,
+          "length64": 0,
+          "high12_zero": 0,
+          "b2_low2_11": 3,
+          "b3_40": 3
+        }
+      },
+      "independent_bytes_prediction": {
+        "discovery": {
+          "total": 168,
+          "classified": 168,
+          "high12_zero_predicts_64": 168
+        },
+        "holdout": {
+          "total": 159,
+          "classified": 159,
+          "high12_zero_predicts_64": 159
+        },
+        "reconstructed": {
+          "total": 6,
+          "classified": 6,
+          "high12_zero_predicts_64": 6
+        }
+      }
+    },
+    "nibbles": {
+      "short_keys": 2,
+      "short_key_variant_groups": 2,
+      "short_keys_with_multiple_low4": 0,
+      "short_key_variant_groups_with_multiple_low4": 0,
+      "held_short_records": 1,
+      "frozen_predictions": {
+        "without_40": {
+          "comparable": 0,
+          "predictions": {
+            "key": {
+              "compared": 0,
+              "correct": 0,
+              "variants": {},
+              "comparable_correct": 0,
+              "mismatches": []
+            },
+            "key_and_variant": {
+              "compared": 0,
+              "correct": 0,
+              "variants": {},
+              "comparable_correct": 0,
+              "mismatches": []
+            }
+          }
+        },
+        "all_discovery": {
+          "comparable": 0,
+          "predictions": {
+            "key": {
+              "compared": 0,
+              "correct": 0,
+              "variants": {},
+              "comparable_correct": 0,
+              "mismatches": []
+            },
+            "key_and_variant": {
+              "compared": 0,
+              "correct": 0,
+              "variants": {},
+              "comparable_correct": 0,
+              "mismatches": []
+            }
+          }
+        }
+      },
+      "offset9_by_key": {
+        "compared": 157,
+        "correct": 157,
+        "keys": 5
+      },
+      "variant_witnesses": []
+    },
+    "occupied_sequences": {
+      "frame_window": 1,
+      "statistics": {
+        "discovery": {
+          "short_records": 1,
+          "at_least_one_neighbor": 0,
+          "negative_offset_-16": 0,
+          "negative_offset_-8": 0,
+          "negative_offset_-2": 0,
+          "negative_offset_-1": 0,
+          "negative_offset_1": 0,
+          "negative_offset_2": 0,
+          "negative_offset_8": 0,
+          "negative_offset_16": 0,
+          "negative_offset_16384": 0
+        },
+        "holdout": {
+          "short_records": 1,
+          "at_least_one_neighbor": 0,
+          "negative_offset_-16": 0,
+          "negative_offset_-8": 0,
+          "negative_offset_-2": 0,
+          "negative_offset_-1": 0,
+          "negative_offset_1": 0,
+          "negative_offset_2": 0,
+          "negative_offset_8": 0,
+          "negative_offset_16": 0,
+          "negative_offset_16384": 0
+        }
+      },
+      "matches": []
+    },
+    "length": {
+      "same_prefix_without_sequence_multiple_lengths": 7,
+      "flow_keys_with_that_counterexample": 5,
+      "same_length_consecutive_sequence_high12_changes": 17,
+      "flow_keys_with_high12_changes": 1,
+      "high12_change_examples": [
+        [
+          {
+            "capture": "Xidian",
+            "frame": 12,
+            "mcs": 21,
+            "offset": 1240,
+            "bytes": 1318,
+            "partition": "holdout",
+            "key": "00233BCC00",
+            "variant": 0,
+            "low4": "0",
+            "sequence_value": "B15D",
+            "first20": "10 00 FC C0 02 A0 B1 5D D1 77 00 23 00 73 3B CC 00 ED FF D0"
+          },
+          {
+            "capture": "Xidian",
+            "frame": 12,
+            "mcs": 21,
+            "offset": 2558,
+            "bytes": 1318,
+            "partition": "holdout",
+            "key": "00233BCC00",
+            "variant": 0,
+            "low4": "0",
+            "sequence_value": "B15E",
+            "first20": "10 00 FC C0 11 80 B1 5E D1 77 00 23 00 73 3B CC 00 ED FF D0"
+          }
+        ],
+        [
+          {
+            "capture": "Xidian",
+            "frame": 12,
+            "mcs": 21,
+            "offset": 2558,
+            "bytes": 1318,
+            "partition": "holdout",
+            "key": "00233BCC00",
+            "variant": 0,
+            "low4": "0",
+            "sequence_value": "B15E",
+            "first20": "10 00 FC C0 11 80 B1 5E D1 77 00 23 00 73 3B CC 00 ED FF D0"
+          },
+          {
+            "capture": "Xidian",
+            "frame": 12,
+            "mcs": 21,
+            "offset": 3876,
+            "bytes": 1318,
+            "partition": "holdout",
+            "key": "00233BCC00",
+            "variant": 0,
+            "low4": "0",
+            "sequence_value": "B15F",
+            "first20": "10 00 FC C0 02 A0 B1 5F D1 77 00 23 00 73 3B CC 00 ED FF D0"
+          }
+        ],
+        [
+          {
+            "capture": "Xidian",
+            "frame": 12,
+            "mcs": 21,
+            "offset": 13102,
+            "bytes": 1318,
+            "partition": "holdout",
+            "key": "00233BCC00",
+            "variant": 0,
+            "low4": "0",
+            "sequence_value": "B166",
+            "first20": "10 00 FC C0 02 A0 B1 66 D1 77 00 23 00 73 3B CC 00 ED FF D0"
+          },
+          {
+            "capture": "Xidian",
+            "frame": 12,
+            "mcs": 21,
+            "offset": 14420,
+            "bytes": 1318,
+            "partition": "holdout",
+            "key": "00233BCC00",
+            "variant": 0,
+            "low4": "0",
+            "sequence_value": "B167",
+            "first20": "10 00 FC C0 11 80 B1 67 D1 77 00 23 00 73 3B CC 00 ED FF D0"
+          }
+        ],
+        [
+          {
+            "capture": "Xidian",
+            "frame": 12,
+            "mcs": 21,
+            "offset": 22328,
+            "bytes": 1318,
+            "partition": "holdout",
+            "key": "00233BCC00",
+            "variant": 0,
+            "low4": "0",
+            "sequence_value": "B16D",
+            "first20": "10 00 FC C0 11 80 B1 6D D1 77 00 23 00 73 3B CC 00 ED FF D0"
+          },
+          {
+            "capture": "Xidian",
+            "frame": 12,
+            "mcs": 21,
+            "offset": 23646,
+            "bytes": 1318,
+            "partition": "holdout",
+            "key": "00233BCC00",
+            "variant": 0,
+            "low4": "0",
+            "sequence_value": "B16E",
+            "first20": "10 00 FC C0 02 A0 B1 6E D1 77 00 23 00 73 3B CC 00 ED FF D0"
+          }
+        ]
+      ]
+    }
+  }
+}

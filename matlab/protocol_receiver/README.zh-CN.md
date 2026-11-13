@@ -102,3 +102,7 @@ python tools/recover_qc_checks.py --input my-development-P.mat --output my-QC-ch
 ## 编号66
 
 默认共享后处理启用编号66，教学第20步调用相同实现。已有协议MAT可用`RUN_MCS66_ANALYSIS(protocolMat,newOutputDir)`只读补算；`RUN_PROTOCOL_ANALYSIS(...,'EnableMCS66',false)`可关闭。输出`result.mcs66`保存每字译码、重编码、奇偶重调制及0.04/0.08尝试记录。完整模型与复现方式见[本轮报告](../../docs/MCS66_RECOVERY_VALIDATION.zh-CN.md)。
+
+## 编号35
+
+已定位且完成去 PN 与增益归一化的 MCS 35 单位可用 `slproto.decodeMCS35` 单独译码。每列输入 5,462 个复数符号，按空口顺序排列。结果按列给出 LDPC 状态和信息位。首列属于分配首字时，`result.mac` 可用于复核该分配开头的 MAC CRC-24。数据来源、模型和复核命令见 [MCS 35 验证](../../docs/MCS35_RECOVERY_VALIDATION.zh-CN.md)。

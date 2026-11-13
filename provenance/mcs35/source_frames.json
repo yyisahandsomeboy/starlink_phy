@@ -1,0 +1,39 @@
+{
+  "frame_numbering": "zero-based UT author archive",
+  "fit_ends_at": 480,
+  "guide": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/exemplar-frames-data/EXEMPLAR_FRAMES_GUIDE.txt",
+  "blocks": [
+    {
+      "url": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/exemplar-frames-data/decodedExemplarFrames_20251019T2214.mat",
+      "first": 455,
+      "end_exclusive": 468,
+      "sha256": "f96377180c2b78d00ebe528c806ffeb9104014cb745356ce982452761caa1d2e",
+      "derived_mat": "record80_geo_words_0455.mat",
+      "derived_mat_sha256": "4907c852055a6ff8eefbc69642d9afc449ff1c5adbfb46ff553c7d05c123168e"
+    },
+    {
+      "url": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/exemplar-frames-data/decodedExemplarFrames_20251019T2214.mat",
+      "first": 468,
+      "end_exclusive": 481,
+      "sha256": "01de5b7edfccbfe216acdf1406d353f5f99a5d1f23a10a4c03f97c6902c2021a",
+      "derived_mat": "record80_geo_words_0468.mat",
+      "derived_mat_sha256": "8e23da1ba16c5f8339de1f7d6b0ecdcf3c0aae636ede05e1f19ad4a98baaf07f"
+    },
+    {
+      "url": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/exemplar-frames-data/decodedExemplarFrames_20251019T2214.mat",
+      "first": 481,
+      "end_exclusive": 494,
+      "sha256": "13c716bd19065a78cc415dd155ab946e14fd8d095a960eac103fc71ba2f655d4",
+      "derived_mat": "record80_geo_words_0481.mat",
+      "derived_mat_sha256": "0d0ce61a6e556ff62212279f9e7883ae4a0ba22eea0abd2586458b9dd83d8872"
+    },
+    {
+      "url": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/exemplar-frames-data/decodedExemplarFrames_20251019T2214.mat",
+      "first": 494,
+      "end_exclusive": 507,
+      "sha256": "69f00af024b9fa4fed7ad04ab53dff063c4c28bfa4d4fe6bda0f00be6e7a7f3c",
+      "derived_mat": "record80_geo_words_0494.mat",
+      "derived_mat_sha256": "3235254005806f15cfb9790f7e5603d2fc22e2f28f23ec3f98bac66206a8e1e6"
+    }
+  ]
+}

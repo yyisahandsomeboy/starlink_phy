@@ -1,0 +1,404 @@
+{
+  "point_order_scaled_sqrt10": [
+    [
+      -3,
+      -3
+    ],
+    [
+      -3,
+      1
+    ],
+    [
+      -1,
+      -1
+    ],
+    [
+      -1,
+      3
+    ],
+    [
+      1,
+      -3
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      3,
+      -1
+    ],
+    [
+      3,
+      3
+    ]
+  ],
+  "labels_integer_lsb_first": [
+    1,
+    5,
+    4,
+    7,
+    0,
+    6,
+    2,
+    3
+  ],
+  "leading_discarded_slots": 0,
+  "crc_screen": {
+    "permutations": 40320,
+    "offsets": [
+      0,
+      1,
+      2
+    ],
+    "prefix_candidates": {
+      "0": 1644,
+      "1": 0,
+      "2": 0
+    },
+    "distinct_passing_tables": 1
+  },
+  "mac": {
+    "discovery": {
+      "frames_attempted": 25,
+      "crc_passed": 5,
+      "one_bit_control_rejected": 5,
+      "rows": [
+        {
+          "frame": 466,
+          "r0": 11152,
+          "quantity": 2,
+          "length_bytes": 132,
+          "crc": "E72753",
+          "prefix": "84 00 07 EA 07 B7 2C 33 20 10 5F 00 43 A1",
+          "first_record_bytes": 1521,
+          "first_record_end": 1653,
+          "systematic_lower_bound_if_record_contained": 6612
+        },
+        {
+          "frame": 468,
+          "r0": 9104,
+          "quantity": 2,
+          "length_bytes": 88,
+          "crc": "65B815",
+          "prefix": "58 00 07 EA 07 C7 23 33 20 C0 6A 00 A7 24",
+          "first_record_bytes": 1708,
+          "first_record_end": 1796,
+          "systematic_lower_bound_if_record_contained": 7184
+        },
+        {
+          "frame": 470,
+          "r0": 9104,
+          "quantity": 2,
+          "length_bytes": 104,
+          "crc": "BB47AD",
+          "prefix": "68 00 07 EA 07 C7 24 53 5E C0 68 00 C7 25",
+          "first_record_bytes": 1676,
+          "first_record_end": 1780,
+          "systematic_lower_bound_if_record_contained": 7120
+        },
+        {
+          "frame": 471,
+          "r0": 9104,
+          "quantity": 2,
+          "length_bytes": 92,
+          "crc": "E3253B",
+          "prefix": "5C 00 07 EA 07 37 26 43 A1 10 68 00 C7 25",
+          "first_record_bytes": 1665,
+          "first_record_end": 1757,
+          "systematic_lower_bound_if_record_contained": 7028
+        },
+        {
+          "frame": 479,
+          "r0": 7056,
+          "quantity": 4,
+          "length_bytes": 128,
+          "crc": "9E0B98",
+          "prefix": "80 00 07 EA 07 77 00 53 07 90 1F 01 A7 21",
+          "first_record_bytes": 4601,
+          "first_record_end": 4729,
+          "systematic_lower_bound_if_record_contained": 9458
+        }
+      ]
+    },
+    "holdout": {
+      "frames_attempted": 24,
+      "crc_passed": 15,
+      "one_bit_control_rejected": 15,
+      "rows": [
+        {
+          "frame": 481,
+          "r0": 9104,
+          "quantity": 3,
+          "length_bytes": 140,
+          "crc": "4BB9A4",
+          "prefix": "8C 00 07 EA 07 87 47 53 5E C0 8D 00 C7 25",
+          "first_record_bytes": 2268,
+          "first_record_end": 2408,
+          "systematic_lower_bound_if_record_contained": 6422
+        },
+        {
+          "frame": 485,
+          "r0": 9104,
+          "quantity": 2,
+          "length_bytes": 132,
+          "crc": "6A3179",
+          "prefix": "84 00 07 EA 07 97 03 53 5E 30 88 00 27 22",
+          "first_record_bytes": 2179,
+          "first_record_end": 2311,
+          "systematic_lower_bound_if_record_contained": 9244
+        },
+        {
+          "frame": 486,
+          "r0": 9104,
+          "quantity": 4,
+          "length_bytes": 132,
+          "crc": "5FA2D8",
+          "prefix": "84 00 07 EA 07 A3 7E 60 08 00 87 25 43 A1",
+          "first_record_bytes": 134,
+          "first_record_end": 266,
+          "systematic_lower_bound_if_record_contained": 532
+        },
+        {
+          "frame": 488,
+          "r0": 13200,
+          "quantity": 4,
+          "length_bytes": 124,
+          "crc": "9630BD",
+          "prefix": "7C 00 07 EA 07 E7 1F 53 5E 60 00 01 27 20",
+          "first_record_bytes": 4102,
+          "first_record_end": 4226,
+          "systematic_lower_bound_if_record_contained": 8452
+        },
+        {
+          "frame": 490,
+          "r0": 15248,
+          "quantity": 4,
+          "length_bytes": 104,
+          "crc": "A1AA82",
+          "prefix": "68 00 07 EA 07 77 20 43 A1 10 01 01 67 25",
+          "first_record_bytes": 4113,
+          "first_record_end": 4217,
+          "systematic_lower_bound_if_record_contained": 8434
+        },
+        {
+          "frame": 491,
+          "r0": 4666,
+          "quantity": 5,
+          "length_bytes": 32,
+          "crc": "1EC9BF",
+          "prefix": "20 00 07 EA 07 27 3D C3 F8 E0 32 01 33 26",
+          "first_record_bytes": 4910,
+          "first_record_end": 4942,
+          "systematic_lower_bound_if_record_contained": 7908
+        },
+        {
+          "frame": 492,
+          "r0": 15248,
+          "quantity": 4,
+          "length_bytes": 108,
+          "crc": "64106D",
+          "prefix": "6C 00 07 EA 07 57 12 43 A1 F0 0E 01 67 25",
+          "first_record_bytes": 4335,
+          "first_record_end": 4443,
+          "systematic_lower_bound_if_record_contained": 8886
+        },
+        {
+          "frame": 494,
+          "r0": 8876,
+          "quantity": 3,
+          "length_bytes": 36,
+          "crc": "4E3BBA",
+          "prefix": "24 00 07 EA 07 F7 31 13 5F D0 A9 00 67 4E",
+          "first_record_bytes": 2717,
+          "first_record_end": 2753,
+          "systematic_lower_bound_if_record_contained": 7342
+        },
+        {
+          "frame": 497,
+          "r0": 8876,
+          "quantity": 18,
+          "length_bytes": 32,
+          "crc": "94CEF1",
+          "prefix": "20 00 07 EA 07 27 00 E3 05 E0 31 05 F7 4D",
+          "first_record_bytes": 21278,
+          "first_record_end": 21310,
+          "systematic_lower_bound_if_record_contained": 9472
+        },
+        {
+          "frame": 498,
+          "r0": 9104,
+          "quantity": 4,
+          "length_bytes": 124,
+          "crc": "29570C",
+          "prefix": "7C 00 07 EA 07 C7 19 03 AA 80 06 01 33 20",
+          "first_record_bytes": 4200,
+          "first_record_end": 4324,
+          "systematic_lower_bound_if_record_contained": 8648
+        },
+        {
+          "frame": 499,
+          "r0": 13086,
+          "quantity": 8,
+          "length_bytes": 112,
+          "crc": "80EE28",
+          "prefix": "70 00 07 EA 07 27 0D 13 5F E0 3B 02 B3 F2",
+          "first_record_bytes": 9150,
+          "first_record_end": 9262,
+          "systematic_lower_bound_if_record_contained": 9262
+        },
+        {
+          "frame": 500,
+          "r0": 4552,
+          "quantity": 25,
+          "length_bytes": 24,
+          "crc": "AECA37",
+          "prefix": "18 00 07 EA 07 C7 3D C3 F8 C0 FA 06 33 26",
+          "first_record_bytes": 28588,
+          "first_record_end": 28612,
+          "systematic_lower_bound_if_record_contained": 9156
+        },
+        {
+          "frame": 501,
+          "r0": 8876,
+          "quantity": 37,
+          "length_bytes": 32,
+          "crc": "D0DCF5",
+          "prefix": "20 00 07 EA 07 07 00 23 29 00 B0 0A 27 58",
+          "first_record_bytes": 43776,
+          "first_record_end": 43808,
+          "systematic_lower_bound_if_record_contained": 9472
+        },
+        {
+          "frame": 504,
+          "r0": 15134,
+          "quantity": 4,
+          "length_bytes": 92,
+          "crc": "ACAC64",
+          "prefix": "5C 00 07 EA 07 37 05 E3 05 10 1D 01 33 20",
+          "first_record_bytes": 4561,
+          "first_record_end": 4653,
+          "systematic_lower_bound_if_record_contained": 9306
+        },
+        {
+          "frame": 506,
+          "r0": 8762,
+          "quantity": 5,
+          "length_bytes": 36,
+          "crc": "C1456F",
+          "prefix": "24 00 07 EA 07 27 2E 73 4F A0 41 01 C3 F8",
+          "first_record_bytes": 5146,
+          "first_record_end": 5182,
+          "systematic_lower_bound_if_record_contained": 8292
+        }
+      ]
+    }
+  },
+  "terminal_symbol": {
+    "discovery": {
+      "words": 64,
+      "terminal_points": {
+        "4": 30,
+        "0": 32,
+        "2": 2
+      },
+      "ones_by_terminal_slot": [
+        32,
+        0,
+        2
+      ],
+      "reliable_words": 61,
+      "reliable_ones_by_terminal_slot": [
+        31,
+        0,
+        0
+      ],
+      "exceptions": [
+        {
+          "frame": 462,
+          "word": 3,
+          "point": 2,
+          "risk": 0.43109837124092404
+        },
+        {
+          "frame": 470,
+          "word": 2,
+          "point": 2,
+          "risk": 0.11384846688395084
+        }
+      ]
+    },
+    "holdout": {
+      "words": 70,
+      "terminal_points": {
+        "0": 43,
+        "4": 27
+      },
+      "ones_by_terminal_slot": [
+        43,
+        0,
+        0
+      ],
+      "reliable_words": 70,
+      "reliable_ones_by_terminal_slot": [
+        43,
+        0,
+        0
+      ],
+      "exceptions": []
+    }
+  },
+  "systematic_end": {
+    "discovery": {
+      "final_words": 15,
+      "padding_selected": 15,
+      "padded_frames": [
+        456,
+        461,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468,
+        469,
+        470,
+        471,
+        472,
+        473,
+        474,
+        475
+      ],
+      "before_32_ones": 0,
+      "after_32_ones": 244,
+      "bits_per_side_32": 480,
+      "before_192_ones": 0,
+      "after_192_ones": 1434,
+      "bits_per_side_192": 2880,
+      "first_position_over_20_percent": 9472,
+      "ones_at_boundary": 8
+    },
+    "holdout": {
+      "final_words": 7,
+      "padding_selected": 6,
+      "padded_frames": [
+        481,
+        482,
+        483,
+        485,
+        493,
+        494
+      ],
+      "before_32_ones": 0,
+      "after_32_ones": 98,
+      "bits_per_side_32": 192,
+      "before_192_ones": 3,
+      "after_192_ones": 577,
+      "bits_per_side_192": 1152,
+      "first_position_over_20_percent": 9472,
+      "ones_at_boundary": 3
+    }
+  },
+  "inferred_systematic_bits": 9472,
+  "inferred_transmitted_word_bits": 16384
+}
