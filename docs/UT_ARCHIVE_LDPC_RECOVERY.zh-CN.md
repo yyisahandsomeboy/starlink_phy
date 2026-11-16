@@ -29,34 +29,37 @@
 
 对 11 个有 MAC 填充长度的 MCS 92 分配末字，把起点在预期位置前后移动 7 个资源。所有帧的最佳位置都是零偏移，预期填充位的硬判决一致率为 89.35% 到 95.80%。第 515、516 帧的观测高度相似，合并后的结果仍需分别检查两份观测的校验段匹配。最近星座点的误差只衡量点云的集中程度，不能单独确定当前码字是否能解开。[对齐和星座误差明细](../provenance/ut_ldpc_archive/mcs92_diagnostics.json)
 
+## 归档相位与剩余信号的复核
+
+作者说明 `yDataSoft` 已完成相位、时序和功率归一化。对 13 帧，把此前的八导频校正还原，再比较直接使用归档相位和对校正量做时间中值滤波两种输入。用已通过 LDPC 的符号作为参考，从一半子载波估计每个 OFDM 时隙的复增益，再在另一半计算按拟合信号能量归一化的误差。保留归档相位在 13 帧上均减少了误差，降幅约为 4.0%–8.6%。流式译码器返回的外部似然用于重估局部增益和观测噪声，候选由固定有效矩阵逐位重编码验收。[作者数据字段说明](https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/exemplar-frames-data/EXEMPLAR_FRAMES_GUIDE.txt) · [留出检查与各轮结果](../provenance/ut_ldpc_archive/followup_review.json)
+
+对前一轮 768 个缺口，按档位在整个归档搜索可能的重复码字，允许帧布局、资源位置和码字序号不同。只有第 515 和 516 帧的 112 个缺口找到了高度相关的对应观测，两帧的近星座点残差相关系数约为 0.991。补出新码字后，这批对应观测中又核实了一个码字。加入相邻子载波预测在 15 帧的留出符号上均小幅增加误差。30 个有已知填充的分配末字也支持原有的标签顺序和极性，10 个 MCS 92 样本支持信息段在第 13,056 位结束。[复核数值](../provenance/ut_ldpc_archive/followup_review.json)
+
 ## 复跑结果
 
-全部 69,631 个码字均已逐个尝试。经过本轮，68,863 个完成 LDPC 校验、有效矩阵重编码比对与系统位解扰，通过率为 **98.90%**。本轮在原有 61,993 个基础上，补回 **6,870** 个。共有 930/1,009 帧全部通过。
+全部 69,631 个码字已逐个重放。累计 69,284 个通过 LDPC、固定有效矩阵重编码比对并完成解扰，通过率为 **99.50%**。此前已验证 68,863 个，本轮新增 **421** 个。共有 979/1,009 帧的全部码字通过。
 
-| 新增有效码字的首个方法 | 通过数 |
+| 本轮新增验证的方法 | 通过数 |
 |---|---:|
-| 同帧信道估计和归一化最小和 | 4,830 |
-| 同帧或盲估计加和积 | 354 |
-| 星座与 LDPC 联合迭代 | 1,338 |
-| 按子载波重估噪声及用新码字刷新训练 | 333 |
-| 用重复观测核实同一个已验证的发送码字 | 12 |
-| 以作者硬判决辅助软解映射 | 3 |
+| LDPC 外部信息反馈 | 6 |
+| 保留归档相位或平滑导频校正 | 369 |
+| 核对高相关帧的已验证码字 | 1 |
+| 更新训练与联合译码配置 | 45 |
+| 原始归档相位下的相关帧联合协方差 | 0 |
+| 邻近训练结合外部信息反馈 | 0 |
+| 少量低档位缺口的定点回放 | 0 |
 
-仍有 **768 个**码字待恢复，分布在 79 帧。缺口如下。
+仍有 **347 个**码字待恢复，分布在 30 帧。
 
 | MCS | 通过／声明 | 待恢复 |
 |---:|---:|---:|
-| 71 | 1,412／1,415 | 3 |
-| 75 | 562／563 | 1 |
-| 78 | 607／609 | 2 |
-| 81 | 200／205 | 5 |
-| 85 | 3,788／3,823 | 35 |
-| 88 | 1,605／1,678 | 73 |
-| 92 | 2,810／3,459 | 649 |
+| 85 | 3,822／3,823 | 1 |
+| 88 | 1,630／1,678 | 48 |
+| 92 | 3,161／3,459 | 298 |
 
-对最后 768 个有重试综合征记录的码字，最好的候选仍至少有 213 条校验不成立。该值只描述本次已试配置。第 515、516 帧仍各有 56 个缺口，合并同一批高相关观测没有补回这些位置。原始采样目录目前只列一个涵盖 250–257 的片段，这些帧的现有码字已全部通过。其余缺口只用作者发布的归一化软网格反复核对，目前缺少可对应的原始 IQ 供重新同步和均衡。[UT 原始 IQ 目录](https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/raw-iq-data/)
+公开原始 IQ 目录只列涵盖第 250–257 帧的片段，这些帧的码字已全部通过。其余有缺口的帧目前可用的是作者处理后的频域软网格。归档记录的源录波名为 `pizza_sl_reference_9_ch0`。匹配该录波或同一发送码字的独立观测，可以进一步复核同步、均衡和软译码。[UT 原始 IQ 目录](https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/raw-iq-data/)
 
-逐帧数据的无效位以掩码标记。完整发送位可对通过的系统信息重新施加扰码，并用对应有效矩阵重算校验位。[按档位覆盖](../provenance/ut_ldpc_archive/coverage.json) · [逐帧统计](../provenance/ut_ldpc_archive/frames.csv) · [未通过码字位置](../provenance/ut_ldpc_archive/unresolved.csv)
+逐帧数据用掩码标记有效码字。完整发送位可对通过的系统信息重新施加扰码，并用有效矩阵重算校验位。[按档位覆盖](../provenance/ut_ldpc_archive/coverage.json) · [逐帧统计](../provenance/ut_ldpc_archive/frames.csv) · [未通过码字位置](../provenance/ut_ldpc_archive/unresolved.csv)
 
 ## 校验
 
@@ -87,3 +90,11 @@ python tools/summarize_ut_ldpc_archive.py "$I" /path/to/baseline /path/to/summar
 ```
 
 其他重试包括 `--frequency-noise`、`--author-hints /path/to/archive.mat` 和 `tools/find_ut_ldpc_repeats.py`。每阶段只增加通过的码字。汇总会检查新增字的资源坐标、原验证掩码，以及不同阶段对同一码字的字节一致性。原始网格和解扰字节用于本地重放。
+
+对有缺口的帧，把零基帧号逐行写入 `frames.txt`。重新编译流式译码器后，可以重放保留归档相位的处理。加上 `--pilot-refine` 会尝试不同的校验图和消息调度。`--seed` 可以传入前一阶段新增的验证结果。
+
+```sh
+python tools/recover_ut_ldpc_feedback.py "$I" /path/to/verified-words /path/to/pilot-replay \
+  --frames frames.txt --symbols /path/to/symbols --decoder ./ldpc_archive_worker \
+  --pilot-archive /path/to/decodedExemplarFrames_20251019T2214.mat
+```

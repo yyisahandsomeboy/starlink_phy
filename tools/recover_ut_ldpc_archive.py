@@ -112,7 +112,7 @@ class Worker:
         if self.process.wait():
             raise RuntimeError('Native LDPC decoder exited with an error')
 
-    def decode(self, profile, score, pad, options, seed):
+    def decode(self, profile, score, pad, options, seed, extrinsic=None, prior=.85, damping=.6):
         name, sparse, limit, period, minsum, shuffle, scale, check = options
         sparse = sparse and profile.sparse is not None
         group = profile.mcs*2+sparse
@@ -129,8 +129,9 @@ class Worker:
         if pad is not None:
             constraints = (60*(1.-2*PN[pad:profile.k])).astype('<f4')
         self.process.stdin.write(struct.pack('<8i4f',2,group,profile.width if period else 0,limit,period,
-                                            int(minsum)+2*shuffle,seed,int(constraints is not None),
-                                            scale,.85,.6,check))
+                                            int(minsum)+2*shuffle,seed,
+                                            int(constraints is not None)+2*int(extrinsic is not None),
+                                            scale,prior,damping,check))
         if period:
             self.process.stdin.write(np.asarray(score,dtype='<f4').tobytes())
             if constraints is not None:
@@ -149,6 +150,11 @@ class Worker:
             raise RuntimeError('Native decoder stopped before returning a result')
         left, iteration = struct.unpack('<2i',reply)
         if left:
+            if extrinsic is not None:
+                reply = self.process.stdout.read(profile.n*4)
+                if len(reply)!=profile.n*4:
+                    raise RuntimeError('Native decoder returned partial extrinsic likelihoods')
+                extrinsic[:] = np.frombuffer(reply,dtype='<f4')
             return None,left
         reply = self.process.stdout.read(profile.n)
         if len(reply)!=profile.n:

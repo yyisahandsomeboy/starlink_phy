@@ -1,0 +1,1065 @@
+{
+  "previous_verified": 68863,
+  "current_verified": 69284,
+  "phase_holdout": [
+    {
+      "frame": 174,
+      "holdout_error_ratio": {
+        "original": 1.0,
+        "without_pilot_reestimate": 0.9136180753794472,
+        "pilot_temporal_median_5": 0.982628975147153,
+        "pilot_temporal_median_15": 0.9780402917623139
+      }
+    },
+    {
+      "frame": 250,
+      "holdout_error_ratio": {
+        "original": 1.0,
+        "without_pilot_reestimate": 0.9416603326343648,
+        "pilot_temporal_median_5": 0.9856475515766372,
+        "pilot_temporal_median_15": 0.9818258037170523
+      }
+    },
+    {
+      "frame": 466,
+      "holdout_error_ratio": {
+        "original": 1.0,
+        "without_pilot_reestimate": 0.9435606230306627,
+        "pilot_temporal_median_5": 0.9825194406934218,
+        "pilot_temporal_median_15": 0.9756423771102196
+      }
+    },
+    {
+      "frame": 478,
+      "holdout_error_ratio": {
+        "original": 1.0,
+        "without_pilot_reestimate": 0.9546890193162565,
+        "pilot_temporal_median_5": 0.9852194919861879,
+        "pilot_temporal_median_15": 0.980616979608451
+      }
+    },
+    {
+      "frame": 482,
+      "holdout_error_ratio": {
+        "original": 1.0,
+        "without_pilot_reestimate": 0.9554592668973331,
+        "pilot_temporal_median_5": 0.9816678674742225,
+        "pilot_temporal_median_15": 0.9774553586379503
+      }
+    },
+    {
+      "frame": 499,
+      "holdout_error_ratio": {
+        "original": 1.0,
+        "without_pilot_reestimate": 0.9173973270627889,
+        "pilot_temporal_median_5": 0.984727559877451,
+        "pilot_temporal_median_15": 0.9825528696282608
+      }
+    },
+    {
+      "frame": 506,
+      "holdout_error_ratio": {
+        "original": 1.0,
+        "without_pilot_reestimate": 0.9498318541365061,
+        "pilot_temporal_median_5": 0.9807364356301637,
+        "pilot_temporal_median_15": 0.9763431275404719
+      }
+    },
+    {
+      "frame": 510,
+      "holdout_error_ratio": {
+        "original": 1.0,
+        "without_pilot_reestimate": 0.953390600582196,
+        "pilot_temporal_median_5": 0.9766008681442644,
+        "pilot_temporal_median_15": 0.9701856668820842
+      }
+    },
+    {
+      "frame": 515,
+      "holdout_error_ratio": {
+        "original": 1.0,
+        "without_pilot_reestimate": 0.9516562125988721,
+        "pilot_temporal_median_5": 0.9747541207740417,
+        "pilot_temporal_median_15": 0.9728395625924352
+      }
+    },
+    {
+      "frame": 516,
+      "holdout_error_ratio": {
+        "original": 1.0,
+        "without_pilot_reestimate": 0.9515845070194747,
+        "pilot_temporal_median_5": 0.9746198069220301,
+        "pilot_temporal_median_15": 0.9724248989363513
+      }
+    },
+    {
+      "frame": 524,
+      "holdout_error_ratio": {
+        "original": 1.0,
+        "without_pilot_reestimate": 0.9548218887016781,
+        "pilot_temporal_median_5": 0.9818575366379463,
+        "pilot_temporal_median_15": 0.9783638118518334
+      }
+    },
+    {
+      "frame": 527,
+      "holdout_error_ratio": {
+        "original": 1.0,
+        "without_pilot_reestimate": 0.9599958251490937,
+        "pilot_temporal_median_5": 0.9844811330528161,
+        "pilot_temporal_median_15": 0.9797607289695346
+      }
+    },
+    {
+      "frame": 767,
+      "holdout_error_ratio": {
+        "original": 1.0,
+        "without_pilot_reestimate": 0.9508088649887059,
+        "pilot_temporal_median_5": 0.9817301952545593,
+        "pilot_temporal_median_15": 0.9754467928983843
+      }
+    }
+  ],
+  "repeat_scan": {
+    "queried_missing_words": 768,
+    "reference_bank_words": 11752,
+    "same_mcs_all_geometry": true,
+    "accepted_from_previously_verified": 0,
+    "correlated_by_frame": {
+      "515": 56,
+      "516": 56
+    }
+  },
+  "related_observations": [
+    {
+      "frames": [
+        466,
+        467
+      ],
+      "toa_delta_seconds": 0.0020284523169991076,
+      "nearest_point_residual_correlation": 0.9371060830964371,
+      "same_signal_difference_nmse": 0.004166885362613887
+    },
+    {
+      "frames": [
+        515,
+        516
+      ],
+      "toa_delta_seconds": 0.0007025585360000974,
+      "nearest_point_residual_correlation": 0.9907070860378342,
+      "same_signal_difference_nmse": 0.0006448317144021242
+    },
+    {
+      "frames": [
+        519,
+        520
+      ],
+      "toa_delta_seconds": 0.007369658327999851,
+      "nearest_point_residual_correlation": 0.9039324183717923,
+      "same_signal_difference_nmse": 0.005929779282597967
+    }
+  ],
+  "interference_holdout": [
+    {
+      "frame": 174,
+      "slots": 286,
+      "holdout_points": 93118,
+      "held_out_error_ratio": 1.0081747402657437
+    },
+    {
+      "frame": 250,
+      "slots": 299,
+      "holdout_points": 97924,
+      "held_out_error_ratio": 1.007778828698088
+    },
+    {
+      "frame": 398,
+      "slots": 298,
+      "holdout_points": 97884,
+      "held_out_error_ratio": 1.007413965312659
+    },
+    {
+      "frame": 466,
+      "slots": 299,
+      "holdout_points": 97914,
+      "held_out_error_ratio": 1.0070232530577268
+    },
+    {
+      "frame": 478,
+      "slots": 153,
+      "holdout_points": 49405,
+      "held_out_error_ratio": 1.0085832085706679
+    },
+    {
+      "frame": 482,
+      "slots": 298,
+      "holdout_points": 97677,
+      "held_out_error_ratio": 1.0084516036027926
+    },
+    {
+      "frame": 489,
+      "slots": 242,
+      "holdout_points": 77625,
+      "held_out_error_ratio": 1.0093101007389396
+    },
+    {
+      "frame": 499,
+      "slots": 172,
+      "holdout_points": 56014,
+      "held_out_error_ratio": 1.0096416984878716
+    },
+    {
+      "frame": 506,
+      "slots": 161,
+      "holdout_points": 52462,
+      "held_out_error_ratio": 1.0090091892026598
+    },
+    {
+      "frame": 510,
+      "slots": 50,
+      "holdout_points": 15889,
+      "held_out_error_ratio": 1.0079652707936975
+    },
+    {
+      "frame": 515,
+      "slots": 115,
+      "holdout_points": 37630,
+      "held_out_error_ratio": 1.0101840332412342
+    },
+    {
+      "frame": 516,
+      "slots": 115,
+      "holdout_points": 37630,
+      "held_out_error_ratio": 1.0104270996446805
+    },
+    {
+      "frame": 524,
+      "slots": 260,
+      "holdout_points": 84050,
+      "held_out_error_ratio": 1.0069362722665693
+    },
+    {
+      "frame": 527,
+      "slots": 198,
+      "holdout_points": 63222,
+      "held_out_error_ratio": 1.0095593167412595
+    },
+    {
+      "frame": 767,
+      "slots": 135,
+      "holdout_points": 43920,
+      "held_out_error_ratio": 1.0090303572957864
+    }
+  ],
+  "label_order_controls": [
+    {
+      "frame": 163,
+      "mcs": 71,
+      "padding_bits": 9776,
+      "nominal_label_agreement": 0.9133592471358429,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.9133592471358429
+    },
+    {
+      "frame": 163,
+      "mcs": 88,
+      "padding_bits": 6360,
+      "nominal_label_agreement": 0.9213836477987422,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.9213836477987422
+    },
+    {
+      "frame": 468,
+      "mcs": 71,
+      "padding_bits": 2936,
+      "nominal_label_agreement": 0.9090599455040872,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.9090599455040872
+    },
+    {
+      "frame": 468,
+      "mcs": 85,
+      "padding_bits": 7800,
+      "nominal_label_agreement": 0.8991025641025641,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.8991025641025641
+    },
+    {
+      "frame": 468,
+      "mcs": 92,
+      "padding_bits": 8568,
+      "nominal_label_agreement": 0.9014939309056956,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.9014939309056956
+    },
+    {
+      "frame": 478,
+      "mcs": 71,
+      "padding_bits": 4584,
+      "nominal_label_agreement": 0.9389179755671903,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.9389179755671903
+    },
+    {
+      "frame": 478,
+      "mcs": 85,
+      "padding_bits": 2968,
+      "nominal_label_agreement": 0.9380053908355795,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.9380053908355795
+    },
+    {
+      "frame": 499,
+      "mcs": 71,
+      "padding_bits": 7392,
+      "nominal_label_agreement": 0.908008658008658,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.908008658008658
+    },
+    {
+      "frame": 499,
+      "mcs": 85,
+      "padding_bits": 7376,
+      "nominal_label_agreement": 0.9011659436008677,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.9011659436008677
+    },
+    {
+      "frame": 499,
+      "mcs": 92,
+      "padding_bits": 2072,
+      "nominal_label_agreement": 0.9290540540540541,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.9290540540540541
+    },
+    {
+      "frame": 506,
+      "mcs": 92,
+      "padding_bits": 6488,
+      "nominal_label_agreement": 0.8934956843403206,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.8934956843403206
+    },
+    {
+      "frame": 508,
+      "mcs": 71,
+      "padding_bits": 4624,
+      "nominal_label_agreement": 0.9258217993079585,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.9258217993079585
+    },
+    {
+      "frame": 508,
+      "mcs": 85,
+      "padding_bits": 9928,
+      "nominal_label_agreement": 0.951853344077357,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.951853344077357
+    },
+    {
+      "frame": 508,
+      "mcs": 92,
+      "padding_bits": 504,
+      "nominal_label_agreement": 0.9146825396825397,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.9146825396825397
+    },
+    {
+      "frame": 510,
+      "mcs": 85,
+      "padding_bits": 5096,
+      "nominal_label_agreement": 0.9207221350078493,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.9207221350078493
+    },
+    {
+      "frame": 510,
+      "mcs": 92,
+      "padding_bits": 2072,
+      "nominal_label_agreement": 0.8996138996138996,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.8996138996138996
+    },
+    {
+      "frame": 514,
+      "mcs": 71,
+      "padding_bits": 7920,
+      "nominal_label_agreement": 0.931060606060606,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.931060606060606
+    },
+    {
+      "frame": 514,
+      "mcs": 85,
+      "padding_bits": 10896,
+      "nominal_label_agreement": 0.9241005873715125,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.9241005873715125
+    },
+    {
+      "frame": 515,
+      "mcs": 71,
+      "padding_bits": 2840,
+      "nominal_label_agreement": 0.926056338028169,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.926056338028169
+    },
+    {
+      "frame": 515,
+      "mcs": 85,
+      "padding_bits": 8352,
+      "nominal_label_agreement": 0.9007423371647509,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.9007423371647509
+    },
+    {
+      "frame": 515,
+      "mcs": 92,
+      "padding_bits": 1568,
+      "nominal_label_agreement": 0.9477040816326531,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.9477040816326531
+    },
+    {
+      "frame": 516,
+      "mcs": 71,
+      "padding_bits": 2840,
+      "nominal_label_agreement": 0.9271126760563381,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.9271126760563381
+    },
+    {
+      "frame": 516,
+      "mcs": 85,
+      "padding_bits": 8352,
+      "nominal_label_agreement": 0.9011015325670498,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.9011015325670498
+    },
+    {
+      "frame": 516,
+      "mcs": 92,
+      "padding_bits": 1568,
+      "nominal_label_agreement": 0.9451530612244898,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.9451530612244898
+    },
+    {
+      "frame": 532,
+      "mcs": 85,
+      "padding_bits": 8424,
+      "nominal_label_agreement": 0.9377967711301045,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.9377967711301045
+    },
+    {
+      "frame": 532,
+      "mcs": 92,
+      "padding_bits": 11992,
+      "nominal_label_agreement": 0.9321214142761841,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.9321214142761841
+    },
+    {
+      "frame": 541,
+      "mcs": 71,
+      "padding_bits": 2232,
+      "nominal_label_agreement": 0.9372759856630825,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.9372759856630825
+    },
+    {
+      "frame": 544,
+      "mcs": 85,
+      "padding_bits": 11744,
+      "nominal_label_agreement": 0.8986716621253406,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.8986716621253406
+    },
+    {
+      "frame": 544,
+      "mcs": 92,
+      "padding_bits": 5240,
+      "nominal_label_agreement": 0.9133587786259542,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.9133587786259542
+    },
+    {
+      "frame": 769,
+      "mcs": 71,
+      "padding_bits": 10208,
+      "nominal_label_agreement": 0.9258424764890282,
+      "winning_serial_label_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "winning_label_inversions": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "strongest_agreement": 0.9258424764890282
+    }
+  ],
+  "information_boundary_controls": [
+    {
+      "frame": 466,
+      "padding_bytes": 934,
+      "strongest_zero_to_parity": [
+        13056,
+        4,
+        69
+      ],
+      "nominal": [
+        13056,
+        4,
+        69
+      ]
+    },
+    {
+      "frame": 468,
+      "padding_bytes": 1071,
+      "strongest_zero_to_parity": [
+        13056,
+        13,
+        64
+      ],
+      "nominal": [
+        13056,
+        13,
+        64
+      ]
+    },
+    {
+      "frame": 482,
+      "padding_bytes": 849,
+      "strongest_zero_to_parity": [
+        13056,
+        12,
+        66
+      ],
+      "nominal": [
+        13056,
+        12,
+        66
+      ]
+    },
+    {
+      "frame": 499,
+      "padding_bytes": 259,
+      "strongest_zero_to_parity": [
+        13056,
+        7,
+        70
+      ],
+      "nominal": [
+        13056,
+        7,
+        70
+      ]
+    },
+    {
+      "frame": 506,
+      "padding_bytes": 811,
+      "strongest_zero_to_parity": [
+        13056,
+        7,
+        68
+      ],
+      "nominal": [
+        13056,
+        7,
+        68
+      ]
+    },
+    {
+      "frame": 510,
+      "padding_bytes": 259,
+      "strongest_zero_to_parity": [
+        13056,
+        5,
+        65
+      ],
+      "nominal": [
+        13056,
+        5,
+        65
+      ]
+    },
+    {
+      "frame": 515,
+      "padding_bytes": 196,
+      "strongest_zero_to_parity": [
+        13056,
+        23,
+        63
+      ],
+      "nominal": [
+        13056,
+        23,
+        63
+      ]
+    },
+    {
+      "frame": 516,
+      "padding_bytes": 196,
+      "strongest_zero_to_parity": [
+        13056,
+        24,
+        64
+      ],
+      "nominal": [
+        13056,
+        24,
+        64
+      ]
+    },
+    {
+      "frame": 527,
+      "padding_bytes": 122,
+      "strongest_zero_to_parity": [
+        13056,
+        7,
+        72
+      ],
+      "nominal": [
+        13056,
+        7,
+        72
+      ]
+    },
+    {
+      "frame": 532,
+      "padding_bytes": 1499,
+      "strongest_zero_to_parity": [
+        13056,
+        10,
+        71
+      ],
+      "nominal": [
+        13056,
+        10,
+        71
+      ]
+    }
+  ],
+  "stage_results": {
+    "ldpc_feedback": {
+      "frames": 79,
+      "reencoded": 6,
+      "attempted": 768
+    },
+    "ldpc_pilot_recovery": {
+      "frames": 79,
+      "reencoded": 369,
+      "attempted": 762
+    },
+    "ldpc_pilot_repeats": {
+      "frames": 1,
+      "reencoded": 1,
+      "attempted": 39
+    },
+    "ldpc_pilot_refine": {
+      "frames": 31,
+      "reencoded": 45,
+      "attempted": 392
+    },
+    "ldpc_joint_pair_recovery": {
+      "frames": 2,
+      "reencoded": 0,
+      "attempted": 0
+    },
+    "ldpc_pilot_feedback": {
+      "frames": 30,
+      "reencoded": 0,
+      "attempted": 347
+    },
+    "ldpc_last_profile_rescue": {
+      "frames": 5,
+      "reencoded": 0,
+      "attempted": 9
+    }
+  }
+}

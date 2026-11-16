@@ -81,8 +81,9 @@ void process(const Graph& graph) {
     receive(request, 6);
     receive(settings, 4);
     int width = request[0], iterations = request[1], period = request[2], flags = request[3];
+    bool known_padding = (request[5]&1)!=0, report_extrinsic = (request[5]&2)!=0;
     if (width < 0 || width > 5 || iterations < 1 || iterations > 400 || period < 0 ||
-        (width == 0 && period != 0))
+        (width == 0 && (period != 0 || report_extrinsic)))
         throw std::runtime_error("Invalid decoder settings");
     Config config{iterations,period,flags>>1,(flags&1)!=0,settings[0],settings[1],
                   settings[2],settings[3],0,static_cast<uint32_t>(request[4])};
@@ -90,13 +91,14 @@ void process(const Graph& graph) {
     if (width) {
         metrics.resize(((graph.transmitted+width-1)/width)*(1<<width));
         receive(metrics.data(), metrics.size());
-        if (request[5]) receive(constraints.data(), constraints.size());
+        if (known_padding) receive(constraints.data(), constraints.size());
         symbol_messages(graph, config, width, metrics, constraints, true, channel, beliefs);
     } else {
         receive(beliefs.data(), beliefs.size());
     }
     int best = syndrome(graph, beliefs), best_step = 0;
     std::vector<float> best_beliefs = beliefs, messages(graph.variables.size());
+    std::vector<float> best_extrinsic(report_extrinsic ? graph.transmitted : 0);
     std::vector<int> schedule(graph.offsets.size()-1);
     std::iota(schedule.begin(), schedule.end(), 0);
     std::mt19937 rng(config.seed);
@@ -109,6 +111,10 @@ void process(const Graph& graph) {
             best = left;
             best_step = i;
             best_beliefs = beliefs;
+            for (int tx = 0; tx < static_cast<int>(best_extrinsic.size()); ++tx) {
+                int v = tx < graph.k ? tx : tx+graph.n-graph.transmitted;
+                best_extrinsic[tx] = beliefs[v]-channel[v];
+            }
         }
         if (best && period && i%period == 0)
             symbol_messages(graph, config, width, metrics, constraints, false, channel, beliefs);
@@ -120,6 +126,8 @@ void process(const Graph& graph) {
         for (int i = 0; i < graph.transmitted; ++i)
             bits[i] = best_beliefs[i < graph.k ? i : i+graph.n-graph.transmitted] < 0;
         send(bits.data(), bits.size());
+    } else if (report_extrinsic) {
+        send(best_extrinsic.data(), best_extrinsic.size());
     }
     std::cout.flush();
 }

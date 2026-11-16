@@ -2,11 +2,11 @@
   "totals": {
     "expected": 69631,
     "baseline_verified": 61993,
-    "verified": 68863,
-    "recovered": 6870,
-    "unresolved": 768,
+    "verified": 69284,
+    "recovered": 7291,
+    "unresolved": 347,
     "frames": 1009,
-    "complete_frames": 930
+    "complete_frames": 979
   },
   "by_mcs": {
     "5": {
@@ -89,51 +89,51 @@
     "71": {
       "expected": 1415,
       "baseline_verified": 1025,
-      "verified": 1412,
-      "recovered": 387,
-      "unresolved": 3
+      "verified": 1415,
+      "recovered": 390,
+      "unresolved": 0
     },
     "75": {
       "expected": 563,
       "baseline_verified": 441,
-      "verified": 562,
-      "recovered": 121,
-      "unresolved": 1
+      "verified": 563,
+      "recovered": 122,
+      "unresolved": 0
     },
     "78": {
       "expected": 609,
       "baseline_verified": 388,
-      "verified": 607,
-      "recovered": 219,
-      "unresolved": 2
+      "verified": 609,
+      "recovered": 221,
+      "unresolved": 0
     },
     "81": {
       "expected": 205,
       "baseline_verified": 188,
-      "verified": 200,
-      "recovered": 12,
-      "unresolved": 5
+      "verified": 205,
+      "recovered": 17,
+      "unresolved": 0
     },
     "85": {
       "expected": 3823,
       "baseline_verified": 1752,
-      "verified": 3788,
-      "recovered": 2036,
-      "unresolved": 35
+      "verified": 3822,
+      "recovered": 2070,
+      "unresolved": 1
     },
     "88": {
       "expected": 1678,
       "baseline_verified": 924,
-      "verified": 1605,
-      "recovered": 681,
-      "unresolved": 73
+      "verified": 1630,
+      "recovered": 706,
+      "unresolved": 48
     },
     "92": {
       "expected": 3459,
       "baseline_verified": 337,
-      "verified": 2810,
-      "recovered": 2473,
-      "unresolved": 649
+      "verified": 3161,
+      "recovered": 2824,
+      "unresolved": 298
     },
     "93": {
       "expected": 4,
@@ -149,8 +149,13 @@
     "local_channel_sparse_min_sum": 4830,
     "blind_channel_sparse_sum_product": 8,
     "frequency_noise_sparse": 333,
+    "original_archive_phase": 357,
     "joint_sparse_demapping_shuffled": 45,
+    "original_archive_phase_refinement": 39,
     "soft_with_author_hint": 3,
-    "repeat_verified_codeword": 12
+    "ldpc_channel_feedback": 6,
+    "smoothed_archive_pilot_phase": 12,
+    "repeat_verified_codeword": 13,
+    "smoothed_archive_pilot_phase_refinement": 6
   }
 }
