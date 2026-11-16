@@ -68,6 +68,39 @@ $p_0,p_1,p_2$ 是本实验中依次编号的三个母码奇偶块，块内区间
 3. **验证接收观测**。在固定位置和标签下做软译码、全综合征和逐位重编码，并报告接收点的重调制误差。另设错位、错标签或打乱资源的对照。在有额外证据的地方，将待预测奇偶位排除在译码输入之外，直接与其真实观测比较。
 4. **记录验证边界**。旧九帧来自同一次采集，未参与首轮选参的码字可以用于同采集留出对照。MCS 78 和 88 的单字证据仍适用于各自这一观测。MATLAB 已复核 57、71、78、92 的缩短核心以及 85、88 的整字。本次新增四档整字结果由 Python 验证，模型与记录目前保存在本机研究目录。
 
+## 6. UT 第 466、482 帧的难译码字
+
+两帧按作者档案的零基编号。固定 MCS 92 的 `N=16384`、`K=13056`、交叉 32 点位标签和发射资源坐标。54 个 MCS 92 码字在最初的重放中通过 4 个。排查和解决过程如下。
+
+| 遇到的问题 | 处理和结果 |
+|---|---|
+| 给所有子载波使用同一套增益和噪声模型，部分软判决的可靠度偏差较大 | 用同帧已通过 LDPC 的码字重调制，从已知星座点拟合各子载波的复增益和噪声。加入已验证的相邻码字后，MCS 92 通过数增至 42/54 |
+| 一次性的比特软判决没有利用同一个星座点上 5 位的联合约束 | 让星座软解映射与 LDPC 校验交换外部信息。在稀疏母图里保留 768 个未知删余变量，并用有效矩阵验收输出。补出 10 字，累计 52/54 |
+| 第 466 帧第 7 字和第 482 帧第 29 字仍不收敛 | 按各 OFDM 时隙分别估计噪声和残余复增益，然后重新做联合迭代。两字各用两种配置复跑，得到相同的发送码字，累计 54/54 |
+| 用预测的内层头辅助译码时，表面上通过 LDPC 的候选缺少接收证据 | 第 482 帧第 3 字曾出现这种情况，遮蔽奇偶位后无法复现。最终由不使用该先验的联合译码恢复，后续三个奇偶留出组均重现同一码字 |
+
+12 个补出的码字，都用有效矩阵重算综合征并逐位重编码。额外做了 36 次奇偶位留出重放，其中 31 次重现同一码字。第 466 帧第 16 字在该留出实验中三次均未重现，第 20 字重现一次。两字都在完整观测下用不同的软判决配置得到相同结果。第 466、467 帧的对应观测有较高相关性，合并软信息时把它们作为重复观测处理。 [联合译码逐字结果](../provenance/mcs92/mac_trace_mcs92_joint.json) · [相邻字重估](../provenance/mcs92/mac_trace_mcs92_joint_refine.json) · [时隙重估](../provenance/mcs92/mac_trace_mcs92_slot_noise.json) · [奇偶留出](../provenance/mcs92/mac_trace_mcs92_phy_holdout.json)
+
+| 帧 | 数据码字 | MCS 92 码字 | 解扰后的系统字节 |
+|---:|---:|---:|---:|
+| 466 | 85/85 | 21/21 | 120,416 |
+| 482 | 82/82 | 33/33 | 121,920 |
+
+逐码字重新施加扰码后核对系统位，按 PHY 分配顺序拼接。字节数包含数据分配内的 MAC 头和零填充。 [逐码字验收表](../provenance/mcs92/phy_decode_466_482_words.csv) · [分配及解扰字节摘要](../provenance/mcs92/phy_decode_466_482_complete.json)
+
+### 重放最后 12 字
+
+仓库提供 C++17 联合译码器和 Python 重放入口。Python 需要 NumPy 和 h5py。输入是本地保存的第 466、467、482 帧符号导出 `mac_trace_symbols_*.mat`，以及本地前序实验的 `mac_trace_decoded.npz`。该 NPZ 的键为 `帧号_MCS`，值是对应分配的解扰字节。已验证的位置、待补位置及训练范围由 [起点清单](../provenance/mcs92/joint_seed_layout.json) 读取。若已有 `length_grid_0455.h5` 和 `length_grid_0481.h5`，可在仓库根目录的 MATLAB 中运行 `addpath('tools'); export_ut_mcs92_symbols('/path/to/grids',pwd)`，软符号文件将保存在网格目录。
+
+```sh
+c++ -O3 -std=c++17 tools/mcs92_joint_decoder.cpp -o mcs92_joint_decoder
+python tools/replay_ut_mcs92.py --symbols /path/to/symbol-exports \
+  --seed /path/to/mac_trace_decoded.npz --decoder ./mcs92_joint_decoder \
+  --out /path/to/recovered-words.npz
+```
+
+输出包含 12 个完整发送码字和各自的解扰字节。发布前重放核对了全部 196,608 个发送位和 19,584 个解扰字节，两者均逐位或逐字节一致。这个入口是基于该批已验证分配的离线重放。 [发布复核清单](../provenance/mcs92/published_replay_check.json) · [UT 数据字段说明](https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/exemplar-frames-data/EXEMPLAR_FRAMES_GUIDE.txt)
+
 ## 复核材料
 
 已有仓库记录包括 [MCS 66 数值验证](MCS66_RECOVERY_VALIDATION.zh-CN.md)、[MCS 70 数值验证](MCS70_RECOVERY_VALIDATION.zh-CN.md)和 [MCS 66 推导教程](CODING_WALKTHROUGH.zh-CN.md)。

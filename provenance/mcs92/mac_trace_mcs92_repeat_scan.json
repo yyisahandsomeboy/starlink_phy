@@ -1,0 +1,67 @@
+{
+  "frames": 130,
+  "words": 1638,
+  "full_comparisons": 5,
+  "matches": [
+    {
+      "frame": 466,
+      "word": 7,
+      "repeat_frame": 467,
+      "repeat_word": 7,
+      "repeat_r0": 251868,
+      "match_fraction": 0.9879150390625,
+      "halves": [
+        0.9881591796875,
+        0.9876708984375
+      ]
+    },
+    {
+      "frame": 466,
+      "word": 10,
+      "repeat_frame": 467,
+      "repeat_word": 10,
+      "repeat_r0": 261699,
+      "match_fraction": 0.98681640625,
+      "halves": [
+        0.9873046875,
+        0.986328125
+      ]
+    },
+    {
+      "frame": 466,
+      "word": 16,
+      "repeat_frame": 467,
+      "repeat_word": 16,
+      "repeat_r0": 281361,
+      "match_fraction": 0.98870849609375,
+      "halves": [
+        0.9912109375,
+        0.9862060546875
+      ]
+    },
+    {
+      "frame": 466,
+      "word": 18,
+      "repeat_frame": 467,
+      "repeat_word": 18,
+      "repeat_r0": 287915,
+      "match_fraction": 0.98681640625,
+      "halves": [
+        0.984619140625,
+        0.989013671875
+      ]
+    },
+    {
+      "frame": 466,
+      "word": 20,
+      "repeat_frame": 467,
+      "repeat_word": 20,
+      "repeat_r0": 294469,
+      "match_fraction": 0.9921875,
+      "halves": [
+        0.9927978515625,
+        0.9915771484375
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+[
+  {
+    "frame": 466,
+    "word": 7,
+    "r0": 251868,
+    "reencoded": true,
+    "attempts": 2,
+    "repeats": [
+      {
+        "final": 0,
+        "iterations": 20,
+        "settings": "8_4_1004_ramp_gain",
+        "graph": "sparse",
+        "period": 2,
+        "scale": 1.0,
+        "weight": 0.9
+      },
+      {
+        "final": 0,
+        "iterations": 33,
+        "settings": "8_4_1004_ramp_gain_pair",
+        "graph": "sparse",
+        "period": 2,
+        "scale": 1.0,
+        "weight": 0.9
+      }
+    ],
+    "final": 0,
+    "iterations": 20,
+    "settings": "8_4_1004_ramp_gain",
+    "graph": "sparse",
+    "period": 2,
+    "scale": 1.0,
+    "weight": 0.9
+  },
+  {
+    "frame": 482,
+    "word": 29,
+    "r0": 284068,
+    "reencoded": true,
+    "attempts": 2,
+    "repeats": [
+      {
+        "final": 0,
+        "iterations": 12,
+        "settings": "8_4_1004_ramp_gain",
+        "graph": "sparse",
+        "period": 2,
+        "scale": 1.0,
+        "weight": 0.9
+      },
+      {
+        "final": 0,
+        "iterations": 13,
+        "settings": "10_6_1004_slot_gain",
+        "graph": "sparse",
+        "period": 2,
+        "scale": 1.0,
+        "weight": 0.9
+      }
+    ],
+    "final": 0,
+    "iterations": 12,
+    "settings": "8_4_1004_ramp_gain",
+    "graph": "sparse",
+    "period": 2,
+    "scale": 1.0,
+    "weight": 0.9
+  }
+]

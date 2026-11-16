@@ -1,3 +1,5 @@
+> UT 作者第 466、482 帧的 167 个数据码字全部完成 LDPC 译码和解扰。新增 MCS 92 联合译码重放及逐字验证。 [遇到的问题、处理办法与实测结果](docs/MCS_LDPC_RECOVERY_SUMMARY.zh-CN.md#6-ut-第-466482-帧的难译码字)
+
 > 已核查的 23 个 MCS 均有通过完整 LDPC 译码和重编码的样本。MCS 6 和 68 分别通过 32/32 和 7/7。逐档汇总包括码率、AR4JA 缩短和删余参数、18 个不同有效矩阵以及复核入口。 [23 档 LDPC 与 AR4JA 汇总](docs/AR4JA_OBSERVED_MCS.zh-CN.md)
 
 > MCS 35 已恢复接收等价 LDPC 模型，134 个样本全部通过重编码，49 个 MAC 头通过 CRC-24。仓库提供独立的 MATLAB 译码入口、可重放的 Python 验证和分帧证据。[MCS 35 验证](docs/MCS35_RECOVERY_VALIDATION.zh-CN.md) · [MAC／RLC 字段与接续](docs/RLC_FIELD_VALIDATION.zh-CN.md)

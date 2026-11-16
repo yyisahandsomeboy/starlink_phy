@@ -1,0 +1,536 @@
+{
+  "associations_by_capture": {
+    "ut_original": {
+      "explicit_records": 124,
+      "records_with_recognized_inner_key": 121,
+      "records_with_multiple_inner_keys": 0,
+      "distinct_outer_ids_with_key": 30,
+      "distinct_recognized_inner_keys": 30,
+      "outer_ids_with_multiple_inner_keys": {
+        "2DA": [
+          "0BEF53A701",
+          "0E437B8900"
+        ],
+        "4F7": [
+          "01F10D1E00",
+          "09EF7B2C03",
+          "0B1E63B900",
+          "0CEE036E01",
+          "0E437B8900"
+        ],
+        "4F8": [
+          "013A229F00",
+          "02CF002A01",
+          "02E27D1B00",
+          "0B00699C00",
+          "0FAD614600"
+        ],
+        "5F1": [
+          "027D706100",
+          "0CEE036E01"
+        ],
+        "61F": [
+          "023C774C00",
+          "04425FA300"
+        ],
+        "6A0": [
+          "0DAF781901",
+          "0E437B8900"
+        ],
+        "B18": [
+          "085B061401",
+          "08CE121401",
+          "0B00699C00",
+          "0E535E3303"
+        ],
+        "B38": [
+          "06E6187A00",
+          "0D536FA100"
+        ],
+        "D21": [
+          "013A229F00",
+          "051917A600",
+          "05311A0A01",
+          "09EF7B2C03"
+        ],
+        "D31": [
+          "013A229F00",
+          "08CE121401"
+        ],
+        "F2B": [
+          "023C774C00",
+          "027D706100",
+          "06072D1103",
+          "071B178900",
+          "0E437B8900"
+        ],
+        "F32": [
+          "05311A0A01",
+          "0CEE036E01",
+          "0D536FA100"
+        ],
+        "F34": [
+          "04DB07AF03",
+          "08E4778D00",
+          "0D536FA100",
+          "0DAF781901",
+          "0FA163A403"
+        ],
+        "F8C": [
+          "0276781800",
+          "05311A0A01",
+          "08CE121401",
+          "09EF7B2C03",
+          "0B1E63B900",
+          "0BEF53A701",
+          "0E437B8900"
+        ],
+        "FEA": [
+          "02CF002A01",
+          "08CE121401",
+          "0E535E3303"
+        ]
+      },
+      "inner_keys_with_multiple_outer_ids": {
+        "013A229F00": [
+          "4F8",
+          "D21",
+          "D31"
+        ],
+        "023C774C00": [
+          "203",
+          "61F",
+          "F2B"
+        ],
+        "0276781800": [
+          "F8C",
+          "FAA"
+        ],
+        "027D706100": [
+          "5F1",
+          "F2B"
+        ],
+        "02CF002A01": [
+          "1C5",
+          "479",
+          "4F8",
+          "FEA"
+        ],
+        "04425FA300": [
+          "1B0",
+          "61F"
+        ],
+        "05311A0A01": [
+          "05E",
+          "D21",
+          "F32",
+          "F8C"
+        ],
+        "08CE121401": [
+          "B18",
+          "D31",
+          "F8C",
+          "FEA"
+        ],
+        "08E4778D00": [
+          "778",
+          "F34"
+        ],
+        "09EF7B2C03": [
+          "4F7",
+          "D21",
+          "F8C"
+        ],
+        "0B00699C00": [
+          "4F8",
+          "B18"
+        ],
+        "0B1E63B900": [
+          "4F7",
+          "F8C"
+        ],
+        "0BEF53A701": [
+          "020",
+          "2DA",
+          "F8C"
+        ],
+        "0CEE036E01": [
+          "4F7",
+          "5F1",
+          "F32"
+        ],
+        "0D536FA100": [
+          "B38",
+          "C78",
+          "F32",
+          "F34"
+        ],
+        "0DAF781901": [
+          "6A0",
+          "F34"
+        ],
+        "0E437B8900": [
+          "2DA",
+          "4F7",
+          "6A0",
+          "BD9",
+          "F2B",
+          "F8C"
+        ],
+        "0E535E3303": [
+          "3C4",
+          "B18",
+          "C87",
+          "FEA"
+        ],
+        "0FAD614600": [
+          "4F8",
+          "CF8"
+        ]
+      },
+      "keys_seen_under_multiple_mcs": {}
+    },
+    "xidian": {
+      "explicit_records": 20,
+      "records_with_recognized_inner_key": 20,
+      "records_with_multiple_inner_keys": 0,
+      "distinct_outer_ids_with_key": 10,
+      "distinct_recognized_inner_keys": 10,
+      "outer_ids_with_multiple_inner_keys": {
+        "A89": [
+          "072BA0AE00",
+          "0C7EBAAC00"
+        ],
+        "C19": [
+          "027C374400",
+          "036E257300",
+          "0D36004D00"
+        ],
+        "F13": [
+          "00233BCC00",
+          "0E6DEE5900"
+        ]
+      },
+      "inner_keys_with_multiple_outer_ids": {
+        "00233BCC00": [
+          "D29",
+          "F13"
+        ],
+        "027C374400": [
+          "C19",
+          "D16"
+        ],
+        "0C7EBAAC00": [
+          "942",
+          "A89"
+        ],
+        "0D36004D00": [
+          "C19",
+          "C3A"
+        ]
+      },
+      "keys_seen_under_multiple_mcs": {}
+    },
+    "ut_archive": {
+      "explicit_records": 95,
+      "records_with_recognized_inner_key": 93,
+      "records_with_multiple_inner_keys": 0,
+      "distinct_outer_ids_with_key": 33,
+      "distinct_recognized_inner_keys": 25,
+      "outer_ids_with_multiple_inner_keys": {
+        "1B0": [
+          "00BD14E000",
+          "0D62266B00"
+        ],
+        "1C5": [
+          "02CF002A01",
+          "08CE121401"
+        ],
+        "203": [
+          "063546B200",
+          "0D62266B00"
+        ],
+        "263": [
+          "08E4778D00",
+          "0D62266B00"
+        ],
+        "479": [
+          "085B061401",
+          "0E535E3303"
+        ],
+        "4F7": [
+          "0D62266B00",
+          "0D6B4D9D00"
+        ],
+        "5F1": [
+          "023C774C00",
+          "06072D1103",
+          "0D62266B00"
+        ],
+        "61F": [
+          "04425FA300",
+          "0D62266B00"
+        ],
+        "778": [
+          "06E6187A00",
+          "0BEF53A701"
+        ],
+        "8EF": [
+          "02E27D1B00",
+          "0992164400",
+          "09D347BB00"
+        ],
+        "A14": [
+          "023C774C00",
+          "0D62266B00"
+        ],
+        "D21": [
+          "013A229F00",
+          "0D536FA100"
+        ],
+        "F34": [
+          "09EF7B2C03",
+          "0BEF53A701",
+          "0E437B8900"
+        ],
+        "F8C": [
+          "01F10D1E00",
+          "08CE121401",
+          "0BEF53A701",
+          "0D62266B00"
+        ],
+        "FEA": [
+          "09D46D2200",
+          "0FAD614600"
+        ]
+      },
+      "inner_keys_with_multiple_outer_ids": {
+        "013A229F00": [
+          "D21",
+          "D31"
+        ],
+        "023C774C00": [
+          "5F1",
+          "A14"
+        ],
+        "02E27D1B00": [
+          "8EF",
+          "CF8"
+        ],
+        "085B061401": [
+          "479",
+          "C87"
+        ],
+        "08CE121401": [
+          "1C5",
+          "F8C"
+        ],
+        "08E4778D00": [
+          "263",
+          "FAA"
+        ],
+        "09D46D2200": [
+          "B18",
+          "FEA"
+        ],
+        "0BEF53A701": [
+          "778",
+          "F34",
+          "F8C"
+        ],
+        "0D536FA100": [
+          "D21",
+          "F32"
+        ],
+        "0D62266B00": [
+          "05E",
+          "075",
+          "1B0",
+          "203",
+          "263",
+          "292",
+          "2DA",
+          "4F7",
+          "5E5",
+          "5F1",
+          "61F",
+          "7EA",
+          "A14",
+          "AA0",
+          "B09",
+          "F2B",
+          "F8C",
+          "FA1"
+        ],
+        "0E437B8900": [
+          "6A0",
+          "F34"
+        ]
+      },
+      "keys_seen_under_multiple_mcs": {
+        "023C774C00": [
+          {
+            "frame": 466,
+            "mcs": 57,
+            "offset": 0,
+            "id": "A14",
+            "tag": "B8"
+          },
+          {
+            "frame": 482,
+            "mcs": 66,
+            "offset": 98,
+            "id": "5F1",
+            "tag": "B8"
+          }
+        ]
+      }
+    }
+  },
+  "pair_matches": {
+    "UT original": {
+      "split_length": {
+        "total": 26,
+        "with_two_ids": 26,
+        "same_id": 8,
+        "changed_id": 18,
+        "strata": {
+          "B8/B8": {
+            "same_id": 8,
+            "changed_id": 18
+          },
+          "same_mcs": {
+            "same_id": 8,
+            "changed_id": 18
+          },
+          "discovery": {
+            "same_id": 5,
+            "changed_id": 7
+          },
+          "mixed": {
+            "same_id": 0,
+            "changed_id": 3
+          },
+          "holdout": {
+            "same_id": 3,
+            "changed_id": 8
+          }
+        }
+      },
+      "closed": {
+        "total": 23,
+        "with_two_ids": 23,
+        "same_id": 6,
+        "changed_id": 17,
+        "strata": {
+          "B8/B8": {
+            "same_id": 5,
+            "changed_id": 13
+          },
+          "same_mcs": {
+            "same_id": 6,
+            "changed_id": 17
+          },
+          "mixed": {
+            "same_id": 2,
+            "changed_id": 4
+          },
+          "discovery": {
+            "same_id": 4,
+            "changed_id": 8
+          },
+          "B8/90": {
+            "same_id": 0,
+            "changed_id": 2
+          },
+          "90/B8": {
+            "same_id": 1,
+            "changed_id": 1
+          },
+          "holdout": {
+            "same_id": 0,
+            "changed_id": 5
+          },
+          "90/90": {
+            "same_id": 0,
+            "changed_id": 1
+          }
+        }
+      }
+    },
+    "UT archive prior": {
+      "split_length": {
+        "total": 97,
+        "with_two_ids": 0,
+        "same_id": 0,
+        "changed_id": 0,
+        "strata": {}
+      },
+      "closed": {
+        "total": 109,
+        "with_two_ids": 0,
+        "same_id": 0,
+        "changed_id": 0,
+        "strata": {}
+      }
+    },
+    "Xidian": {
+      "split_length": {
+        "total": 6,
+        "with_two_ids": 4,
+        "same_id": 2,
+        "changed_id": 2,
+        "strata": {
+          "B8/B8": {
+            "same_id": 2,
+            "changed_id": 2
+          },
+          "same_mcs": {
+            "same_id": 2,
+            "changed_id": 2
+          },
+          "discovery": {
+            "same_id": 0,
+            "changed_id": 1
+          },
+          "mixed": {
+            "same_id": 1,
+            "changed_id": 0
+          },
+          "holdout": {
+            "same_id": 1,
+            "changed_id": 1
+          }
+        }
+      },
+      "closed": {
+        "total": 10,
+        "with_two_ids": 4,
+        "same_id": 1,
+        "changed_id": 3,
+        "strata": {
+          "B8/B8": {
+            "same_id": 1,
+            "changed_id": 3
+          },
+          "same_mcs": {
+            "same_id": 1,
+            "changed_id": 3
+          },
+          "discovery": {
+            "same_id": 1,
+            "changed_id": 1
+          },
+          "mixed": {
+            "same_id": 0,
+            "changed_id": 1
+          },
+          "holdout": {
+            "same_id": 0,
+            "changed_id": 1
+          }
+        }
+      }
+    }
+  }
+}

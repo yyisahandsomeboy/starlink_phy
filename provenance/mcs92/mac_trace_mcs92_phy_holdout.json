@@ -1,0 +1,398 @@
+[
+  {
+    "frame": 466,
+    "word": 10,
+    "hard_received_parity_matches": 144,
+    "heldout_received_parity_bits": 150,
+    "reproduced_groups": 3,
+    "groups": [
+      {
+        "group": 1,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "466_10_near"
+      },
+      {
+        "group": 2,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "466_10_near"
+      },
+      {
+        "group": 3,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "466_10_near"
+      }
+    ]
+  },
+  {
+    "frame": 466,
+    "word": 16,
+    "hard_received_parity_matches": 139,
+    "heldout_received_parity_bits": 150,
+    "reproduced_groups": 0,
+    "groups": [
+      {
+        "group": 1,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 567,
+        "same_word": false,
+        "settings": "466_16_pair_near"
+      },
+      {
+        "group": 2,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 588,
+        "same_word": false,
+        "settings": "466_16_pair_near"
+      },
+      {
+        "group": 3,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 594,
+        "same_word": false,
+        "settings": "466_16_pair_near"
+      }
+    ]
+  },
+  {
+    "frame": 466,
+    "word": 18,
+    "hard_received_parity_matches": 146,
+    "heldout_received_parity_bits": 150,
+    "reproduced_groups": 3,
+    "groups": [
+      {
+        "group": 1,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "466_18_near"
+      },
+      {
+        "group": 2,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "466_18_near"
+      },
+      {
+        "group": 3,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "466_18_near"
+      }
+    ]
+  },
+  {
+    "frame": 466,
+    "word": 20,
+    "hard_received_parity_matches": 146,
+    "heldout_received_parity_bits": 150,
+    "reproduced_groups": 1,
+    "groups": [
+      {
+        "group": 1,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 317,
+        "same_word": false,
+        "settings": "466_20_narrow"
+      },
+      {
+        "group": 2,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 257,
+        "same_word": false,
+        "settings": "466_20_narrow"
+      },
+      {
+        "group": 3,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "466_20_near"
+      }
+    ]
+  },
+  {
+    "frame": 466,
+    "word": 7,
+    "hard_received_parity_matches": 146,
+    "heldout_received_parity_bits": 150,
+    "reproduced_groups": 3,
+    "groups": [
+      {
+        "group": 1,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "slot_466_7_8_4_1004_ramp_gain"
+      },
+      {
+        "group": 2,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "slot_466_7_8_4_1004_ramp_gain"
+      },
+      {
+        "group": 3,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "slot_466_7_8_4_1004_ramp_gain"
+      }
+    ]
+  },
+  {
+    "frame": 482,
+    "word": 14,
+    "hard_received_parity_matches": 140,
+    "heldout_received_parity_bits": 150,
+    "reproduced_groups": 3,
+    "groups": [
+      {
+        "group": 1,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "482_14_near"
+      },
+      {
+        "group": 2,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "482_14_near"
+      },
+      {
+        "group": 3,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "482_14_near"
+      }
+    ]
+  },
+  {
+    "frame": 482,
+    "word": 26,
+    "hard_received_parity_matches": 142,
+    "heldout_received_parity_bits": 150,
+    "reproduced_groups": 3,
+    "groups": [
+      {
+        "group": 1,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "482_26_near"
+      },
+      {
+        "group": 2,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "482_26_near"
+      },
+      {
+        "group": 3,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "482_26_near"
+      }
+    ]
+  },
+  {
+    "frame": 482,
+    "word": 28,
+    "hard_received_parity_matches": 149,
+    "heldout_received_parity_bits": 150,
+    "reproduced_groups": 3,
+    "groups": [
+      {
+        "group": 1,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "482_28_near"
+      },
+      {
+        "group": 2,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "482_28_near"
+      },
+      {
+        "group": 3,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "482_28_near"
+      }
+    ]
+  },
+  {
+    "frame": 482,
+    "word": 29,
+    "hard_received_parity_matches": 135,
+    "heldout_received_parity_bits": 150,
+    "reproduced_groups": 3,
+    "groups": [
+      {
+        "group": 1,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "slot_482_29_8_4_1004_ramp_gain"
+      },
+      {
+        "group": 2,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "slot_482_29_8_4_1004_ramp_gain"
+      },
+      {
+        "group": 3,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "slot_482_29_8_4_1004_ramp_gain"
+      }
+    ]
+  },
+  {
+    "frame": 482,
+    "word": 3,
+    "hard_received_parity_matches": 143,
+    "heldout_received_parity_bits": 150,
+    "reproduced_groups": 3,
+    "groups": [
+      {
+        "group": 1,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "482_3_near"
+      },
+      {
+        "group": 2,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "482_3_near"
+      },
+      {
+        "group": 3,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "482_3_near"
+      }
+    ]
+  },
+  {
+    "frame": 482,
+    "word": 4,
+    "hard_received_parity_matches": 149,
+    "heldout_received_parity_bits": 150,
+    "reproduced_groups": 3,
+    "groups": [
+      {
+        "group": 1,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "482_4_narrow"
+      },
+      {
+        "group": 2,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "482_4_narrow"
+      },
+      {
+        "group": 3,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "482_4_narrow"
+      }
+    ]
+  },
+  {
+    "frame": 482,
+    "word": 5,
+    "hard_received_parity_matches": 147,
+    "heldout_received_parity_bits": 150,
+    "reproduced_groups": 3,
+    "groups": [
+      {
+        "group": 1,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "482_5_near"
+      },
+      {
+        "group": 2,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "482_5_near"
+      },
+      {
+        "group": 3,
+        "symbols": 10,
+        "bits": 50,
+        "failed_checks": 0,
+        "same_word": true,
+        "settings": "482_5_near"
+      }
+    ]
+  }
+]

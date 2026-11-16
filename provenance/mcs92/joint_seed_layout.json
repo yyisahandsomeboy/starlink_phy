@@ -1,0 +1,999 @@
+[
+  {
+    "frame": 466,
+    "allocations": [
+      {
+        "mcs": 5,
+        "r0": 228,
+        "quantity": 5,
+        "capacity_bytes": 640,
+        "words": [
+          {
+            "word": 1,
+            "r0": 228,
+            "reencoded": true
+          },
+          {
+            "word": 2,
+            "r0": 2276,
+            "reencoded": true
+          },
+          {
+            "word": 3,
+            "r0": 4324,
+            "reencoded": true
+          },
+          {
+            "word": 4,
+            "r0": 6372,
+            "reencoded": true
+          },
+          {
+            "word": 5,
+            "r0": 8420,
+            "reencoded": true
+          }
+        ]
+      },
+      {
+        "mcs": 35,
+        "r0": 11152,
+        "quantity": 2,
+        "capacity_bytes": 2368,
+        "words": [
+          {
+            "word": 1,
+            "r0": 11152,
+            "reencoded": true
+          },
+          {
+            "word": 2,
+            "r0": 16614,
+            "reencoded": true
+          }
+        ]
+      },
+      {
+        "mcs": 57,
+        "r0": 22076,
+        "quantity": 1,
+        "capacity_bytes": 672,
+        "words": [
+          {
+            "word": 1,
+            "r0": 22076,
+            "reencoded": true
+          }
+        ]
+      },
+      {
+        "mcs": 66,
+        "r0": 24124,
+        "quantity": 17,
+        "capacity_bytes": 26112,
+        "words": [
+          {
+            "word": 1,
+            "r0": 24124,
+            "reencoded": true
+          },
+          {
+            "word": 2,
+            "r0": 28220,
+            "reencoded": true
+          },
+          {
+            "word": 3,
+            "r0": 32316,
+            "reencoded": true
+          },
+          {
+            "word": 4,
+            "r0": 36412,
+            "reencoded": true
+          },
+          {
+            "word": 5,
+            "r0": 40508,
+            "reencoded": true
+          },
+          {
+            "word": 6,
+            "r0": 44604,
+            "reencoded": true
+          },
+          {
+            "word": 7,
+            "r0": 48700,
+            "reencoded": true
+          },
+          {
+            "word": 8,
+            "r0": 52796,
+            "reencoded": true
+          },
+          {
+            "word": 9,
+            "r0": 56892,
+            "reencoded": true
+          },
+          {
+            "word": 10,
+            "r0": 60988,
+            "reencoded": true
+          },
+          {
+            "word": 11,
+            "r0": 65084,
+            "reencoded": true
+          },
+          {
+            "word": 12,
+            "r0": 69180,
+            "reencoded": true
+          },
+          {
+            "word": 13,
+            "r0": 73276,
+            "reencoded": true
+          },
+          {
+            "word": 14,
+            "r0": 77372,
+            "reencoded": true
+          },
+          {
+            "word": 15,
+            "r0": 81468,
+            "reencoded": true
+          },
+          {
+            "word": 16,
+            "r0": 85564,
+            "reencoded": true
+          },
+          {
+            "word": 17,
+            "r0": 89660,
+            "reencoded": true
+          }
+        ]
+      },
+      {
+        "mcs": 70,
+        "r0": 93756,
+        "quantity": 13,
+        "capacity_bytes": 20800,
+        "words": [
+          {
+            "word": 1,
+            "r0": 93756,
+            "reencoded": true
+          },
+          {
+            "word": 2,
+            "r0": 97852,
+            "reencoded": true
+          },
+          {
+            "word": 3,
+            "r0": 101948,
+            "reencoded": true
+          },
+          {
+            "word": 4,
+            "r0": 106044,
+            "reencoded": true
+          },
+          {
+            "word": 5,
+            "r0": 110140,
+            "reencoded": true
+          },
+          {
+            "word": 6,
+            "r0": 114236,
+            "reencoded": true
+          },
+          {
+            "word": 7,
+            "r0": 118332,
+            "reencoded": true
+          },
+          {
+            "word": 8,
+            "r0": 122428,
+            "reencoded": true
+          },
+          {
+            "word": 9,
+            "r0": 126524,
+            "reencoded": true
+          },
+          {
+            "word": 10,
+            "r0": 130620,
+            "reencoded": true
+          },
+          {
+            "word": 11,
+            "r0": 134716,
+            "reencoded": true
+          },
+          {
+            "word": 12,
+            "r0": 138812,
+            "reencoded": true
+          },
+          {
+            "word": 13,
+            "r0": 142908,
+            "reencoded": true
+          }
+        ]
+      },
+      {
+        "mcs": 71,
+        "r0": 147004,
+        "quantity": 22,
+        "capacity_bytes": 29568,
+        "words": [
+          {
+            "word": 1,
+            "r0": 147004,
+            "reencoded": true
+          },
+          {
+            "word": 2,
+            "r0": 150281,
+            "reencoded": true
+          },
+          {
+            "word": 3,
+            "r0": 153558,
+            "reencoded": true
+          },
+          {
+            "word": 4,
+            "r0": 156835,
+            "reencoded": true
+          },
+          {
+            "word": 5,
+            "r0": 160112,
+            "reencoded": true
+          },
+          {
+            "word": 6,
+            "r0": 163389,
+            "reencoded": true
+          },
+          {
+            "word": 7,
+            "r0": 166666,
+            "reencoded": true
+          },
+          {
+            "word": 8,
+            "r0": 169943,
+            "reencoded": true
+          },
+          {
+            "word": 9,
+            "r0": 173220,
+            "reencoded": true
+          },
+          {
+            "word": 10,
+            "r0": 176497,
+            "reencoded": true
+          },
+          {
+            "word": 11,
+            "r0": 179774,
+            "reencoded": true
+          },
+          {
+            "word": 12,
+            "r0": 183051,
+            "reencoded": true
+          },
+          {
+            "word": 13,
+            "r0": 186328,
+            "reencoded": true
+          },
+          {
+            "word": 14,
+            "r0": 189605,
+            "reencoded": true
+          },
+          {
+            "word": 15,
+            "r0": 192882,
+            "reencoded": true
+          },
+          {
+            "word": 16,
+            "r0": 196159,
+            "reencoded": true
+          },
+          {
+            "word": 17,
+            "r0": 199436,
+            "reencoded": true
+          },
+          {
+            "word": 18,
+            "r0": 202713,
+            "reencoded": true
+          },
+          {
+            "word": 19,
+            "r0": 205990,
+            "reencoded": true
+          },
+          {
+            "word": 20,
+            "r0": 209267,
+            "reencoded": true
+          },
+          {
+            "word": 21,
+            "r0": 212544,
+            "reencoded": true
+          },
+          {
+            "word": 22,
+            "r0": 215821,
+            "reencoded": true
+          }
+        ]
+      },
+      {
+        "mcs": 75,
+        "r0": 219098,
+        "quantity": 1,
+        "capacity_bytes": 1376,
+        "words": [
+          {
+            "word": 1,
+            "r0": 219098,
+            "reencoded": true
+          }
+        ]
+      },
+      {
+        "mcs": 85,
+        "r0": 222375,
+        "quantity": 3,
+        "capacity_bytes": 4608,
+        "words": [
+          {
+            "word": 1,
+            "r0": 222375,
+            "reencoded": true
+          },
+          {
+            "word": 2,
+            "r0": 225652,
+            "reencoded": true
+          },
+          {
+            "word": 3,
+            "r0": 228929,
+            "reencoded": true
+          }
+        ]
+      },
+      {
+        "mcs": 92,
+        "r0": 232206,
+        "quantity": 21,
+        "capacity_bytes": 34272,
+        "words": [
+          {
+            "word": 1,
+            "r0": 232206,
+            "reencoded": true
+          },
+          {
+            "word": 2,
+            "r0": 235483,
+            "reencoded": true
+          },
+          {
+            "word": 3,
+            "r0": 238760,
+            "reencoded": true
+          },
+          {
+            "word": 4,
+            "r0": 242037,
+            "reencoded": true
+          },
+          {
+            "word": 5,
+            "r0": 245314,
+            "reencoded": true
+          },
+          {
+            "word": 6,
+            "r0": 248591,
+            "reencoded": true
+          },
+          {
+            "word": 7,
+            "r0": 251868,
+            "reencoded": false
+          },
+          {
+            "word": 8,
+            "r0": 255145,
+            "reencoded": true
+          },
+          {
+            "word": 9,
+            "r0": 258422,
+            "reencoded": true
+          },
+          {
+            "word": 10,
+            "r0": 261699,
+            "reencoded": false
+          },
+          {
+            "word": 11,
+            "r0": 264976,
+            "reencoded": true
+          },
+          {
+            "word": 12,
+            "r0": 268253,
+            "reencoded": true
+          },
+          {
+            "word": 13,
+            "r0": 271530,
+            "reencoded": true
+          },
+          {
+            "word": 14,
+            "r0": 274807,
+            "reencoded": true
+          },
+          {
+            "word": 15,
+            "r0": 278084,
+            "reencoded": true
+          },
+          {
+            "word": 16,
+            "r0": 281361,
+            "reencoded": false
+          },
+          {
+            "word": 17,
+            "r0": 284638,
+            "reencoded": true
+          },
+          {
+            "word": 18,
+            "r0": 287915,
+            "reencoded": false
+          },
+          {
+            "word": 19,
+            "r0": 291192,
+            "reencoded": true
+          },
+          {
+            "word": 20,
+            "r0": 294469,
+            "reencoded": false
+          },
+          {
+            "word": 21,
+            "r0": 297746,
+            "reencoded": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "frame": 482,
+    "allocations": [
+      {
+        "mcs": 5,
+        "r0": 228,
+        "quantity": 4,
+        "capacity_bytes": 512,
+        "words": [
+          {
+            "word": 1,
+            "r0": 228,
+            "reencoded": true
+          },
+          {
+            "word": 2,
+            "r0": 2276,
+            "reencoded": true
+          },
+          {
+            "word": 3,
+            "r0": 4324,
+            "reencoded": true
+          },
+          {
+            "word": 4,
+            "r0": 6372,
+            "reencoded": true
+          }
+        ]
+      },
+      {
+        "mcs": 35,
+        "r0": 9218,
+        "quantity": 3,
+        "capacity_bytes": 3552,
+        "words": [
+          {
+            "word": 1,
+            "r0": 9218,
+            "reencoded": true
+          },
+          {
+            "word": 2,
+            "r0": 14680,
+            "reencoded": true
+          },
+          {
+            "word": 3,
+            "r0": 20142,
+            "reencoded": true
+          }
+        ]
+      },
+      {
+        "mcs": 57,
+        "r0": 25604,
+        "quantity": 1,
+        "capacity_bytes": 672,
+        "words": [
+          {
+            "word": 1,
+            "r0": 25604,
+            "reencoded": true
+          }
+        ]
+      },
+      {
+        "mcs": 66,
+        "r0": 27652,
+        "quantity": 27,
+        "capacity_bytes": 41472,
+        "words": [
+          {
+            "word": 1,
+            "r0": 27652,
+            "reencoded": true
+          },
+          {
+            "word": 2,
+            "r0": 31748,
+            "reencoded": true
+          },
+          {
+            "word": 3,
+            "r0": 35844,
+            "reencoded": true
+          },
+          {
+            "word": 4,
+            "r0": 39940,
+            "reencoded": true
+          },
+          {
+            "word": 5,
+            "r0": 44036,
+            "reencoded": true
+          },
+          {
+            "word": 6,
+            "r0": 48132,
+            "reencoded": true
+          },
+          {
+            "word": 7,
+            "r0": 52228,
+            "reencoded": true
+          },
+          {
+            "word": 8,
+            "r0": 56324,
+            "reencoded": true
+          },
+          {
+            "word": 9,
+            "r0": 60420,
+            "reencoded": true
+          },
+          {
+            "word": 10,
+            "r0": 64516,
+            "reencoded": true
+          },
+          {
+            "word": 11,
+            "r0": 68612,
+            "reencoded": true
+          },
+          {
+            "word": 12,
+            "r0": 72708,
+            "reencoded": true
+          },
+          {
+            "word": 13,
+            "r0": 76804,
+            "reencoded": true
+          },
+          {
+            "word": 14,
+            "r0": 80900,
+            "reencoded": true
+          },
+          {
+            "word": 15,
+            "r0": 84996,
+            "reencoded": true
+          },
+          {
+            "word": 16,
+            "r0": 89092,
+            "reencoded": true
+          },
+          {
+            "word": 17,
+            "r0": 93188,
+            "reencoded": true
+          },
+          {
+            "word": 18,
+            "r0": 97284,
+            "reencoded": true
+          },
+          {
+            "word": 19,
+            "r0": 101380,
+            "reencoded": true
+          },
+          {
+            "word": 20,
+            "r0": 105476,
+            "reencoded": true
+          },
+          {
+            "word": 21,
+            "r0": 109572,
+            "reencoded": true
+          },
+          {
+            "word": 22,
+            "r0": 113668,
+            "reencoded": true
+          },
+          {
+            "word": 23,
+            "r0": 117764,
+            "reencoded": true
+          },
+          {
+            "word": 24,
+            "r0": 121860,
+            "reencoded": true
+          },
+          {
+            "word": 25,
+            "r0": 125956,
+            "reencoded": true
+          },
+          {
+            "word": 26,
+            "r0": 130052,
+            "reencoded": true
+          },
+          {
+            "word": 27,
+            "r0": 134148,
+            "reencoded": true
+          }
+        ]
+      },
+      {
+        "mcs": 70,
+        "r0": 138244,
+        "quantity": 10,
+        "capacity_bytes": 16000,
+        "words": [
+          {
+            "word": 1,
+            "r0": 138244,
+            "reencoded": true
+          },
+          {
+            "word": 2,
+            "r0": 142340,
+            "reencoded": true
+          },
+          {
+            "word": 3,
+            "r0": 146436,
+            "reencoded": true
+          },
+          {
+            "word": 4,
+            "r0": 150532,
+            "reencoded": true
+          },
+          {
+            "word": 5,
+            "r0": 154628,
+            "reencoded": true
+          },
+          {
+            "word": 6,
+            "r0": 158724,
+            "reencoded": true
+          },
+          {
+            "word": 7,
+            "r0": 162820,
+            "reencoded": true
+          },
+          {
+            "word": 8,
+            "r0": 166916,
+            "reencoded": true
+          },
+          {
+            "word": 9,
+            "r0": 171012,
+            "reencoded": true
+          },
+          {
+            "word": 10,
+            "r0": 175108,
+            "reencoded": true
+          }
+        ]
+      },
+      {
+        "mcs": 71,
+        "r0": 179204,
+        "quantity": 1,
+        "capacity_bytes": 1344,
+        "words": [
+          {
+            "word": 1,
+            "r0": 179204,
+            "reencoded": true
+          }
+        ]
+      },
+      {
+        "mcs": 75,
+        "r0": 182481,
+        "quantity": 1,
+        "capacity_bytes": 1376,
+        "words": [
+          {
+            "word": 1,
+            "r0": 182481,
+            "reencoded": true
+          }
+        ]
+      },
+      {
+        "mcs": 85,
+        "r0": 185758,
+        "quantity": 1,
+        "capacity_bytes": 1536,
+        "words": [
+          {
+            "word": 1,
+            "r0": 185758,
+            "reencoded": true
+          }
+        ]
+      },
+      {
+        "mcs": 88,
+        "r0": 189035,
+        "quantity": 1,
+        "capacity_bytes": 1600,
+        "words": [
+          {
+            "word": 1,
+            "r0": 189035,
+            "reencoded": true
+          }
+        ]
+      },
+      {
+        "mcs": 92,
+        "r0": 192312,
+        "quantity": 33,
+        "capacity_bytes": 53856,
+        "words": [
+          {
+            "word": 1,
+            "r0": 192312,
+            "reencoded": true
+          },
+          {
+            "word": 2,
+            "r0": 195589,
+            "reencoded": true
+          },
+          {
+            "word": 3,
+            "r0": 198866,
+            "reencoded": false
+          },
+          {
+            "word": 4,
+            "r0": 202143,
+            "reencoded": false
+          },
+          {
+            "word": 5,
+            "r0": 205420,
+            "reencoded": false
+          },
+          {
+            "word": 6,
+            "r0": 208697,
+            "reencoded": true
+          },
+          {
+            "word": 7,
+            "r0": 211974,
+            "reencoded": true
+          },
+          {
+            "word": 8,
+            "r0": 215251,
+            "reencoded": true
+          },
+          {
+            "word": 9,
+            "r0": 218528,
+            "reencoded": true
+          },
+          {
+            "word": 10,
+            "r0": 221805,
+            "reencoded": true
+          },
+          {
+            "word": 11,
+            "r0": 225082,
+            "reencoded": true
+          },
+          {
+            "word": 12,
+            "r0": 228359,
+            "reencoded": true
+          },
+          {
+            "word": 13,
+            "r0": 231636,
+            "reencoded": true
+          },
+          {
+            "word": 14,
+            "r0": 234913,
+            "reencoded": false
+          },
+          {
+            "word": 15,
+            "r0": 238190,
+            "reencoded": true
+          },
+          {
+            "word": 16,
+            "r0": 241467,
+            "reencoded": true
+          },
+          {
+            "word": 17,
+            "r0": 244744,
+            "reencoded": true
+          },
+          {
+            "word": 18,
+            "r0": 248021,
+            "reencoded": true
+          },
+          {
+            "word": 19,
+            "r0": 251298,
+            "reencoded": true
+          },
+          {
+            "word": 20,
+            "r0": 254575,
+            "reencoded": true
+          },
+          {
+            "word": 21,
+            "r0": 257852,
+            "reencoded": true
+          },
+          {
+            "word": 22,
+            "r0": 261129,
+            "reencoded": true
+          },
+          {
+            "word": 23,
+            "r0": 264406,
+            "reencoded": true
+          },
+          {
+            "word": 24,
+            "r0": 267683,
+            "reencoded": true
+          },
+          {
+            "word": 25,
+            "r0": 270960,
+            "reencoded": true
+          },
+          {
+            "word": 26,
+            "r0": 274237,
+            "reencoded": false
+          },
+          {
+            "word": 27,
+            "r0": 277514,
+            "reencoded": true
+          },
+          {
+            "word": 28,
+            "r0": 280791,
+            "reencoded": false
+          },
+          {
+            "word": 29,
+            "r0": 284068,
+            "reencoded": false
+          },
+          {
+            "word": 30,
+            "r0": 287345,
+            "reencoded": true
+          },
+          {
+            "word": 31,
+            "r0": 290622,
+            "reencoded": true
+          },
+          {
+            "word": 32,
+            "r0": 293899,
+            "reencoded": true
+          },
+          {
+            "word": 33,
+            "r0": 297176,
+            "reencoded": true
+          }
+        ]
+      }
+    ]
+  }
+]

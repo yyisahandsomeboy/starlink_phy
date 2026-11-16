@@ -1,0 +1,58 @@
+﻿capture,test,key,earlier_inner_sequence,phase,source_frame,source_mcs,source_offset,source_tag,source_id,target_frame,target_mcs,target_offset,target_tag,target_id,same_id,outer_counter_step,source_fragment_bytes,target_fragment_bytes,joined_bytes
+UT original,split_length,0D6B4D9D00,9593,discovery,1,70,5751,B8,263,2,70,7343,B8,263,True,1,48,1270,1318
+UT original,split_length,013A229F00,C202,discovery,1,70,8816,B8,D21,2,70,10486,B8,4F8,False,1,1283,251,1534
+UT original,split_length,0CEE036E01,6CBF,discovery,2,66,188,B8,5F1,3,66,353,B8,5F1,True,1,586,886,1472
+UT original,split_length,0E437B8900,4422,discovery,2,66,30552,B8,F8C,3,66,29629,B8,BD9,False,1,345,1179,1524
+UT original,split_length,0D6B4D9D00,9595,discovery,2,70,7343,B8,263,3,70,5087,B8,263,True,1,548,770,1318
+UT original,split_length,013A229F00,C204,discovery,2,70,10486,B8,4F8,3,70,8103,B8,D21,False,1,1351,183,1534
+UT original,split_length,0CEE036E01,6CD3,discovery,3,66,353,B8,5F1,4,66,104,B8,5F1,True,1,388,1084,1472
+UT original,split_length,013A229F00,C206,discovery,3,70,8103,B8,D21,4,70,10402,B8,D31,False,1,1292,242,1534
+UT original,split_length,0CEE036E01,6CE7,discovery,4,66,104,B8,5F1,5,66,29968,B8,F32,False,1,673,799,1472
+UT original,split_length,0E437B8900,4444,discovery,4,66,29863,B8,6A0,5,66,84,B8,F2B,False,1,312,1212,1524
+UT original,split_length,0D6B4D9D00,95AE,discovery,4,70,7280,B8,263,5,70,4655,B8,263,True,1,479,839,1318
+UT original,split_length,013A229F00,C208,discovery,4,70,10402,B8,D31,5,70,7731,B8,D21,False,1,1339,195,1534
+UT original,split_length,0E437B8900,4457,mixed,5,66,84,B8,F2B,6,66,30122,B8,2DA,False,1,1207,317,1524
+UT original,split_length,0CEE036E01,6CFB,mixed,5,66,29968,B8,F32,6,66,0,B8,5F1,False,1,1135,337,1472
+UT original,split_length,013A229F00,C20A,mixed,5,70,7731,B8,D21,6,70,9783,B8,D31,False,1,1340,194,1534
+UT original,split_length,0CEE036E01,6D11,holdout,6,66,0,B8,5F1,7,66,38820,B8,4F7,False,1,196,1276,1472
+UT original,split_length,0E437B8900,446A,holdout,6,66,30122,B8,2DA,7,66,568,B8,F2B,False,1,464,1060,1524
+UT original,split_length,0D6B4D9D00,95E3,holdout,6,70,6649,B8,263,7,70,8375,B8,263,True,1,491,827,1318
+UT original,split_length,013A229F00,C20C,holdout,6,70,9783,B8,D31,7,70,12370,B8,D21,False,1,1399,135,1534
+UT original,split_length,0E535E3303,4110,holdout,6,85,0,B8,B18,7,85,374,B8,B18,True,1,418,1102,1520
+UT original,split_length,0E437B8900,4483,holdout,7,66,568,B8,F2B,8,66,40235,B8,2DA,False,1,574,950,1524
+UT original,split_length,0CEE036E01,6D2A,holdout,7,66,38820,B8,4F7,8,66,0,B8,5F1,False,1,1334,138,1472
+UT original,split_length,013A229F00,C20F,holdout,7,70,12370,B8,D21,8,70,13322,B8,D31,False,1,783,751,1534
+UT original,split_length,0CEE036E01,6D46,holdout,8,66,0,B8,5F1,9,66,346,B8,5F1,True,1,307,1165,1472
+UT original,split_length,0E437B8900,44A8,holdout,8,66,40235,B8,2DA,9,66,31128,B8,4F7,False,1,554,970,1524
+UT original,split_length,013A229F00,C212,holdout,8,70,13322,B8,D31,9,70,7688,B8,D21,False,1,410,1124,1534
+UT original,closed,023C774C00,C7DA,mixed,1,57,130,B8,F2B,6,57,76,B8,F2B,True,1,,,
+UT original,closed,0D536FA100,BF04,discovery,1,70,98,B8,F34,3,70,282,B8,C78,False,1,,,
+UT original,closed,0BEF53A701,717E,discovery,1,70,1033,B8,2DA,2,70,68,B8,2DA,True,1,,,
+UT original,closed,05311A0A01,7A05,discovery,1,70,1679,B8,F8C,2,70,467,B8,D21,False,1,,,
+UT original,closed,02CF002A01,6F3C,discovery,1,71,0,B8,1C5,3,71,0,B8,479,False,1,,,
+UT original,closed,06072D1103,E98E,discovery,2,66,88,B8,F2B,4,66,0,B8,F2B,True,1,,,
+UT original,closed,0BEF53A701,7183,discovery,2,70,68,B8,2DA,3,70,68,90,020,False,216,,,
+UT original,closed,02E27D1B00,3FD8,discovery,2,85,68,B8,4F8,4,85,0,B8,4F8,True,1,,,
+UT original,closed,0BEF53A701,7184,discovery,3,70,68,90,020,3,70,1811,B8,020,True,41,,,
+UT original,closed,0D536FA100,BF07,discovery,3,70,282,B8,C78,5,70,68,B8,B38,False,1,,,
+UT original,closed,0BEF53A701,7186,discovery,3,70,1811,B8,020,4,70,294,B8,2DA,False,1,,,
+UT original,closed,02CF002A01,6F3E,discovery,3,71,0,B8,479,4,71,0,B8,FEA,False,1,,,
+UT original,closed,04425FA300,8128,mixed,4,57,104,B8,1B0,7,57,76,B8,61F,False,1,,,
+UT original,closed,0DAF781901,FACA,discovery,4,70,136,B8,F34,5,70,1255,B8,6A0,False,1,,,
+UT original,closed,05311A0A01,7A0B,mixed,4,70,633,B8,05E,6,70,0,B8,F32,False,1,,,
+UT original,closed,02CF002A01,6F3F,mixed,4,71,0,B8,FEA,6,71,0,B8,4F8,False,1,,,
+UT original,closed,02E27D1B00,3FD9,mixed,4,85,0,B8,4F8,7,85,0,B8,4F8,True,1,,,
+UT original,closed,09EF7B2C03,7882,mixed,5,70,0,90,4F7,6,70,141,B8,D21,False,229,,,
+UT original,closed,023C774C00,C7DB,holdout,6,57,76,B8,F2B,9,57,144,B8,61F,False,1,,,
+UT original,closed,05311A0A01,7A0C,holdout,6,70,0,B8,F32,8,70,0,B8,D21,False,1,,,
+UT original,closed,09EF7B2C03,7883,holdout,6,70,141,B8,D21,7,70,4187,B8,F8C,False,1,,,
+UT original,closed,02CF002A01,6F41,holdout,6,71,0,B8,4F8,8,71,0,90,1C5,False,112,,,
+UT original,closed,027D706100,EC7F,holdout,7,66,0,90,5F1,9,66,0,90,F2B,False,1,,,
+Xidian,split_length,0C7EBAAC00,218A,discovery,2,28,240,B8,942,6,28,1701,B8,A89,False,1,496,820,1316
+Xidian,split_length,0C7EBAAC00,21B3,mixed,6,28,1701,B8,A89,10,28,0,B8,A89,True,1,773,543,1316
+Xidian,split_length,0C7EBAAC00,21D6,holdout,10,28,0,B8,A89,14,28,679,B8,A89,True,1,576,740,1316
+Xidian,split_length,00233BCC00,B17D,holdout,12,21,20,B8,F13,16,21,24,B8,D29,False,1,744,574,1318
+Xidian,closed,0D36004D00,6841,discovery,2,10,36,B8,C3A,6,10,36,B8,C3A,True,1,,,
+Xidian,closed,027C374400,8CCD,discovery,2,28,0,B8,C19,6,28,0,B8,D16,False,1,,,
+Xidian,closed,0D36004D00,6842,mixed,6,10,36,B8,C3A,10,10,24,B8,C19,False,1,,,
+Xidian,closed,0D36004D00,684A,holdout,10,10,24,B8,C19,14,10,0,B8,C3A,False,1,,,
