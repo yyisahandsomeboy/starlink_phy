@@ -1,0 +1,270 @@
+{
+  "75": {
+    "N": 16384,
+    "K": 11008,
+    "KB": 8,
+    "M": 2048,
+    "shortened": 5376,
+    "punctured": 768,
+    "leading_spare_bits": 0,
+    "training_hard_rates_by_leading_slot": [
+      0.33575148809523814,
+      0.3372395833333333
+    ],
+    "verification": [
+      {
+        "frame": 458,
+        "fit": true,
+        "reencoded": true,
+        "scale": 0.04,
+        "decoded_without_mac_padding": false,
+        "unaided_best_failed_checks": 896,
+        "supplied_padding_bits": 10464,
+        "known_padding_initial_mismatches": 763,
+        "initial": 1203,
+        "final": 0,
+        "iterations": 3,
+        "changes": 450,
+        "converged": true,
+        "symbol_nmse": 0.062045094565711396,
+        "raw_parity_hard_agreement": 0.9244791666666666,
+        "parsed_lengths": [
+          68
+        ],
+        "expected_lengths": [
+          68
+        ],
+        "expected_padding_bytes": 1308,
+        "actual_padding_all_zero": true,
+        "mac_boundary_match": true
+      },
+      {
+        "frame": 466,
+        "fit": true,
+        "reencoded": true,
+        "scale": 0.04,
+        "decoded_without_mac_padding": true,
+        "unaided_best_failed_checks": 0,
+        "supplied_padding_bits": 0,
+        "known_padding_initial_mismatches": null,
+        "initial": 1718,
+        "final": 0,
+        "iterations": 9,
+        "changes": 863,
+        "converged": true,
+        "symbol_nmse": 0.04669773384803581,
+        "raw_parity_hard_agreement": 0.9481026785714286,
+        "parsed_lengths": [
+          68,
+          549
+        ],
+        "expected_lengths": [
+          68,
+          549
+        ],
+        "expected_padding_bytes": 759,
+        "actual_padding_all_zero": true,
+        "mac_boundary_match": true
+      },
+      {
+        "frame": 467,
+        "fit": true,
+        "reencoded": true,
+        "scale": 0.04,
+        "decoded_without_mac_padding": true,
+        "unaided_best_failed_checks": 0,
+        "supplied_padding_bits": 0,
+        "known_padding_initial_mismatches": null,
+        "initial": 1726,
+        "final": 0,
+        "iterations": 16,
+        "changes": 873,
+        "converged": true,
+        "symbol_nmse": 0.05172055365472869,
+        "raw_parity_hard_agreement": 0.9460565476190477,
+        "parsed_lengths": [
+          68,
+          549
+        ],
+        "expected_lengths": [
+          68,
+          549
+        ],
+        "expected_padding_bytes": 759,
+        "actual_padding_all_zero": true,
+        "mac_boundary_match": true
+      },
+      {
+        "frame": 482,
+        "fit": false,
+        "reencoded": true,
+        "scale": 0.04,
+        "decoded_without_mac_padding": false,
+        "unaided_best_failed_checks": 676,
+        "supplied_padding_bits": 9232,
+        "known_padding_initial_mismatches": 604,
+        "initial": 1159,
+        "final": 0,
+        "iterations": 3,
+        "changes": 426,
+        "converged": true,
+        "symbol_nmse": 0.05592891437419705,
+        "raw_parity_hard_agreement": 0.9421502976190477,
+        "parsed_lengths": [
+          134,
+          88
+        ],
+        "expected_lengths": [
+          134,
+          88
+        ],
+        "expected_padding_bytes": 1154,
+        "actual_padding_all_zero": true,
+        "mac_boundary_match": true,
+        "parity_erasure_check": {
+          "bits": 316,
+          "final_failed_checks": 0,
+          "same_word": true,
+          "agreement_with_raw": 298
+        },
+        "holdout_negative_controls_failed_checks": {
+          "wrong_spare_side": 1638,
+          "unscrambled_zero_prior": 1670
+        }
+      }
+    ],
+    "effective_model": "mcs75_complete_16384_model.json"
+  },
+  "81": {
+    "N": 16384,
+    "K": 11776,
+    "KB": 8,
+    "M": 2048,
+    "shortened": 4608,
+    "punctured": 1536,
+    "leading_spare_bits": 0,
+    "training_hard_rates_by_leading_slot": [
+      0.4156539351851852,
+      0.4166666666666667
+    ],
+    "verification": [
+      {
+        "frame": 459,
+        "fit": true,
+        "reencoded": true,
+        "scale": 0.04,
+        "decoded_without_mac_padding": false,
+        "unaided_best_failed_checks": 817,
+        "supplied_padding_bits": 11232,
+        "known_padding_initial_mismatches": 644,
+        "initial": 1047,
+        "final": 0,
+        "iterations": 3,
+        "changes": 380,
+        "converged": true,
+        "symbol_nmse": 0.05280501365599819,
+        "raw_parity_hard_agreement": 0.9273003472222222,
+        "parsed_lengths": [
+          68
+        ],
+        "expected_lengths": [
+          68
+        ],
+        "expected_padding_bytes": 1404,
+        "actual_padding_all_zero": true,
+        "mac_boundary_match": true
+      },
+      {
+        "frame": 461,
+        "fit": true,
+        "reencoded": true,
+        "scale": 0.04,
+        "decoded_without_mac_padding": false,
+        "unaided_best_failed_checks": 1111,
+        "supplied_padding_bits": 8896,
+        "known_padding_initial_mismatches": 731,
+        "initial": 1777,
+        "final": 0,
+        "iterations": 6,
+        "changes": 773,
+        "converged": true,
+        "symbol_nmse": 0.07702715764770719,
+        "raw_parity_hard_agreement": 0.9138454861111112,
+        "parsed_lengths": [
+          360
+        ],
+        "expected_lengths": [
+          360
+        ],
+        "expected_padding_bytes": 1112,
+        "actual_padding_all_zero": true,
+        "mac_boundary_match": true
+      },
+      {
+        "frame": 472,
+        "fit": true,
+        "reencoded": true,
+        "scale": 0.04,
+        "decoded_without_mac_padding": false,
+        "unaided_best_failed_checks": 968,
+        "supplied_padding_bits": 11232,
+        "known_padding_initial_mismatches": 828,
+        "initial": 1122,
+        "final": 0,
+        "iterations": 3,
+        "changes": 465,
+        "converged": true,
+        "symbol_nmse": 0.0657094901792642,
+        "raw_parity_hard_agreement": 0.9088541666666666,
+        "parsed_lengths": [
+          68
+        ],
+        "expected_lengths": [
+          68
+        ],
+        "expected_padding_bytes": 1404,
+        "actual_padding_all_zero": true,
+        "mac_boundary_match": true
+      },
+      {
+        "frame": 486,
+        "fit": false,
+        "reencoded": true,
+        "scale": 0.04,
+        "decoded_without_mac_padding": false,
+        "unaided_best_failed_checks": 763,
+        "supplied_padding_bits": 10192,
+        "known_padding_initial_mismatches": 610,
+        "initial": 1063,
+        "final": 0,
+        "iterations": 4,
+        "changes": 399,
+        "converged": true,
+        "symbol_nmse": 0.05727563860397294,
+        "raw_parity_hard_agreement": 0.9361979166666666,
+        "parsed_lengths": [
+          68,
+          130
+        ],
+        "expected_lengths": [
+          68,
+          130
+        ],
+        "expected_padding_bytes": 1274,
+        "actual_padding_all_zero": true,
+        "mac_boundary_match": true,
+        "parity_erasure_check": {
+          "bits": 271,
+          "final_failed_checks": 0,
+          "same_word": true,
+          "agreement_with_raw": 251
+        },
+        "holdout_negative_controls_failed_checks": {
+          "wrong_spare_side": 1464,
+          "unscrambled_zero_prior": 1390
+        }
+      }
+    ],
+    "effective_model": "mcs81_complete_16384_model.json"
+  }
+}

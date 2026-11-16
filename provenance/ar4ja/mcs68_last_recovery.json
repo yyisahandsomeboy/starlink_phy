@@ -1,0 +1,289 @@
+{
+  "mcs": 68,
+  "N": 8192,
+  "observations": 7,
+  "screened": 3,
+  "screen_best": [
+    {
+      "K": 6144,
+      "params": [
+        8,
+        1024,
+        2048,
+        1024
+      ],
+      "fit_raw_syndrome": 0.01611328125,
+      "holdout_raw_syndrome": 0.021321614583333332
+    },
+    {
+      "K": 6144,
+      "params": [
+        4,
+        2048,
+        2048,
+        4096
+      ],
+      "fit_raw_syndrome": 0.499755859375,
+      "holdout_raw_syndrome": 0.4939778645833333
+    },
+    {
+      "K": 6144,
+      "params": [
+        8,
+        2048,
+        10240,
+        4096
+      ],
+      "fit_raw_syndrome": 0.499755859375,
+      "holdout_raw_syndrome": 0.4939778645833333
+    }
+  ],
+  "trials": [
+    {
+      "frame": "T02",
+      "fit": true,
+      "word": 1,
+      "quantity": 1,
+      "r0": 294947,
+      "padding_bytes": 700,
+      "scale": 0.04,
+      "assisted": false,
+      "reencoded": true,
+      "initial": 25,
+      "final": 0,
+      "iterations": 1,
+      "changes": 8,
+      "converged": true,
+      "nmse": 0.01911426934324752,
+      "parity_hard_agreement": 0.99951171875
+    },
+    {
+      "frame": "T06",
+      "fit": true,
+      "word": 1,
+      "quantity": 3,
+      "r0": 292102,
+      "padding_bytes": 466,
+      "scale": 0.04,
+      "assisted": false,
+      "reencoded": true,
+      "initial": 26,
+      "final": 0,
+      "iterations": 1,
+      "changes": 8,
+      "converged": true,
+      "nmse": 0.019359932201220863,
+      "parity_hard_agreement": 0.99951171875
+    },
+    {
+      "frame": "T06",
+      "fit": true,
+      "word": 2,
+      "quantity": 3,
+      "r0": 294150,
+      "padding_bytes": 466,
+      "scale": 0.04,
+      "assisted": false,
+      "reencoded": true,
+      "initial": 60,
+      "final": 0,
+      "iterations": 1,
+      "changes": 15,
+      "converged": true,
+      "nmse": 0.01916348076004335,
+      "parity_hard_agreement": 0.99609375
+    },
+    {
+      "frame": "T06",
+      "fit": true,
+      "word": 3,
+      "quantity": 3,
+      "r0": 296198,
+      "padding_bytes": 466,
+      "scale": 0.04,
+      "assisted": false,
+      "reencoded": true,
+      "initial": 21,
+      "final": 0,
+      "iterations": 1,
+      "changes": 6,
+      "converged": true,
+      "nmse": 0.020476944899507063,
+      "parity_hard_agreement": 0.998046875
+    },
+    {
+      "frame": "T10",
+      "fit": false,
+      "word": 1,
+      "quantity": 2,
+      "r0": 292096,
+      "padding_bytes": 639,
+      "scale": 0.04,
+      "assisted": false,
+      "reencoded": true,
+      "initial": 41,
+      "final": 0,
+      "iterations": 1,
+      "changes": 12,
+      "converged": true,
+      "nmse": 0.019914412528093395,
+      "parity_hard_agreement": 0.998046875
+    },
+    {
+      "frame": "T10",
+      "fit": false,
+      "word": 2,
+      "quantity": 2,
+      "r0": 294144,
+      "padding_bytes": 639,
+      "scale": 0.04,
+      "assisted": false,
+      "reencoded": true,
+      "initial": 43,
+      "final": 0,
+      "iterations": 1,
+      "changes": 12,
+      "converged": true,
+      "nmse": 0.018288245611220715,
+      "parity_hard_agreement": 0.99658203125
+    },
+    {
+      "frame": "T14",
+      "fit": false,
+      "word": 1,
+      "quantity": 1,
+      "r0": 297676,
+      "padding_bytes": 260,
+      "scale": 0.04,
+      "assisted": false,
+      "reencoded": true,
+      "initial": 47,
+      "final": 0,
+      "iterations": 1,
+      "changes": 13,
+      "converged": true,
+      "nmse": 0.02008923254596675,
+      "parity_hard_agreement": 1.0
+    }
+  ],
+  "K": 6144,
+  "parameters": [
+    8,
+    1024,
+    2048,
+    1024
+  ],
+  "equivalent_parameters": [],
+  "passed": 7,
+  "unassisted_passed": 7,
+  "tail_boundary": [
+    {
+      "frame": "T02",
+      "fit": true,
+      "ones_in_last_128_system": 0,
+      "ones_in_first_128_after": 59
+    },
+    {
+      "frame": "T06",
+      "fit": true,
+      "ones_in_last_128_system": 1,
+      "ones_in_first_128_after": 62
+    },
+    {
+      "frame": "T10",
+      "fit": false,
+      "ones_in_last_128_system": 0,
+      "ones_in_first_128_after": 73
+    },
+    {
+      "frame": "T14",
+      "fit": false,
+      "ones_in_last_128_system": 0,
+      "ones_in_first_128_after": 57
+    }
+  ],
+  "one_bit_shift": [
+    {
+      "frame": "T10",
+      "word": 1,
+      "correct_hard_failed_fraction": 0.02001953125,
+      "shifted_hard_failed_fraction": 0.04150390625
+    },
+    {
+      "frame": "T10",
+      "word": 2,
+      "correct_hard_failed_fraction": 0.02099609375,
+      "shifted_hard_failed_fraction": 0.0361328125
+    },
+    {
+      "frame": "T14",
+      "word": 1,
+      "correct_hard_failed_fraction": 0.02294921875,
+      "shifted_hard_failed_fraction": 0.04638671875
+    }
+  ],
+  "allocations": [
+    {
+      "frame": "T02",
+      "bytes": 768,
+      "mac": null,
+      "records": [
+        {
+          "start": 0,
+          "length": 68,
+          "tag": "90"
+        }
+      ],
+      "tail_bytes": 700,
+      "tail_all_zero": true,
+      "predicted_padding": 700
+    },
+    {
+      "frame": "T06",
+      "bytes": 2304,
+      "mac": null,
+      "records": [
+        {
+          "start": 0,
+          "length": 1838,
+          "tag": "90"
+        }
+      ],
+      "tail_bytes": 466,
+      "tail_all_zero": true,
+      "predicted_padding": 466
+    },
+    {
+      "frame": "T10",
+      "bytes": 1536,
+      "mac": null,
+      "records": [
+        {
+          "start": 0,
+          "length": 897,
+          "tag": "90"
+        }
+      ],
+      "tail_bytes": 639,
+      "tail_all_zero": true,
+      "predicted_padding": 639
+    },
+    {
+      "frame": "T14",
+      "bytes": 768,
+      "mac": null,
+      "records": [
+        {
+          "start": 0,
+          "length": 508,
+          "tag": "90"
+        }
+      ],
+      "tail_bytes": 260,
+      "tail_all_zero": true,
+      "predicted_padding": 260
+    }
+  ],
+  "model": "mcs68_complete_model.json",
+  "sha256": "eac414feb6e055a3deaafdfe2f2d586d4ea4e1062741518119afc2c53afc0c76"
+}

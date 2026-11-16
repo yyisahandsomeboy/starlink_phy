@@ -1,0 +1,866 @@
+{
+  "75": {
+    "information_bytes": 1376,
+    "information_bits": 11008,
+    "discovery_count": 3,
+    "holdout_count": 1,
+    "frames": [
+      {
+        "frame": 458,
+        "crc": "1C0466",
+        "head_bytes": 100,
+        "fit": true,
+        "candidates": [
+          1376
+        ],
+        "confirmed_table": [
+          {
+            "mcs": 35,
+            "quantity": 23,
+            "capacity_bytes": 27232,
+            "used_bytes": 27092,
+            "padding_bytes": 40,
+            "explicit_lengths": [
+              27092
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 66,
+            "quantity": 1,
+            "capacity_bytes": 1536,
+            "used_bytes": 1028,
+            "padding_bytes": 508,
+            "explicit_lengths": [
+              520,
+              424,
+              84
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 70,
+            "quantity": 17,
+            "capacity_bytes": 27200,
+            "used_bytes": 26822,
+            "padding_bytes": 378,
+            "explicit_lengths": [
+              68,
+              68,
+              68,
+              1807,
+              102,
+              138,
+              24571
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 71,
+            "quantity": 5,
+            "capacity_bytes": 6720,
+            "used_bytes": 5904,
+            "padding_bytes": 816,
+            "explicit_lengths": [
+              4543,
+              119,
+              1242
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 75,
+            "quantity": 1,
+            "capacity_bytes": 1376,
+            "used_bytes": 68,
+            "padding_bytes": 1308,
+            "explicit_lengths": [
+              68
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 85,
+            "quantity": 3,
+            "capacity_bytes": 4608,
+            "used_bytes": 3337,
+            "padding_bytes": 1271,
+            "explicit_lengths": [
+              3174
+            ],
+            "implicit_terminal_bytes": 163
+          }
+        ]
+      },
+      {
+        "frame": 466,
+        "crc": "E72753",
+        "head_bytes": 132,
+        "fit": true,
+        "candidates": [
+          1376
+        ],
+        "confirmed_table": [
+          {
+            "mcs": 35,
+            "quantity": 2,
+            "capacity_bytes": 2368,
+            "used_bytes": 1521,
+            "padding_bytes": 715,
+            "explicit_lengths": [
+              1521
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 57,
+            "quantity": 1,
+            "capacity_bytes": 672,
+            "used_bytes": 223,
+            "padding_bytes": 449,
+            "explicit_lengths": [
+              107,
+              116
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 66,
+            "quantity": 17,
+            "capacity_bytes": 26112,
+            "used_bytes": 26112,
+            "padding_bytes": 0,
+            "explicit_lengths": [
+              145,
+              25967
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 70,
+            "quantity": 13,
+            "capacity_bytes": 20800,
+            "used_bytes": 20084,
+            "padding_bytes": 716,
+            "explicit_lengths": [
+              68,
+              514,
+              454,
+              11218,
+              2596,
+              2596,
+              2638
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 71,
+            "quantity": 22,
+            "capacity_bytes": 29568,
+            "used_bytes": 29273,
+            "padding_bytes": 295,
+            "explicit_lengths": [
+              1408,
+              880,
+              26985
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 75,
+            "quantity": 1,
+            "capacity_bytes": 1376,
+            "used_bytes": 617,
+            "padding_bytes": 759,
+            "explicit_lengths": [
+              68,
+              549
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 85,
+            "quantity": 3,
+            "capacity_bytes": 4608,
+            "used_bytes": 3848,
+            "padding_bytes": 760,
+            "explicit_lengths": [
+              1590,
+              1590,
+              668
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 92,
+            "quantity": 21,
+            "capacity_bytes": 34272,
+            "used_bytes": 33338,
+            "padding_bytes": 934,
+            "explicit_lengths": [
+              68
+            ],
+            "implicit_terminal_bytes": 33270
+          }
+        ]
+      },
+      {
+        "frame": 467,
+        "crc": "E72753",
+        "head_bytes": 132,
+        "fit": true,
+        "candidates": [
+          1376
+        ],
+        "confirmed_table": [
+          {
+            "mcs": 35,
+            "quantity": 2,
+            "capacity_bytes": 2368,
+            "used_bytes": 1521,
+            "padding_bytes": 715,
+            "explicit_lengths": [
+              1521
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 57,
+            "quantity": 1,
+            "capacity_bytes": 672,
+            "used_bytes": 223,
+            "padding_bytes": 449,
+            "explicit_lengths": [
+              107,
+              116
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 66,
+            "quantity": 17,
+            "capacity_bytes": 26112,
+            "used_bytes": 26112,
+            "padding_bytes": 0,
+            "explicit_lengths": [
+              145,
+              25967
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 70,
+            "quantity": 13,
+            "capacity_bytes": 20800,
+            "used_bytes": 20084,
+            "padding_bytes": 716,
+            "explicit_lengths": [
+              68,
+              514,
+              454,
+              11218,
+              2596,
+              2596,
+              2638
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 71,
+            "quantity": 22,
+            "capacity_bytes": 29568,
+            "used_bytes": 29273,
+            "padding_bytes": 295,
+            "explicit_lengths": [
+              1408,
+              880,
+              26985
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 75,
+            "quantity": 1,
+            "capacity_bytes": 1376,
+            "used_bytes": 617,
+            "padding_bytes": 759,
+            "explicit_lengths": [
+              68,
+              549
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 85,
+            "quantity": 3,
+            "capacity_bytes": 4608,
+            "used_bytes": 3848,
+            "padding_bytes": 760,
+            "explicit_lengths": [
+              1590,
+              1590,
+              668
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 92,
+            "quantity": 21,
+            "capacity_bytes": 34272,
+            "used_bytes": 33338,
+            "padding_bytes": 934,
+            "explicit_lengths": [
+              68
+            ],
+            "implicit_terminal_bytes": 33270
+          }
+        ]
+      },
+      {
+        "frame": 482,
+        "crc": "B36BC1",
+        "head_bytes": 148,
+        "fit": false,
+        "candidates": [
+          1376
+        ],
+        "confirmed_table": [
+          {
+            "mcs": 35,
+            "quantity": 3,
+            "capacity_bytes": 3552,
+            "used_bytes": 2370,
+            "padding_bytes": 1034,
+            "explicit_lengths": [
+              2370
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 57,
+            "quantity": 1,
+            "capacity_bytes": 672,
+            "used_bytes": 126,
+            "padding_bytes": 546,
+            "explicit_lengths": [
+              126
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 66,
+            "quantity": 27,
+            "capacity_bytes": 41472,
+            "used_bytes": 41084,
+            "padding_bytes": 388,
+            "explicit_lengths": [
+              30,
+              68,
+              720,
+              40266
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 70,
+            "quantity": 10,
+            "capacity_bytes": 16000,
+            "used_bytes": 16000,
+            "padding_bytes": 0,
+            "explicit_lengths": [
+              30,
+              68,
+              68,
+              68,
+              636,
+              1800,
+              80,
+              146,
+              4229,
+              4227,
+              4648
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 71,
+            "quantity": 1,
+            "capacity_bytes": 1344,
+            "used_bytes": 1343,
+            "padding_bytes": 1,
+            "explicit_lengths": [
+              1030,
+              313
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 75,
+            "quantity": 1,
+            "capacity_bytes": 1376,
+            "used_bytes": 222,
+            "padding_bytes": 1154,
+            "explicit_lengths": [
+              134,
+              88
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 85,
+            "quantity": 1,
+            "capacity_bytes": 1536,
+            "used_bytes": 964,
+            "padding_bytes": 572,
+            "explicit_lengths": [
+              552,
+              412
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 88,
+            "quantity": 1,
+            "capacity_bytes": 1600,
+            "used_bytes": 132,
+            "padding_bytes": 1468,
+            "explicit_lengths": [
+              132
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 92,
+            "quantity": 33,
+            "capacity_bytes": 53856,
+            "used_bytes": 53007,
+            "padding_bytes": 849,
+            "explicit_lengths": [],
+            "implicit_terminal_bytes": 53007
+          }
+        ]
+      }
+    ]
+  },
+  "81": {
+    "information_bytes": 1472,
+    "information_bits": 11776,
+    "discovery_count": 3,
+    "holdout_count": 1,
+    "frames": [
+      {
+        "frame": 459,
+        "crc": "409E72",
+        "head_bytes": 92,
+        "fit": true,
+        "candidates": [
+          1472
+        ],
+        "confirmed_table": [
+          {
+            "mcs": 35,
+            "quantity": 4,
+            "capacity_bytes": 4736,
+            "used_bytes": 4146,
+            "padding_bytes": 498,
+            "explicit_lengths": [
+              4146
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 66,
+            "quantity": 1,
+            "capacity_bytes": 1536,
+            "used_bytes": 158,
+            "padding_bytes": 1378,
+            "explicit_lengths": [
+              158
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 70,
+            "quantity": 16,
+            "capacity_bytes": 25600,
+            "used_bytes": 24326,
+            "padding_bytes": 1274,
+            "explicit_lengths": [
+              134,
+              68,
+              1227,
+              503,
+              202,
+              7368,
+              7368,
+              7456
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 71,
+            "quantity": 58,
+            "capacity_bytes": 77952,
+            "used_bytes": 77952,
+            "padding_bytes": 0,
+            "explicit_lengths": [
+              575,
+              77377
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 81,
+            "quantity": 1,
+            "capacity_bytes": 1472,
+            "used_bytes": 68,
+            "padding_bytes": 1404,
+            "explicit_lengths": [
+              68
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 85,
+            "quantity": 2,
+            "capacity_bytes": 3072,
+            "used_bytes": 1961,
+            "padding_bytes": 1111,
+            "explicit_lengths": [
+              1522
+            ],
+            "implicit_terminal_bytes": 439
+          }
+        ]
+      },
+      {
+        "frame": 461,
+        "crc": "E27B1C",
+        "head_bytes": 156,
+        "fit": true,
+        "candidates": [
+          1472
+        ],
+        "confirmed_table": [
+          {
+            "mcs": 35,
+            "quantity": 2,
+            "capacity_bytes": 2368,
+            "used_bytes": 2180,
+            "padding_bytes": 32,
+            "explicit_lengths": [
+              2180
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 57,
+            "quantity": 1,
+            "capacity_bytes": 672,
+            "used_bytes": 136,
+            "padding_bytes": 536,
+            "explicit_lengths": [
+              68,
+              68
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 66,
+            "quantity": 1,
+            "capacity_bytes": 1536,
+            "used_bytes": 204,
+            "padding_bytes": 1332,
+            "explicit_lengths": [
+              68,
+              68,
+              68
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 70,
+            "quantity": 14,
+            "capacity_bytes": 22400,
+            "used_bytes": 21660,
+            "padding_bytes": 740,
+            "explicit_lengths": [
+              30,
+              68,
+              68,
+              68,
+              68,
+              91,
+              114,
+              1004,
+              3862,
+              3862,
+              3944,
+              8481
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 71,
+            "quantity": 57,
+            "capacity_bytes": 76608,
+            "used_bytes": 76608,
+            "padding_bytes": 0,
+            "explicit_lengths": [
+              134,
+              1905,
+              994,
+              73575
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 81,
+            "quantity": 1,
+            "capacity_bytes": 1472,
+            "used_bytes": 360,
+            "padding_bytes": 1112,
+            "explicit_lengths": [
+              360
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 85,
+            "quantity": 7,
+            "capacity_bytes": 10752,
+            "used_bytes": 9696,
+            "padding_bytes": 1056,
+            "explicit_lengths": [
+              68,
+              2202,
+              7426
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 92,
+            "quantity": 1,
+            "capacity_bytes": 1632,
+            "used_bytes": 68,
+            "padding_bytes": 1564,
+            "explicit_lengths": [],
+            "implicit_terminal_bytes": 68
+          }
+        ]
+      },
+      {
+        "frame": 472,
+        "crc": "99BF27",
+        "head_bytes": 128,
+        "fit": true,
+        "candidates": [
+          1472
+        ],
+        "confirmed_table": [
+          {
+            "mcs": 35,
+            "quantity": 2,
+            "capacity_bytes": 2368,
+            "used_bytes": 1822,
+            "padding_bytes": 418,
+            "explicit_lengths": [
+              146,
+              1676
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 66,
+            "quantity": 20,
+            "capacity_bytes": 30720,
+            "used_bytes": 29405,
+            "padding_bytes": 1315,
+            "explicit_lengths": [
+              144,
+              150,
+              29111
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 70,
+            "quantity": 7,
+            "capacity_bytes": 11200,
+            "used_bytes": 11200,
+            "padding_bytes": 0,
+            "explicit_lengths": [
+              68,
+              134,
+              68,
+              1236,
+              360,
+              462,
+              3003,
+              3030,
+              2839
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 71,
+            "quantity": 26,
+            "capacity_bytes": 34944,
+            "used_bytes": 33664,
+            "padding_bytes": 1280,
+            "explicit_lengths": [
+              68,
+              134,
+              1304,
+              842,
+              31316
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 81,
+            "quantity": 1,
+            "capacity_bytes": 1472,
+            "used_bytes": 68,
+            "padding_bytes": 1404,
+            "explicit_lengths": [
+              68
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 85,
+            "quantity": 1,
+            "capacity_bytes": 1536,
+            "used_bytes": 147,
+            "padding_bytes": 1389,
+            "explicit_lengths": [
+              147
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 92,
+            "quantity": 23,
+            "capacity_bytes": 37536,
+            "used_bytes": 36614,
+            "padding_bytes": 922,
+            "explicit_lengths": [],
+            "implicit_terminal_bytes": 36614
+          }
+        ]
+      },
+      {
+        "frame": 486,
+        "crc": "5FA2D8",
+        "head_bytes": 132,
+        "fit": false,
+        "candidates": [
+          1472
+        ],
+        "confirmed_table": [
+          {
+            "mcs": 35,
+            "quantity": 4,
+            "capacity_bytes": 4736,
+            "used_bytes": 4004,
+            "padding_bytes": 600,
+            "explicit_lengths": [
+              134,
+              3870
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 57,
+            "quantity": 1,
+            "capacity_bytes": 672,
+            "used_bytes": 68,
+            "padding_bytes": 604,
+            "explicit_lengths": [
+              68
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 66,
+            "quantity": 3,
+            "capacity_bytes": 4608,
+            "used_bytes": 4134,
+            "padding_bytes": 474,
+            "explicit_lengths": [
+              3836,
+              298
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 70,
+            "quantity": 17,
+            "capacity_bytes": 27200,
+            "used_bytes": 26045,
+            "padding_bytes": 1155,
+            "explicit_lengths": [
+              68,
+              68,
+              1429,
+              4181,
+              196,
+              328,
+              6057,
+              6839,
+              6879
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 71,
+            "quantity": 2,
+            "capacity_bytes": 2688,
+            "used_bytes": 1479,
+            "padding_bytes": 1209,
+            "explicit_lengths": [
+              458,
+              825,
+              196
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 81,
+            "quantity": 1,
+            "capacity_bytes": 1472,
+            "used_bytes": 198,
+            "padding_bytes": 1274,
+            "explicit_lengths": [
+              68,
+              130
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 85,
+            "quantity": 1,
+            "capacity_bytes": 1536,
+            "used_bytes": 391,
+            "padding_bytes": 1145,
+            "explicit_lengths": [
+              114,
+              277
+            ],
+            "implicit_terminal_bytes": 0
+          },
+          {
+            "mcs": 92,
+            "quantity": 52,
+            "capacity_bytes": 84864,
+            "used_bytes": 84864,
+            "padding_bytes": 0,
+            "explicit_lengths": [],
+            "implicit_terminal_bytes": 84864
+          }
+        ]
+      }
+    ]
+  }
+}
