@@ -101,6 +101,10 @@ python tools/replay_ut_mcs92.py --symbols /path/to/symbol-exports \
 
 输出包含 12 个完整发送码字和各自的解扰字节。发布前重放核对了全部 196,608 个发送位和 19,584 个解扰字节，两者均逐位或逐字节一致。这个入口是基于该批已验证分配的离线重放。 [发布复核清单](../provenance/mcs92/published_replay_check.json) · [UT 数据字段说明](https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/exemplar-frames-data/EXEMPLAR_FRAMES_GUIDE.txt)
 
+## 7. UT 1,009 帧归档逐码字恢复
+
+新增 MCS 42 和 93，把原九帧、UT 归档和西电采集覆盖的 MCS 模型扩至 25 档，包含 20 个不同的有效矩阵。UT 全档案的逐码字复跑记录了自适应软解映射、删余变量、重复观测、不同子载波噪声及作者硬判决提示的效果。逐帧覆盖和仍待恢复的码字位置见 [UT 全档案的 LDPC 码字恢复记录](UT_ARCHIVE_LDPC_RECOVERY.zh-CN.md)。
+
 ## 复核材料
 
 已有仓库记录包括 [MCS 66 数值验证](MCS66_RECOVERY_VALIDATION.zh-CN.md)、[MCS 70 数值验证](MCS70_RECOVERY_VALIDATION.zh-CN.md)和 [MCS 66 推导教程](CODING_WALKTHROUGH.zh-CN.md)。

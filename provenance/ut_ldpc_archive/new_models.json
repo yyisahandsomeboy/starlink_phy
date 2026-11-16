@@ -1,0 +1,791 @@
+{
+  "archive": {
+    "file": "decodedExemplarFrames_20251019T2214.mat",
+    "bytes": 5415856507,
+    "sha256": "86ca4b20970e79d4ab5b6612262b1dc0a1335f4e6e54bf8b381aedcc6054c77b",
+    "zenodo_record": 21404931,
+    "prefix_matches_previous_utexas_cache": true
+  },
+  "matrices": [
+    {
+      "mcs": 42,
+      "N": 16384,
+      "K": 8704,
+      "H_rows": 7680,
+      "roundtrip": true,
+      "flipped_parity_rejected": true,
+      "comparison_parameters": [
+        8,
+        4096,
+        24064,
+        4608
+      ],
+      "identical_projected_checks": true,
+      "support_sha256": "6aa74489bd2b43f0da86d1d7897b9e8c9c833bbe88c88670198707e7756091c9"
+    },
+    {
+      "mcs": 93,
+      "N": 16384,
+      "K": 13568,
+      "H_rows": 2816,
+      "roundtrip": true,
+      "flipped_parity_rejected": true,
+      "comparison_parameters": null,
+      "identical_projected_checks": null,
+      "support_sha256": "ede4e9bc99aa36db7c4771b0d6d67d0dba24ed0ea92ed002554bfaae040bd682"
+    }
+  ],
+  "mcs42": {
+    "mcs": 42,
+    "Q": 4096,
+    "N": 16384,
+    "K": 8704,
+    "parameters": [
+      4,
+      4096,
+      7680,
+      4608
+    ],
+    "alphabet": "16QAM",
+    "zero_boundary": [
+      {
+        "K": 8704,
+        "before": 84,
+        "after": 577,
+        "contrast": 493
+      },
+      {
+        "K": 9984,
+        "before": 553,
+        "after": 607,
+        "contrast": 54
+      },
+      {
+        "K": 12032,
+        "before": 564,
+        "after": 602,
+        "contrast": 38
+      },
+      {
+        "K": 5504,
+        "before": 193,
+        "after": 230,
+        "contrast": 37
+      },
+      {
+        "K": 14464,
+        "before": 560,
+        "after": 596,
+        "contrast": 36
+      },
+      {
+        "K": 11008,
+        "before": 565,
+        "after": 600,
+        "contrast": 35
+      },
+      {
+        "K": 8832,
+        "before": 577,
+        "after": 610,
+        "contrast": 33
+      },
+      {
+        "K": 4608,
+        "before": 192,
+        "after": 223,
+        "contrast": 31
+      },
+      {
+        "K": 10240,
+        "before": 559,
+        "after": 589,
+        "contrast": 30
+      },
+      {
+        "K": 12800,
+        "before": 582,
+        "after": 611,
+        "contrast": 29
+      },
+      {
+        "K": 8192,
+        "before": 66,
+        "after": 93,
+        "contrast": 27
+      },
+      {
+        "K": 13056,
+        "before": 566,
+        "after": 593,
+        "contrast": 27
+      }
+    ],
+    "screen": [
+      {
+        "K": 8704,
+        "parameters": [
+          4,
+          4096,
+          7680,
+          4608
+        ],
+        "discovery_syndrome_fraction": 0.11393229166666667
+      },
+      {
+        "K": 8704,
+        "parameters": [
+          8,
+          4096,
+          24064,
+          4608
+        ],
+        "discovery_syndrome_fraction": 0.11393229166666667
+      }
+    ],
+    "words": [
+      {
+        "frame": 4,
+        "word": 1,
+        "fit": true,
+        "r0": 6828,
+        "initial": 695,
+        "final": 0,
+        "iterations": 4,
+        "changes": 204,
+        "converged": true,
+        "reencoded": true,
+        "noise_index": 0
+      },
+      {
+        "frame": 36,
+        "word": 1,
+        "fit": false,
+        "r0": 9104,
+        "initial": 433,
+        "final": 0,
+        "iterations": 3,
+        "changes": 143,
+        "converged": true,
+        "reencoded": true,
+        "noise_index": 0
+      },
+      {
+        "frame": 43,
+        "word": 1,
+        "fit": true,
+        "r0": 8876,
+        "initial": 440,
+        "final": 0,
+        "iterations": 4,
+        "changes": 134,
+        "converged": true,
+        "reencoded": true,
+        "noise_index": 0
+      },
+      {
+        "frame": 52,
+        "word": 1,
+        "fit": false,
+        "r0": 9104,
+        "initial": 769,
+        "final": 0,
+        "iterations": 4,
+        "changes": 262,
+        "converged": true,
+        "reencoded": true,
+        "noise_index": 0
+      },
+      {
+        "frame": 78,
+        "word": 1,
+        "fit": true,
+        "r0": 8990,
+        "initial": 719,
+        "final": 0,
+        "iterations": 2,
+        "changes": 249,
+        "converged": true,
+        "reencoded": true,
+        "noise_index": 0
+      },
+      {
+        "frame": 131,
+        "word": 1,
+        "fit": false,
+        "r0": 15362,
+        "initial": 666,
+        "final": 0,
+        "iterations": 2,
+        "changes": 221,
+        "converged": true,
+        "reencoded": true,
+        "noise_index": 0
+      },
+      {
+        "frame": 175,
+        "word": 1,
+        "fit": true,
+        "r0": 8990,
+        "initial": 1015,
+        "final": 0,
+        "iterations": 3,
+        "changes": 367,
+        "converged": true,
+        "reencoded": true,
+        "noise_index": 0
+      },
+      {
+        "frame": 180,
+        "word": 1,
+        "fit": false,
+        "r0": 6828,
+        "initial": 670,
+        "final": 0,
+        "iterations": 2,
+        "changes": 245,
+        "converged": true,
+        "reencoded": true,
+        "noise_index": 0
+      },
+      {
+        "frame": 185,
+        "word": 1,
+        "fit": true,
+        "r0": 8990,
+        "initial": 1068,
+        "final": 0,
+        "iterations": 5,
+        "changes": 374,
+        "converged": true,
+        "reencoded": true,
+        "noise_index": 0
+      },
+      {
+        "frame": 186,
+        "word": 1,
+        "fit": false,
+        "r0": 9104,
+        "initial": 1388,
+        "final": 0,
+        "iterations": 4,
+        "changes": 522,
+        "converged": true,
+        "reencoded": true,
+        "noise_index": 0
+      },
+      {
+        "frame": 187,
+        "word": 1,
+        "fit": true,
+        "r0": 8876,
+        "initial": 1062,
+        "final": 0,
+        "iterations": 6,
+        "changes": 386,
+        "converged": true,
+        "reencoded": true,
+        "noise_index": 0
+      },
+      {
+        "frame": 188,
+        "word": 1,
+        "fit": false,
+        "r0": 6942,
+        "initial": 1075,
+        "final": 0,
+        "iterations": 3,
+        "changes": 389,
+        "converged": true,
+        "reencoded": true,
+        "noise_index": 0
+      },
+      {
+        "frame": 190,
+        "word": 1,
+        "fit": true,
+        "r0": 6942,
+        "initial": 895,
+        "final": 0,
+        "iterations": 3,
+        "changes": 336,
+        "converged": true,
+        "reencoded": true,
+        "noise_index": 0
+      },
+      {
+        "frame": 194,
+        "word": 1,
+        "fit": false,
+        "r0": 15020,
+        "initial": 1351,
+        "final": 0,
+        "iterations": 6,
+        "changes": 545,
+        "converged": true,
+        "reencoded": true,
+        "noise_index": 0
+      },
+      {
+        "frame": 197,
+        "word": 1,
+        "fit": true,
+        "r0": 13086,
+        "initial": 1232,
+        "final": 0,
+        "iterations": 3,
+        "changes": 440,
+        "converged": true,
+        "reencoded": true,
+        "noise_index": 0
+      },
+      {
+        "frame": 197,
+        "word": 2,
+        "fit": true,
+        "r0": 17182,
+        "initial": 1142,
+        "final": 0,
+        "iterations": 2,
+        "changes": 386,
+        "converged": true,
+        "reencoded": true,
+        "noise_index": 0
+      }
+    ],
+    "mac_evidence": [
+      {
+        "frame": 4,
+        "actual_bytes": 1088,
+        "padding": 988,
+        "padding_zero": true,
+        "records_checked": 1,
+        "records_declared": 1,
+        "length_closed": true,
+        "mac_crc_pass": true
+      },
+      {
+        "frame": 36,
+        "actual_bytes": 1088,
+        "padding": 934,
+        "padding_zero": true,
+        "records_checked": 1,
+        "records_declared": 1,
+        "length_closed": true,
+        "mac_crc_pass": true
+      },
+      {
+        "frame": 43,
+        "actual_bytes": 1088,
+        "padding": 932,
+        "padding_zero": true,
+        "records_checked": 1,
+        "records_declared": 1,
+        "length_closed": true,
+        "mac_crc_pass": true
+      },
+      {
+        "frame": 52,
+        "actual_bytes": 1088,
+        "padding": 908,
+        "padding_zero": true,
+        "records_checked": 1,
+        "records_declared": 1,
+        "length_closed": true,
+        "mac_crc_pass": true
+      },
+      {
+        "frame": 78,
+        "actual_bytes": 1088,
+        "padding": 912,
+        "padding_zero": true,
+        "records_checked": 1,
+        "records_declared": 1,
+        "length_closed": true,
+        "mac_crc_pass": true
+      },
+      {
+        "frame": 131,
+        "actual_bytes": 1088,
+        "padding": 888,
+        "padding_zero": true,
+        "records_checked": 1,
+        "records_declared": 1,
+        "length_closed": true,
+        "mac_crc_pass": true
+      },
+      {
+        "frame": 175,
+        "actual_bytes": 1088,
+        "padding": 358,
+        "padding_zero": true,
+        "records_checked": 1,
+        "records_declared": 1,
+        "length_closed": true,
+        "mac_crc_pass": true
+      },
+      {
+        "frame": 180,
+        "actual_bytes": 1088,
+        "padding": 643,
+        "padding_zero": true,
+        "records_checked": 1,
+        "records_declared": 1,
+        "length_closed": true,
+        "mac_crc_pass": true
+      },
+      {
+        "frame": 185,
+        "actual_bytes": 1088,
+        "padding": 198,
+        "padding_zero": true,
+        "records_checked": 1,
+        "records_declared": 1,
+        "length_closed": true,
+        "mac_crc_pass": true
+      },
+      {
+        "frame": 186,
+        "actual_bytes": 1088,
+        "padding": 240,
+        "padding_zero": true,
+        "records_checked": 1,
+        "records_declared": 1,
+        "length_closed": true,
+        "mac_crc_pass": true
+      },
+      {
+        "frame": 187,
+        "actual_bytes": 1088,
+        "padding": 531,
+        "padding_zero": true,
+        "records_checked": 1,
+        "records_declared": 1,
+        "length_closed": true,
+        "mac_crc_pass": true
+      },
+      {
+        "frame": 188,
+        "actual_bytes": 1088,
+        "padding": 816,
+        "padding_zero": true,
+        "records_checked": 2,
+        "records_declared": 2,
+        "length_closed": true,
+        "mac_crc_pass": true
+      },
+      {
+        "frame": 190,
+        "actual_bytes": 1088,
+        "padding": 940,
+        "padding_zero": true,
+        "records_checked": 1,
+        "records_declared": 1,
+        "length_closed": true,
+        "mac_crc_pass": true
+      },
+      {
+        "frame": 194,
+        "actual_bytes": 1088,
+        "padding": 355,
+        "padding_zero": true,
+        "records_checked": 1,
+        "records_declared": 1,
+        "length_closed": true,
+        "mac_crc_pass": true
+      },
+      {
+        "frame": 197,
+        "actual_bytes": 2176,
+        "padding": 1030,
+        "padding_zero": true,
+        "records_checked": 1,
+        "records_declared": 1,
+        "length_closed": true,
+        "mac_crc_pass": true
+      }
+    ]
+  },
+  "mcs93": {
+    "mcs": 93,
+    "Q": 3277,
+    "N": 16384,
+    "K": 13568,
+    "parameters": [
+      8,
+      2048,
+      2816,
+      3328
+    ],
+    "alphabet": "cross32",
+    "zero_boundary": [
+      {
+        "K": 13568,
+        "before": 14,
+        "after": 125,
+        "contrast": 111
+      },
+      {
+        "K": 7680,
+        "before": 14,
+        "after": 30,
+        "contrast": 16
+      },
+      {
+        "K": 13696,
+        "before": 125,
+        "after": 138,
+        "contrast": 13
+      },
+      {
+        "K": 14848,
+        "before": 131,
+        "after": 144,
+        "contrast": 13
+      },
+      {
+        "K": 4608,
+        "before": 21,
+        "after": 33,
+        "contrast": 12
+      },
+      {
+        "K": 9216,
+        "before": 10,
+        "after": 22,
+        "contrast": 12
+      },
+      {
+        "K": 12672,
+        "before": 7,
+        "after": 19,
+        "contrast": 12
+      },
+      {
+        "K": 4352,
+        "before": 6,
+        "after": 17,
+        "contrast": 11
+      },
+      {
+        "K": 9472,
+        "before": 20,
+        "after": 31,
+        "contrast": 11
+      },
+      {
+        "K": 11392,
+        "before": 3,
+        "after": 13,
+        "contrast": 10
+      },
+      {
+        "K": 6528,
+        "before": 14,
+        "after": 23,
+        "contrast": 9
+      },
+      {
+        "K": 14720,
+        "before": 122,
+        "after": 131,
+        "contrast": 9
+      }
+    ],
+    "screen": [
+      {
+        "parameters": [
+          8,
+          2048,
+          2816,
+          3328
+        ],
+        "K": 13568,
+        "syndrome_after_known_padding": [
+          0.3856534090909091,
+          0.23686079545454544
+        ]
+      },
+      {
+        "parameters": [
+          4,
+          4096,
+          2816,
+          9472
+        ],
+        "K": 13568,
+        "syndrome_after_known_padding": [
+          0.4904119318181818,
+          0.4861505681818182
+        ]
+      },
+      {
+        "parameters": [
+          8,
+          4096,
+          19200,
+          9472
+        ],
+        "K": 13568,
+        "syndrome_after_known_padding": [
+          0.4904119318181818,
+          0.4861505681818182
+        ]
+      }
+    ],
+    "words": [
+      {
+        "frame": 54,
+        "word": 1,
+        "fit": true,
+        "r0": 296645,
+        "padding_bytes": 1628,
+        "initial": 961,
+        "final": 0,
+        "iterations": 3,
+        "changes": 282,
+        "converged": true,
+        "reencoded": true,
+        "noise_index": 3,
+        "padding_aided": true
+      },
+      {
+        "frame": 66,
+        "word": 1,
+        "fit": false,
+        "r0": 297464,
+        "padding_bytes": 1509,
+        "initial": 637,
+        "final": 0,
+        "iterations": 3,
+        "changes": 192,
+        "converged": true,
+        "reencoded": true,
+        "noise_index": 3,
+        "padding_aided": true
+      },
+      {
+        "frame": 93,
+        "word": 1,
+        "fit": true,
+        "r0": 296236,
+        "padding_bytes": 1628,
+        "initial": 654,
+        "final": 0,
+        "iterations": 4,
+        "changes": 172,
+        "converged": true,
+        "reencoded": true,
+        "noise_index": 3,
+        "padding_aided": true
+      },
+      {
+        "frame": 101,
+        "word": 1,
+        "fit": false,
+        "r0": 193016,
+        "padding_bytes": 1628,
+        "initial": 786,
+        "final": 0,
+        "iterations": 3,
+        "changes": 254,
+        "converged": true,
+        "reencoded": true,
+        "noise_index": 3,
+        "padding_aided": true
+      }
+    ],
+    "mac_evidence": [
+      {
+        "frame": 54,
+        "padding": 1628,
+        "padding_zero": true,
+        "length_closed": true,
+        "records_checked": 1,
+        "explicit_lengths": [],
+        "observed_lengths": [
+          68
+        ],
+        "mac_crc_pass": true
+      },
+      {
+        "frame": 66,
+        "padding": 1509,
+        "padding_zero": true,
+        "length_closed": true,
+        "records_checked": 1,
+        "explicit_lengths": [],
+        "observed_lengths": [
+          187
+        ],
+        "mac_crc_pass": true
+      },
+      {
+        "frame": 93,
+        "padding": 1628,
+        "padding_zero": true,
+        "length_closed": true,
+        "records_checked": 1,
+        "explicit_lengths": [],
+        "observed_lengths": [
+          68
+        ],
+        "mac_crc_pass": true
+      },
+      {
+        "frame": 101,
+        "padding": 1628,
+        "padding_zero": true,
+        "length_closed": true,
+        "records_checked": 1,
+        "explicit_lengths": [],
+        "observed_lengths": [
+          68
+        ],
+        "mac_crc_pass": true
+      }
+    ]
+  },
+  "mcs93_withheld_padding": [
+    {
+      "frame": 54,
+      "held_out_in_model_selection": false,
+      "syndrome": 0,
+      "word_reencoded": true,
+      "withheld_padding_bits": 3448,
+      "withheld_padding_bit_errors": 0,
+      "observed_hard_parity_differences": 246,
+      "observed_parity_bits": 2816
+    },
+    {
+      "frame": 66,
+      "held_out_in_model_selection": true,
+      "syndrome": 0,
+      "word_reencoded": true,
+      "withheld_padding_bits": 3210,
+      "withheld_padding_bit_errors": 0,
+      "observed_hard_parity_differences": 111,
+      "observed_parity_bits": 2816
+    },
+    {
+      "frame": 93,
+      "held_out_in_model_selection": false,
+      "syndrome": 0,
+      "word_reencoded": true,
+      "withheld_padding_bits": 3448,
+      "withheld_padding_bit_errors": 0,
+      "observed_hard_parity_differences": 143,
+      "observed_parity_bits": 2816
+    },
+    {
+      "frame": 101,
+      "held_out_in_model_selection": true,
+      "syndrome": 0,
+      "word_reencoded": true,
+      "withheld_padding_bits": 3448,
+      "withheld_padding_bit_errors": 0,
+      "observed_hard_parity_differences": 222,
+      "observed_parity_bits": 2816
+    }
+  ]
+}

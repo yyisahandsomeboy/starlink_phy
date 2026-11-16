@@ -1,5 +1,7 @@
 # 23 个实测 MCS 的 LDPC 译码与 AR4JA 关系
 
+全量 UT 作者归档后续验证了 MCS 42 和 93。当前机器可读模型表共有 25 档和 20 个不同的有效矩阵。下文保留原 23 档实验的样本范围。 [新增模型与全档案恢复](UT_ARCHIVE_LDPC_RECOVERY.zh-CN.md)
+
 原九帧、177 个 UT 公共软符号示例帧和西电公开 18 帧，共查到 23 个不同 MCS 编号。23 个档位都已有至少一个完整 LDPC 码字通过校验及重编码。表中的分数是各实验使用的样本数。MCS 75 和 81 的留出译码使用了来自已通过 MAC CRC-24 的填充长度。 [UT 示例帧档案](https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/exemplar-frames-data/EXEMPLAR_FRAMES_GUIDE.txt) · [西电原始 IQ](https://github.com/misaka666/Starlink-Downlink-Analysis/releases/tag/v1.0.0)
 
 ## 每个档位如何得到完整模型

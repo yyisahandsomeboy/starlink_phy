@@ -179,6 +179,7 @@ void decode_check(const Graph& g, const Config& config, int row,
     }
 }
 
+#ifndef LDPC_ARCHIVE_WORKER
 int main(int argc, char** argv) try {
     if (argc != 14) {
         std::cerr << "graph metrics result iterations demap_period scale prior_weight damp check_weight "
@@ -223,3 +224,4 @@ int main(int argc, char** argv) try {
     std::cerr << e.what() << '\n';
     return 2;
 }
+#endif

@@ -1,0 +1,156 @@
+{
+  "totals": {
+    "expected": 69631,
+    "baseline_verified": 61993,
+    "verified": 68863,
+    "recovered": 6870,
+    "unresolved": 768,
+    "frames": 1009,
+    "complete_frames": 930
+  },
+  "by_mcs": {
+    "5": {
+      "expected": 4089,
+      "baseline_verified": 4088,
+      "verified": 4089,
+      "recovered": 1,
+      "unresolved": 0
+    },
+    "6": {
+      "expected": 48,
+      "baseline_verified": 44,
+      "verified": 48,
+      "recovered": 4,
+      "unresolved": 0
+    },
+    "21": {
+      "expected": 239,
+      "baseline_verified": 239,
+      "verified": 239,
+      "recovered": 0,
+      "unresolved": 0
+    },
+    "27": {
+      "expected": 5,
+      "baseline_verified": 5,
+      "verified": 5,
+      "recovered": 0,
+      "unresolved": 0
+    },
+    "28": {
+      "expected": 1088,
+      "baseline_verified": 1062,
+      "verified": 1088,
+      "recovered": 26,
+      "unresolved": 0
+    },
+    "35": {
+      "expected": 509,
+      "baseline_verified": 499,
+      "verified": 509,
+      "recovered": 10,
+      "unresolved": 0
+    },
+    "39": {
+      "expected": 12,
+      "baseline_verified": 12,
+      "verified": 12,
+      "recovered": 0,
+      "unresolved": 0
+    },
+    "42": {
+      "expected": 16,
+      "baseline_verified": 16,
+      "verified": 16,
+      "recovered": 0,
+      "unresolved": 0
+    },
+    "57": {
+      "expected": 14330,
+      "baseline_verified": 14299,
+      "verified": 14330,
+      "recovered": 31,
+      "unresolved": 0
+    },
+    "66": {
+      "expected": 17654,
+      "baseline_verified": 17245,
+      "verified": 17654,
+      "recovered": 409,
+      "unresolved": 0
+    },
+    "70": {
+      "expected": 19885,
+      "baseline_verified": 19425,
+      "verified": 19885,
+      "recovered": 460,
+      "unresolved": 0
+    },
+    "71": {
+      "expected": 1415,
+      "baseline_verified": 1025,
+      "verified": 1412,
+      "recovered": 387,
+      "unresolved": 3
+    },
+    "75": {
+      "expected": 563,
+      "baseline_verified": 441,
+      "verified": 562,
+      "recovered": 121,
+      "unresolved": 1
+    },
+    "78": {
+      "expected": 609,
+      "baseline_verified": 388,
+      "verified": 607,
+      "recovered": 219,
+      "unresolved": 2
+    },
+    "81": {
+      "expected": 205,
+      "baseline_verified": 188,
+      "verified": 200,
+      "recovered": 12,
+      "unresolved": 5
+    },
+    "85": {
+      "expected": 3823,
+      "baseline_verified": 1752,
+      "verified": 3788,
+      "recovered": 2036,
+      "unresolved": 35
+    },
+    "88": {
+      "expected": 1678,
+      "baseline_verified": 924,
+      "verified": 1605,
+      "recovered": 681,
+      "unresolved": 73
+    },
+    "92": {
+      "expected": 3459,
+      "baseline_verified": 337,
+      "verified": 2810,
+      "recovered": 2473,
+      "unresolved": 649
+    },
+    "93": {
+      "expected": 4,
+      "baseline_verified": 4,
+      "verified": 4,
+      "recovered": 0,
+      "unresolved": 0
+    }
+  },
+  "methods": {
+    "joint_sparse_demapping": 1293,
+    "local_channel_sparse_sum_product": 346,
+    "local_channel_sparse_min_sum": 4830,
+    "blind_channel_sparse_sum_product": 8,
+    "frequency_noise_sparse": 333,
+    "joint_sparse_demapping_shuffled": 45,
+    "soft_with_author_hint": 3,
+    "repeat_verified_codeword": 12
+  }
+}

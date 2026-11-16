@@ -207,6 +207,23 @@
       "method": "复用 MCS 10 的矩阵，改用 16QAM 位映射；跨采集复用"
     },
     {
+      "mcs": 42,
+      "modulation": "16QAM",
+      "resources_per_unit": 4096,
+      "N": 16384,
+      "K": 8704,
+      "K_B": 4,
+      "M": 4096,
+      "S": 7680,
+      "D": 4608,
+      "rate": "17/32",
+      "spare_modulation_bits": 0,
+      "H_sha256": "6aa74489bd2b43f0da86d1d7897b9e8c9c833bbe88c88670198707e7756091c9",
+      "matched_archived_model": null,
+      "evidence": "UT 16/16; holdout 7/7",
+      "method": "配置头与下游边界、解扰零尾、LDPC 重编码"
+    },
+    {
       "mcs": 57,
       "modulation": "16QAM",
       "resources_per_unit": 2048,
@@ -392,6 +409,23 @@
       "matched_archived_model": "mcs92_complete_16384_model.json",
       "evidence": "原九帧 3/3",
       "method": "交叉点标签和缩短核心；预测并纳入漏掉的 256 个奇偶位"
+    },
+    {
+      "mcs": 93,
+      "modulation": "交叉32点",
+      "resources_per_unit": 3277,
+      "N": 16384,
+      "K": 13568,
+      "K_B": 8,
+      "M": 2048,
+      "S": 2816,
+      "D": 3328,
+      "rate": "53/64",
+      "spare_modulation_bits": 1,
+      "H_sha256": "ede4e9bc99aa36db7c4771b0d6d67d0dba24ed0ea92ed002554bfaae040bd682",
+      "matched_archived_model": null,
+      "evidence": "UT 4/4; holdout 2/2",
+      "method": "帧尾几何、MAC 填充先验、保留位及 LDPC 重编码"
     }
   ],
   "same_matrix": [

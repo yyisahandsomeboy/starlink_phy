@@ -1,0 +1,189 @@
+{
+  "near_constellation": [
+    {
+      "frame": 466,
+      "mcs": 92,
+      "mean_nearest_constellation_nmse": 0.03230448050629891,
+      "median_nearest_constellation_nmse": 0.03182850647369619,
+      "codewords": 21
+    },
+    {
+      "frame": 467,
+      "mcs": 92,
+      "mean_nearest_constellation_nmse": 0.03208550074603037,
+      "median_nearest_constellation_nmse": 0.03202725823568316,
+      "codewords": 21
+    },
+    {
+      "frame": 478,
+      "mcs": 92,
+      "mean_nearest_constellation_nmse": 0.03649103275507301,
+      "median_nearest_constellation_nmse": 0.036334718304348146,
+      "codewords": 57
+    },
+    {
+      "frame": 479,
+      "mcs": 92,
+      "mean_nearest_constellation_nmse": 0.03420609310437492,
+      "median_nearest_constellation_nmse": 0.03434738410669554,
+      "codewords": 57
+    },
+    {
+      "frame": 482,
+      "mcs": 92,
+      "mean_nearest_constellation_nmse": 0.034200730919303195,
+      "median_nearest_constellation_nmse": 0.03395968696981154,
+      "codewords": 33
+    },
+    {
+      "frame": 489,
+      "mcs": 92,
+      "mean_nearest_constellation_nmse": 0.035335985815194676,
+      "median_nearest_constellation_nmse": 0.03520801485359781,
+      "codewords": 61
+    },
+    {
+      "frame": 506,
+      "mcs": 92,
+      "mean_nearest_constellation_nmse": 0.040076758349526065,
+      "median_nearest_constellation_nmse": 0.039683911258014494,
+      "codewords": 35
+    },
+    {
+      "frame": 515,
+      "mcs": 92,
+      "mean_nearest_constellation_nmse": 0.03463697330232198,
+      "median_nearest_constellation_nmse": 0.034385451282007914,
+      "codewords": 55
+    },
+    {
+      "frame": 516,
+      "mcs": 92,
+      "mean_nearest_constellation_nmse": 0.034472766914076275,
+      "median_nearest_constellation_nmse": 0.03407569728731644,
+      "codewords": 55
+    },
+    {
+      "frame": 524,
+      "mcs": 92,
+      "mean_nearest_constellation_nmse": 0.03469982089419916,
+      "median_nearest_constellation_nmse": 0.03440156544562009,
+      "codewords": 58
+    },
+    {
+      "frame": 527,
+      "mcs": 92,
+      "mean_nearest_constellation_nmse": 0.03322660837624249,
+      "median_nearest_constellation_nmse": 0.033272943251188916,
+      "codewords": 62
+    }
+  ],
+  "padding_alignment": [
+    {
+      "frame": 466,
+      "expected_zeros": 7472,
+      "nominal_score": 0.9565,
+      "best": [
+        0,
+        0.9565
+      ]
+    },
+    {
+      "frame": 479,
+      "expected_zeros": 760,
+      "nominal_score": 0.90526,
+      "best": [
+        0,
+        0.90526
+      ]
+    },
+    {
+      "frame": 482,
+      "expected_zeros": 6792,
+      "nominal_score": 0.94508,
+      "best": [
+        0,
+        0.94508
+      ]
+    },
+    {
+      "frame": 499,
+      "expected_zeros": 2072,
+      "nominal_score": 0.92905,
+      "best": [
+        0,
+        0.92905
+      ]
+    },
+    {
+      "frame": 506,
+      "expected_zeros": 6488,
+      "nominal_score": 0.8935,
+      "best": [
+        0,
+        0.8935
+      ]
+    },
+    {
+      "frame": 510,
+      "expected_zeros": 2072,
+      "nominal_score": 0.89961,
+      "best": [
+        0,
+        0.89961
+      ]
+    },
+    {
+      "frame": 515,
+      "expected_zeros": 1568,
+      "nominal_score": 0.9477,
+      "best": [
+        0,
+        0.9477
+      ]
+    },
+    {
+      "frame": 516,
+      "expected_zeros": 1568,
+      "nominal_score": 0.94515,
+      "best": [
+        0,
+        0.94515
+      ]
+    },
+    {
+      "frame": 524,
+      "expected_zeros": 6488,
+      "nominal_score": 0.90783,
+      "best": [
+        0,
+        0.90783
+      ]
+    },
+    {
+      "frame": 527,
+      "expected_zeros": 976,
+      "nominal_score": 0.95799,
+      "best": [
+        0,
+        0.95799
+      ]
+    },
+    {
+      "frame": 528,
+      "expected_zeros": 2072,
+      "nominal_score": 0.93098,
+      "best": [
+        0,
+        0.93098
+      ]
+    }
+  ],
+  "padding_offset_trials": {
+    "minimum": -7,
+    "maximum": 7,
+    "unit": "complex resource"
+  },
+  "raw_iq_directory": "https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/raw-iq-data/",
+  "listed_iq_clip": "exemplar250-257.zip"
+}

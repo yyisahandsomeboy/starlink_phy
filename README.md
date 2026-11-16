@@ -1,4 +1,6 @@
-> UT 作者第 466、482 帧的 167 个数据码字全部完成 LDPC 译码和解扰。新增 MCS 92 联合译码重放及逐字验证。 [遇到的问题、处理办法与实测结果](docs/MCS_LDPC_RECOVERY_SUMMARY.zh-CN.md#6-ut-第-466482-帧的难译码字)
+> UT 作者 1,009 帧归档已验证 68,863/69,631 个 LDPC 码字，接入 MCS 42 和 93。 [译码覆盖、恢复方法与剩余位置](docs/UT_ARCHIVE_LDPC_RECOVERY.zh-CN.md)
+
+> UT 作者第 466、482 帧的 167 个数据码字全部完成 LDPC 译码和解扰。 [两帧联合译码记录](docs/MCS_LDPC_RECOVERY_SUMMARY.zh-CN.md#6-ut-第-466482-帧的难译码字)
 
 > 已核查的 23 个 MCS 均有通过完整 LDPC 译码和重编码的样本。MCS 6 和 68 分别通过 32/32 和 7/7。逐档汇总包括码率、AR4JA 缩短和删余参数、18 个不同有效矩阵以及复核入口。 [23 档 LDPC 与 AR4JA 汇总](docs/AR4JA_OBSERVED_MCS.zh-CN.md)
 

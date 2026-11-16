@@ -1,4 +1,4 @@
-function export_ut_mcs92_symbols(source,repo,pairs)
+function export_ut_mcs92_symbols(source,repo,pairs,archive)
 % Export calibrated, de-rotated resources and CRC-accepted PHY allocations.
 addpath(fullfile(repo,'matlab','protocol_receiver'),fullfile(repo,'matlab','learning_receiver'));
 maxNumCompThreads(2);
@@ -24,17 +24,39 @@ end
 if nargin < 3
     pairs = [455 466;455 467;481 482];
 end
+fullArchive = nargin >= 4;
+if fullArchive
+    d = h5info(archive,'/yDataSoft');
+    blockSize = min(13,d.ChunkSize(3));
+    previousBlock = -1;
+end
 for pair = pairs.'
     block = pair(1);
     frame = pair(2);
     final = fullfile(source,sprintf('mac_trace_symbols_%04d.mat',frame));
     if isfile(final),continue;end
-    input = fullfile(source,sprintf('length_grid_%04d.h5',block));
-    ids = double(h5read(input,'/frame0'));
-    j = find(ids==frame);
-    assert(isscalar(j));
-    grid = complex(h5read(input,'/grid_real',[1 1 j],[1024 301 1]), ...
-                   h5read(input,'/grid_imag',[1 1 j],[1024 301 1]));
+    if fullArchive
+        start = floor(frame/blockSize)*blockSize;
+        if start ~= previousBlock
+            count = min(blockSize,d.Dataspace.Size(3)-start);
+            data = h5read(archive,'/yDataSoft',[1 1 start+1],[1024 301 count]);
+            if isstruct(data)
+                grids = complex(data.real,data.imag);
+            else
+                grids = data;
+            end
+            clear data;
+            previousBlock = start;
+        end
+        grid = grids(:,:,frame-start+1);
+    else
+        input = fullfile(source,sprintf('length_grid_%04d.h5',block));
+        ids = double(h5read(input,'/frame0'));
+        j = find(ids==frame);
+        assert(isscalar(j));
+        grid = complex(h5read(input,'/grid_real',[1 1 j],[1024 301 1]), ...
+                       h5read(input,'/grid_imag',[1 1 j],[1024 301 1]));
+    end
     original = slproto.calibrateGrid(grid,refs.pilots);
     after = original.*conj(pn);
     points = reshape(after(coordinates.payload_rows,2:301),[],1);
@@ -54,7 +76,9 @@ for pair = pairs.'
     rows = plan.regions;
     ranges = [[rows.id];[rows.quantity];[rows.start_r0]; ...
               [rows.end_exclusive_r0];[rows.resources_per_unit]];
-    save(final,'points','ranges','-v7.3');
+    temporary = [tempname(source) '.mat'];
+    save(temporary,'points','ranges','-v7.3');
+    movefile(temporary,final,'f');
     fprintf('FRAME %d complete PHY plan, %d regions, tail starts %d\n', ...
         frame,numel(rows),plan.predicted_tail_start_r0);
 end
