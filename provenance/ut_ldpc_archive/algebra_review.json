@@ -1,0 +1,92 @@
+{
+  "osd": {
+    "evaluated": 347,
+    "reencoded_and_confirmed": 0,
+    "known_control_matches": 7,
+    "total_holdout_replays": 692,
+    "reproduced_holdouts": 0,
+    "full_observation_parity_agreement_range": [
+      0.8695913461538461,
+      0.9402043269230769
+    ],
+    "synthetic": {
+      "mcs": [
+        85,
+        88,
+        92
+      ],
+      "low_confidence_errors_per_word": 60,
+      "remaining_bit_errors": 0
+    }
+  },
+  "structured_hints": {
+    "evaluated": 69,
+    "reencoded_and_confirmed": 0,
+    "verified_mac_length_tables": 30,
+    "controls": {
+      "outer_tag": {
+        "bits": 90,
+        "errors": 0
+      },
+      "two_verified_inner_neighbors": {
+        "bits": 5832,
+        "errors": 0
+      }
+    }
+  },
+  "impulsive_noise": {
+    "frames": 17,
+    "checked_slots": 3697,
+    "detected_slots": 0
+  },
+  "repeated_fragments": {
+    "verified_words_scanned": 69284,
+    "missing_words_queried": 347,
+    "candidate_spans": 224,
+    "positive_control_spans": 6,
+    "accepted_words": [
+      {
+        "frame": 516,
+        "source": 515,
+        "word": 22,
+        "support_rank": 3328,
+        "zero_syndrome": true,
+        "target_parity_agreement": 0.9299879807692307,
+        "target_whole_word_agreement": 0.93829345703125,
+        "corresponding_observed_parity_match": 0.9891826923076923,
+        "largest_shifted_control_parity_match": 0.5105168269230769
+      },
+      {
+        "frame": 516,
+        "source": 515,
+        "word": 24,
+        "support_rank": 3328,
+        "zero_syndrome": true,
+        "target_parity_agreement": 0.9341947115384616,
+        "target_whole_word_agreement": 0.93768310546875,
+        "corresponding_observed_parity_match": 0.9915865384615384,
+        "largest_shifted_control_parity_match": 0.5159254807692307
+      },
+      {
+        "frame": 516,
+        "source": 515,
+        "word": 49,
+        "support_rank": 3328,
+        "zero_syndrome": true,
+        "target_parity_agreement": 0.9405048076923077,
+        "target_whole_word_agreement": 0.93890380859375,
+        "corresponding_observed_parity_match": 0.9849759615384616,
+        "largest_shifted_control_parity_match": 0.50390625
+      }
+    ]
+  },
+  "totals": {
+    "expected": 69631,
+    "baseline_verified": 61993,
+    "verified": 69287,
+    "recovered": 7294,
+    "unresolved": 344,
+    "frames": 1009,
+    "complete_frames": 979
+  }
+}

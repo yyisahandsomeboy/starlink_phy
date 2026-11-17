@@ -1,4 +1,4 @@
-> UT 作者 1,009 帧归档已验证 69,284/69,631 个 LDPC 码字，接入 MCS 42 和 93。 [译码覆盖、恢复方法与剩余位置](docs/UT_ARCHIVE_LDPC_RECOVERY.zh-CN.md)
+> UT 作者 1,009 帧归档已验证 69,287/69,631 个 LDPC 码字，接入 MCS 42 和 93。 [译码覆盖、恢复方法与剩余位置](docs/UT_ARCHIVE_LDPC_RECOVERY.zh-CN.md)
 
 > UT 作者第 466、482 帧的 167 个数据码字全部完成 LDPC 译码和解扰。 [两帧联合译码记录](docs/MCS_LDPC_RECOVERY_SUMMARY.zh-CN.md#6-ut-第-466482-帧的难译码字)
 

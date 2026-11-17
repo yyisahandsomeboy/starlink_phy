@@ -35,11 +35,19 @@
 
 对前一轮 768 个缺口，按档位在整个归档搜索可能的重复码字，允许帧布局、资源位置和码字序号不同。只有第 515 和 516 帧的 112 个缺口找到了高度相关的对应观测，两帧的近星座点残差相关系数约为 0.991。补出新码字后，这批对应观测中又核实了一个码字。加入相邻子载波预测在 15 帧的留出符号上均小幅增加误差。30 个有已知填充的分配末字也支持原有的标签顺序和极性，10 个 MCS 92 样本支持信息段在第 13,056 位结束。[复核数值](../provenance/ut_ldpc_archive/followup_review.json)
 
+## 代数重译码与重复片段复核
+
+以先前的 347 个缺口为输入，用软判决选取低可靠度且线性独立的校验矩阵列，通过 GF(2) 消元处理综合征，再用原星座的似然对翻转零至两个额外比特的候选排序。验收时选择两组互不重叠的 32 个校验段星座点，分别将它们排除在信道拟合与候选生成之外。7 个已验证对照均复现同一完整码字。实际缺口没有候选达到同样的复现条件。 [可靠度排序的综合征译码](https://arxiv.org/abs/0710.5230) · [复核结果](../provenance/ut_ldpc_archive/algebra_review.json)
+
+逐位复核 30 帧的 MAC 长度表，所有 CRC 和分配长度均闭合。相邻已验证记录提供的字节类型、序号与固定字段，在已知字段留出测试的 5,922 位上逐位一致。把这些字段作为软先验后仍未确认新的完整码字。17 帧的时域脉冲检查也未发现达到本次门槛的可扣除成分。 [留出结果与覆盖范围](../provenance/ut_ldpc_archive/algebra_review.json)
+
+在 69,284 个已验证码字中搜索字节对齐的重复片段，确定第 516 帧 MCS 92 的第 22、24、49 字对应第 515 帧新确认的三字。用第 515 帧系统位重编码后，三者在第 516 帧各自的原软观测中有 93.00%–94.05% 的校验段硬判决一致率。源和目标两份观测的相应校验段一致率均超过 98%，移到附近的其他码字时最高不足 52%。 [三字的逐项验收](../provenance/ut_ldpc_archive/algebra_review.json)
+
 ## 复跑结果
 
-全部 69,631 个码字已逐个重放。累计 69,284 个通过 LDPC、固定有效矩阵重编码比对并完成解扰，通过率为 **99.50%**。此前已验证 68,863 个，本轮新增 **421** 个。共有 979/1,009 帧的全部码字通过。
+全部 69,631 个码字已逐个重放。累计 69,287 个通过 LDPC、固定有效矩阵重编码比对并完成解扰，通过率为 **99.51%**。本轮由重复观测再确认 3 个。共有 979/1,009 帧的全部码字通过。
 
-| 本轮新增验证的方法 | 通过数 |
+| 上一轮新增验证的方法 | 通过数 |
 |---|---:|
 | LDPC 外部信息反馈 | 6 |
 | 保留归档相位或平滑导频校正 | 369 |
@@ -49,13 +57,13 @@
 | 邻近训练结合外部信息反馈 | 0 |
 | 少量低档位缺口的定点回放 | 0 |
 
-仍有 **347 个**码字待恢复，分布在 30 帧。
+仍有 **344 个**码字待恢复，分布在 30 帧。
 
 | MCS | 通过／声明 | 待恢复 |
 |---:|---:|---:|
 | 85 | 3,822／3,823 | 1 |
 | 88 | 1,630／1,678 | 48 |
-| 92 | 3,161／3,459 | 298 |
+| 92 | 3,164／3,459 | 295 |
 
 公开原始 IQ 目录只列涵盖第 250–257 帧的片段，这些帧的码字已全部通过。其余有缺口的帧目前可用的是作者处理后的频域软网格。归档记录的源录波名为 `pizza_sl_reference_9_ch0`。匹配该录波或同一发送码字的独立观测，可以进一步复核同步、均衡和软译码。[UT 原始 IQ 目录](https://rnl-data.ae.utexas.edu/datastore/supplementaryMaterial/qin-starlink-pilots/raw-iq-data/)
 
@@ -97,4 +105,12 @@ python tools/summarize_ut_ldpc_archive.py "$I" /path/to/baseline /path/to/summar
 python tools/recover_ut_ldpc_feedback.py "$I" /path/to/verified-words /path/to/pilot-replay \
   --frames frames.txt --symbols /path/to/symbols --decoder ./ldpc_archive_worker \
   --pilot-archive /path/to/decodedExemplarFrames_20251019T2214.mat
+```
+
+使用相同的帧名单运行代数重译码。加上 `--control` 可用已经验证的码字检查留出复现条件。
+
+```sh
+python tools/recover_ut_ldpc_osd.py "$I" /path/to/verified-words /path/to/osd \
+  --frames frames.txt --symbols /path/to/symbols --decoder ./ldpc_archive_worker \
+  --archive /path/to/decodedExemplarFrames_20251019T2214.mat
 ```

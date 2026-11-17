@@ -2,9 +2,9 @@
   "totals": {
     "expected": 69631,
     "baseline_verified": 61993,
-    "verified": 69284,
-    "recovered": 7291,
-    "unresolved": 347,
+    "verified": 69287,
+    "recovered": 7294,
+    "unresolved": 344,
     "frames": 1009,
     "complete_frames": 979
   },
@@ -131,9 +131,9 @@
     "92": {
       "expected": 3459,
       "baseline_verified": 337,
-      "verified": 3161,
-      "recovered": 2824,
-      "unresolved": 298
+      "verified": 3164,
+      "recovered": 2827,
+      "unresolved": 295
     },
     "93": {
       "expected": 4,
@@ -155,7 +155,7 @@
     "soft_with_author_hint": 3,
     "ldpc_channel_feedback": 6,
     "smoothed_archive_pilot_phase": 12,
-    "repeat_verified_codeword": 13,
+    "repeat_verified_codeword": 16,
     "smoothed_archive_pilot_phase_refinement": 6
   }
 }

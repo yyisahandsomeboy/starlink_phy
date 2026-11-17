@@ -190,27 +190,31 @@ def frame_channel(grid, training):
     return gain,training
 
 
-def gain_calibrate(z, points):
-    z = z/np.sqrt(max(np.mean(abs(z)**2),1e-10))
+def gain_calibrate(z, points, excluded=None):
+    use = slice(None) if excluded is None else ~excluded
+    z = z/np.sqrt(max(np.mean(abs(z[use])**2),1e-10))
     for _ in range(3):
-        nearest = points[abs(z[:,None]-points).argmin(axis=1)]
-        gain = np.vdot(nearest,z)/np.vdot(nearest,nearest)
+        observed = z[use]
+        nearest = points[abs(observed[:,None]-points).argmin(axis=1)]
+        gain = np.vdot(nearest,observed)/np.vdot(nearest,nearest)
         if abs(gain)<.2:
             break
         z = z/gain
     return z
 
 
-def expected_gain(z, points, positions, slope):
+def expected_gain(z, points, positions, slope, excluded=None):
     adjusted = z.copy()
     groups = positions//SUBCARRIERS
     for group in np.unique(groups):
         selected = groups==group
-        if selected.sum()<75:
+        fit = selected if excluded is None else selected&~excluded
+        if fit.sum()<75:
             continue
-        x = z[selected]
+        x = z[fit]
+        carrier_fit = positions[fit]%SUBCARRIERS/SUBCARRIERS-.5
         carrier = positions[selected]%SUBCARRIERS/SUBCARRIERS-.5
-        design = np.column_stack((np.ones(len(carrier)),carrier)) if slope else np.ones((len(x),1))
+        design = np.column_stack((np.ones(len(x)),carrier_fit)) if slope else np.ones((len(x),1))
         prior = np.diag([45.,65.] if slope else [45.])
         reference = np.r_[1.,np.zeros(design.shape[1]-1)]
         gain = np.ones(len(x),dtype=complex)
@@ -222,24 +226,26 @@ def expected_gain(z, points, positions, slope):
             normal = design.T@(design*(p@energy)[:,None])+prior
             coeff = np.linalg.solve(normal,design.T@(np.conj(p@points)*x)+prior@reference)
             gain = design@coeff
-        if np.max(abs(gain-1))<.4:
-            adjusted[selected] /= gain
+        applied = coeff[0]+carrier*coeff[1] if slope else coeff[0]
+        if np.max(abs(applied-1))<.4:
+            adjusted[selected] /= applied
     return adjusted
 
 
-def metric(profile, positions, grid, correction, training, slope=False, frequency_noise=False):
+def metric(profile, positions, grid, correction, training, slope=False, frequency_noise=False, excluded=None):
     points = profile.points
     local = expected_gain(grid[positions]/correction[positions%SUBCARRIERS],
-                          points,positions,slope)
-    global_grid = gain_calibrate(grid[positions],points)
+                          points,positions,slope,excluded)
+    global_grid = gain_calibrate(grid[positions],points,excluded)
     if profile.width==5:
         global_grid = chunk_gain(global_grid,points)
     plain = -abs(global_grid[:,None]-points)**2/.04
     pool = training.get(profile.width)
     if not pool:
-        local = gain_calibrate(local,points)
+        local = gain_calibrate(local,points,excluded)
         dist = abs(local[:,None]-points)**2
-        noise = np.clip(dist.min(axis=1).mean()*(1.5 if profile.width>=4 else 1.1),.012,.18)
+        use = slice(None) if excluded is None else ~excluded
+        noise = np.clip(dist[use].min(axis=1).mean()*(1.5 if profile.width>=4 else 1.1),.012,.18)
         return -dist/noise,plain
     sample,truth = [np.concatenate(a) for a in zip(*pool,strict=True)]
     observed = grid[sample]/correction[sample%SUBCARRIERS]
