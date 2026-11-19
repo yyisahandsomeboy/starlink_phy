@@ -2,10 +2,13 @@ function result = verifyPayloadHeaderCrc(informationBits)
 %VERIFYPAYLOADHEADERCRC Check the MAC header in decoded LDPC system bits.
 % Each column is one codeword's system bits in receiver order. Columns must
 % belong to the same allocation and be ordered as transmitted.
+% An empty second block requires a CRC-valid short header and a full word
+% whose remaining 120 bytes all descramble to zero.
 validateattributes(informationBits,{'logical'},{'2d'},mfilename,'informationBits');
 result = struct('available',false,'reason','unrecognized header', ...
     'header_bytes',NaN,'covered_bytes',NaN,'computed_crc',uint32(0), ...
-    'received_crc',uint32(0),'crc_pass',false);
+    'received_crc',uint32(0),'crc_pass',false, ...
+    'header_format','unknown','empty_second_block',false,'padding_bytes',NaN);
 wordBits = size(informationBits,1);
 if mod(wordBits,8) ~= 0
     error('slproto:InvalidSystemBitCount','System-bit columns must be byte-aligned.');
@@ -24,9 +27,13 @@ mask = reshape(flipud(reshape(serial(1:wordBits),8,[])),[],1);
 
 prefix = decodePrefix(5);
 bytes = uint8((2.^(0:7))*double(reshape(prefix,8,[])));
-isFirstHeaderLayout = isequal(bytes(3:5),uint8([1 240 15]));
-isExtendedHeaderLayout = bytes(3) == uint8(7);
-if ~isFirstHeaderLayout && ~isExtendedHeaderLayout
+if isequal(bytes(3:5),uint8([1 240 15]))
+    result.header_format = 'first';
+elseif bytes(3) == uint8(7)
+    result.header_format = 'second';
+elseif isequal(bytes,uint8([8 0 136 7 255]))
+    result.header_format = 'short_second';
+else
     return;
 end
 
@@ -44,6 +51,14 @@ result.received_crc = uint32((2.^(23:-1:0))*double(bits(end-23:end)));
 result.crc_pass = result.computed_crc == result.received_crc;
 if result.crc_pass
     result.reason = 'header CRC-24 passed';
+    if strcmp(result.header_format,'short_second') && ...
+            wordBits == 1024 && size(informationBits,2) == 1
+        fullWord = decodePrefix(128);
+        if ~any(fullWord(headerBytes*8+1:end))
+            result.empty_second_block = true;
+            result.padding_bytes = 128 - headerBytes;
+        end
+    end
 else
     result.reason = 'header CRC-24 mismatch';
 end

@@ -17,6 +17,30 @@ assert(all(full(sum(model.H,2))==6)&&all(ismember(full(sum(model.H,1)),[2 3 4]))
 rng(20261103);u=rand(1024,1)>.5;parity=logical(mod(double(u).'*double(model.P),2).');word=[u;parity];
 assert(~any(mod(model.H*double(word),2)));llr=6*(1-2*double(word));llr([55 1200])=-.25*llr([55 1200]);
 d=slproto.minsum(llr,model.H,.8,60);assert(d.converged&&isequal(d.bits,word)&&d.hard_changes==2);
+
+% UT archive frame 83: CRC-valid eight-byte header and 120 zero bytes.
+decodedBytes = [uint8([8 0 136 7 255 137 92 70]),zeros(1,120,'uint8')];
+serial = false(1024,1);
+serial(1:15) = bitget(uint16(hex2dec('01FB')),15:-1:1).';
+for k = 16:numel(serial)
+    serial(k) = xor(serial(k-14),serial(k-15));
+end
+systemBits = xor(reshape(fliplr(dec2bin(decodedBytes,8)).' == '1',[],1), ...
+                 reshape(flipud(reshape(serial,8,[])),[],1));
+header = slproto.verifyPayloadHeaderCrc(systemBits);
+assert(header.crc_pass && header.empty_second_block && header.padding_bytes == 120);
+assert(strcmp(header.header_format,'short_second') && header.header_bytes == 8);
+badCrc = systemBits;
+badCrc(64) = ~badCrc(64);
+header = slproto.verifyPayloadHeaderCrc(badCrc);
+assert(header.available && ~header.crc_pass && ~header.empty_second_block);
+nonzeroFill = systemBits;
+nonzeroFill(65) = ~nonzeroFill(65);
+header = slproto.verifyPayloadHeaderCrc(nonzeroFill);
+assert(header.crc_pass && ~header.empty_second_block);
+header = slproto.verifyPayloadHeaderCrc(systemBits(1:64));
+assert(header.crc_pass && ~header.empty_second_block);
+
 % 小型已知QC线性关系，验证满秩、留出错误和欠定/不一致拒绝。
 P=logical(blkdiag(circshift(eye(4),1,2),circshift(eye(4),2,2)));U=[logical(eye(8));true(1,8)];W=[U logical(mod(double(U)*double(P),2))];
 fit=[true(8,1);false];m=slproto.recoverQC(W,fit,8,4);assert(m.fit.unique&&isequal(m.P,P)&&all(m.verification_parity_errors==0));
@@ -25,6 +49,7 @@ W(end,end)=~W(end,end);m=slproto.recoverQC(W,fit,8,4);assert(m.fit.unique&&m.ver
 [X,check]=slproto.gf2Solve([1;1],[0;1]);assert(isempty(X)&&~check.consistent);
 result=struct('status','passed','published_CRC_examples',2,'soft_BCC_and_error_correction',true, ...
     'coordinate_cases',true,'code5_H_rank',1024,'code5_GH_orthogonal',true,'synthetic_minsum_changes',2, ...
-    'QC_full_rank_and_reserved_error',true,'rank_deficient_and_inconsistent_rejected',true);
+    'QC_full_rank_and_reserved_error',true,'rank_deficient_and_inconsistent_rejected',true, ...
+    'short_second_mac_header_checked',true);
 fprintf('PROTOCOL_UNIT_TESTS_PASSED\n');
 end
