@@ -114,3 +114,20 @@ python tools/recover_ut_ldpc_osd.py "$I" /path/to/verified-words /path/to/osd \
   --frames frames.txt --symbols /path/to/symbols --decoder ./ldpc_archive_worker \
   --archive /path/to/decodedExemplarFrames_20251019T2214.mat
 ```
+
+## MAC 第二块与跨帧片段重放
+
+归档的 1,009 帧中，每帧的两个 MAC 头都通过 CRC-24。982 帧的第二块按长度表解析。其余 27 帧的第二块只包含一个 128 字节的 MCS 5 信息字。头部共 8 字节，前 5 字节是 `08 00 88 07 FF`，剩下 120 字节解扰后全部为零。只有头部 CRC、完整信息字和零填充同时成立，才将第二块标记为空。
+
+在现有归档的 69,287 个已重编码核验的码字上，第二块的 11,413 条外层记录通过长度核对，另有 34 条记录覆盖尚未恢复的码字。索引包含 591 对物理帧之间的 1,313 条双帧接续。候选须有一致的内层标识、连续的内层序号和外层计数，并在后方六帧的搜索范围内满足一对一匹配。这些是结构与实际字节的复核结果，内层头 CRC 仍待确认。
+
+在仓库根目录用 Python 和 NumPy 生成索引。`/path/to/verified-words` 指向合并后的逐帧 JSON 和 NPZ。索引记录了零基帧号、分配编号及其解扰字节区间 `[start, stop)`。重放时重新读取归档并重算拼接结果的 SHA-256。省略筛选参数可以复核全部条目。
+
+```sh
+python tools/replay_ut_mac_rlc.py build provenance/ut_ldpc_archive/phy_inventory.json \
+  /path/to/verified-words /path/to/mac-rlc-index.json
+python tools/replay_ut_mac_rlc.py replay /path/to/verified-words \
+  /path/to/mac-rlc-index.json --frame 237 --sequence 952B
+```
+
+上面的例子在第 237 帧读出 1 字节，在第 238 帧读出后续 1,317 字节，得到序号 `952B` 的 1,318 字节记录。也可以用 `--join` 按条目编号查找。选中唯一条目时，`--bytes-out /path/to/new-file.bin` 可将拼接后的字节写入新文件。
